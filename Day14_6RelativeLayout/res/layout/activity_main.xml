@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/na" 
+        android:layout_margin="10dp"/>
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_toRightOf="@id/imageView1"
+        android:background="#ff0"
+        android:text="김수영" />
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:text="24"
+        android:background="#ff0"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:autoLink="phone"
+        android:background="#ff0"
+        android:text="010-9622-0213"
+        android:textSize="30sp" />
+    
+<!--     남은 부분에서 가운데 정렬하는 방법은 없고, 폭을 늘린 후에 그래비티로 가운데 정렬하여야 한다 -->
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:autoLink="web"
+        android:background="#ff0"
+        android:text="facebook.com/surumex"
+        android:textSize="20sp" />
+
+</RelativeLayout>
