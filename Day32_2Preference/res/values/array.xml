@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "time">
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+        <item >수박</item>
+    </string-array>
+    
+</resources>

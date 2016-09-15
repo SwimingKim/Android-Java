@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:summary="배경음악 상태를 선택해주요?"
+            android:title="소리"
+            android:key="sound">
+        </CheckBoxPreference>
+        <EditTextPreference
+            android:defaultValue="수영"
+            android:summary="계정명을 입력해주세요"
+            android:title="이름"
+            android:key="name">  
+        </EditTextPreference>
+        <ListPreference
+            android:defaultValue="2"
+            android:dialogTitle="색상을 고르시요"
+            android:entries="@array/color"
+            android:entryValues="@array/color"
+            android:key="color"
+            android:title="색상설정"
+            android:summary="원하는 색상을 선택하세요"
+            ></ListPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
