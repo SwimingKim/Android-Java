@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff00"
+        android:gravity="right|bottom"
+        android:text="1"
+        android:textSize="30sp" />
+ <!-- 좌측상단이 기준이다 -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff"
+        android:layout_gravity="right"
+        android:text="2"
+        android:textSize="30sp" />
+<!-- 껍데기 자체를 이동하는 것이 layout_gravity이다/match_parent -->
+<!-- 내용물을 움직이는 것이 gravity이다/wrap_content -->
+<!-- @=r+(변수종류)id /이름이 서로 다르게 정의해야 한다-->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="30sp" />
+
+</LinearLayout>
