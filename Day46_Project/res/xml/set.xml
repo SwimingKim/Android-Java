@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <CheckBoxPreference 
+            android:key="sound"
+            android:title="소리"
+            android:summary="배경음악을 재생하겠습니까?"
+            android:defaultValue="false"/>
+        <ListPreference
+            android:key="color"
+            android:title="배경색상"
+            android:summary="어플테마를 선택해주세요"
+            android:defaultValue="0"
+            android:dialogTitle="색상선택"
+            android:entries="@array/color"
+            android:entryValues="@array/color"
+            ></ListPreference>
+        
+    </PreferenceCategory>
+    
+</PreferenceScreen>
