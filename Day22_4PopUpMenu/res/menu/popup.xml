@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/apple" android:title="사과"></item>
+    <item android:id="@+id/lemon" android:title="레몬"></item>
+    <item android:id="@+id/banana" android:title="바나나"></item>
+    
+
+</menu>
