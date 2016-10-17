@@ -1,73 +1,61 @@
 package com.seoul.culture;
 
-import com.navdrawer.SimpleSideDrawer;
 import com.seoul.culture.map.MapActivity;
 
-import android.app.ActionBar;
-import android.app.TabActivity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTabHost;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
-import android.widget.TextView;
 
-public class IntroActivity extends TabActivity {
+public class IntroActivity  extends FragmentActivity {
+	private FragmentTabHost mTabHost;
 
-	private SimpleSideDrawer mSlidingMenu;
-	private SharedPreferences sp;
-	private TextView tvOne;
-
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// Menu
-		mSlidingMenu = new SimpleSideDrawer(this);
-		mSlidingMenu.setRightBehindContentView(R.layout.left_menu);
-		tvOne = (TextView) findViewById(R.id.txtOne);
-
-		// �׼ǹ� ��, ������ �Ⱥ��̰�
-		ActionBar ab = getActionBar();
-		ab.setBackgroundDrawable(new ColorDrawable(Color.rgb(32, 111, 185)));
-		ab.setDisplayShowHomeEnabled(false);
 		setContentView(R.layout.intro);
+		mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+		mTabHost.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
 
-		TabHost host = getTabHost();
-		TabSpec tab1 = host.newTabSpec("1");
-		tab1.setIndicator("CATEGORY");
-		Intent intent1 = new Intent(getApplicationContext(), com.seoul.culture.CategoryActivity.class);
-		tab1.setContent(intent1);
-		host.addTab(tab1);
-		TabSpec tab2 = host.newTabSpec("2");
-		tab2.setIndicator("MAP");
-		Intent intent2 = new Intent(getApplicationContext(), MapActivity.class);
-		tab2.setContent(intent2);
-		host.addTab(tab2);
+		mTabHost.addTab(
+				mTabHost.newTabSpec("tab1").setIndicator("Tab 1", null),
+				FragmentTab.class, null);
+		mTabHost.addTab(
+				mTabHost.newTabSpec("tab2").setIndicator("Tab 2", null),
+				FragmentTab.class, null);
+		mTabHost.addTab(
+				mTabHost.newTabSpec("tab3").setIndicator("Tab 3", null),
+				FragmentTab.class, null);
+	}
 
-		TextView Bookmark = (TextView) findViewById(R.id.textView1);
-		Bookmark.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
-				startActivity(intent);
-			}
-		});
+	@Override // 메뉴버튼과 검색버튼 적용
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		getMenuInflater().inflate(R.menu.menubutton, menu);
 
-		TextView appinfo = (TextView) findViewById(R.id.textView6);
-		appinfo.setOnClickListener(new OnClickListener() {
+		return true;
+	}
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intentAppInfo = new Intent(getApplicationContext(), AppInfo.class);
-				startActivity(intentAppInfo);
-			}
-		});
+	// 메뉴버튼과 검색버튼 동작하는 구문
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_btn:
+//			mSlidingMenu.toggleRightDrawer();
+			break;
+		case R.id.search_btn:
 
-	}// end of onCreate
+			Intent intentSearch = new Intent(getApplicationContext(), SearchActivity.class);
+			startActivity(intentSearch);
+
+			break;
+
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 }
