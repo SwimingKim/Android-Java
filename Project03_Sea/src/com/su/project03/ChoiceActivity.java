@@ -7,6 +7,8 @@ public class ChoiceActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//이것은 맥북입니다.
 
 	}//end of onCreate
 }//end of class
