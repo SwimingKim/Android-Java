@@ -9,7 +9,7 @@ public class Google {
 			num[i / 10 % 10]++;
 			num[i % 10]++;
 		}
-		System.out.println("8°³ÀÇ °³¼ö = " + num[8]);
+		System.out.println("8ê°œì˜ ê°œìˆ˜ = " + num[8]);
 
 	}
 }

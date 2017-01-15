@@ -1,29 +1,29 @@
 import java.util.Scanner;
 
 /**
- * ¹İº¹¹® : for, while, do~while
+ * ë°˜ë³µë¬¸ : for, while, do~while
  */
 public class TestDoWhile {
 	public static void main(String[] args) {
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹Ş¾Æ¼­ Ãâ·ÂÇÏ´Ù°¡, °ªÀÌ 0ÀÌ¸é Á¾·áÇÏ±â
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ì•„ì„œ ì¶œë ¥í•˜ë‹¤ê°€, ê°’ì´ 0ì´ë©´ ì¢…ë£Œí•˜ê¸°
 		Scanner scan = new Scanner(System.in);
 
-		// System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		// int num=scan.nextInt();//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ³Ö°Ú´Ù
+		// System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		// int num=scan.nextInt();//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ ë„£ê² ë‹¤
 		//
-		// while(num != 0){//0ÀÌ ¾Æ´Ï¸é(0À» ÀÔ·ÂÇÒ ¶§±îÁö) ¹İº¹ÇÏÙ´Ù
-		// System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		// while(num != 0){//0ì´ ì•„ë‹ˆë©´(0ì„ ì…ë ¥í•  ë•Œê¹Œì§€) ë°˜ë³µí•˜ê³˜ë‹¤
+		// System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		// num=scan.nextInt();
 		// }
 
 		// do {
-		// ¹İº¹ÇÒ ½ÇÇà¹®;
-		// } while(Á¶°Ç¹®);
-		// ÃÖ¼Ò 1¹øÀÇ ½ÇÇàÀ» º¸ÀåÇØ¾ß ÇÒ ¶§ »ç¿ëÇÏ´Â ¹İº¹¹®
+		// ë°˜ë³µí•  ì‹¤í–‰ë¬¸;
+		// } while(ì¡°ê±´ë¬¸);
+		// ìµœì†Œ 1ë²ˆì˜ ì‹¤í–‰ì„ ë³´ì¥í•´ì•¼ í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ë°˜ë³µë¬¸
 
-		int num;// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ³Ö°Ú´Ù
+		int num;// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ ë„£ê² ë‹¤
 		do {
-			System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			num = scan.nextInt();
 		} while (num != 0);
 

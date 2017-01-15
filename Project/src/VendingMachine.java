@@ -1,106 +1,106 @@
 import java.util.Scanner;
 /**
- * ÀÚÆÇ±â ÇÁ·Î±×·¥
+ * ìžíŒê¸° í”„ë¡œê·¸ëž¨
  * */
 public class VendingMachine {
 	public static void main(String[] args) {
-//ÀÚÆÇ±â ÇÁ·Î±×·¥
-//¸Þ´º
-//ÄÝ¶ó 1290
-//»çÀÌ´Ù 890
-//¹° 610
-//Ä¿ÇÇ 560
-//<Ãâ·ÂÈ­¸é>
-//µ·À» ÀÔ·Â : 3000
-//¸Þ´º ÀÔ·Â : ÄÝ¶ó
-//ÄÝ¶ó¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù
-//ÄÝ¶ó ³ª¿È
-//ÀÜµ· ÃÑ 1710¿ø
-//500¿ø : 3°³
-//100¿ø : 2°³
-//50¿ø : 0°³
-//10¿ø : 1°³
-//Á¾·á
-//<¿¹¿Ü»çÇ×>
-//µ·À» À½¼ö ÀÔ·Â½Ã '´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä'
-//ÇÁ·Î±×·¥ Ã³À½ºÎÅÍ ´Ù½Ã
-//¾ø´Â ¸Þ´º ÀÔ·Â½Ã '±×·± ¸Þ´º ¾ø½À´Ï´Ù'
-//ÇÁ·Î±×·¥ Ã³À½ºÎÅÍ ´Ù½Ã
-//Á¦Ç°º¸´Ù µ·ÀÌ ºÎÁ·ÇÒ °æ¿ì 'ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù'
-//ÇÁ·Î±×·¥ Ã³À½ºÎÅÍ ´Ù½Ã
+//ìžíŒê¸° í”„ë¡œê·¸ëž¨
+//ë©”ë‰´
+//ì½œë¼ 1290
+//ì‚¬ì´ë‹¤ 890
+//ë¬¼ 610
+//ì»¤í”¼ 560
+//<ì¶œë ¥í™”ë©´>
+//ëˆì„ ìž…ë ¥ : 3000
+//ë©”ë‰´ ìž…ë ¥ : ì½œë¼
+//ì½œë¼ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤
+//ì½œë¼ ë‚˜ì˜´
+//ìž”ëˆ ì´ 1710ì›
+//500ì› : 3ê°œ
+//100ì› : 2ê°œ
+//50ì› : 0ê°œ
+//10ì› : 1ê°œ
+//ì¢…ë£Œ
+//<ì˜ˆì™¸ì‚¬í•­>
+//ëˆì„ ìŒìˆ˜ ìž…ë ¥ì‹œ 'ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”'
+//í”„ë¡œê·¸ëž¨ ì²˜ìŒë¶€í„° ë‹¤ì‹œ
+//ì—†ëŠ” ë©”ë‰´ ìž…ë ¥ì‹œ 'ê·¸ëŸ° ë©”ë‰´ ì—†ìŠµë‹ˆë‹¤'
+//í”„ë¡œê·¸ëž¨ ì²˜ìŒë¶€í„° ë‹¤ì‹œ
+//ì œí’ˆë³´ë‹¤ ëˆì´ ë¶€ì¡±í•  ê²½ìš° 'ìž”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤'
+//í”„ë¡œê·¸ëž¨ ì²˜ìŒë¶€í„° ë‹¤ì‹œ
 
 		
 		Scanner scan = new Scanner(System.in);
 		
-		//Á¦Ç°ÀÇ Á¤º¸¸¦ ¹è¿­º¯¼ö¿¡ ÀúÀåÇØµÎÀÚ
-		String item[]={"ÄÝ¶ó","»çÀÌ´Ù","¹°","Ä¿ÇÇ"};
+		//ì œí’ˆì˜ ì •ë³´ë¥¼ ë°°ì—´ë³€ìˆ˜ì— ì €ìž¥í•´ë‘ìž
+		String item[]={"ì½œë¼","ì‚¬ì´ë‹¤","ë¬¼","ì»¤í”¼"};
 		int price[]={1290,890,610,560};
 				
 		while (true) {
-			System.out.println("ÀÚÆÇ±âÇÁ·Î±×·¥ÀÔ´Ï´Ù");
-			System.out.println("¸Þ´º\n"
-					+ "ÄÝ¶ó 1290\n"
-					+ "»çÀÌ´Ù 890¿ø\n"
-					+ "¹° 610¿ø\n"
-					+ "Ä¿ÇÇ 560¿ø ÀÔ´Ï´Ù");
-			System.out.println("µ·À» ³Ö¾îÁÖ¼¼¿ä");
+			System.out.println("ìžíŒê¸°í”„ë¡œê·¸ëž¨ìž…ë‹ˆë‹¤");
+			System.out.println("ë©”ë‰´\n"
+					+ "ì½œë¼ 1290\n"
+					+ "ì‚¬ì´ë‹¤ 890ì›\n"
+					+ "ë¬¼ 610ì›\n"
+					+ "ì»¤í”¼ 560ì› ìž…ë‹ˆë‹¤");
+			System.out.println("ëˆì„ ë„£ì–´ì£¼ì„¸ìš”");
 			int money = Integer.parseInt(scan.nextLine());
-		//»ç¿ëÀÚ°¡ À½¼ö·Î µ·À» ÀÔ·ÂÇÏ´Â °Í Ã¼Å©
+		//ì‚¬ìš©ìžê°€ ìŒìˆ˜ë¡œ ëˆì„ ìž…ë ¥í•˜ëŠ” ê²ƒ ì²´í¬
 			if (money<0){
-				System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä");
+				System.out.println("ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”");
 				continue;
 			}
-			System.out.println(money+"¿øÀ» ÀÔ·Â¹Þ¾Ò½À´Ï´Ù");	
+			System.out.println(money+"ì›ì„ ìž…ë ¥ë°›ì•˜ìŠµë‹ˆë‹¤");	
 			
-			System.out.println("¸Þ´º¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");			
+			System.out.println("ë©”ë‰´ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”");			
 			String menu = scan.nextLine();
 			
 				
-			int select = -1;//»ç¿ëÀÚ°¡ ¼±ÅÃÇÑ Á¦Ç°ÀÇ index
+			int select = -1;//ì‚¬ìš©ìžê°€ ì„ íƒí•œ ì œí’ˆì˜ index
 			switch (menu) {
-			case "ÄÝ¶ó":
+			case "ì½œë¼":
 				select=0;
 				break;
-			case "»çÀÌ´Ù":
+			case "ì‚¬ì´ë‹¤":
 				select=1;
 				break;
-			case "¹°":
+			case "ë¬¼":
 				select=2;
 				break;	
-			case "Ä¿ÇÇ":
+			case "ì»¤í”¼":
 				select=3;
 				break;		
 			default:
-		//¾ø´Â ¸Þ´º ÀÔ·Â ½Ã Ã¼Å©		
-				System.out.println("±×·± ¸Þ´º ¾ø½À´Ï´Ù");
+		//ì—†ëŠ” ë©”ë‰´ ìž…ë ¥ ì‹œ ì²´í¬		
+				System.out.println("ê·¸ëŸ° ë©”ë‰´ ì—†ìŠµë‹ˆë‹¤");
 				continue;
 			}
-		//Á¦Ç°º¸´Ù µ·ÀÌ ºÎÁ·ÇÒ °æ¿ì
+		//ì œí’ˆë³´ë‹¤ ëˆì´ ë¶€ì¡±í•  ê²½ìš°
 			if(money<price[select]){
-				System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù");
+				System.out.println("ìž”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤");
 				continue;
 			}			
 			
-			System.out.println(item[select]+"¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù");
-			System.out.println(item[select]+" ³ª¿È");
+			System.out.println(item[select]+"ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤");
+			System.out.println(item[select]+" ë‚˜ì˜´");
 			
-			//ÀÜµ· °Å½½·¯ÁÖ±â
+			//ìž”ëˆ ê±°ìŠ¬ëŸ¬ì£¼ê¸°
 			int change = money - price[select];
-			System.out.println("ÀÜµ·Àº ÃÑ"+ change +"¿øÀÌ°í\n"+
-					"500¿ø :"+change /500+"°³\n"+
-					"100¿ø :"+change %500/100+"°³\n"+
-					"50¿ø :"+change %100/50+"°³\n"+
-					"10¿ø :"+change %50/10+"°³ ÀÔ´Ï´Ù");
+			System.out.println("ìž”ëˆì€ ì´"+ change +"ì›ì´ê³ \n"+
+					"500ì› :"+change /500+"ê°œ\n"+
+					"100ì› :"+change %500/100+"ê°œ\n"+
+					"50ì› :"+change %100/50+"ê°œ\n"+
+					"10ì› :"+change %50/10+"ê°œ ìž…ë‹ˆë‹¤");
 			break;
 		} 
-		System.out.println("Á¾·á");
+		System.out.println("ì¢…ë£Œ");
 		
 		
 		
 		
 		
 //		String menu = scan.nextLine();
-//		System.out.println(menu+"À» ¼±ÅÃÇß½À´Ï´Ù");
+//		System.out.println(menu+"ì„ ì„ íƒí–ˆìŠµë‹ˆë‹¤");
 		
 	
 		

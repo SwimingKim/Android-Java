@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class FileCopy {
 	public static void main(String[] args) throws IOException {
 
-		//Byte ±â¹İ ¿¬°á½ºÆ®¸²(ÁÖ ½ºÆ®¸²)ÀÇ º¸Á¶ ½ºÆ®¸²µé
-		//1)BufferedInput/OUtputStream=>bufferÀ» ¸¸µé¾î Áà¾ß ÇÑ´Ù
-		//2)Data Input/Output Stream =>ÀÚ¹ÙÀÇ ±âº» ÀÚ·áÇü ÇüÅÂÀÇ Stream Áö¿ø
-		//3) Object Input/Output Stream =>Å¬·¡½ºÀÇ °´Ã¼¸¦ Stream Áö¿ø
+		//Byte ê¸°ë°˜ ì—°ê²°ìŠ¤íŠ¸ë¦¼(ì£¼ ìŠ¤íŠ¸ë¦¼)ì˜ ë³´ì¡° ìŠ¤íŠ¸ë¦¼ë“¤
+		//1)BufferedInput/OUtputStream=>bufferì„ ë§Œë“¤ì–´ ì¤˜ì•¼ í•œë‹¤
+		//2)Data Input/Output Stream =>ìë°”ì˜ ê¸°ë³¸ ìë£Œí˜• í˜•íƒœì˜ Stream ì§€ì›
+		//3) Object Input/Output Stream =>í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ Stream ì§€ì›
 
 		ArrayList<String> word = new ArrayList<String>();
 		try {
@@ -28,14 +28,14 @@ public class FileCopy {
 		
 		System.out.println(word.size());
 
-		//ÆÄÀÏ º¹»ç °úÁ¤
-		//1) ÆÄÀÏÀ» ÀĞ´Â´Ù=>InputStreamÀ¸·Î
-		//1-1) ÆÄÀÏÀÇ Å©±â´Â Å©´Ù(1mb,1gb~)
-		//1-2) ÆÄÀÏÀ» ÂÉ°³¼­ ÀÛ¾÷À» ÇØ¾ß ÇÑ´Ù.=>ÂÉ°³´Â ¿ªÇÒ ÇÏ´Â °Í:¹öÆÛ!(¹öÆÛ¶ó´Â ÀÓ½Ã °ø°£¿¡ ÆÄÀÏ Á¶°¢À» ÀúÀå)
+		//íŒŒì¼ ë³µì‚¬ ê³¼ì •
+		//1) íŒŒì¼ì„ ì½ëŠ”ë‹¤=>InputStreamìœ¼ë¡œ
+		//1-1) íŒŒì¼ì˜ í¬ê¸°ëŠ” í¬ë‹¤(1mb,1gb~)
+		//1-2) íŒŒì¼ì„ ìª¼ê°œì„œ ì‘ì—…ì„ í•´ì•¼ í•œë‹¤.=>ìª¼ê°œëŠ” ì—­í•  í•˜ëŠ” ê²ƒ:ë²„í¼!(ë²„í¼ë¼ëŠ” ì„ì‹œ ê³µê°„ì— íŒŒì¼ ì¡°ê°ì„ ì €ì¥)
 
-		//2) ¹öÆÛ¿¡ ÆÄÀÏÀÇ Á¶°¢ÀÌ µé¾î°¡ ÀÖ´Ù
-		//2-1) ÆÄÀÏ »ı¼º
-		//2-2) ¸¸µé¾îÁø ÆÄÀÏ¿¡ ÆÄÀÏ Á¶°¢(¹öÆÛ)µéÀ» Ã¤¿î´Ù=>ÆÄÀÏ¿¡ ½á¾ß ÇÔÀ¸·Î OutputStream
+		//2) ë²„í¼ì— íŒŒì¼ì˜ ì¡°ê°ì´ ë“¤ì–´ê°€ ìˆë‹¤
+		//2-1) íŒŒì¼ ìƒì„±
+		//2-2) ë§Œë“¤ì–´ì§„ íŒŒì¼ì— íŒŒì¼ ì¡°ê°(ë²„í¼)ë“¤ì„ ì±„ìš´ë‹¤=>íŒŒì¼ì— ì¨ì•¼ í•¨ìœ¼ë¡œ OutputStream
 
 		String strNum = "";
 		for (int i = 0; i < word.size(); i++) {
@@ -47,42 +47,42 @@ public class FileCopy {
 				strNum = "0" + (int)(i+1);
 			}
 			
-			File file=new File("C:\\Users\\Administrator\\Desktop\\all\\"+word.get(i)+".mp3"); //ÆÄÀÏ ÀÌ¸§ ³Ö±â
+			File file=new File("C:\\Users\\Administrator\\Desktop\\all\\"+word.get(i)+".mp3"); //íŒŒì¼ ì´ë¦„ ë„£ê¸°
 			if(file.exists()){
-				//Á¸Àç ÇÒ °æ¿ì=>ÀÛ¾÷ º¹»ç ÁøÇà
+				//ì¡´ì¬ í•  ê²½ìš°=>ì‘ì—… ë³µì‚¬ ì§„í–‰
 
-				//ÆÄÀÏ ÀĞ±â À§ÇØ fileInputStream °¡Á®¿À±â
-				FileInputStream fis=new FileInputStream(file); //=>ÁÖ ½ºÆ®¸²(¿¬°á ½ºÆ®¸²)
-				BufferedInputStream bis=new BufferedInputStream(fis);//=>º¸Á¶ ½ºÆ®¸²
+				//íŒŒì¼ ì½ê¸° ìœ„í•´ fileInputStream ê°€ì ¸ì˜¤ê¸°
+				FileInputStream fis=new FileInputStream(file); //=>ì£¼ ìŠ¤íŠ¸ë¦¼(ì—°ê²° ìŠ¤íŠ¸ë¦¼)
+				BufferedInputStream bis=new BufferedInputStream(fis);//=>ë³´ì¡° ìŠ¤íŠ¸ë¦¼
 
-				//ÆÄÀÏÀ» ÂÉ°³¼­ ´ã±â À§ÇÑ ¹öÆÛ¸¦ »ı¼º=>ÆÄÀÏ Å©±â°¡ Å©±â ¶§¹®¿¡
+				//íŒŒì¼ì„ ìª¼ê°œì„œ ë‹´ê¸° ìœ„í•œ ë²„í¼ë¥¼ ìƒì„±=>íŒŒì¼ í¬ê¸°ê°€ í¬ê¸° ë•Œë¬¸ì—
 				byte []buffer=new byte[16];
 				int readCnt=0;
 
-				//int bis.read(¹öÆÛ)
-				//return: ¹öÆÛ°¡ ÀĞÀº Å©±â=>ÇöÀç´Â ÆÄÀÏ¿¡¼­ ÀĞ¾î¿À±â ¶§¹®¿¡ ÆÄÀÏÀÇ ³¡¿¡ µµ´ŞÇÏ¸é EOF(-1)°ª ¸®ÅÏ
-//				read(buffer)=>ÆÄÀÏ¿¡¼­ ÀĞÀº µ¥ÀÌÅÍ¸¦ ¹öÆÛ¿¡ Áı¾î ³Ö´Â´Ù
+				//int bis.read(ë²„í¼)
+				//return: ë²„í¼ê°€ ì½ì€ í¬ê¸°=>í˜„ì¬ëŠ” íŒŒì¼ì—ì„œ ì½ì–´ì˜¤ê¸° ë•Œë¬¸ì— íŒŒì¼ì˜ ëì— ë„ë‹¬í•˜ë©´ EOF(-1)ê°’ ë¦¬í„´
+//				read(buffer)=>íŒŒì¼ì—ì„œ ì½ì€ ë°ì´í„°ë¥¼ ë²„í¼ì— ì§‘ì–´ ë„£ëŠ”ë‹¤
 
-				File copyFile=new File("C:\\Users\\Administrator\\Desktop\\voice\\"+strNum+".mp3");//¹øÈ£
-//				File copyFile=new File("C:\\Users\\Administrator\\Desktop\\voice\\"+word.get(i)+".mp3");//**ÇØ´ç ÀÌ¸§À¸·Î ÀÚ¹ÙÇÁ·ÎÁ§Æ® Æú´õ ¾È¿¡ º¹»ç ÆÄÀÏ »ı¼º‰Î
-				copyFile.createNewFile(); //=>ÆÄÀÏ »ı¼º
+				File copyFile=new File("C:\\Users\\Administrator\\Desktop\\voice\\"+strNum+".mp3");//ë²ˆí˜¸
+//				File copyFile=new File("C:\\Users\\Administrator\\Desktop\\voice\\"+word.get(i)+".mp3");//**í•´ë‹¹ ì´ë¦„ìœ¼ë¡œ ìë°”í”„ë¡œì íŠ¸ í´ë” ì•ˆì— ë³µì‚¬ íŒŒì¼ ìƒì„±ëŒ
+				copyFile.createNewFile(); //=>íŒŒì¼ ìƒì„±
 
-				//buffer¿¡ µé¾îÀÖ´Â ³»¿ëÀ» ÆÄÀÏ¿¡ Ãâ·Â ÇØ¾ß ÇÏ¹Ç·Î FileOutputStream Çü¼º
+				//bufferì— ë“¤ì–´ìˆëŠ” ë‚´ìš©ì„ íŒŒì¼ì— ì¶œë ¥ í•´ì•¼ í•˜ë¯€ë¡œ FileOutputStream í˜•ì„±
 				FileOutputStream fos=new FileOutputStream(copyFile);
 				BufferedOutputStream bos=new BufferedOutputStream(fos);
 
 
 
-				//½ºÆ®¸²¿¡¼­ µ¥ÀÌÅÍ¸¦ ÀĞÀ¸¸é ÀÚµ¿À¸·Î ´ÙÀ½À¸·Î ³Ñ¾î°£´Ù.
+				//ìŠ¤íŠ¸ë¦¼ì—ì„œ ë°ì´í„°ë¥¼ ì½ìœ¼ë©´ ìë™ìœ¼ë¡œ ë‹¤ìŒìœ¼ë¡œ ë„˜ì–´ê°„ë‹¤.
 				while((readCnt=bis.read(buffer))!=-1){
-					//					System.out.println("ÀĞÈù ÆÄÀÏ Å©±â: "+readCnt);
-					bos.write(buffer); //BufferedInputStreamÀ» ÀÌ¿ëÇØ ÀĞÀº ³»¿ë(¹öÆÛ)¸¦ º¹»çÇÒ ÆÄÀÏ¿¡ ±×´ë·Î Ã¤¿ö ³Ö´Â´Ù
+					//					System.out.println("ì½íŒ íŒŒì¼ í¬ê¸°: "+readCnt);
+					bos.write(buffer); //BufferedInputStreamì„ ì´ìš©í•´ ì½ì€ ë‚´ìš©(ë²„í¼)ë¥¼ ë³µì‚¬í•  íŒŒì¼ì— ê·¸ëŒ€ë¡œ ì±„ì›Œ ë„£ëŠ”ë‹¤
 				}
 
-				bis.close(); //¹İµå½Ã closeÇØÁà¾ß ¿¡·¯ ¾È³²
+				bis.close(); //ë°˜ë“œì‹œ closeí•´ì¤˜ì•¼ ì—ëŸ¬ ì•ˆë‚¨
 				bos.close();
 			}else{
-				//Á¸Àç ¾È ÇÒ °æ¿ì
+				//ì¡´ì¬ ì•ˆ í•  ê²½ìš°
 				System.out.println(strNum+" || "+word.get(i)+"!!!!");
 			}
 		}
@@ -90,7 +90,7 @@ public class FileCopy {
 
 
 
-		//ÆÄÀÏÀÌ Á¸Àç ÇÏ´Â°¡?
+		//íŒŒì¼ì´ ì¡´ì¬ í•˜ëŠ”ê°€?
 
 	}//end of main
 }

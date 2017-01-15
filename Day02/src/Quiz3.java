@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class Quiz3 {
 	public static void main(String[] args) {
 
-		// Á¤¼ö¸¦ 3°³ »ç¿ëÀÚ ÀÔ·ÂÀ» ¹Ş¾Æ
-		// Å« ¼ö¸¦ Ãâ·Â
+		// ì •ìˆ˜ë¥¼ 3ê°œ ì‚¬ìš©ì ì…ë ¥ì„ ë°›ì•„
+		// í° ìˆ˜ë¥¼ ì¶œë ¥
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("¼ıÀÚ¸¦ 3°³ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ìˆ«ìë¥¼ 3ê°œ ì…ë ¥í•˜ì„¸ìš”");
 		int num1 = scan.nextInt();
 		int num2 = scan.nextInt();
 		int num3 = scan.nextInt();
 
 		// System.out.println(num1>num2? num1 : num2);
 		System.out.println(num1 > num2 ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3));
-		// ÄÚµå°¡ º¹ÀâÇØÁö¸é »ïÇ×¿¬»êÀÚ´Â ¾²Áö ¾Ê´Â´Ù
+		// ì½”ë“œê°€ ë³µì¡í•´ì§€ë©´ ì‚¼í•­ì—°ì‚°ìëŠ” ì“°ì§€ ì•ŠëŠ”ë‹¤
 
-		if (num1 > num2) {// º¯¼ö°¡ ¸¹¾ÆÁö¸é Çì±ò¸°´Ù
+		if (num1 > num2) {// ë³€ìˆ˜ê°€ ë§ì•„ì§€ë©´ í—¤ê¹”ë¦°ë‹¤
 			if (num1 > num3) {
 				System.out.println(num1);
 			} else
@@ -28,8 +28,8 @@ public class Quiz3 {
 				System.out.println(num3);
 		}
 
-		// ÃÖ´ë, ÃÖ¼Ò¸¦ Ã£À» °æ¿ì
-		int max = num1;// ÃÖ´ë°ªÀ» ÀúÀåÇÒ º¯¼ö
+		// ìµœëŒ€, ìµœì†Œë¥¼ ì°¾ì„ ê²½ìš°
+		int max = num1;// ìµœëŒ€ê°’ì„ ì €ì¥í•  ë³€ìˆ˜
 		if (max < num1)
 			max = num1;
 		if (max < num2)
@@ -38,7 +38,7 @@ public class Quiz3 {
 			max = num3;
 		System.out.println(max);
 
-		// ÃÖ¼Ò°ªÀ» Ã£´Â °æ¿ì
+		// ìµœì†Œê°’ì„ ì°¾ëŠ” ê²½ìš°
 		int min = num1;
 		if (min > num1)
 			min = num1;
@@ -49,9 +49,9 @@ public class Quiz3 {
 
 		char x = '6';
 		if (x > 0 && x <= 9) {
-			System.out.println("¼ıÀÚ");
+			System.out.println("ìˆ«ì");
 		} else {
-			System.out.println("¼ıÀÚ¾Æ´Ô");
+			System.out.println("ìˆ«ìì•„ë‹˜");
 		}
 
 	}// end of main

@@ -1,16 +1,16 @@
 /**
- * static ¸Ş¼­µå Æ¯Â¡ static ¸â¹ö(º¯¼ö, ¸Ş¼­µå)´Â non-static ¸â¹ö¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù
+ * static ë©”ì„œë“œ íŠ¹ì§• static ë©¤ë²„(ë³€ìˆ˜, ë©”ì„œë“œ)ëŠ” non-static ë©¤ë²„ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤
  */
 public class TestStaticMethod2 {
-	int b = 4;// Àü¿ªº¯¼ö
+	int b = 4;// ì „ì—­ë³€ìˆ˜
 	// static int b;
-	// staticÀ» Áö¿î´Ù
+	// staticì„ ì§€ìš´ë‹¤
 
 	public static void main(String[] args) {
-		int a = 3;// Áö¿ªº¯¼ö
+		int a = 3;// ì§€ì—­ë³€ìˆ˜
 		a = 4;
 		// TestStaticMethod2 t = new TestStaticMethod2();
-		// b =4; //static ¸â¹ö(º¯¼ö, ¸Ş¼­µå)´Â non-static ¸â¹ö¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù
+		// b =4; //static ë©¤ë²„(ë³€ìˆ˜, ë©”ì„œë“œ)ëŠ” non-static ë©¤ë²„ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤
 
 	}// end of main
 }// end of class
@@ -19,7 +19,7 @@ class DD {
 	static int s = 4;
 	static int t = s;
 
-	int d = s;// non-staticº¯¼ö
+	int d = s;// non-staticë³€ìˆ˜
 	// static int q = d;
 
 	void xx() {

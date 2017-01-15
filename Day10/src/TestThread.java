@@ -1,6 +1,6 @@
 /**
- * ¾²·¹µå Thread - ÇÏ³ªÀÇ ÇÁ·Î¼¼½º(½ÇÇàµÈ ÇÁ·Î±×·¥) ¾È¿¡¼­ ½ÃºĞÇÒ ½ºÄÉÁÙ¸µÀ» ÅëÇØ, ¸¶Ä¡ µ¿½Ã¿¡ ¿©·¯ ÀÛ¾÷À» ÁøÇàÇÏ´Â µíÇÑ È¿°ú¸¦
- * ÁÖ´Â °Í
+ * ì“°ë ˆë“œ Thread - í•˜ë‚˜ì˜ í”„ë¡œì„¸ìŠ¤(ì‹¤í–‰ëœ í”„ë¡œê·¸ë¨) ì•ˆì—ì„œ ì‹œë¶„í•  ìŠ¤ì¼€ì¤„ë§ì„ í†µí•´, ë§ˆì¹˜ ë™ì‹œì— ì—¬ëŸ¬ ì‘ì—…ì„ ì§„í–‰í•˜ëŠ” ë“¯í•œ íš¨ê³¼ë¥¼
+ * ì£¼ëŠ” ê²ƒ
  */
 public class TestThread {
 	public static void main(String[] args) {
@@ -8,10 +8,10 @@ public class TestThread {
 		MyT mt = new MyT();
 		mt.start();
 
-		Thread t = new Thread(new Runnable() {// ÀÎÅÍÆäÀÌ½º ±¸Çö
-			public void run() {// º°µµÀÇ ¾²·¹µå·Î µ¿ÀÛ½ÃÅ³ ÀÛ¾÷
+		Thread t = new Thread(new Runnable() {// ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„
+			public void run() {// ë³„ë„ì˜ ì“°ë ˆë“œë¡œ ë™ì‘ì‹œí‚¬ ì‘ì—…
 				for (int i = 0; i < 100000; i++) {
-					System.out.println("¡Ú");
+					System.out.println("â˜…");
 				}
 			}
 		});
@@ -24,11 +24,11 @@ public class TestThread {
 	}// end of main
 }// end of class
 
-class MyT extends Thread {// Thread Å¬·¡½º¸¦ »ó¼Ó¹Ş¾Æ¼­ run ¸Ş¼­µå ±¸Çö
+class MyT extends Thread {// Thread í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì•„ì„œ run ë©”ì„œë“œ êµ¬í˜„
 	@Override
 	public void run() {
 		for (int i = 0; i < 100000; i++) {
-			System.out.println("¤Ñ");
+			System.out.println("ã…¡");
 		}
 	}
 }

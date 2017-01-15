@@ -33,11 +33,11 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-// ÇÚµåÆù È­¸éÀÇ Å©±â¸¦ ¾Ë¾Æ¿À±â
+// í•¸ë“œí° í™”ë©´ì˜ í¬ê¸°ë¥¼ ì•Œì•„ì˜¤ê¸°
 		WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
 		Display ds = wm.getDefaultDisplay();
-		Point p = new Point();//2Â÷¿ø ÁÂÇ¥¸¦ Ãß»óÈ­ÇÑ Å¬·¡½º, x, y
-		ds.getSize(p); // È­¸éÀÇ Å©±â¸¦ Point Å¬·¡½º¿¡ ´ã¾ÆÁØ´Ù
+		Point p = new Point();//2ì°¨ì› ì¢Œí‘œë¥¼ ì¶”ìƒí™”í•œ í´ë˜ìŠ¤, x, y
+		ds.getSize(p); // í™”ë©´ì˜ í¬ê¸°ë¥¼ Point í´ë˜ìŠ¤ì— ë‹´ì•„ì¤€ë‹¤
 		h = p.x;
 		w = p.y;
 		
@@ -72,20 +72,20 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onSensorChanged(SensorEvent event) {
-			tx.setText("XÃà : "+event.values[0]);
-			ty.setText("YÃà : "+event.values[1]);
+			tx.setText("Xì¶• : "+event.values[0]);
+			ty.setText("Yì¶• : "+event.values[1]);
 			
 			
 			float px = iv.getX()-event.values[0]; //event.values[0]*-500+400
 			float py = iv.getY()+event.values[1]; //event.values[1]*100+100
 
-// ¼³Á¤ÇÏ°íÀÚ ÇÏ´Â °ªÀÌ È­¸é¹üÀ§¿¡¼­ ¹ş¾î³ªÁö ¾Ê´ÂÁö Ã¼Å©ÇÏÀÚ
-			if (px<0) px = 0;// ¿ŞÂÊÀ¸·Î ¹ş¾î³ªÁö ¸øÇÏ°Ô
-			if (px>w-iv.getWidth()) px = w-iv.getWidth();// ¿À¸¥ÂÊÀ¸·Î ¹ş¾î³ªÁö ¸øÇÏ°Ô
+// ì„¤ì •í•˜ê³ ì í•˜ëŠ” ê°’ì´ í™”ë©´ë²”ìœ„ì—ì„œ ë²—ì–´ë‚˜ì§€ ì•ŠëŠ”ì§€ ì²´í¬í•˜ì
+			if (px<0) px = 0;// ì™¼ìª½ìœ¼ë¡œ ë²—ì–´ë‚˜ì§€ ëª»í•˜ê²Œ
+			if (px>w-iv.getWidth()) px = w-iv.getWidth();// ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë²—ì–´ë‚˜ì§€ ëª»í•˜ê²Œ
 		
-			if (py<0) py = 0;// À§ÂÊÀ¸·Î ¹ş¾î³ªÁö ¸øÇÏ°Ô
-			if (py>h-iv.getHeight()*2) py = h-iv.getHeight()*2;// ¾Æ·¡ÂÊÀ¸·Î ¹ş¾î³ªÁö ¸øÇÏ°Ô
-																// Å¸ÀÌÆ²¹ÙÀÇ ¿µ¿ªÀÇ ³ôÀÌ¸¦ °í·Á
+			if (py<0) py = 0;// ìœ„ìª½ìœ¼ë¡œ ë²—ì–´ë‚˜ì§€ ëª»í•˜ê²Œ
+			if (py>h-iv.getHeight()*2) py = h-iv.getHeight()*2;// ì•„ë˜ìª½ìœ¼ë¡œ ë²—ì–´ë‚˜ì§€ ëª»í•˜ê²Œ
+																// íƒ€ì´í‹€ë°”ì˜ ì˜ì—­ì˜ ë†’ì´ë¥¼ ê³ ë ¤
 			
 			iv.setX(px);
 			iv.setY(py);

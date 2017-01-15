@@ -15,16 +15,16 @@ public class MainActivity extends Activity {
 	int img[] = { R.drawable.ain, R.drawable.ain2, R.drawable.ain4, R.drawable.ain, R.drawable.ain2, R.drawable.ain4,
 			R.drawable.ain, R.drawable.ain2 };
 
-	String name[] = { "»ç°ú", "·Îº¿", "Ã¼¸®", "¹Ù³ª³ª", "¾ÖÇÃ", "·Î¿ìº¿", "Ãé¸®", "ghgh" };
+	String name[] = { "ì‚¬ê³¼", "ë¡œë´‡", "ì²´ë¦¬", "ë°”ë‚˜ë‚˜", "ì• í”Œ", "ë¡œìš°ë´‡", "ì·Œë¦¬", "ghgh" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// 1. ´Ù·®ÀÇ µ¥ÀÌÅÍ ÁØºñ
-		// 2. ÇÑ Ä­¿¡ ÇØ´çÇÏ´Â layout ÆÄÀÏÀ» µğÀÚÀÎÇÑ´Ù.
-		// 3. adapter ¿¡ ¿¬°áÇØÁØ´Ù.
+		// 1. ë‹¤ëŸ‰ì˜ ë°ì´í„° ì¤€ë¹„
+		// 2. í•œ ì¹¸ì— í•´ë‹¹í•˜ëŠ” layout íŒŒì¼ì„ ë””ìì¸í•œë‹¤.
+		// 3. adapter ì— ì—°ê²°í•´ì¤€ë‹¤.
 
 		GridView gv = (GridView) findViewById(R.id.gridView1);
 

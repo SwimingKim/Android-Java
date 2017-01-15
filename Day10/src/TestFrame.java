@@ -5,17 +5,17 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * AWT È°¿ë
+ * AWT í™œìš©
  */
 public class TestFrame {
 	public static void main(String[] args) {
-		Frame f = new Frame("ÇÁ·¹ÀÓ");
+		Frame f = new Frame("í”„ë ˆì„");
 		f.setBounds(100, 100, 200, 300);
 		f.setLayout(new FlowLayout());
-		f.setResizable(false);// Å©±â¸¦ º¯°æÇÏÁö ¸øÇÏ°Ô ¼³Á¤
+		f.setResizable(false);// í¬ê¸°ë¥¼ ë³€ê²½í•˜ì§€ ëª»í•˜ê²Œ ì„¤ì •
 
 		TextField tf = new TextField(10);
-		tf.setEchoChar('#');// ±ÛÀÚ ´ë½Å º¸¾ÈÀ» À§ÇØ º¸¿©ÁÙ ±ÛÀÚ
+		tf.setEchoChar('#');// ê¸€ì ëŒ€ì‹  ë³´ì•ˆì„ ìœ„í•´ ë³´ì—¬ì¤„ ê¸€ì
 
 		f.add(tf);
 

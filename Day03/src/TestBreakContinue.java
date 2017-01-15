@@ -1,6 +1,6 @@
 /**
- * ¹İº¹¹®ÀÇ Èå¸§Á¦¾î-break,continue break : °¡Àå °¡±î¿î switch¹® or ¹İº¹¹® ÇÏ³ª¸¦ ºüÁ®³ª°£´Ù continue :
- * ¹İº¹¹®ÀÇ ´ÙÀ½ Â÷¼ö·Î ³Ñ¾î°£´Ù.
+ * ë°˜ë³µë¬¸ì˜ íë¦„ì œì–´-break,continue break : ê°€ì¥ ê°€ê¹Œìš´ switchë¬¸ or ë°˜ë³µë¬¸ í•˜ë‚˜ë¥¼ ë¹ ì ¸ë‚˜ê°„ë‹¤ continue :
+ * ë°˜ë³µë¬¸ì˜ ë‹¤ìŒ ì°¨ìˆ˜ë¡œ ë„˜ì–´ê°„ë‹¤.
  */
 public class TestBreakContinue {
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class TestBreakContinue {
 			for (int j = 0; j < 3; j++) {
 				for (int k = 0; k < 4; k++) {
 					if (k == 1) {
-						break xx;// ¹İº¹¹® ¾Õ¿¡ ºÙ¾îÀÖ´Â ¶óº§À» ºüÁ®³ª°¨
+						break xx;// ë°˜ë³µë¬¸ ì•ì— ë¶™ì–´ìˆëŠ” ë¼ë²¨ì„ ë¹ ì ¸ë‚˜ê°
 					}
 					System.out.println("" + i + j + k);
 				}

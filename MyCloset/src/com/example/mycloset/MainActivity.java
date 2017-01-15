@@ -25,22 +25,22 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		clo.add(new Closet(R.drawable.c1, "Àü½Å", "°ËÁ¤»ö", "°Ü¿ï"));
-		clo.add(new Closet(R.drawable.c2, "»óÀÇ", "»¡°£»ö", "¿©¸§"));
-		clo.add(new Closet(R.drawable.c3, "»óÀÇ", "ÆÄ¶û»ö", "º½"));
-		clo.add(new Closet(R.drawable.c4, "»óÀÇ", "È¸»ö", "°¡À»"));
-		clo.add(new Closet(R.drawable.c1, "Àü½Å", "°ËÁ¤»ö", "°Ü¿ï"));
-		clo.add(new Closet(R.drawable.c2, "»óÀÇ", "»¡°£»ö", "¿©¸§"));
-		clo.add(new Closet(R.drawable.c3, "»óÀÇ", "ÆÄ¶û»ö", "º½"));
-		clo.add(new Closet(R.drawable.c4, "»óÀÇ", "È¸»ö", "°¡À»"));
-		clo.add(new Closet(R.drawable.c1, "Àü½Å", "°ËÁ¤»ö", "°Ü¿ï"));
-		clo.add(new Closet(R.drawable.c2, "»óÀÇ", "»¡°£»ö", "¿©¸§"));
-		clo.add(new Closet(R.drawable.c3, "»óÀÇ", "ÆÄ¶û»ö", "º½"));
-		clo.add(new Closet(R.drawable.c4, "»óÀÇ", "È¸»ö", "°¡À»"));
-		clo.add(new Closet(R.drawable.c1, "Àü½Å", "°ËÁ¤»ö", "°Ü¿ï"));
-		clo.add(new Closet(R.drawable.c2, "»óÀÇ", "»¡°£»ö", "¿©¸§"));
-		clo.add(new Closet(R.drawable.c3, "»óÀÇ", "ÆÄ¶û»ö", "º½"));
-		clo.add(new Closet(R.drawable.c4, "»óÀÇ", "È¸»ö", "°¡À»"));
+		clo.add(new Closet(R.drawable.c1, "ì „ì‹ ", "ê²€ì •ìƒ‰", "ê²¨ìš¸"));
+		clo.add(new Closet(R.drawable.c2, "ìƒì˜", "ë¹¨ê°„ìƒ‰", "ì—¬ë¦„"));
+		clo.add(new Closet(R.drawable.c3, "ìƒì˜", "íŒŒë‘ìƒ‰", "ë´„"));
+		clo.add(new Closet(R.drawable.c4, "ìƒì˜", "íšŒìƒ‰", "ê°€ì„"));
+		clo.add(new Closet(R.drawable.c1, "ì „ì‹ ", "ê²€ì •ìƒ‰", "ê²¨ìš¸"));
+		clo.add(new Closet(R.drawable.c2, "ìƒì˜", "ë¹¨ê°„ìƒ‰", "ì—¬ë¦„"));
+		clo.add(new Closet(R.drawable.c3, "ìƒì˜", "íŒŒë‘ìƒ‰", "ë´„"));
+		clo.add(new Closet(R.drawable.c4, "ìƒì˜", "íšŒìƒ‰", "ê°€ì„"));
+		clo.add(new Closet(R.drawable.c1, "ì „ì‹ ", "ê²€ì •ìƒ‰", "ê²¨ìš¸"));
+		clo.add(new Closet(R.drawable.c2, "ìƒì˜", "ë¹¨ê°„ìƒ‰", "ì—¬ë¦„"));
+		clo.add(new Closet(R.drawable.c3, "ìƒì˜", "íŒŒë‘ìƒ‰", "ë´„"));
+		clo.add(new Closet(R.drawable.c4, "ìƒì˜", "íšŒìƒ‰", "ê°€ì„"));
+		clo.add(new Closet(R.drawable.c1, "ì „ì‹ ", "ê²€ì •ìƒ‰", "ê²¨ìš¸"));
+		clo.add(new Closet(R.drawable.c2, "ìƒì˜", "ë¹¨ê°„ìƒ‰", "ì—¬ë¦„"));
+		clo.add(new Closet(R.drawable.c3, "ìƒì˜", "íŒŒë‘ìƒ‰", "ë´„"));
+		clo.add(new Closet(R.drawable.c4, "ìƒì˜", "íšŒìƒ‰", "ê°€ì„"));
 		
 		
 		

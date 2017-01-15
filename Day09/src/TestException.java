@@ -1,5 +1,5 @@
 /**
- * Exception Handling(¿¹¿Ü Ã³¸®)
+ * Exception Handling(ì˜ˆì™¸ ì²˜ë¦¬)
  */
 public class TestException {
 	public static void main(String[] args) {
@@ -8,16 +8,16 @@ public class TestException {
 
 		try {
 			System.out.println(2);
-			System.out.println(3 / 0); // Á¤¼öÀÇ ³ª´°¼À¿¡¼­ 0À¸·Î ³ª´Â °ÍÀº Exception
+			System.out.println(3 / 0); // ì •ìˆ˜ì˜ ë‚˜ëˆ—ì…ˆì—ì„œ 0ìœ¼ë¡œ ë‚˜ëŠ” ê²ƒì€ Exception
 			// ArithmeticException
 			System.out.println(3);
 		} catch (ArithmeticException ae) {
 			System.out.println(4);
-			System.out.println("0À¸·Î ÀÔ·ÂÇÏ¸é ¾È µË´Ï´Ù");
+			System.out.println("0ìœ¼ë¡œ ì…ë ¥í•˜ë©´ ì•ˆ ë©ë‹ˆë‹¤");
 			System.out.println(5);
 		}
 
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì •ìƒì¢…ë£Œ");
 
 	}// end of main
 }// end of class

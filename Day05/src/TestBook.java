@@ -3,8 +3,8 @@ import java.awt.print.Printable;
 public class TestBook {
 	public static void main(String[] args) {
 		Book bo1 = new Book();
-		bo1.name = "ÀÚ¹ÙÀÇ Á¤¼®";
-		bo1.publisher = "µµ¿ì";
+		bo1.name = "ìë°”ì˜ ì •ì„";
+		bo1.publisher = "ë„ìš°";
 		bo1.price = 30000;
 
 		bo1.printBook();
@@ -13,12 +13,12 @@ public class TestBook {
 }// end of class
 
 class Book {
-	String name;// Ã¥ÀÌ¸§
-	String publisher;// ÃâÆÇ»ç
-	int price;// °¡°İ
+	String name;// ì±…ì´ë¦„
+	String publisher;// ì¶œíŒì‚¬
+	int price;// ê°€ê²©
 
-	void printBook() {// ¸â¹öº¯¼ö °ª Ãâ·Â
-		System.out.println("Ã¥ ÀÌ¸§Àº " + name + "ÀÌ¸ç,\n" + "ÃâÆÇ»ç´Â " + publisher + "ÀÌ°í,\n" + "°¡°İÀº " + price + "¿øÀÔ´Ï´Ù.");
+	void printBook() {// ë©¤ë²„ë³€ìˆ˜ ê°’ ì¶œë ¥
+		System.out.println("ì±… ì´ë¦„ì€ " + name + "ì´ë©°,\n" + "ì¶œíŒì‚¬ëŠ” " + publisher + "ì´ê³ ,\n" + "ê°€ê²©ì€ " + price + "ì›ì…ë‹ˆë‹¤.");
 
 	};
 }

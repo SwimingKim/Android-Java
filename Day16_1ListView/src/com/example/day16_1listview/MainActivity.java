@@ -20,24 +20,24 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends Activity {
 
-	String name[] = { "¼­¹Î±Ô", "È«Á¤ÅÃ", "¹®»õ¹Ì", "·ù¿¬Áö", "È²º¸¶÷", "½Å³ªÀº", "±è¼ö¿µ", "ÁÖÈñÁø", "Àåµ¿Áø", "±èº´ÀÏ" };
+	String name[] = { "ì„œë¯¼ê·œ", "í™ì •íƒ", "ë¬¸ìƒˆë¯¸", "ë¥˜ì—°ì§€", "í™©ë³´ëŒ", "ì‹ ë‚˜ì€", "ê¹€ìˆ˜ì˜", "ì£¼í¬ì§„", "ì¥ë™ì§„", "ê¹€ë³‘ì¼" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// Á¦ÇÑµÈ È­¸é¿¡ ´Ù·®ÀÇ µ¥ÀÌÅÍ¸¦ º¸¿©ÁÖ´Â ¹æ¹ı : AdapterView ¾Æ´äÅ¸ºä
+		// ì œí•œëœ í™”ë©´ì— ë‹¤ëŸ‰ì˜ ë°ì´í„°ë¥¼ ë³´ì—¬ì£¼ëŠ” ë°©ë²• : AdapterView ì•„ë‹µíƒ€ë·°
 		// (ListView, GridView, Spinner, Gallery)
-		// 1. ´Ù·®ÀÇ µ¥ÀÌÅÍ
-		// 2. Adapter ¾Æ´äÅ¸ ±¸¼º (ÇÑ ÇàÀ» ±×·ÁÁÙ layout, Å¬·¡½º »ı¼º)
-		// 3. ¾Æ´äÅ¸ºä¿¡ ¾Æ´äÄ«¸¦ µî·ÏÇÑ´Ù
+		// 1. ë‹¤ëŸ‰ì˜ ë°ì´í„°
+		// 2. Adapter ì•„ë‹µíƒ€ êµ¬ì„± (í•œ í–‰ì„ ê·¸ë ¤ì¤„ layout, í´ë˜ìŠ¤ ìƒì„±)
+		// 3. ì•„ë‹µíƒ€ë·°ì— ì•„ë‹µì¹´ë¥¼ ë“±ë¡í•œë‹¤
 
 		final ListView lv = (ListView) findViewById(R.id.listView1);
-		MyAdapter adapter = new MyAdapter(getApplicationContext(), // ÇöÀç È­¸éÀÇ
-																	// Á¦¾î±ÇÀÚ
-				R.layout.row, // ÇÑ ÇàÀ» ±×·ÁÁÙ ·¹ÀÌ¾Æ¿ô
-				name);// ´Ù·®ÀÇ µ¥ÀÌÅÍ
+		MyAdapter adapter = new MyAdapter(getApplicationContext(), // í˜„ì¬ í™”ë©´ì˜
+																	// ì œì–´ê¶Œì
+				R.layout.row, // í•œ í–‰ì„ ê·¸ë ¤ì¤„ ë ˆì´ì•„ì›ƒ
+				name);// ë‹¤ëŸ‰ì˜ ë°ì´í„°
 		lv.setAdapter(adapter);
 
 		Button b1 = (Button) findViewById(R.id.button1);
@@ -80,15 +80,15 @@ class MyAdapter extends BaseAdapter {
 		this.lif = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 	}
 
-	public int getCount() {// È­¸é¿¡ º¸¿©ÁÙ listviewÀÇ Çà °³¼ö : µ¥ÀÌÅÍÀÇ °³¼ö·Î ÁöÁ¤
+	public int getCount() {// í™”ë©´ì— ë³´ì—¬ì¤„ listviewì˜ í–‰ ê°œìˆ˜ : ë°ì´í„°ì˜ ê°œìˆ˜ë¡œ ì§€ì •
 		return name.length;
 	}
 
-	public Object getItem(int position) {// Çà¿¡ ÇØ´çÇÏ´Â °´Ã¼¸¦ ¸®ÅÏ
+	public Object getItem(int position) {// í–‰ì— í•´ë‹¹í•˜ëŠ” ê°ì²´ë¥¼ ë¦¬í„´
 		return name[position];
 	}
 
-	public long getItemId(int position) {// Çà¿¡ ÇØ´çÇÏ´Â °´Ã¼ÀÇ °íÀ¯ÇÑ id ¸®ÅÏ
+	public long getItemId(int position) {// í–‰ì— í•´ë‹¹í•˜ëŠ” ê°ì²´ì˜ ê³ ìœ í•œ id ë¦¬í„´
 		return position;
 	}
 

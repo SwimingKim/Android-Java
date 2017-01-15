@@ -1,9 +1,9 @@
 /**
- * ¿À¹ö¶óÀÌµù(Over riding):Á¶»óÅ¬·¡½º·ÎºÎÅÍ »ó¼Ó¹ÞÀº ¸Þ¼­µåÀÇ ³»¿ëÀ» ÀçÁ¤ÀÇÇÏ´Â °Í Á¶°Ç :ºÎ¸ðÅ¬·¡½ºÀÇ ¸Þ¼­µå ¼±¾ðºÎ¿Í ÀÚ½ÄÅ¬·¡½º¿¡¼­
- * ÀçÁ¤ÀÇÇÏ´Â ¸Þ¼­µå ¼±¾ðºÎ°¡ µ¿ÀÏÇØ¾ßÇÔ
+ * ì˜¤ë²„ë¼ì´ë”©(Over riding):ì¡°ìƒí´ëž˜ìŠ¤ë¡œë¶€í„° ìƒì†ë°›ì€ ë©”ì„œë“œì˜ ë‚´ìš©ì„ ìž¬ì •ì˜í•˜ëŠ” ê²ƒ ì¡°ê±´ :ë¶€ëª¨í´ëž˜ìŠ¤ì˜ ë©”ì„œë“œ ì„ ì–¸ë¶€ì™€ ìžì‹í´ëž˜ìŠ¤ì—ì„œ
+ * ìž¬ì •ì˜í•˜ëŠ” ë©”ì„œë“œ ì„ ì–¸ë¶€ê°€ ë™ì¼í•´ì•¼í•¨
  * 
- * ¿À¹ö·Îµù°úÀÇ Â÷ÀÌÁ¡ ¿À¹ö·Îµù(Over loading) : ÇÏ³ªÀÇ Å¬·¡½º ¾È¿¡¼­ ¸Þ¼­µåÀÇ ÀÌ¸§À» µ¿ÀÏÇÏ°Ô »ç¿ëÇÏ´Â °Í Á¶°Ç : ¸Å°³º¯¼öÀÇ
- * °³¼ö or Å¸ÀÔ or ¼ø¼­°¡ ´Þ¶ó¾ß ÇÑ´Ù
+ * ì˜¤ë²„ë¡œë”©ê³¼ì˜ ì°¨ì´ì  ì˜¤ë²„ë¡œë”©(Over loading) : í•˜ë‚˜ì˜ í´ëž˜ìŠ¤ ì•ˆì—ì„œ ë©”ì„œë“œì˜ ì´ë¦„ì„ ë™ì¼í•˜ê²Œ ì‚¬ìš©í•˜ëŠ” ê²ƒ ì¡°ê±´ : ë§¤ê°œë³€ìˆ˜ì˜
+ * ê°œìˆ˜ or íƒ€ìž… or ìˆœì„œê°€ ë‹¬ë¼ì•¼ í•œë‹¤
  */
 public class TestOverriding {
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class TestOverriding {
 	}// end of main
 }// end of class
 
-class PP {// 2Â÷¿ø ÁÂÇ¥°è
+class PP {// 2ì°¨ì› ì¢Œí‘œê³„
 	int x;
 	int y;
 
@@ -30,7 +30,7 @@ class PP {// 2Â÷¿ø ÁÂÇ¥°è
 	}
 }
 
-class PPP extends PP {// 3Â÷¿ø ÁÂÇ¥°è
+class PPP extends PP {// 3ì°¨ì› ì¢Œí‘œê³„
 	int z;
 
 	// @Override
@@ -38,7 +38,7 @@ class PPP extends PP {// 3Â÷¿ø ÁÂÇ¥°è
 	// super.printPP();
 	// }
 
-	@Override // ¾î³ëÅ×ÀÌ¼Ç :¿À¹ö¶óÀÌµù ±â¹ýÀ» Àû¿ëÇßÀ¸¹Ç·Î ¼±¾ðºÎ°¡ °°¾Æ¾ßÇÔÀ» ÀÇ¹Ì
+	@Override // ì–´ë…¸í…Œì´ì…˜ :ì˜¤ë²„ë¼ì´ë”© ê¸°ë²•ì„ ì ìš©í–ˆìœ¼ë¯€ë¡œ ì„ ì–¸ë¶€ê°€ ê°™ì•„ì•¼í•¨ì„ ì˜ë¯¸
 	void printPP() {
 		// System.out.println(x+","+y+","+z);
 		super.printPP();

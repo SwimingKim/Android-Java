@@ -5,30 +5,30 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * ¹öÆ° Ãß°¡
+ * ë²„íŠ¼ ì¶”ê°€
  */
 public class TestAWT2 {
 	public static void main(String[] args) {
-		Frame f = new Frame("¹öÆ° Ãß°¡ ÇÁ·¹ÀÓ");
+		Frame f = new Frame("ë²„íŠ¼ ì¶”ê°€ í”„ë ˆì„");
 		// f.setSize(300, 200);
 		// f.setLocation(100, 100);
-		f.setBounds(100, 100, 300, 200);// À§Ä¡¿Í Å©±â¸¦ ÇÑ¹ø¿¡ ¼³Á¤
-		f.setLayout(null);// È­¸é¹èÄ¡
+		f.setBounds(100, 100, 300, 200);// ìœ„ì¹˜ì™€ í¬ê¸°ë¥¼ í•œë²ˆì— ì„¤ì •
+		f.setLayout(null);// í™”ë©´ë°°ì¹˜
 
-		// ¹öÆ°À» Ãß°¡ÇØ¼­ ÇÁ·¹ÀÓ¿¡ ´Ş¾Æº¸±â
-		Button b = new Button("±î²á");// ¶óº§
+		// ë²„íŠ¼ì„ ì¶”ê°€í•´ì„œ í”„ë ˆì„ì— ë‹¬ì•„ë³´ê¸°
+		Button b = new Button("ê¹Œê¿");// ë¼ë²¨
 		b.setBounds(100, 100, 50, 50);
-		// b.setLabel("¹öÆ°ÀÔ´Ï´ç");
+		// b.setLabel("ë²„íŠ¼ì…ë‹ˆë‹¹");
 
 		f.add(b);
 		f.setVisible(true);
 
-		// ¹öÆ°ÀÇ ÀÌº¥Æ® Ã³¸® - ¹«¾ùÀ» ¾î¶»°Ô ÇßÀ» ¶§ ÀÌº¥Æ®¸¦ Ã³¸®ÇÒÁö
+		// ë²„íŠ¼ì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ - ë¬´ì—‡ì„ ì–´ë–»ê²Œ í–ˆì„ ë•Œ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í• ì§€
 		b.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {// Å¬¸¯ÇÏ¸é ½ÇÇà
+			public void actionPerformed(ActionEvent arg0) {// í´ë¦­í•˜ë©´ ì‹¤í–‰
 				f.setBackground(Color.red);
 			}
-		});// ¹öÆ° Å¬¸¯½Ã ÀÌº¥Æ® Ã³¸®
+		});// ë²„íŠ¼ í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì²˜ë¦¬
 
 	}// end of main
 }// end of class

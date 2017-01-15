@@ -3,11 +3,11 @@ public class TestEncapsulation2 {
 	public static void main(String[] args) {
 
 		Car c1 = new Car();
-		c1.setName("º¥Ã÷");
+		c1.setName("ë²¤ì¸ ");
 		c1.setDoor(4);
 		c1.setEngine(1490);
 
-		System.out.println(c1.getName() + ",\t" + c1.getDoor() + "°³,\t" + c1.getEngine());
+		System.out.println(c1.getName() + ",\t" + c1.getDoor() + "ê°œ,\t" + c1.getEngine());
 
 	}// end of main
 }// end of class

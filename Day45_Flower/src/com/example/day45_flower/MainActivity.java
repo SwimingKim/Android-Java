@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
 			al.addView(iv,80,80);
 			pos++;
 
-			// ±æ µû¶ó ²É »ı¼º
+			// ê¸¸ ë”°ë¼ ê½ƒ ìƒì„±
 			handler.postDelayed(rFlo,100);
 		}
 	};
@@ -158,8 +158,8 @@ public class MainActivity extends Activity {
 		b.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				if (event.getAction()==MotionEvent.ACTION_DOWN) {
-					if ("½ÃÀÛ".equals(b.getText().toString())) {
-						b.setText("Á¤Áö");
+					if ("ì‹œì‘".equals(b.getText().toString())) {
+						b.setText("ì •ì§€");
 						handler.post(r);
 						handler.post(rFlo);
 						mp.start();
@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
 					} else {
 						handler.removeCallbacks(rFlo);
 						handler.removeCallbacks(r);
-						b.setText("½ÃÀÛ");		
+						b.setText("ì‹œì‘");		
 						mp.pause();
 					}
 

@@ -27,55 +27,55 @@ public class MainActivity extends Activity {
 		b1.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				// event.getAction();
-				tv.setText("ÅÍÄ¡ÀÌº¥Æ® : ");
-				Log.d("event", "ÅÍÄ¡ ÀÌº¥Æ® : ");
+				tv.setText("í„°ì¹˜ì´ë²¤íŠ¸ : ");
+				Log.d("event", "í„°ì¹˜ ì´ë²¤íŠ¸ : ");
 				return false;
 			}
 		});
 
 		b2.setOnLongClickListener(new OnLongClickListener() {
 			public boolean onLongClick(View v) {
-				tv.setText("·ÕÅ¬¸¯ ÀÌº¥Æ® : ");
-				Log.d("event", "·ÕÅ¬¸¯ ÀÌº¥Æ® : ");
+				tv.setText("ë¡±í´ë¦­ ì´ë²¤íŠ¸ : ");
+				Log.d("event", "ë¡±í´ë¦­ ì´ë²¤íŠ¸ : ");
 				return false;
 			}
 		});
 
 		b3.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				tv.setText("Å¬¸¯ ÀÌº¥Æ® : ");
-				Log.d("event", "Å¬¸¯ ÀÌº¥Æ® : ");
+				tv.setText("í´ë¦­ ì´ë²¤íŠ¸ : ");
+				Log.d("event", "í´ë¦­ ì´ë²¤íŠ¸ : ");
 			}
 		});
 		//////////////////////////////
 		b4.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				if (MotionEvent.ACTION_DOWN == event.getAction()) {
-					tv.setText("ÅÍÄ¡ÀÌº¥Æ® : ´Ù¿î");
-					Log.d("ÀÌº¥Æ®", "ÅÍÄ¡ÀÌº¥Æ® : ´Ù¿î");
+					tv.setText("í„°ì¹˜ì´ë²¤íŠ¸ : ë‹¤ìš´");
+					Log.d("ì´ë²¤íŠ¸", "í„°ì¹˜ì´ë²¤íŠ¸ : ë‹¤ìš´");
 				} else if (MotionEvent.ACTION_UP == event.getAction()) {
-					tv.setText("ÅÍÄ¡ÀÌº¥Æ® : ¾÷");
-					Log.d("ÀÌº¥Æ®", "ÅÍÄ¡ÀÌº¥Æ® : ¾÷");
+					tv.setText("í„°ì¹˜ì´ë²¤íŠ¸ : ì—…");
+					Log.d("ì´ë²¤íŠ¸", "í„°ì¹˜ì´ë²¤íŠ¸ : ì—…");
 				} else if (MotionEvent.ACTION_MOVE == event.getAction()) {
-					tv.setText("ÅÍÄ¡ÀÌº¥Æ® : ¹«ºê");
-					Log.d("ÀÌº¥Æ®", "ÅÍÄ¡ÀÌº¥Æ® : ¹«ºê");
+					tv.setText("í„°ì¹˜ì´ë²¤íŠ¸ : ë¬´ë¸Œ");
+					Log.d("ì´ë²¤íŠ¸", "í„°ì¹˜ì´ë²¤íŠ¸ : ë¬´ë¸Œ");
 				}
-				return false;// ¸®ÅÏ°ªÀÇ ÀÇ¹Ì
-				// true : ¹ß»ıÇÑ ÀÌº¥Æ®¸¦ ´Ù¸¥ ¸®½º³Ê¿¡ Àü´ŞÇÏÁö ¾ÊÀ½
+				return false;// ë¦¬í„´ê°’ì˜ ì˜ë¯¸
+				// true : ë°œìƒí•œ ì´ë²¤íŠ¸ë¥¼ ë‹¤ë¥¸ ë¦¬ìŠ¤ë„ˆì— ì „ë‹¬í•˜ì§€ ì•ŠìŒ
 			}
 		});
 		b4.setOnLongClickListener(new OnLongClickListener() {
 			public boolean onLongClick(View v) {
-				tv.setText("·ÕÅ¬¸¯ÀÌº¥Æ®");
-				Log.d("event", "·ÕÅ¬¸¯ÀÌº¥Æ®");
+				tv.setText("ë¡±í´ë¦­ì´ë²¤íŠ¸");
+				Log.d("event", "ë¡±í´ë¦­ì´ë²¤íŠ¸");
 				return false;
 			}
 		});
 		b4.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				tv.setText("Å¬¸¯ÀÌº¥Æ®");
-				Log.d("event", "Å¬¸¯ÀÌº¥Æ®");
-				// ¸¶Áö¸· ÀÌº¥Æ®ÀÌ¹Ç·Î Àü´Ş¹ŞÀ» ÀÌº¥Æ®°¡ ¾ø¾î¼­ ¹İÈ¯°ªÀÌ ¾ø´Ù
+				tv.setText("í´ë¦­ì´ë²¤íŠ¸");
+				Log.d("event", "í´ë¦­ì´ë²¤íŠ¸");
+				// ë§ˆì§€ë§‰ ì´ë²¤íŠ¸ì´ë¯€ë¡œ ì „ë‹¬ë°›ì„ ì´ë²¤íŠ¸ê°€ ì—†ì–´ì„œ ë°˜í™˜ê°’ì´ ì—†ë‹¤
 			}
 		});
 

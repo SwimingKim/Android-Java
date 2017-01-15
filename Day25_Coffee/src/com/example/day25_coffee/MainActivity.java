@@ -67,10 +67,10 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				count++;
 				if (count % 2 == 0) {
-					tv1.setText("¿¡½ºÇÁ·¹¼Ò X\n");
+					tv1.setText("ì—ìŠ¤í”„ë ˆì†Œ X\n");
 					user_esp = false;
 				} else {
-					tv1.setText("¿¡½ºÇÁ·¹¼Ò O\n");
+					tv1.setText("ì—ìŠ¤í”„ë ˆì†Œ O\n");
 					user_esp = true;
 				}
 			}
@@ -81,10 +81,10 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				count++;
 				if (count % 2 == 0) {
-					tv2.setText("¿ìÀ¯ X\n");
+					tv2.setText("ìš°ìœ  X\n");
 					user_milk = false;
 				} else {
-					tv2.setText("¿ìÀ¯ O\n");
+					tv2.setText("ìš°ìœ  O\n");
 					user_milk = true;
 				}
 			}
@@ -95,10 +95,10 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				count++;
 				if (count % 2 == 0) {
-					tv3.setText("¹° X\n");
+					tv3.setText("ë¬¼ X\n");
 					user_water = false;
 				} else {
-					tv3.setText("¹° O\n");
+					tv3.setText("ë¬¼ O\n");
 					user_water = true;
 				}
 			}
@@ -109,10 +109,10 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				count++;
 				if (count % 2 == 0) {
-					tv4.setText("½Ã·´ X\n");
+					tv4.setText("ì‹œëŸ½ X\n");
 					user_syrup = false;
 				} else {
-					tv4.setText("½Ã·´ O\n");
+					tv4.setText("ì‹œëŸ½ O\n");
 					user_syrup = true;
 				}
 			}
@@ -137,14 +137,14 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DIALOG_HINT:
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("ÈùÆ®");
-			dialog.setMessage("ÇÑ¹ø ´õ ±âÈ¸¸¦ µå¸®ÁÒ\n" + hint);
+			dialog.setTitle("íŒíŠ¸");
+			dialog.setMessage("í•œë²ˆ ë” ê¸°íšŒë¥¼ ë“œë¦¬ì£ \n" + hint);
 			return dialog.create();
 
 		case 1:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("´Ù½Ã ÇÑ¹ø ´õ");
-			dialog2.setMessage("Æ²·È¾î¿ä. ´Ù½Ã ÇÑ¹ø ¸¸µé¾îº¸¼¼¿ä.");
+			dialog2.setTitle("ë‹¤ì‹œ í•œë²ˆ ë”");
+			dialog2.setMessage("í‹€ë ¸ì–´ìš”. ë‹¤ì‹œ í•œë²ˆ ë§Œë“¤ì–´ë³´ì„¸ìš”.");
 			return dialog2.create();
 
 		default:

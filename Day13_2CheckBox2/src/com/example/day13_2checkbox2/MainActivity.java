@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 	boolean dap1[] = { true, false, true, false };
 	boolean dap2[] = { false, true, true, false };
-	boolean dap[] = dap1;// ÇöÀç ¹®Á¦ÀÇ ´ä
+	boolean dap[] = dap1;// í˜„ì¬ ë¬¸ì œì˜ ë‹µ
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,10 @@ public class MainActivity extends Activity {
 
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				String str = "¶¯! Æ²·ÈÀ½";
+				String str = "ë•¡! í‹€ë ¸ìŒ";
 				if (cb1.isChecked() == dap[0] && cb2.isChecked() == dap[1] && cb3.isChecked() == dap[2]
 						&& cb4.isChecked() == dap[3])
-					str = "µùµ¿´ó~! ¸Â¾ÒÀ½";
+					str = "ë”©ë™ëŒ•~! ë§ì•˜ìŒ";
 				Toast.makeText(getApplicationContext(), str, 1).show();
 			}
 		});
@@ -44,21 +44,21 @@ public class MainActivity extends Activity {
 				cb3.setChecked(false);
 				cb4.setChecked(false);
 				String ss = b2.getText().toString();
-				if ("´ÙÀ½¹®Á¦".equals(ss)) {// 2¹ø¹®Á¦·Î
-					tv.setText("¹®Á¦2 Á¡½É¸Ş´º¸¦ ¸ğµÎ °í¸£½Ã¿À");
-					cb1.setText("±â½Ä");
-					cb2.setText("¼øµÎºÎ");
-					cb3.setText("Áß¾ÓµÅÁö¸¶À»");
-					cb4.setText("ÇĞ½Ä");
-					b2.setText("ÀÌÀü¹®Á¦");
+				if ("ë‹¤ìŒë¬¸ì œ".equals(ss)) {// 2ë²ˆë¬¸ì œë¡œ
+					tv.setText("ë¬¸ì œ2 ì ì‹¬ë©”ë‰´ë¥¼ ëª¨ë‘ ê³ ë¥´ì‹œì˜¤");
+					cb1.setText("ê¸°ì‹");
+					cb2.setText("ìˆœë‘ë¶€");
+					cb3.setText("ì¤‘ì•™ë¼ì§€ë§ˆì„");
+					cb4.setText("í•™ì‹");
+					b2.setText("ì´ì „ë¬¸ì œ");
 					dap = dap2;
-				} else if ("ÀÌÀü¹®Á¦".equals(ss)) {// 1¹ø¹®Á¦·Î
-					tv.setText("¹®Á¦1 ÁÁ¾ÆÇÏ´Â ¿µÈ­¸¦ ¸ğµÎ °í¸£½Ã¿À");
-					cb1.setText("ÁÖÅäÇÇ¾Æ");
-					cb2.setText("°î¼º");
-					cb3.setText("¿±±âÀûÀÎ±×³à");
-					cb4.setText("¿±±âÀûÀÎ±×³à2");
-					b2.setText("´ÙÀ½¹®Á¦");
+				} else if ("ì´ì „ë¬¸ì œ".equals(ss)) {// 1ë²ˆë¬¸ì œë¡œ
+					tv.setText("ë¬¸ì œ1 ì¢‹ì•„í•˜ëŠ” ì˜í™”ë¥¼ ëª¨ë‘ ê³ ë¥´ì‹œì˜¤");
+					cb1.setText("ì£¼í† í”¼ì•„");
+					cb2.setText("ê³¡ì„±");
+					cb3.setText("ì—½ê¸°ì ì¸ê·¸ë…€");
+					cb4.setText("ì—½ê¸°ì ì¸ê·¸ë…€2");
+					b2.setText("ë‹¤ìŒë¬¸ì œ");
 					dap = dap1;
 				}
 			}

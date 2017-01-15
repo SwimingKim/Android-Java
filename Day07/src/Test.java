@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Test {
 	public static void main(String[] args) {
-		// ±¸±¸´Ü ÀÚ¸®¼ö¸¦ ¸ÂÃç¼­ 2~9´Ü±îÁö Ãâ·ÂÇÏ½Ã¿À
+		// êµ¬êµ¬ë‹¨ ìë¦¬ìˆ˜ë¥¼ ë§ì¶°ì„œ 2~9ë‹¨ê¹Œì§€ ì¶œë ¥í•˜ì‹œì˜¤
 
 		for (int i = 2; i <= 9; i += 2) {
 			for (int j = 1; j <= 9; j++) {
@@ -11,7 +11,7 @@ public class Test {
 			}
 		}
 
-		// ¹è¿­À» ¸¸µé¾î¼­ (3,7,1,9,2,5) ÀúÀå ÈÄ ÃÖ´ë°ªÀ» Ãâ·ÂÇÏ½Ã¿À.
+		// ë°°ì—´ì„ ë§Œë“¤ì–´ì„œ (3,7,1,9,2,5) ì €ì¥ í›„ ìµœëŒ€ê°’ì„ ì¶œë ¥í•˜ì‹œì˜¤.
 		int s[] = { 3, 7, 1, 9, 2, 5 };
 		int max = s[0];
 		for (int i = 1; i < s.length; i++) {
@@ -20,7 +20,7 @@ public class Test {
 			}
 			continue;
 		}
-		System.out.println("ÃÖ´ë°ªÀº " + max);
+		System.out.println("ìµœëŒ€ê°’ì€ " + max);
 
 		int min = s[0];
 		for (int i = 1; i < s.length; i++) {
@@ -29,21 +29,21 @@ public class Test {
 			}
 			continue;
 		}
-		System.out.println("ÃÖ¼Ò°ªÀº " + min);
+		System.out.println("ìµœì†Œê°’ì€ " + min);
 
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹Ş¾Æ¼­ 4°³ ¹Ş¾Æ¼­
-		// ¹è¿­¿¡ ÀúÀåÈÄ ÃÑÁ¡°ú Æò±ÕÀ» Ãâ·Â
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ì•„ì„œ 4ê°œ ë°›ì•„ì„œ
+		// ë°°ì—´ì— ì €ì¥í›„ ì´ì ê³¼ í‰ê· ì„ ì¶œë ¥
 
 		Scanner scan = new Scanner(System.in);
 		int num[] = new int[4];
-		System.out.println("¼ıÀÚ " + num.length + "°³¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ìˆ«ì " + num.length + "ê°œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		int sum = 0;
 		for (int i = 0; i < num.length; i++) {
 			num[i] = scan.nextInt();
 			sum += num[i];
 		}
-		System.out.println("ÃÑÁ¡Àº " + sum);
-		System.out.println("Æò±ÕÀº " + (float) (sum / num.length));
+		System.out.println("ì´ì ì€ " + sum);
+		System.out.println("í‰ê· ì€ " + (float) (sum / num.length));
 
 		System.out.println(3 + 4 + "abc" + 5 + 6);
 

@@ -3,38 +3,38 @@ import java.util.Scanner;
 public class TestArrayQuiz {
 	public static void main(String[] args) {
 		int a[] = { 1, 2, 3, 4, 5 };
-		// ¹è¿­ a¸¦ ¹è¿­ b·Î º¹»ç ÈÄ Ãâ·ÂÇÏ½Ã¿À.
+		// ë°°ì—´ aë¥¼ ë°°ì—´ bë¡œ ë³µì‚¬ í›„ ì¶œë ¥í•˜ì‹œì˜¤.
 
 		int b[];
-		b = a;// ¹è¿­ÁÖ¼Òº¹»ç//¾èÀºº¹»ç
+		b = a;// ë°°ì—´ì£¼ì†Œë³µì‚¬//ì–•ì€ë³µì‚¬
 		System.out.println(b[2]);
 		b[0] = 100;
 		System.out.println(b[0]);
 		System.out.println(b[1]);
 
-		// ±íÀº º¹»ç-»õ·Î¿î ´ë»óÀ» µû·Î ¸¸µç´Ù
+		// ê¹Šì€ ë³µì‚¬-ìƒˆë¡œìš´ ëŒ€ìƒì„ ë”°ë¡œ ë§Œë“ ë‹¤
 		int d[] = new int[5];
 		for (int i = 0; i < d.length; i++) {
-			d[i] = a[i];// ¹è¿­ ³»¿ëÀÇ º¹»ç - ±íÀº º¹¼ö
+			d[i] = a[i];// ë°°ì—´ ë‚´ìš©ì˜ ë³µì‚¬ - ê¹Šì€ ë³µìˆ˜
 		}
 		System.out.println(d[4]);
 		d[4] = 400;
 		System.out.println(d[4]);
 		System.out.println(a[4]);
 
-		// ÄûÁî : 3¸íÀÇ ÇĞ»ıÀÇ Á¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ¼­ ÃÑ Á¡À» Ãâ·ÂÇÏ½Ã¿À
+		// í€´ì¦ˆ : 3ëª…ì˜ í•™ìƒì˜ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ì„œ ì´ ì ì„ ì¶œë ¥í•˜ì‹œì˜¤
 
-		Scanner scan = new Scanner(System.in);// ÀÔ·Â¹Ş´Â °´Ã¼¼±¾ğ
-		int jumsoo[] = new int[3];// ¹è¿­ ¼±¾ğ 3°³Â¥¸®
-		System.out.println("3¸í ÇĞ»ıÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		Scanner scan = new Scanner(System.in);// ì…ë ¥ë°›ëŠ” ê°ì²´ì„ ì–¸
+		int jumsoo[] = new int[3];// ë°°ì—´ ì„ ì–¸ 3ê°œì§œë¦¬
+		System.out.println("3ëª… í•™ìƒì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 
 		int sum = 0;
-		for (int i = 0; i < jumsoo.length; i++) {// ¹İº¹¹®
+		for (int i = 0; i < jumsoo.length; i++) {// ë°˜ë³µë¬¸
 			jumsoo[i] = scan.nextInt();
 			sum += jumsoo[i];
 		}
 
-		System.out.println("ÇĞ»ıµéÀÇ ÃÑÁ¡Àº " + sum);
+		System.out.println("í•™ìƒë“¤ì˜ ì´ì ì€ " + sum);
 
 	}
 }

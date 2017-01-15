@@ -30,27 +30,27 @@ public class GoogleMap extends FragmentActivity{
 		map.getUiSettings().setZoomControlsEnabled(true);
 		
 		MarkerOptions mo1 = new MarkerOptions();
-		mo1.position(new LatLng(37.7731182,128.9429963)).title("¾È¸ñÇØº¯").snippet("°­¿øµµ ¸í¼Ò");
+		mo1.position(new LatLng(37.7731182,128.9429963)).title("ì•ˆëª©í•´ë³€").snippet("ê°•ì›ë„ ëª…ì†Œ");
 		MarkerOptions mo2 = new MarkerOptions();
-		mo2.position(new LatLng(37.6584131,126.7620336)).title("ÀÏ»ê È£¼ö°ø¿ø").snippet("¼öµµ±Ç ¸í¼Ò");
+		mo2.position(new LatLng(37.6584131,126.7620336)).title("ì¼ì‚° í˜¸ìˆ˜ê³µì›").snippet("ìˆ˜ë„ê¶Œ ëª…ì†Œ");
 		MarkerOptions mo3 = new MarkerOptions();
-		mo3.position(new LatLng(34.6222575,128.5459788)).title("Åë¿µ ¼Ò¸Å¹°µµ").snippet("°æ»ó³²µµ ¸í¼Ò");
+		mo3.position(new LatLng(34.6222575,128.5459788)).title("í†µì˜ ì†Œë§¤ë¬¼ë„").snippet("ê²½ìƒë‚¨ë„ ëª…ì†Œ");
 		MarkerOptions mo4 = new MarkerOptions();
-		mo4.position(new LatLng(35.8347202,129.2247643)).title("°æÁÖ ¾È¾ĞÁö").snippet("°æ»óºÏµµ ¸í¼Ò");
+		mo4.position(new LatLng(35.8347202,129.2247643)).title("ê²½ì£¼ ì•ˆì••ì§€").snippet("ê²½ìƒë¶ë„ ëª…ì†Œ");
 		MarkerOptions mo5 = new MarkerOptions();
-		mo5.position(new LatLng(36.3325029,127.4492084)).title("´ëµ¿ÇÏ´Ã°ø¿ø").snippet("´ëÀü±¤¿ª½Ã ¸í¼Ò");
+		mo5.position(new LatLng(36.3325029,127.4492084)).title("ëŒ€ë™í•˜ëŠ˜ê³µì›").snippet("ëŒ€ì „ê´‘ì—­ì‹œ ëª…ì†Œ");
 		MarkerOptions mo6 = new MarkerOptions();
-		mo6.position(new LatLng(37.2419723,131.862681)).title("µ¶µµ").snippet("¿ï¸ªµµµ¶µµ ¸í¼Ò");
+		mo6.position(new LatLng(37.2419723,131.862681)).title("ë…ë„").snippet("ìš¸ë¦‰ë„ë…ë„ ëª…ì†Œ");
 		MarkerOptions mo7 = new MarkerOptions();
-		mo7.position(new LatLng(35.3258532,126.9841248)).title("´ã¾ç Á×³ì¿ø").snippet("Àü¶ó³²µµ ¸í¼Ò");
+		mo7.position(new LatLng(35.3258532,126.9841248)).title("ë‹´ì–‘ ì£½ë…¹ì›").snippet("ì „ë¼ë‚¨ë„ ëª…ì†Œ");
 		MarkerOptions mo8 = new MarkerOptions();
-		mo8.position(new LatLng(35.8153767,127.1059535)).title("ÀüÁÖ ÇÑ¿Á¸¶À»").snippet("Àü¶óºÏµµ ¸í¼Ò");
+		mo8.position(new LatLng(35.8153767,127.1059535)).title("ì „ì£¼ í•œì˜¥ë§ˆì„").snippet("ì „ë¼ë¶ë„ ëª…ì†Œ");
 		MarkerOptions mo9 = new MarkerOptions();
-		mo9.position(new LatLng(36.3056132,126.5072723)).title("º¸·É ´ëÃµÇØ¼ö¿åÀå").snippet("ÃæÃ»³²µµ ¸í¼Ò");
+		mo9.position(new LatLng(36.3056132,126.5072723)).title("ë³´ë ¹ ëŒ€ì²œí•´ìˆ˜ìš•ì¥").snippet("ì¶©ì²­ë‚¨ë„ ëª…ì†Œ");
 		MarkerOptions mo10 = new MarkerOptions();
-		mo10.position(new LatLng(36.9999664,128.3417429)).title("´Ü¾ç µµ´ã»ïºÀ").snippet("ÃæÃ»ºÏµµ ¸í¼Ò");
+		mo10.position(new LatLng(36.9999664,128.3417429)).title("ë‹¨ì–‘ ë„ë‹´ì‚¼ë´‰").snippet("ì¶©ì²­ë¶ë„ ëª…ì†Œ");
 		MarkerOptions mo11 = new MarkerOptions();
-		mo11.position(new LatLng(33.3616837,126.5203904)).title("ÇÑ¶ó»ê").snippet("Á¦ÁÖµµ ¸í¼Ò");
+		mo11.position(new LatLng(33.3616837,126.5203904)).title("í•œë¼ì‚°").snippet("ì œì£¼ë„ ëª…ì†Œ");
 		
 		map.addMarker(mo1);
 		map.addMarker(mo2);

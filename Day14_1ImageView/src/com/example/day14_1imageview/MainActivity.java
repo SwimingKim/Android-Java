@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ¹öÆ°, ÀÌ¹ÌÁöºä, ÀÌ¹ÌÁö¸¦ ¿¬°á
+		// ë²„íŠ¼, ì´ë¯¸ì§€ë·°, ì´ë¯¸ì§€ë¥¼ ì—°ê²°
 		Button b1 = (Button) findViewById(R.id.button1);
 		final ImageView iv1 = (ImageView) findViewById(R.id.imageView1);
 		final ImageView iv2 = (ImageView) findViewById(R.id.imageView2);
@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
 
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ÀÌ¹ÌÁö ¹Ù²Ù´Â ¹æ¹ı
+				// ì´ë¯¸ì§€ ë°”ê¾¸ëŠ” ë°©ë²•
 				iv1.setImageResource(R.drawable.poongsun);
 				iv2.setImageResource(R.drawable.sky);
 				iv3.setImageResource(R.drawable.travel);

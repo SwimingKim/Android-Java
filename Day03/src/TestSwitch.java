@@ -1,73 +1,73 @@
 /**
- * Èå¸§ Á¦¾î : if, switch, »ïÇ×¿¬»êÀÚ
+ * íë¦„ ì œì–´ : if, switch, ì‚¼í•­ì—°ì‚°ì
  */
 public class TestSwitch {
 	public static void main(String[] args) {
 		int num = 4;
 
-		switch (num) {// Á¶°Ç°ªÀ¸·Î µé¾î°¥ ¼ö ÀÖ´Â °Í, int ¹üÀ§ ÀÌÇÏ ¼ıÀÚ,
+		switch (num) {// ì¡°ê±´ê°’ìœ¼ë¡œ ë“¤ì–´ê°ˆ ìˆ˜ ìˆëŠ” ê²ƒ, int ë²”ìœ„ ì´í•˜ ìˆ«ì,
 		case 3:
 			System.out.println(3);
 			break;
 		case 4:
 			System.out.println(4);
-			break;// switch¹®À» ºüÁ®³ª°£´Ù
+			break;// switchë¬¸ì„ ë¹ ì ¸ë‚˜ê°„ë‹¤
 		case 5:
 			System.out.println(5);
 			break;
 		}
 
 		int jumsoo = 8;
-		// 10, 9 ¼ö 8 ¿ì 7 ¹Ì 6 ¾ç ³ª¸ÓÁö (1~5) °¡
+		// 10, 9 ìˆ˜ 8 ìš° 7 ë¯¸ 6 ì–‘ ë‚˜ë¨¸ì§€ (1~5) ê°€
 
 		int jungsoo = 8;
 		switch (jungsoo) {
 		case 10:
 		case 9:
-			System.out.println("¼ö");
+			System.out.println("ìˆ˜");
 			break;
 		case 8:
-			System.out.println("¿ì");
+			System.out.println("ìš°");
 			break;
 		case 7:
-			System.out.println("¹Ì");
+			System.out.println("ë¯¸");
 			break;
 		case 6:
-			System.out.println("¾ç");
+			System.out.println("ì–‘");
 			break;
 		case 5:
 		case 4:
 		case 3:
 		case 2:
 		case 1:
-			System.out.println("°¡");
+			System.out.println("ê°€");
 			break;
 
-		default:// ÇØ´çµÇ´Â case°ªÀÌ ¾øÀ» °æ¿ì ¼öÇàµÊ
-			System.out.println("±âº»°ª");
+		default:// í•´ë‹¹ë˜ëŠ” caseê°’ì´ ì—†ì„ ê²½ìš° ìˆ˜í–‰ë¨
+			System.out.println("ê¸°ë³¸ê°’");
 			break;
 		}
 
-		// 100~90 ¼ö 89~80 ¿ì 79~70 ¹Ì 69~60 ¾ç 59~0 °¡
+		// 100~90 ìˆ˜ 89~80 ìš° 79~70 ë¯¸ 69~60 ì–‘ 59~0 ê°€
 		int jumsu = 89;
 
 		switch (jumsu / 10) {
 		case 10:
 		case 9:
-			System.out.println("¼ö");
+			System.out.println("ìˆ˜");
 			break;
 		case 8:
-			System.out.println("¿ì");
+			System.out.println("ìš°");
 			break;
 		case 7:
-			System.out.println("¹Ì");
+			System.out.println("ë¯¸");
 			break;
 		case 6:
-			System.out.println("¾ç");
+			System.out.println("ì–‘");
 			break;
 		default:
 			if (jumsu >= 0 && jumsu <= 100)
-				System.out.println("°¡");
+				System.out.println("ê°€");
 			break;
 		}
 

@@ -25,9 +25,9 @@ public class MainActivity extends Activity {
 		bMoney.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				int num = Integer.valueOf(eMoney.getText().toString());
-				eResult.append("\t³ÖÀº µ·? " + num + "¿ø\n");
+				eResult.append("\të„£ì€ ëˆ? " + num + "ì›\n");
 				money += num;
-				eResult.append("\tÃÑ ³ÖÀº µ·? " + money + "¿ø\n\n");
+				eResult.append("\tì´ ë„£ì€ ëˆ? " + money + "ì›\n\n");
 				eMoney.setText("");
 			}
 		});
@@ -35,8 +35,8 @@ public class MainActivity extends Activity {
 		Button b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°? »çÀÌ´Ù\n");
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°ÀÇ °¡°İ? 960¿ø\n\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆ? ì‚¬ì´ë‹¤\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆì˜ ê°€ê²©? 960ì›\n\n");
 				int index = 1;
 			}
 		});
@@ -44,8 +44,8 @@ public class MainActivity extends Activity {
 		Button b2 = (Button) findViewById(R.id.button2);
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°? ¿Á¼ö¼ö¼ö¿°Â÷\n");
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°ÀÇ °¡°İ? 1120¿ø\n\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆ? ì˜¥ìˆ˜ìˆ˜ìˆ˜ì—¼ì°¨\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆì˜ ê°€ê²©? 1120ì›\n\n");
 				int index = 2;
 			}
 		});
@@ -53,8 +53,8 @@ public class MainActivity extends Activity {
 		Button b3 = (Button) findViewById(R.id.button3);
 		b3.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°? ¾ÆÀÌ½º¾Æ¸Ş¸®Ä«³ë\n");
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°ÀÇ °¡°İ? 1340¿ø\n\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆ? ì•„ì´ìŠ¤ì•„ë©”ë¦¬ì¹´ë…¸\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆì˜ ê°€ê²©? 1340ì›\n\n");
 				int index = 3;
 			}
 		});
@@ -62,8 +62,8 @@ public class MainActivity extends Activity {
 		Button b4 = (Button) findViewById(R.id.button4);
 		b4.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°? À¯ÀÚÂ÷\n");
-				eResult.append("\t¼±ÅÃÇÑ Á¦Ç°ÀÇ °¡°İ? 2350¿ø\n\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆ? ìœ ìì°¨\n");
+				eResult.append("\tì„ íƒí•œ ì œí’ˆì˜ ê°€ê²©? 2350ì›\n\n");
 				int index = 4;
 			}
 		});
@@ -73,13 +73,13 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				int change = money - price[index];
 				if (money - price[index] < 0) {
-					Toast.makeText(getApplicationContext(), "µ·ÀÌ ºÎÁ·ÇØ¿ä", 0).show();
+					Toast.makeText(getApplicationContext(), "ëˆì´ ë¶€ì¡±í•´ìš”", 0).show();
 				} else {
-					eResult.append("\tÀÜ¾×? " + change + "¿ø\n");
-					eResult.append("\t\t500¿ø? " + change / 500 + "°³\n");
-					eResult.append("\t\t100¿ø? " + change % 500 / 100 + "°³\n");
-					eResult.append("\t\t\t50¿ø? " + change % 100 / 50 + "°³\n");
-					eResult.append("\t\t\t10¿ø? " + change % 50 / 10 + "°³\n\n");
+					eResult.append("\tì”ì•¡? " + change + "ì›\n");
+					eResult.append("\t\t500ì›? " + change / 500 + "ê°œ\n");
+					eResult.append("\t\t100ì›? " + change % 500 / 100 + "ê°œ\n");
+					eResult.append("\t\t\t50ì›? " + change % 100 / 50 + "ê°œ\n");
+					eResult.append("\t\t\t10ì›? " + change % 50 / 10 + "ê°œ\n\n");
 
 					money -= price[index];
 				}

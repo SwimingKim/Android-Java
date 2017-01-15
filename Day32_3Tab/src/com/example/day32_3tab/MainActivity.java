@@ -14,16 +14,16 @@ public class MainActivity extends TabActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-// TabHost: ÅÇÀÇ ÀüÃ¼ ±¸Á¶
-// TabWedget : ÅÇÀÇ ²ôÆ®¸Ó¸®
-// FrameLayout : °¢ ÅÇÀ» ¼±ÅÃÇÛÀ» ¶§ º¸¿©ÁÙ ºä
+// TabHost: íƒ­ì˜ ì „ì²´ êµ¬ì¡°
+// TabWedget : íƒ­ì˜ ë„íŠ¸ë¨¸ë¦¬
+// FrameLayout : ê° íƒ­ì„ ì„ íƒí•¼ì„ ë•Œ ë³´ì—¬ì¤„ ë·°
 		
 		TabHost host = getTabHost();
 		
 		TabSpec tab1 = host.newTabSpec("1");
 		tab1.setIndicator("ONE");
-		tab1.setContent(new Intent(getApplicationContext(),OneActivity.class));// ÅÇ ²ôÆ®¸Ó¸® ¼±ÅÃ½Ã º¸¿©ÁÙ È­¸é µî·Ï
-		host.addTab(tab1);//ÅÇÀ» ÅÇÈ£½ºÆ®¿¡ µî·Ï
+		tab1.setContent(new Intent(getApplicationContext(),OneActivity.class));// íƒ­ ë„íŠ¸ë¨¸ë¦¬ ì„ íƒì‹œ ë³´ì—¬ì¤„ í™”ë©´ ë“±ë¡
+		host.addTab(tab1);//íƒ­ì„ íƒ­í˜¸ìŠ¤íŠ¸ì— ë“±ë¡
 		
 		TabSpec tab2 = host.newTabSpec("2");
 		tab2.setIndicator("TWO");

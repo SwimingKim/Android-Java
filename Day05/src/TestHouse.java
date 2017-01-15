@@ -2,7 +2,7 @@
 public class TestHouse {
 	public static void main(String[] args) {
 		House ho1 = new House();
-		ho1.address = "¿¬¼­·Î";
+		ho1.address = "ì—°ì„œë¡œ";
 		ho1.roomNum = 3;
 		ho1.size = 34;
 		ho1.hasElavator = true;
@@ -14,14 +14,14 @@ public class TestHouse {
 
 class House {
 	String address;
-	int roomNum;// ¹æ°³¼ö
-	int size;// Æò¼ö
-	boolean hasElavator;// ¿¤¸®º£ÀÌÅÍ À¯¹«
-	boolean hasParkingPlace;// ÁÖÂ÷Àå À¯¹«
+	int roomNum;// ë°©ê°œìˆ˜
+	int size;// í‰ìˆ˜
+	boolean hasElavator;// ì—˜ë¦¬ë² ì´í„° ìœ ë¬´
+	boolean hasParkingPlace;// ì£¼ì°¨ì¥ ìœ ë¬´
 
-	void print() {// ¸â¹öº¯¼ö °ª Ãâ·Â
-		System.out.println(address + "¿¡ À§Ä¡ÇÑ ÁıÀº\n" + "¹æÀÇ °³¼ö´Â " + roomNum + "°³ÀÌ°í,\n" + "Æò¼ö´Â " + size + "ÆòÀÌ°í,\n"
-				+ "¿¤¸®º£ÀÌÅÍ´Â " + (hasElavator ? "ÀÖ°í,\n" : "¾ø°í,\n") + "ÁÖÂ÷ÀåÀº " + (hasParkingPlace ? "ÀÖ½À´Ï´Ù" : "¾ø½À´Ï´Ù"));
+	void print() {// ë©¤ë²„ë³€ìˆ˜ ê°’ ì¶œë ¥
+		System.out.println(address + "ì— ìœ„ì¹˜í•œ ì§‘ì€\n" + "ë°©ì˜ ê°œìˆ˜ëŠ” " + roomNum + "ê°œì´ê³ ,\n" + "í‰ìˆ˜ëŠ” " + size + "í‰ì´ê³ ,\n"
+				+ "ì—˜ë¦¬ë² ì´í„°ëŠ” " + (hasElavator ? "ìˆê³ ,\n" : "ì—†ê³ ,\n") + "ì£¼ì°¨ì¥ì€ " + (hasParkingPlace ? "ìˆìŠµë‹ˆë‹¤" : "ì—†ìŠµë‹ˆë‹¤"));
 	}
 
 }

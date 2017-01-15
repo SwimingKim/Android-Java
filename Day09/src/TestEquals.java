@@ -1,48 +1,48 @@
 /**
- * Object Å¬·¡½º : ¸ğµç Å¬·¡½ºÀÇ ÃÖ°í Á¶»ó Å¬·¡½º ÀÚ¹Ù´Â ´ÜÀÏ»ó¼Ó¸¸À» Çã¿ëÇÑ´Ù : ÀÚ¹ÙÀÇ ¸íÈ®¼º(¾Ö¸Å¸ğÈ£ÇÑ »çÇ×¿¡¼­ ¹ß»ıÇÒ ¿À·ù¸¦
- * Á¦°Å) ¾Æ¹«°Íµµ »ó¼Ó¹ŞÁö ¾ÊÀº Å¬·¡½º´Â extends Object¸¦ »ğÀÔÇØ¼­, ¸ğµç Å¬·¡½º°¡ Object¸¦ »ó¼Ó¹ŞÀ½
+ * Object í´ë˜ìŠ¤ : ëª¨ë“  í´ë˜ìŠ¤ì˜ ìµœê³  ì¡°ìƒ í´ë˜ìŠ¤ ìë°”ëŠ” ë‹¨ì¼ìƒì†ë§Œì„ í—ˆìš©í•œë‹¤ : ìë°”ì˜ ëª…í™•ì„±(ì• ë§¤ëª¨í˜¸í•œ ì‚¬í•­ì—ì„œ ë°œìƒí•  ì˜¤ë¥˜ë¥¼
+ * ì œê±°) ì•„ë¬´ê²ƒë„ ìƒì†ë°›ì§€ ì•Šì€ í´ë˜ìŠ¤ëŠ” extends Objectë¥¼ ì‚½ì…í•´ì„œ, ëª¨ë“  í´ë˜ìŠ¤ê°€ Objectë¥¼ ìƒì†ë°›ìŒ
  */
 public class TestEquals {
 	public static void main(String[] args) {
-		String str1 = "È«±æµ¿"; // String Å¬·¡½º¸¸ ÀÌ·± ¹æ½ÄÀÇ »ı¼ºÀ» Çã¿ëÇÑ´Ù(ÁÖ¼Ò)
-		String str2 = "È«±æµ¿";
+		String str1 = "í™ê¸¸ë™"; // String í´ë˜ìŠ¤ë§Œ ì´ëŸ° ë°©ì‹ì˜ ìƒì„±ì„ í—ˆìš©í•œë‹¤(ì£¼ì†Œ)
+		String str2 = "í™ê¸¸ë™";
 		if (str1 == str2) {
-			System.out.println("== °á°ú °°À½");// °°À½
+			System.out.println("== ê²°ê³¼ ê°™ìŒ");// ê°™ìŒ
 		} else {
-			System.out.println("== °á°ú ´Ù¸§");
+			System.out.println("== ê²°ê³¼ ë‹¤ë¦„");
 		}
 		/////////////////////////////////////////////////////////////
-		String str3 = new String("¹Î±Ô½Ü");// °´Ã¼ »ı¼ºÀÇ ¿øÄ¢(»ó¼öÇ®)
-		String str4 = new String("¹Î±Ô½Ü");
+		String str3 = new String("ë¯¼ê·œìŒ¤");// ê°ì²´ ìƒì„±ì˜ ì›ì¹™(ìƒìˆ˜í’€)
+		String str4 = new String("ë¯¼ê·œìŒ¤");
 		if (str3 == str4) {
-			System.out.println("== °°À½");
+			System.out.println("== ê°™ìŒ");
 		} else {
-			System.out.println("== ´Ù¸§");// °á°ú
+			System.out.println("== ë‹¤ë¦„");// ê²°ê³¼
 		}
-		// °´Ã¼(¹®ÀÚ¿­)ÀÇ ³»¿ë¹°À» ºñ±³ÇÏ·Á¸é equals() ¸Ş¼­µå¸¦ »ç¿ëÇØ¾ß ÇÔ
+		// ê°ì²´(ë¬¸ìì—´)ì˜ ë‚´ìš©ë¬¼ì„ ë¹„êµí•˜ë ¤ë©´ equals() ë©”ì„œë“œë¥¼ ì‚¬ìš©í•´ì•¼ í•¨
 		if (str3.equals(str4)) {
-			System.out.println("equals °°¾Æ¿ä");// °á°ú
+			System.out.println("equals ê°™ì•„ìš”");// ê²°ê³¼
 		} else {
-			System.out.println("equals ´Ş¶ó¿ä");
+			System.out.println("equals ë‹¬ë¼ìš”");
 		}
 
 		Car c1 = new Car();
 		Car c2 = new Car();
 		c1.door = 4;
-		c1.¿¬ºñ = 21.0;
+		c1.ì—°ë¹„ = 21.0;
 		c2.door = 4;
-		c2.¿¬ºñ = 21.0;
+		c2.ì—°ë¹„ = 21.0;
 
 		if (c1 == c2) {
-			System.out.println("== °°À½");
+			System.out.println("== ê°™ìŒ");
 		} else {
-			System.out.println("== ´Ù¸§");// °á°ú
+			System.out.println("== ë‹¤ë¦„");// ê²°ê³¼
 		}
 
-		if (c1.equals(c2)) {// equals() »ç¿ëÇÏ·Á¸é overriding ÇØ¾ß ÇÑ´Ù
-			System.out.println("equals °°À½");
+		if (c1.equals(c2)) {// equals() ì‚¬ìš©í•˜ë ¤ë©´ overriding í•´ì•¼ í•œë‹¤
+			System.out.println("equals ê°™ìŒ");
 		} else {
-			System.out.println("equals ´Ù¸§");// °á°ú
+			System.out.println("equals ë‹¤ë¦„");// ê²°ê³¼
 		}
 
 	}// end of main
@@ -50,12 +50,12 @@ public class TestEquals {
 
 class Car {
 	int door;
-	double ¿¬ºñ;
+	double ì—°ë¹„;
 
 	@Override
 	public boolean equals(Object obj) {
-		Car c = (Car) obj;// Car °´Ã¼¸¦ ²¨³»·Á¸é Çüº¯È¯ÇØ¾ßÇÑ´Ù
-		if (this.door == c.door && this.¿¬ºñ == c.¿¬ºñ) {
+		Car c = (Car) obj;// Car ê°ì²´ë¥¼ êº¼ë‚´ë ¤ë©´ í˜•ë³€í™˜í•´ì•¼í•œë‹¤
+		if (this.door == c.door && this.ì—°ë¹„ == c.ì—°ë¹„) {
 			return true;
 		} else
 			return false;

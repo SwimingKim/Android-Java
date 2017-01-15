@@ -58,10 +58,10 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DIALOG_ID_LIST:
 			AlertDialog.Builder dialog = new Builder(this);
-			final String str1[] = { "»ç°ú", "º¹¼ş¾Æ", "ÀÚµÎ", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¼ö¹Ú" };
-			dialog.setTitle("ÀÌ°ÍÀº ¸®½ºÆ® ´ÙÀÌ¾ó·Î±× ÀÓ?");
-			// ¸Ş¼¼Áö ÀÚ¸®¿¡ ¸®½ºÆ®°¡ º¸ÀÎ´Ù
-			// dialog.setMessage("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?");
+			final String str1[] = { "ì‚¬ê³¼", "ë³µìˆ­ì•„", "ìë‘", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ìˆ˜ë°•" };
+			dialog.setTitle("ì´ê²ƒì€ ë¦¬ìŠ¤íŠ¸ ë‹¤ì´ì–¼ë¡œê·¸ ì„?");
+			// ë©”ì„¸ì§€ ìë¦¬ì— ë¦¬ìŠ¤íŠ¸ê°€ ë³´ì¸ë‹¤
+			// dialog.setMessage("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 			dialog.setItems(str1, new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Toast.makeText(getApplicationContext(), str1[which] + "", 1).show();
@@ -70,10 +70,10 @@ public class MainActivity extends Activity {
 			return dialog.create();
 		case DIALOG_ID_RADIO:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			final String str2[] = { "»ç°ú", "º¹¼ş¾Æ", "ÀÚµÎ", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¼ö¹Ú" };
-			dialog2.setTitle("ÀÌ°ÍÀº ¶óµğ¿À ´ÙÀÌ¾ó·Î±× ÀÓ?");
-			// dialog2.setMessage("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?");
-			dialog2.setSingleChoiceItems(str2, 0, // ÃÖÃÊ ¼±ÅÃÇ×¸ñ
+			final String str2[] = { "ì‚¬ê³¼", "ë³µìˆ­ì•„", "ìë‘", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ìˆ˜ë°•" };
+			dialog2.setTitle("ì´ê²ƒì€ ë¼ë””ì˜¤ ë‹¤ì´ì–¼ë¡œê·¸ ì„?");
+			// dialog2.setMessage("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog2.setSingleChoiceItems(str2, 0, // ìµœì´ˆ ì„ íƒí•­ëª©
 					new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							Toast.makeText(getApplicationContext(), str2[which] + "", 0).show();
@@ -83,17 +83,17 @@ public class MainActivity extends Activity {
 			return dialog2.create();
 		case DIALOG_ID_CHECKBOX:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			final String str3[] = { "»ç°ú", "º¹¼ş¾Æ", "ÀÚµÎ", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¼ö¹Ú" };
+			final String str3[] = { "ì‚¬ê³¼", "ë³µìˆ­ì•„", "ìë‘", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ìˆ˜ë°•" };
 			final boolean isCheck[] = { true, false, true, false, false, false };
-			dialog3.setTitle("ÀÌ°ÍÀº Ã¼Å©¹Ú½ºÀÔ´Ï´Ù");
-			dialog3.setMultiChoiceItems(str3, // ¹è¿­
-					isCheck, // ÃÊ±âÃ¼Å©»óÅÂ
-					new DialogInterface.OnMultiChoiceClickListener() {// ÀÌº¥Æ®
+			dialog3.setTitle("ì´ê²ƒì€ ì²´í¬ë°•ìŠ¤ì…ë‹ˆë‹¤");
+			dialog3.setMultiChoiceItems(str3, // ë°°ì—´
+					isCheck, // ì´ˆê¸°ì²´í¬ìƒíƒœ
+					new DialogInterface.OnMultiChoiceClickListener() {// ì´ë²¤íŠ¸
 						public void onClick(DialogInterface dialog, int which, boolean isChecked) {
 							Toast.makeText(getApplicationContext(), str3[which] + "", 0).show();
 						}
 					});
-			dialog3.setPositiveButton("¼±ÅÃ¿Ï·á", new DialogInterface.OnClickListener() {
+			dialog3.setPositiveButton("ì„ íƒì™„ë£Œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					String result = "";
 					for (int i = 0; i < isCheck.length; i++) {
@@ -101,27 +101,27 @@ public class MainActivity extends Activity {
 							result += str3[i] + ", ";
 						}
 					}
-					Toast.makeText(getApplicationContext(), result + " ¼±ÅÃ", 1).show();
+					Toast.makeText(getApplicationContext(), result + " ì„ íƒ", 1).show();
 				}
 			});
-			dialog3.setNegativeButton("Ãë¼Ò", null);
+			dialog3.setNegativeButton("ì·¨ì†Œ", null);
 			return dialog3.create();
 		case DIALOG_ID_CUSTOM:
-			// Ä¿½ºÅÒ ´ÙÀÌ¾ó·Î±×
-			// È­¸é¿¡ ¶ç¾îÁÙ ³»¿ëÀ» µğÀÚÀÎÇÑ´Ù. (xml)
-			final String str4[] = { "»ç°ú", "º¹¼ş¾Æ", "ÀÚµÎ", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¼ö¹Ú" };
+			// ì»¤ìŠ¤í…€ ë‹¤ì´ì–¼ë¡œê·¸
+			// í™”ë©´ì— ë„ì–´ì¤„ ë‚´ìš©ì„ ë””ìì¸í•œë‹¤. (xml)
+			final String str4[] = { "ì‚¬ê³¼", "ë³µìˆ­ì•„", "ìë‘", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ìˆ˜ë°•" };
 			LayoutInflater lif = (LayoutInflater) getApplicationContext()
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View myView = lif.inflate(R.layout.custom_design, null);
 			AlertDialog.Builder dialog4 = new Builder(this);
-			dialog4.setTitle("ÀÌ°ÍÀº Ä¿½ºÅÒÀÔ´Ï´Ù");
+			dialog4.setTitle("ì´ê²ƒì€ ì»¤ìŠ¤í…€ì…ë‹ˆë‹¤");
 			dialog4.setView(myView);
-			dialog4.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog4.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					Toast.makeText(getApplicationContext(), "°í¿ë¼º°ø", 1).show();
+					Toast.makeText(getApplicationContext(), "ê³ ìš©ì„±ê³µ", 1).show();
 				}
 			});
-			dialog4.setNegativeButton("¾Æ´Ï¿À", null);
+			dialog4.setNegativeButton("ì•„ë‹ˆì˜¤", null);
 
 			return dialog4.create();
 

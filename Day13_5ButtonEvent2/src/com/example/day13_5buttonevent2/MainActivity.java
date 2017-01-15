@@ -22,14 +22,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		Button b3 = (Button) findViewById(R.id.button3);
 		Button b4 = (Button) findViewById(R.id.button4);
 
-		b1.setOnClickListener(this);// ³» Å¬·¡½º¿¡¼­ ÀÌº¥Æ® Ã³¸®±îÁö ÇÏ°Ú´Ù
+		b1.setOnClickListener(this);// ë‚´ í´ë˜ìŠ¤ì—ì„œ ì´ë²¤íŠ¸ ì²˜ë¦¬ê¹Œì§€ í•˜ê² ë‹¤
 		b2.setOnClickListener(this);
 		b3.setOnClickListener(this);
 		b4.setOnClickListener(this);
 
 	}// end of onCreate
 
-	public void onClick(View v) {// Å¬¸¯½Ã ÀÌº¥Æ® Ã³¸®
+	public void onClick(View v) {// í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì²˜ë¦¬
 		Button b = (Button) v;
 		et.append(b.getText());
 	}

@@ -2,28 +2,28 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * ¼ıÀÚ°ÔÀÓ UpDown
+ * ìˆ«ìê²Œì„ UpDown
  */
 public class TestUpDown {
 	public static void main(String[] args) {
-		// ÄÄÇ»ÅÍ°¡ ·£´ıÀ¸·Î »ı¼ºÇÑ ¼ıÀÚ(0~99)¸¦ »ç¿ëÀÚ°¡ ¸ÂÃâ ¼ö ÀÖµµ·Ï
-		// Up or Down Á¤º¸¸¦ Á¦°øÇØÁÖ°í, ¸ÂÃá È½¼ö¸¦ ¸¶Áö¸·¿¡ Ãâ·ÂÇÏ½Ã¿À
+		// ì»´í“¨í„°ê°€ ëœë¤ìœ¼ë¡œ ìƒì„±í•œ ìˆ«ì(0~99)ë¥¼ ì‚¬ìš©ìê°€ ë§ì¶œ ìˆ˜ ìˆë„ë¡
+		// Up or Down ì •ë³´ë¥¼ ì œê³µí•´ì£¼ê³ , ë§ì¶˜ íšŸìˆ˜ë¥¼ ë§ˆì§€ë§‰ì— ì¶œë ¥í•˜ì‹œì˜¤
 
 		Random ran = new Random();
 		int num = ran.nextInt(100);
-		System.out.println("ÄÄÇ»ÅÍ°¡ ·£´ıÀ¸·Î »ı¼ºÇÑ °ª :" + num);
+		System.out.println("ì»´í“¨í„°ê°€ ëœë¤ìœ¼ë¡œ ìƒì„±í•œ ê°’ :" + num);
 		Scanner scan = new Scanner(System.in);
-		System.out.println("´ç½ÅÀÇ »ı³â¿ùÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ë‹¹ì‹ ì˜ ìƒë…„ì›”ì¼ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
 
 		int user = scan.nextInt();
 		int count = 0;
 		while (true) {
-			System.out.println("0ºÎÅÍ 99±îÁö ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("0ë¶€í„° 99ê¹Œì§€ ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			user = scan.nextInt();
 			count++;
-			if (user == num) {// ¸ÂÃã
-				// ¸î ¹ø¸¸¿¡ ¸ÂÃè´ÂÁö Ãâ·Â
-				System.out.println(count + "¹ø ¸¸¿¡ ¸ÂÃè½À´Ï´Ù");
+			if (user == num) {// ë§ì¶¤
+				// ëª‡ ë²ˆë§Œì— ë§ì·„ëŠ”ì§€ ì¶œë ¥
+				System.out.println(count + "ë²ˆ ë§Œì— ë§ì·„ìŠµë‹ˆë‹¤");
 				break;
 			} else if (user < num) {
 				System.out.println("Up");
@@ -32,7 +32,7 @@ public class TestUpDown {
 			}
 
 		}
-		System.out.println("°ÔÀÓÁ¾·á");
+		System.out.println("ê²Œì„ì¢…ë£Œ");
 
 	}// end of main
 }// end of class

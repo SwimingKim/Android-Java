@@ -21,35 +21,35 @@ public class MainActivity extends Activity {
 
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
-				// ´ÙÀ½ ÆäÀÌÁö·Î È­¸é ÀüÈ¯
-				// 1. ´ÙÀ½ ³Ñ¾î°¥ È­¸éÀ» ÁØºñÇÑ´Ù(java, xml)
-				// 2. È­¸éÀ» µî·ÏÇÑ´Ù(AndroidManifest.xml)
-				// 3. Intent °´Ã¼¸¦ »ı¼ºÇØ¼­ È­¸éÀüÈ¯ÇÑ´Ù(ÀÎÅÙÆ® ³¯¸°´Ù)
-				Intent intent = new Intent// ¸í½ÃÀû ÀÎÅÙÆ®
-				(getApplicationContext()// ÇöÀç È­¸éÀÇ Á¦¾î±ÇÀÚ
-				, NextActivity.class);// ´ÙÀ½ ³Ñ¾î°¥ È­¸é
+				// ë‹¤ìŒ í˜ì´ì§€ë¡œ í™”ë©´ ì „í™˜
+				// 1. ë‹¤ìŒ ë„˜ì–´ê°ˆ í™”ë©´ì„ ì¤€ë¹„í•œë‹¤(java, xml)
+				// 2. í™”ë©´ì„ ë“±ë¡í•œë‹¤(AndroidManifest.xml)
+				// 3. Intent ê°ì²´ë¥¼ ìƒì„±í•´ì„œ í™”ë©´ì „í™˜í•œë‹¤(ì¸í…íŠ¸ ë‚ ë¦°ë‹¤)
+				Intent intent = new Intent// ëª…ì‹œì  ì¸í…íŠ¸
+				(getApplicationContext()// í˜„ì¬ í™”ë©´ì˜ ì œì–´ê¶Œì
+				, NextActivity.class);// ë‹¤ìŒ ë„˜ì–´ê°ˆ í™”ë©´
 
-				intent.putExtra("num1", Integer.valueOf(et1.getText().toString()));// µ¥ÀÌÅÍ
-																					// ½Ç¾î¼­
-																					// º¸³»±â
+				intent.putExtra("num1", Integer.valueOf(et1.getText().toString()));// ë°ì´í„°
+																					// ì‹¤ì–´ì„œ
+																					// ë³´ë‚´ê¸°
 				intent.putExtra("num2", Integer.valueOf(et2.getText().toString()));
 
 				intent.putExtra("operator", "+");
 
-				startActivity(intent);// ÀÎÅÙÆ® ³¯¸®±â
+				startActivity(intent);// ì¸í…íŠ¸ ë‚ ë¦¬ê¸°
 			}
 		});
 
 		Button b2 = (Button) findViewById(R.id.button2);
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
-				Intent intent = new Intent// ¸í½ÃÀû ÀÎÅÙÆ®
-				(getApplicationContext()// ÇöÀç È­¸éÀÇ Á¦¾î±ÇÀÚ
-				, NextActivity.class);// ´ÙÀ½ ³Ñ¾î°¥ È­¸é
+				Intent intent = new Intent// ëª…ì‹œì  ì¸í…íŠ¸
+				(getApplicationContext()// í˜„ì¬ í™”ë©´ì˜ ì œì–´ê¶Œì
+				, NextActivity.class);// ë‹¤ìŒ ë„˜ì–´ê°ˆ í™”ë©´
 
-				intent.putExtra("num1", Integer.valueOf(et1.getText().toString()));// µ¥ÀÌÅÍ
-																					// ½Ç¾î¼­
-																					// º¸³»±â
+				intent.putExtra("num1", Integer.valueOf(et1.getText().toString()));// ë°ì´í„°
+																					// ì‹¤ì–´ì„œ
+																					// ë³´ë‚´ê¸°
 				intent.putExtra("num2", Integer.valueOf(et2.getText().toString()));
 
 				intent.putExtra("operator", "-");

@@ -22,14 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-	Rest arrRest[] = { new Rest(R.drawable.c1, "ÃÊ´çµÎºÎ", "02-000-0000", "°­¿øµµ °­¸ª½Ã", "µÎºÎ"),
-			new Rest(R.drawable.c2, "ÁßµÅ¸¶À»", "02-000-0000", "¼­¿ï½Ã µ¿ÀÛ±¸", "°í±â"),
-			new Rest(R.drawable.c3, "Åä½º¸¶½º", "02-000-0000", "¼­¿ï½Ã µ¿ÀÛ±¸", "Åä½º"),
-			new Rest(R.drawable.c4, "¼øµÎºÎÂî°³", "02-000-0000", "¼­¿ï½Ã µ¿ÀÛ±¸", "¼øµÎºÎ"),
-			new Rest(R.drawable.c5, "¼­ºê¿şÀÌ", "02-000-0000", "°æ±âµµ °í¾ç½Ã", "»÷µåÀ§Ä¡"),
-			new Rest(R.drawable.c6, "»ï°ã»ìÁı", "02-000-0000", "¼­¿ï½Ã µ¿ÀÛ±¸", "°í±â"),
-			new Rest(R.drawable.c7, "ºê¸®¶Ç", "02-000-0000", "¼­¿ï½Ã µ¿ÀÛ±¸", "»÷µåÀ§Ä¡"),
-			new Rest(R.drawable.c8, "µîÃÌÄ®±¹¼ö", "02-000-0000", "¼­¿ï½Ã µ¿ÀÛ±¸", "¸é") };
+	Rest arrRest[] = { new Rest(R.drawable.c1, "ì´ˆë‹¹ë‘ë¶€", "02-000-0000", "ê°•ì›ë„ ê°•ë¦‰ì‹œ", "ë‘ë¶€"),
+			new Rest(R.drawable.c2, "ì¤‘ë¼ë§ˆì„", "02-000-0000", "ì„œìš¸ì‹œ ë™ì‘êµ¬", "ê³ ê¸°"),
+			new Rest(R.drawable.c3, "í† ìŠ¤ë§ˆìŠ¤", "02-000-0000", "ì„œìš¸ì‹œ ë™ì‘êµ¬", "í† ìŠ¤"),
+			new Rest(R.drawable.c4, "ìˆœë‘ë¶€ì°Œê°œ", "02-000-0000", "ì„œìš¸ì‹œ ë™ì‘êµ¬", "ìˆœë‘ë¶€"),
+			new Rest(R.drawable.c5, "ì„œë¸Œì›¨ì´", "02-000-0000", "ê²½ê¸°ë„ ê³ ì–‘ì‹œ", "ìƒŒë“œìœ„ì¹˜"),
+			new Rest(R.drawable.c6, "ì‚¼ê²¹ì‚´ì§‘", "02-000-0000", "ì„œìš¸ì‹œ ë™ì‘êµ¬", "ê³ ê¸°"),
+			new Rest(R.drawable.c7, "ë¸Œë¦¬ë˜", "02-000-0000", "ì„œìš¸ì‹œ ë™ì‘êµ¬", "ìƒŒë“œìœ„ì¹˜"),
+			new Rest(R.drawable.c8, "ë“±ì´Œì¹¼êµ­ìˆ˜", "02-000-0000", "ì„œìš¸ì‹œ ë™ì‘êµ¬", "ë©´") };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Toast.makeText(getApplicationContext(), arrRest[position].name + "À» ¼±ÅÃÇß½À´Ï´Ù", 1).show();
+				Toast.makeText(getApplicationContext(), arrRest[position].name + "ì„ ì„ íƒí–ˆìŠµë‹ˆë‹¤", 1).show();
 				Intent intent = new Intent(getApplicationContext(), DeepActivity.class);
 
 				intent.putExtra("Rest", arrRest[position]);
@@ -103,7 +103,7 @@ class MyAdapter extends BaseAdapter {
 
 }
 
-class Rest implements Serializable {// À½½ÄÁ¡
+class Rest implements Serializable {// ìŒì‹ì 
 	int img;
 	String name;
 	String number;

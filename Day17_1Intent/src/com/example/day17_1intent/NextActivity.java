@@ -8,12 +8,12 @@ import android.widget.TextView;
 public class NextActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// xml¿Í ¼Ò½ºÆÄÀÏÀ» ¿¬°áÇÏ´Â ÀÛ¾÷
+		// xmlì™€ ì†ŒìŠ¤íŒŒì¼ì„ ì—°ê²°í•˜ëŠ” ì‘ì—…
 		setContentView(R.layout.next);
 
-		// ÀÌÀü È­¸é¿¡¼­ ½Ç¾î¿Â µ¥ÀÌÅÍ¸¦ ²¨³»±â À§ÇÑ ¹æ¹ı : intent¸¦ ¾ò¾î¿Â´Ù
-		Intent intent = getIntent();// ÀÌÀü È­¸é¿¡¼­ Àü´ŞÇØ¿Â Á¤º¸
-		// intent.getÅ¸ÀÔExtra();
+		// ì´ì „ í™”ë©´ì—ì„œ ì‹¤ì–´ì˜¨ ë°ì´í„°ë¥¼ êº¼ë‚´ê¸° ìœ„í•œ ë°©ë²• : intentë¥¼ ì–»ì–´ì˜¨ë‹¤
+		Intent intent = getIntent();// ì´ì „ í™”ë©´ì—ì„œ ì „ë‹¬í•´ì˜¨ ì •ë³´
+		// intent.getíƒ€ì…Extra();
 		int num1 = intent.getIntExtra("num1", 0);
 		int num2 = intent.getIntExtra("num2", 0);
 		String op = intent.getStringExtra("operator");
@@ -22,11 +22,11 @@ public class NextActivity extends Activity {
 		final TextView tv = (TextView) findViewById(R.id.textView1);
 
 		if ("+".equals(op)) {
-			re.setText("µ¡¼À");
-			tv.setText("µ¡¼À °á°ú = " + (num1 + num2));
+			re.setText("ë§ì…ˆ");
+			tv.setText("ë§ì…ˆ ê²°ê³¼ = " + (num1 + num2));
 		} else if ("-".equals(op)) {
-			re.setText("»¬¼À");
-			tv.setText("»¬¼À °á°ú = " + (num1 - num2));
+			re.setText("ëº„ì…ˆ");
+			tv.setText("ëº„ì…ˆ ê²°ê³¼ = " + (num1 - num2));
 		}
 
 	}// end of onCreate

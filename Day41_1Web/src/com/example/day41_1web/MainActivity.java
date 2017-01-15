@@ -42,35 +42,35 @@ public class MainActivity extends Activity {
 	}//end of onCreate
 
 	void downloadHtml() {
-		// Web¿¡ ÀÖ´Â ÀÚ·á¸¦ °¡Á®¿À±â
-		// 1. AndroidManifest.xml¿¡ ÀÎÅÍ³İ »ç¿ë±ÇÇÑ ÆÛ¹Ì¼Ç µî·ÏÇÑ´Ù.
-		// 2. º°µµÀÇ Thread¸¦ »ı¼ºÇÏ¿© À¥ÀÚ·á¸¦ ¹Ş¾Æ¿Â´Ù.
-		// 3. º°µµÀÇ Thread¿¡¼­ È­¸éÀÇ º¯°æÀÛ¾÷À» ÇÏ·Á¸é, Handler°´Ã¼¸¦ »ç¿ëÇØ¾ß ÇÑ´Ù.
+		// Webì— ìˆëŠ” ìë£Œë¥¼ ê°€ì ¸ì˜¤ê¸°
+		// 1. AndroidManifest.xmlì— ì¸í„°ë„· ì‚¬ìš©ê¶Œí•œ í¼ë¯¸ì…˜ ë“±ë¡í•œë‹¤.
+		// 2. ë³„ë„ì˜ Threadë¥¼ ìƒì„±í•˜ì—¬ ì›¹ìë£Œë¥¼ ë°›ì•„ì˜¨ë‹¤.
+		// 3. ë³„ë„ì˜ Threadì—ì„œ í™”ë©´ì˜ ë³€ê²½ì‘ì—…ì„ í•˜ë ¤ë©´, Handlerê°ì²´ë¥¼ ì‚¬ìš©í•´ì•¼ í•œë‹¤.
 
 		Thread t = new Thread(new Runnable() {
 
-			public void run() {//º°µµÀÇ Thread¿¡¼­ ¼öÇàÇÒ ÀÛ¾÷À» ±â¼úÇÑ´Ù
-//				String result = "";// ¹®ÀÚ¿­ ÀÛ¾÷¼Óµµ°¡ ´Ê´Ù, ¾²Áö ¸» °Í
-//				StringBuffer : ½Ì±Û¾²·¹µå
-//				StringBuilder : ¸ÖÆ¼¾²·¹µå
+			public void run() {//ë³„ë„ì˜ Threadì—ì„œ ìˆ˜í–‰í•  ì‘ì—…ì„ ê¸°ìˆ í•œë‹¤
+//				String result = "";// ë¬¸ìì—´ ì‘ì—…ì†ë„ê°€ ëŠ¦ë‹¤, ì“°ì§€ ë§ ê²ƒ
+//				StringBuffer : ì‹±ê¸€ì“°ë ˆë“œ
+//				StringBuilder : ë©€í‹°ì“°ë ˆë“œ
 				final StringBuilder result = new StringBuilder();
 
 				try {
 					URL url = new URL("http://www.naver.com/");//try~catch
 					HttpURLConnection conn = (HttpURLConnection) url.openConnection();//try-catch
-					if (conn != null) {// ¿¬°áÀÌ µÇ¾ú´Ù¸é
-						conn.setConnectTimeout(1000); // ´ë±â½Ã°£ ¾ó¸¶³ª ÂüÀ»°ÇÁö
+					if (conn != null) {// ì—°ê²°ì´ ë˜ì—ˆë‹¤ë©´
+						conn.setConnectTimeout(1000); // ëŒ€ê¸°ì‹œê°„ ì–¼ë§ˆë‚˜ ì°¸ì„ê±´ì§€
 						conn.setUseCaches(false);
-						if (conn.getResponseCode()==HttpURLConnection.HTTP_OK) {// ¼­¹öÀÇ ÀÀ´äÀ» Á¤»óÀûÀ¸·Î ¹Ş¾Ò´Ù¸é
-							// ¼­¹öÀÇ ÀÀ´äÀ» Á¤»óÀûÀ¸·Î ¹Ş¾Ò´Ù¸é
-							BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));//ÇÑ±ÛÀÎÄÚµùÃ³¸®
+						if (conn.getResponseCode()==HttpURLConnection.HTTP_OK) {// ì„œë²„ì˜ ì‘ë‹µì„ ì •ìƒì ìœ¼ë¡œ ë°›ì•˜ë‹¤ë©´
+							// ì„œë²„ì˜ ì‘ë‹µì„ ì •ìƒì ìœ¼ë¡œ ë°›ì•˜ë‹¤ë©´
+							BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));//í•œê¸€ì¸ì½”ë”©ì²˜ë¦¬
 							while (true) {
 								String str = br.readLine();
-								if (str==null) break;// ¼­¹ö ÆäÀÌÁöÀÇ ¸¶Áö¸·ÀÏ °æ¿ì
+								if (str==null) break;// ì„œë²„ í˜ì´ì§€ì˜ ë§ˆì§€ë§‰ì¼ ê²½ìš°
 								result.append(str+"\n");
 								Log.d("web", str);
 							}
-							br.close();//BufferedReader´İ±â
+							br.close();//BufferedReaderë‹«ê¸°
 						}// end of if (HTTP_OK)
 						conn.disconnect();
 						handler.post(new Runnable() {
@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		t.start();// ¾²·¹µå µ¿ÀÛ½ÃÅ°±â		
+		t.start();// ì“°ë ˆë“œ ë™ì‘ì‹œí‚¤ê¸°		
 
 	}
 

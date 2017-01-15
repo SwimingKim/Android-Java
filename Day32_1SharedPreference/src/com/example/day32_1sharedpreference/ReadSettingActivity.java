@@ -17,13 +17,13 @@ public class ReadSettingActivity extends Activity{
 		TextView tv2 = (TextView)findViewById(R.id.textView2);
 		TextView tv3 = (TextView)findViewById(R.id.textView3);
 		
-// »ç¿ëÀÚ°¡ ¼³Á¤Çß´ø °ªµéÀ» º¸¿©ÁÖ±â
+// ì‚¬ìš©ìê°€ ì„¤ì •í–ˆë˜ ê°’ë“¤ì„ ë³´ì—¬ì£¼ê¸°
 		SharedPreferences sp = getSharedPreferences("myset.dat", Context.MODE_PRIVATE);
 		Editor editor = sp.edit();
 		
-		tv1.setText("Ã¼Å©¹Ú½º : "+(sp.getBoolean("cb", false)?"Ã¼Å©µÊ":"Ã¼Å©¾ÈÇÔ"));
-		tv2.setText("½ºÀ§Ä¡ : "+(sp.getBoolean("sw", false)?"On":"Off"));
-		tv3.setText("¿¡µğÆ®ÅØ½ºÆ® : "+sp.getString("et", ""));
+		tv1.setText("ì²´í¬ë°•ìŠ¤ : "+(sp.getBoolean("cb", false)?"ì²´í¬ë¨":"ì²´í¬ì•ˆí•¨"));
+		tv2.setText("ìŠ¤ìœ„ì¹˜ : "+(sp.getBoolean("sw", false)?"On":"Off"));
+		tv3.setText("ì—ë””íŠ¸í…ìŠ¤íŠ¸ : "+sp.getString("et", ""));
 		
 		
 		

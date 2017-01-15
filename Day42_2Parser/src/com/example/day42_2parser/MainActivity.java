@@ -24,10 +24,10 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// xml ÅÂ±×¿¡¼­ Á¤º¸¸¦ ¼Õ½±°Ô ÃßÃâÇÒ ¼ö ÀÖµµ·Ï ¿©·¯°¡Áö parserµéÀÌ Á¸ÀçÇÑ´Ù
+		// xml íƒœê·¸ì—ì„œ ì •ë³´ë¥¼ ì†ì‰½ê²Œ ì¶”ì¶œí•  ìˆ˜ ìˆë„ë¡ ì—¬ëŸ¬ê°€ì§€ parserë“¤ì´ ì¡´ì¬í•œë‹¤
 		// Dom Parser, SAX Parser, XMLPullParser, ...
-		// Dom Parser : ºü¸£°Ô ÇÒ ¼ö ÀÖÁö¸¸, µ¥ÀÌÅÍ ¼Ò¸ğ·®ÀÌ ¸¹´Ù
-		// XMLPullParser : ¾Èµå·ÎÀÌµå¿¡¼­ »ç¿ëÇÏ±â ÀûÇÕÇÏµµ·Ï ¸¸µç Å¬·¡½º
+		// Dom Parser : ë¹ ë¥´ê²Œ í•  ìˆ˜ ìˆì§€ë§Œ, ë°ì´í„° ì†Œëª¨ëŸ‰ì´ ë§ë‹¤
+		// XMLPullParser : ì•ˆë“œë¡œì´ë“œì—ì„œ ì‚¬ìš©í•˜ê¸° ì í•©í•˜ë„ë¡ ë§Œë“  í´ë˜ìŠ¤
 
 		tv = (TextView)findViewById(R.id.textView1);
 		Button b = (Button)findViewById(R.id.button1);
@@ -49,21 +49,21 @@ public class MainActivity extends Activity {
 
 	void goXmlPullParser() {
 		try {
-//		String result = "";//¹®ÀÚ¿­ÀÇ ¿¬»ê·®ÀÌ ¸¹¾ÆÁö¸é ¼Óµµ°¡ ´À·ÁÁø´Ù
+//		String result = "";//ë¬¸ìì—´ì˜ ì—°ì‚°ëŸ‰ì´ ë§ì•„ì§€ë©´ ì†ë„ê°€ ëŠë ¤ì§„ë‹¤
 			StringBuffer result = new StringBuffer();
 
-// res/raw/student.xml ÀÚ¿øÀ» °¡Á®¿À±â
+// res/raw/student.xml ìì›ì„ ê°€ì ¸ì˜¤ê¸°
 			InputStream is = getResources().openRawResource(R.raw.student);
 
 			XmlPullParserFactory xxpf = XmlPullParserFactory.newInstance();
 			XmlPullParser xpp = xxpf.newPullParser();
 			xpp.setInput(new InputStreamReader(is));
-//			xpp.setInput(new InputStreamReader(is, "utf-8"));//ÇÑ±Û ÀÎÄÚµùÅ¸ÀÔÀÌ ´Ù¸¦¶§
+//			xpp.setInput(new InputStreamReader(is, "utf-8"));//í•œê¸€ ì¸ì½”ë”©íƒ€ì…ì´ ë‹¤ë¥¼ë•Œ
 			
-			while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) { // ¹®¼­ÀÇ ³¡±îÁö ¹İº¹
+			while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) { // ë¬¸ì„œì˜ ëê¹Œì§€ ë°˜ë³µ
 				if (xpp.getEventType()==XmlPullParser.START_TAG) {
-					String strName = xpp.getName(); // tag ÀÌ¸§ ¾ò¾î¿À±â
-					if ("member".equals(strName)) {//nullPoint Exception ¹æÁö
+					String strName = xpp.getName(); // tag ì´ë¦„ ì–»ì–´ì˜¤ê¸°
+					if ("member".equals(strName)) {//nullPoint Exception ë°©ì§€
 						result.append(xpp.getAttributeValue(0)+",");
 						result.append(xpp.getAttributeValue(1)+"\n");
 					}
@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
 						result.append(xpp.nextText()+"\n");
 					}
 				}
-				xpp.next(); // ´ÙÀ½ ÅÂÅ©(´ÙÀ½ ÁÙ)·Î ³Ñ¾î°¡±â
+				xpp.next(); // ë‹¤ìŒ íƒœí¬(ë‹¤ìŒ ì¤„)ë¡œ ë„˜ì–´ê°€ê¸°
 			}
 			tv.setText(result.toString());
 			

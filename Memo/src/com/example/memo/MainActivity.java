@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 				ContentValues values = new ContentValues();
 				values.put("write", e_first_write.getText().toString());
 				long result = db.insert("list", null, values);
-				Toast.makeText(getApplicationContext(), result + "¹øÂ° insert", 1).show();
+				Toast.makeText(getApplicationContext(), result + "ë²ˆì§¸ insert", 1).show();
 
 				db = helper.getReadableDatabase();
 				Cursor c = db.query("list", null, null, null, null, null, null);
@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				db = helper.getWritableDatabase();
 				long result = db.delete("list", "num=?", new String[] { e_third_id.getText().toString() });
-				Toast.makeText(getApplicationContext(), result + "°³ delete", 1).show();
+				Toast.makeText(getApplicationContext(), result + "ê°œ delete", 1).show();
 
 				db = helper.getReadableDatabase();
 				Cursor c = db.query("list", null, null, null, null, null, null);

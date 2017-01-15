@@ -26,21 +26,21 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ¿ÜºÎ¸Ş¸ğ¸® »ç¿ëÀ» À§ÇÑ ÁØºñ´Ü°è
-		// 1. »ç¿ëÀÚ ±ÇÇÑÀ» µî·ÏÇØ¾ß ÇÑ´Ù (AndroidManifest.xml -> usePermission)
-		// 2. OS¿¡¼­ ¸Ş¸ğ¸® Ä«µå¸¦ Á¦´ë·Î ÀÎ½ÄÇß´ÂÁö¸¦ È®ÀÎÇÏ±â
+		// ì™¸ë¶€ë©”ëª¨ë¦¬ ì‚¬ìš©ì„ ìœ„í•œ ì¤€ë¹„ë‹¨ê³„
+		// 1. ì‚¬ìš©ì ê¶Œí•œì„ ë“±ë¡í•´ì•¼ í•œë‹¤ (AndroidManifest.xml -> usePermission)
+		// 2. OSì—ì„œ ë©”ëª¨ë¦¬ ì¹´ë“œë¥¼ ì œëŒ€ë¡œ ì¸ì‹í–ˆëŠ”ì§€ë¥¼ í™•ì¸í•˜ê¸°
 
 		String state =Environment.getExternalStorageState();
 		if (state.equals(Environment.MEDIA_MOUNTED)) {
-			Log.d("file", "¿ÜºÎ¸Ş¸ğ¸® ÀĞ±â/¾²±â °¡´É");
+			Log.d("file", "ì™¸ë¶€ë©”ëª¨ë¦¬ ì½ê¸°/ì“°ê¸° ê°€ëŠ¥");
 		} else if (state.equals(Environment.MEDIA_MOUNTED_READ_ONLY)) {
-			Log.d("file", "¿ÜºÎ¸Ş¸ğ¸® ÀĞ±â Àü¿ë");
-			Toast.makeText(getApplicationContext(), "¿ÜºÎ¸Ş¸ğ¸® ÀĞ±â Àü¿ë", 0).show();
-			finish();//¾ÛÁ¾·á
+			Log.d("file", "ì™¸ë¶€ë©”ëª¨ë¦¬ ì½ê¸° ì „ìš©");
+			Toast.makeText(getApplicationContext(), "ì™¸ë¶€ë©”ëª¨ë¦¬ ì½ê¸° ì „ìš©", 0).show();
+			finish();//ì•±ì¢…ë£Œ
 		} else {
-			Log.d("file", "¿ÜºÎ¸Ş¸ğ¸® »ç¿ë ºÒ°¡");
-			Toast.makeText(getApplicationContext(), "¿ÜºÎ¸Ş¸ğ¸® »ç¿ë ºÒ°¡", 0).show();
-			finish();//¾ÛÁ¾·á
+			Log.d("file", "ì™¸ë¶€ë©”ëª¨ë¦¬ ì‚¬ìš© ë¶ˆê°€");
+			Toast.makeText(getApplicationContext(), "ì™¸ë¶€ë©”ëª¨ë¦¬ ì‚¬ìš© ë¶ˆê°€", 0).show();
+			finish();//ì•±ì¢…ë£Œ
 		}
 
 
@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
 					PrintWriter out = new PrintWriter(new FileWriter(file, true));
 					out.println(str);
 					out.close();
-					Log.d("file", "ÆÄÀÏ ¾²±â ¿Ï·á");
+					Log.d("file", "íŒŒì¼ ì“°ê¸° ì™„ë£Œ");
 
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -83,24 +83,24 @@ public class MainActivity extends Activity {
 					int point = 0;
 					while (true) {
 //						String str = br.readLine();
-//						if (str==null) break;//ÆÄÀÏÀÇ ³¡À» ¸¸³ª¸é ¹İº¹ Å»Ãâ
+//						if (str==null) break;//íŒŒì¼ì˜ ëì„ ë§Œë‚˜ë©´ ë°˜ë³µ íƒˆì¶œ
 //						result += str +"\n";
 						String str = br.readLine();
-						if (str==null) break;//ÆÄÀÏÀÇ ³¡À» ¸¸³ª¸é ¹İº¹ Å»Ãâ						
-						if (str.substring(0,3).equals("ÀÌ¸§:")) {
+						if (str==null) break;//íŒŒì¼ì˜ ëì„ ë§Œë‚˜ë©´ ë°˜ë³µ íƒˆì¶œ						
+						if (str.substring(0,3).equals("ì´ë¦„:")) {
 //							name = str.substring(3, str.length());
 							name = str.substring(3);
-						} else if (str.substring(0,3).equals("´Ü°è:")) {
+						} else if (str.substring(0,3).equals("ë‹¨ê³„:")) {
 //							step = Integer.valueOf(str.substring(3, str.length()));
 							step = Integer.valueOf(str.substring(3));
-						} else if (str.substring(0,3).equals("Á¡¼ö:")) {
+						} else if (str.substring(0,3).equals("ì ìˆ˜:")) {
 //							point =  Integer.valueOf(str.substring(3, str.length()));
 							point =  Integer.valueOf(str.substring(3));
 						}
 					}
 					result = name +"," + step + "," + point;
 					tv.setText(result);
-					Log.d("file", "ÆÄÀÏ ÀĞ±â ¿Ï·á");
+					Log.d("file", "íŒŒì¼ ì½ê¸° ì™„ë£Œ");
 
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();

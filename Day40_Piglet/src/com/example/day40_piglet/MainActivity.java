@@ -83,19 +83,19 @@ public class MainActivity extends Activity {
 	Handler handler = new Handler();
 	Runnable r = new Runnable() {
 		public void run() {
-			tv_result.setText("´©ÀûµÈ ²ÉÀÇ ¼ö : "+count+"\n¸ğÀº ²ÉÀÇ ¼ö : "+flower);
-			tv_level.setText("·¹º§ : "+level+"\nÇÇ±Û·¿ : "+pig.size()+"   ²É : "+MAX_FLOWER);
-			// ²É »ı¼º
+			tv_result.setText("ëˆ„ì ëœ ê½ƒì˜ ìˆ˜ : "+count+"\nëª¨ì€ ê½ƒì˜ ìˆ˜ : "+flower);
+			tv_level.setText("ë ˆë²¨ : "+level+"\ní”¼ê¸€ë › : "+pig.size()+"   ê½ƒ : "+MAX_FLOWER);
+			// ê½ƒ ìƒì„±
 			if (flo.size()<MAX_FLOWER) {
 				BuyFlower();
 			}
-			// ÇÇ±Û¸´ »ı¼º
+			// í”¼ê¸€ë¦¿ ìƒì„±
 			if (pig.size()<MINUM_PIG) {
 				AddPiglet();
 			}
 
 
-			// ÇÇ±Û·¿ ¿òÁ÷ÀÓ ¹× Ãæµ¹ °ü¸®
+			// í”¼ê¸€ë › ì›€ì§ì„ ë° ì¶©ëŒ ê´€ë¦¬
 			for (int i = pig.size()-1; i >= 0; i--){
 				final Piglet object_pig = pig.get(i);
 
@@ -209,7 +209,7 @@ public class MainActivity extends Activity {
 		tv_level = (TextView)findViewById(R.id.level);
 
 		Intent intent = getIntent();
-		String mode = intent.getStringExtra("¸ğµå");
+		String mode = intent.getStringExtra("ëª¨ë“œ");
 		if ("NEW".equals(mode)) {
 			Toast.makeText(getApplicationContext(), mode, 0).show();
 		} else if ("LOAD".equals(mode)) {
@@ -242,8 +242,8 @@ public class MainActivity extends Activity {
 						MAX_FLOWER = Integer.valueOf(str.substring(4));
 					}
 				}
-				tv_result.setText("´©ÀûµÈ ²ÉÀÇ ¼ö : "+count+"\n¸ğÀº ²ÉÀÇ ¼ö : "+flower);
-				tv_level.setText("·¹º§ : "+level+"\nÇÇ±Û·¿ : "+pig.size()+"   ²É : "+MAX_FLOWER);
+				tv_result.setText("ëˆ„ì ëœ ê½ƒì˜ ìˆ˜ : "+count+"\nëª¨ì€ ê½ƒì˜ ìˆ˜ : "+flower);
+				tv_level.setText("ë ˆë²¨ : "+level+"\ní”¼ê¸€ë › : "+pig.size()+"   ê½ƒ : "+MAX_FLOWER);
 				br.close();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -260,13 +260,13 @@ public class MainActivity extends Activity {
 		});
 		handler.post(r_check);
 		final Button b_po = (Button)findViewById(R.id.position);
-		if (b_po.getText().toString().equals("ÇÇ±Û·¿ Á¤Áö")) {
+		if (b_po.getText().toString().equals("í”¼ê¸€ë › ì •ì§€")) {
 			handler.post(r);
-		} else if (b_po.getText().toString().equals("ÇÇ±Û·¿ µ¿ÀÛ")){
+		} else if (b_po.getText().toString().equals("í”¼ê¸€ë › ë™ì‘")){
 		}
 		b_po.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				if (b_po.getText().toString().equals("ÇÇ±Û·¿ Á¤Áö")) {
+				if (b_po.getText().toString().equals("í”¼ê¸€ë › ì •ì§€")) {
 					for (int i = pig.size()-1; i >= 0; i--){
 						Piglet object_pig = pig.get(i);
 						object_pig.iv.bringToFront();
@@ -274,7 +274,7 @@ public class MainActivity extends Activity {
 						object_pig.dx = 0;
 						object_pig.dy = 0;
 					}
-					b_po.setText("ÇÇ±Û·¿ µ¿ÀÛ");
+					b_po.setText("í”¼ê¸€ë › ë™ì‘");
 				} else {
 					for (int i = pig.size()-1; i >= 0; i--){
 						Piglet object_pig = pig.get(i);
@@ -286,7 +286,7 @@ public class MainActivity extends Activity {
 						object_pig.dx = dx;
 						object_pig.dy = dy;
 					}
-					b_po.setText("ÇÇ±Û·¿ Á¤Áö");
+					b_po.setText("í”¼ê¸€ë › ì •ì§€");
 				}
 			}
 		});
@@ -299,16 +299,16 @@ public class MainActivity extends Activity {
 				try {
 					FileOutputStream fos = openFileOutput("game.txt", Context.MODE_PRIVATE);
 					PrintWriter out = new PrintWriter(fos);
-					out.println("COU:"+count);//´©ÀûµÈ ²ÉÀÇ ¼ö
-					out.println("FLO:"+flower);//ÇöÀç °¡Áö°í ÀÖ´Â ¼ö
-					out.println("PIG:"+pig.size());//ÇÇ±Û·¿ÀÇ ¼ö
-					out.println("LEV:"+level);//·¹º§
-					out.println("MAX:"+MAX_FLOWER);//È­¸é »óÀÇ ²ÉÀÇ °³¼ö
+					out.println("COU:"+count);//ëˆ„ì ëœ ê½ƒì˜ ìˆ˜
+					out.println("FLO:"+flower);//í˜„ì¬ ê°€ì§€ê³  ìˆëŠ” ìˆ˜
+					out.println("PIG:"+pig.size());//í”¼ê¸€ë ›ì˜ ìˆ˜
+					out.println("LEV:"+level);//ë ˆë²¨
+					out.println("MAX:"+MAX_FLOWER);//í™”ë©´ ìƒì˜ ê½ƒì˜ ê°œìˆ˜
 					out.close();
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
-				Toast.makeText(getApplicationContext(), "ÀúÀåµÇ¾ú½À´Ï´Ù", 0).show();
+				Toast.makeText(getApplicationContext(), "ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤", 0).show();
 			}
 		});
 
@@ -323,20 +323,20 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DIALOG_ADDPIG:
 			AlertDialog.Builder dialog1 = new Builder(this);
-			dialog1.setTitle("ÇÇ±Û·¿ Ãß°¡");
-			dialog1.setMessage("ÇÇ±Û·¿À» Ãß°¡ÇÏ±â À§ÇØ¼­´Â \n²ÉÀÌ 10°³ ÇÊ¿äÇÕ´Ï´Ù. \nÇÇ±Û·¿À» Ãß°¡ÇÏ½Ã°Ú½À´Ï±î?");
-			dialog1.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog1.setTitle("í”¼ê¸€ë › ì¶”ê°€");
+			dialog1.setMessage("í”¼ê¸€ë ›ì„ ì¶”ê°€í•˜ê¸° ìœ„í•´ì„œëŠ” \nê½ƒì´ 10ê°œ í•„ìš”í•©ë‹ˆë‹¤. \ní”¼ê¸€ë ›ì„ ì¶”ê°€í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog1.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					if (flower>=10) {
 						AddPiglet();
 						flower-=10;
 						MINUM_PIG++;
 					} else {
-						Toast.makeText(getApplicationContext(), "²ÉÀÌ ºÎÁ·ÇÕ´Ï´Ù", 0).show();
+						Toast.makeText(getApplicationContext(), "ê½ƒì´ ë¶€ì¡±í•©ë‹ˆë‹¤", 0).show();
 					}
 				}
 			});
-			dialog1.setNegativeButton("¾Æ´Ï¿À", null);
+			dialog1.setNegativeButton("ì•„ë‹ˆì˜¤", null);
 			return dialog1.create();
 		default:
 			break;

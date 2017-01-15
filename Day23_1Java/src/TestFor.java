@@ -4,8 +4,8 @@ public class TestFor {
 		for (int i = 0; i < args.length; i++) {
 
 		}
-		// while (Á¶°Ç½Ä) {
-		// //Á¶°Ç½ÄÀÌ ÂüÀÌ¸é ½ÇÇà
+		// while (ì¡°ê±´ì‹) {
+		// //ì¡°ê±´ì‹ì´ ì°¸ì´ë©´ ì‹¤í–‰
 		// }
 		byte a = 7;
 
@@ -15,8 +15,8 @@ public class TestFor {
 		}
 
 		do {
-			// Á¶°Ç½ÄÀÌ ÂüÀÌ¸é ½ÇÇà
-			System.out.println("½ÇÇà");
+			// ì¡°ê±´ì‹ì´ ì°¸ì´ë©´ ì‹¤í–‰
+			System.out.println("ì‹¤í–‰");
 		} while (a < 7);
 
 	}// end of main

@@ -23,13 +23,13 @@ public class SettingActivity extends Activity{
 		sw = (Switch)findViewById(R.id.switch1);
 		et = (EditText)findViewById(R.id.editText1);
 		
-		//myset.datÆÄÀÏ¿¡ ÀúÀå
+		//myset.datíŒŒì¼ì— ì €ì¥
 		sp = getSharedPreferences("myset.dat",Context.MODE_PRIVATE);
-////ÀĞ±â
+////ì½ê¸°
 //		sp.getBoolean("cb", true);
-////¾²±â		
-//		Editor editor = sp.edit();// SharedPreference¿¡¼­ Editor°´Ã¼ ¾òÀ½
-//		editor.putBoolean("cd", false);// Å°, °ª
+////ì“°ê¸°		
+//		Editor editor = sp.edit();// SharedPreferenceì—ì„œ Editorê°ì²´ ì–»ìŒ
+//		editor.putBoolean("cd", false);// í‚¤, ê°’
 //		
 //		editor.commit();
 		
@@ -42,15 +42,15 @@ public class SettingActivity extends Activity{
 	}//end of onCreate
 	
 	protected void onPause() {
-		// ¿ì¸® ¾ÛÀÌ ´Ù¸¥ ÆË¾÷¿¡ ÀÇÇØ È­¸éÀÇ ÀÏºÎ°¡ °¡·ÁÁ³À» ‹š È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
+		// ìš°ë¦¬ ì•±ì´ ë‹¤ë¥¸ íŒì—…ì— ì˜í•´ í™”ë©´ì˜ ì¼ë¶€ê°€ ê°€ë ¤ì¡Œì„ ë–„ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
 		super.onPause();
-// »ç¿ëÀÚ°¡ º¯°æÇÑ ÀÛ¾÷À» ÆÄÀÏ¿¡ ÀúÀåÇÏ±â
+// ì‚¬ìš©ìê°€ ë³€ê²½í•œ ì‘ì—…ì„ íŒŒì¼ì— ì €ì¥í•˜ê¸°
 //		SharedPreferences sp = getSharedPreferences("myset.dat", Context.MODE_PRIVATE);
 		Editor editor = sp.edit();
-		editor.putBoolean("cb", cb.isChecked());//Ã¼Å©¹Ú½º°ªÀúÀå
-		editor.putBoolean("sw", sw.isChecked());//½ºÀ§Ä¡°ªÀúÀå
-		editor.putString("et", et.getText().toString());//¿¡µğÆ®ÅØ½ºÆ®°ªÀúÀå
-		editor.commit();//¿ì¸® º¯°æÇÑ ÀÛ¾÷À» ÆÄÀÏ¿¡ ÀÛ¼ºÇÏ±â
+		editor.putBoolean("cb", cb.isChecked());//ì²´í¬ë°•ìŠ¤ê°’ì €ì¥
+		editor.putBoolean("sw", sw.isChecked());//ìŠ¤ìœ„ì¹˜ê°’ì €ì¥
+		editor.putString("et", et.getText().toString());//ì—ë””íŠ¸í…ìŠ¤íŠ¸ê°’ì €ì¥
+		editor.commit();//ìš°ë¦¬ ë³€ê²½í•œ ì‘ì—…ì„ íŒŒì¼ì— ì‘ì„±í•˜ê¸°
 
 	
 	
@@ -58,8 +58,8 @@ public class SettingActivity extends Activity{
 	
 	protected void onResume() {
 		super.onResume();
-	// ¿ì¸® ¾ÛÀÌ È­¸é¿¡ ±×·ÁÁú ¶§ È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
-// »ç¿ëÀÚ°¡ ¼³Á¤ÇÑ ³»¿ëÀÏ ÀúÀåµÈ ÆÄÀÏ¿¡¼­ Á¤º¸¸¦ ÀĞ¾î¼­ È­¸é¿¡ Ç¥½ÃÇÏ±â		
+	// ìš°ë¦¬ ì•±ì´ í™”ë©´ì— ê·¸ë ¤ì§ˆ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
+// ì‚¬ìš©ìê°€ ì„¤ì •í•œ ë‚´ìš©ì¼ ì €ì¥ëœ íŒŒì¼ì—ì„œ ì •ë³´ë¥¼ ì½ì–´ì„œ í™”ë©´ì— í‘œì‹œí•˜ê¸°		
 	
 		if (sp==null) return;
 		

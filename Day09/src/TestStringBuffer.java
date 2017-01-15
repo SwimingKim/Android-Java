@@ -1,26 +1,26 @@
 /**
- * StringÀÌ ¿¬»ê¼Óµµ°¡ ´À¸®´Ù StringBuffer (½Ì±Û ¾²·¹µå ¿ë) StringBuilder(¸ÖÆ¼ ¾²·¹µå ¿ë)
+ * Stringì´ ì—°ì‚°ì†ë„ê°€ ëŠë¦¬ë‹¤ StringBuffer (ì‹±ê¸€ ì“°ë ˆë“œ ìš©) StringBuilder(ë©€í‹° ì“°ë ˆë“œ ìš©)
  */
 public class TestStringBuffer {
 	public static void main(String[] args) {
-		StringBuffer sb = new StringBuffer("abc");// ¹®ÀÚ¿­ Å©±â + ¹öÆÛ 16
+		StringBuffer sb = new StringBuffer("abc");// ë¬¸ìžì—´ í¬ê¸° + ë²„í¼ 16
 
-		System.out.println(sb.length());// ¹®ÀÚ¿­ÀÇ ±æÀÌ
-		System.out.println(sb.capacity());// ¹®ÀÚ¿­ Å©±â + ¹öÆÛ Å©±â
+		System.out.println(sb.length());// ë¬¸ìžì—´ì˜ ê¸¸ì´
+		System.out.println(sb.capacity());// ë¬¸ìžì—´ í¬ê¸° + ë²„í¼ í¬ê¸°
 		System.out.println(sb.charAt(2));
-		System.out.println(sb.delete(1, 2));// »èÁ¦, 1Æ÷ÇÔ 2¹ÌÆ÷ÇÔ
-		System.out.println(sb);// Ã³¸®µÈ °ªÀÌ ÀúÀåµÇ¾î¹ö¸°´Ù
+		System.out.println(sb.delete(1, 2));// ì‚­ì œ, 1í¬í•¨ 2ë¯¸í¬í•¨
+		System.out.println(sb);// ì²˜ë¦¬ëœ ê°’ì´ ì €ìž¥ë˜ì–´ë²„ë¦°ë‹¤
 		System.out.println(sb.insert(1, "helloworld"));
 		System.out.println(sb);
 		// ahelloWorldc
 		// 012345678901
-		System.out.println(sb.substring(4, 8));// ÀúÀå ¾ÈµÊ
+		System.out.println(sb.substring(4, 8));// ì €ìž¥ ì•ˆë¨
 		System.out.println(sb);
-		System.out.println(sb.reverse());// ¿ª¼øÀ¸·Î Ãâ·Â
+		System.out.println(sb.reverse());// ì—­ìˆœìœ¼ë¡œ ì¶œë ¥
 
-		// ÄûÁî
+		// í€´ì¦ˆ
 		String str = "HelloWorld";
-		// ¿ª¼øÀ¸·Î Ãâ·ÂÇÏ½Ã¿À
+		// ì—­ìˆœìœ¼ë¡œ ì¶œë ¥í•˜ì‹œì˜¤
 		StringBuffer sb2 = new StringBuffer(str);// String=>StringBuffer
 		sb2.reverse();
 		System.out.println(sb2.toString());

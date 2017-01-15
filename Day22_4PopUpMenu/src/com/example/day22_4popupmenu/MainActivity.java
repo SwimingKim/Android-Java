@@ -26,9 +26,9 @@ public class MainActivity extends Activity {
 
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ÆË¾÷¸Ş´º ¶ç¿ì±â
-				// 1. ÆË¾÷¸Ş´º »ı¼º ÈÄ show
-				// 2. ÀÌº¥Æ® Ã³¸®
+				// íŒì—…ë©”ë‰´ ë„ìš°ê¸°
+				// 1. íŒì—…ë©”ë‰´ ìƒì„± í›„ show
+				// 2. ì´ë²¤íŠ¸ ì²˜ë¦¬
 
 				PopupMenu pm = new PopupMenu(getApplicationContext(), v);
 				pm.getMenuInflater().inflate(R.menu.popup, pm.getMenu());

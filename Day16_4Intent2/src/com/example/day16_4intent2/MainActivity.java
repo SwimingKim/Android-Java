@@ -18,12 +18,12 @@ public class MainActivity extends Activity {
 		Button b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ´ÙÀÌ¾ó È­¸éÀ¸·Î ÀüÈ¯ÇÏ±â - ³»°¡ ¸¸µç Å¬·¡½º°¡ ¾Æ´Ï¸é, Å¬·¡½º ÀÌ¸§À» ¾Ë ¼ö ¾ø´Ù
-				// ¹¬½ÃÀû ÀÎÅÙÆ®
+				// ë‹¤ì´ì–¼ í™”ë©´ìœ¼ë¡œ ì „í™˜í•˜ê¸° - ë‚´ê°€ ë§Œë“  í´ë˜ìŠ¤ê°€ ì•„ë‹ˆë©´, í´ë˜ìŠ¤ ì´ë¦„ì„ ì•Œ ìˆ˜ ì—†ë‹¤
+				// ë¬µì‹œì  ì¸í…íŠ¸
 
-				Intent intent = new Intent(Intent.ACTION_VIEW, // ¸ğµå
-						Uri.parse("tel:010-9622-0213"));// ¼¼ºÎµ¥ÀÌÅÍ
-				startActivity(intent);// ¹¬½ÃÀûÀÎ Intent È­¸éÀüÈ¯
+				Intent intent = new Intent(Intent.ACTION_VIEW, // ëª¨ë“œ
+						Uri.parse("tel:010-9622-0213"));// ì„¸ë¶€ë°ì´í„°
+				startActivity(intent);// ë¬µì‹œì ì¸ Intent í™”ë©´ì „í™˜
 
 			}
 		});
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 		Button b5 = (Button) findViewById(R.id.button5);
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ÀüÈ­°É¾î¹ö¸®±â
+				// ì „í™”ê±¸ì–´ë²„ë¦¬ê¸°
 				Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:010-9622-0213"));
 				startActivity(intent);
 			}
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 		});
 		b4.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ¹®ÀÚº¸³»±â
+				// ë¬¸ìë³´ë‚´ê¸°
 				Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:010-9622-0213"));
 				startActivity(intent);
 			}

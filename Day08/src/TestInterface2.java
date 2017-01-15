@@ -1,6 +1,6 @@
 /**
- * ÀÚ¹ÙÀÇ Å¬·¡½º´Â ´ÜÀÏ»ó¼Ó¸¸À» Çã¿ëÇÑ´Ù(¾Ö¸Å¸ğÈ£ÇÑ ¿¡·¯¸¦ ¹æÁöÇÏ±â À§ÇØ¼­ ´ÙÁß»ó¼ÓÀÇ ÀåÁ¡À» Æ÷±âÇÔ) ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Âµ¥, ¿©·¯°³ÀÇ
- * ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÒ ¼ö ÀÖ´Ù
+ * ìë°”ì˜ í´ë˜ìŠ¤ëŠ” ë‹¨ì¼ìƒì†ë§Œì„ í—ˆìš©í•œë‹¤(ì• ë§¤ëª¨í˜¸í•œ ì—ëŸ¬ë¥¼ ë°©ì§€í•˜ê¸° ìœ„í•´ì„œ ë‹¤ì¤‘ìƒì†ì˜ ì¥ì ì„ í¬ê¸°í•¨) ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ”ë°, ì—¬ëŸ¬ê°œì˜
+ * ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•  ìˆ˜ ìˆë‹¤
  */
 public class TestInterface2 {
 	public static void main(String[] args) {
@@ -8,12 +8,12 @@ public class TestInterface2 {
 	}// end of main
 }// end of class
 
-interface Movable {// ~able·Î ³¡³ª´Â ÀÌ¸§À¸·Î ¸í¸íÇÑ´Ù
+interface Movable {// ~ableë¡œ ëë‚˜ëŠ” ì´ë¦„ìœ¼ë¡œ ëª…ëª…í•œë‹¤
 	void move();
 }
 
 interface Attackable {
-	void attack();// public static / abstract»ı·«
+	void attack();// public static / abstractìƒëµ
 
 }
 

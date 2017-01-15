@@ -12,15 +12,15 @@ import java.awt.event.WindowEvent;
 
 public class Machine {
 	public static void main(String[] args) {
-		String menu[] = { "Ä­Å¸Å¸", "¹ĞÅ°½º", "¸¶¿îÆ¾µà", "·¹¾²ºñ", "»çÀÌ´Ù", "Ä«ÆäÅ¸ÀÓ", "¸ÆÄİ", "Äİ¶ó", "°ÔÅä·¹ÀÌ" };
+		String menu[] = { "ì¹¸íƒ€íƒ€", "ë°€í‚¤ìŠ¤", "ë§ˆìš´í‹´ë“€", "ë ˆì“°ë¹„", "ì‚¬ì´ë‹¤", "ì¹´í˜íƒ€ì„", "ë§¥ì½œ", "ì½œë¼", "ê²Œí† ë ˆì´" };
 		int price[] = { 1800, 800, 900, 500, 1100, 700, 600, 700, 700 };
 
-		Frame f = new Frame("ÀÚÆÇ±â ÇÁ·Î±×·¥");
+		Frame f = new Frame("ìíŒê¸° í”„ë¡œê·¸ë¨");
 		f.setBounds(100, 100, 280, 500);
 		f.setLayout(new FlowLayout());
 		f.setBackground(Color.orange);
 
-		f.add(new Label("¿ì¸® ÀÚÆÇ±â °ñ¶ó°ñ¶ó~\n"));
+		f.add(new Label("ìš°ë¦¬ ìíŒê¸° ê³¨ë¼ê³¨ë¼~\n"));
 
 		TextArea ta1 = new TextArea(12, 20);
 		f.add(ta1);
@@ -30,40 +30,40 @@ public class Machine {
 		}
 		TextArea ta2 = new TextArea(8, 30);
 
-		f.add(new Label("µ·À» ÀÔ·ÂÇØÁÖ¼¼¿ä."));
+		f.add(new Label("ëˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”."));
 		TextField tf1 = new TextField(8);
 		f.add(tf1);
 
-		Button b1 = new Button("Àü¼Û");
+		Button b1 = new Button("ì „ì†¡");
 		f.add(b1);
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					if (Integer.parseInt(tf1.getText()) < 0) {
-						ta2.append("µ·Àº ¸¶ÀÌ³Ê½º´Â ¾ÈµÅ¿ä\n");
+						ta2.append("ëˆì€ ë§ˆì´ë„ˆìŠ¤ëŠ” ì•ˆë¼ìš”\n");
 					} else
-						ta2.append("³ÖÀº µ· : " + Integer.parseInt(tf1.getText()) + "\n");
+						ta2.append("ë„£ì€ ëˆ : " + Integer.parseInt(tf1.getText()) + "\n");
 				} catch (Exception e2) {
-					ta2.append("µ·Àº ¼ıÀÚ·Î ³Ö¾îÁÖ¼¼¿ä\n");
+					ta2.append("ëˆì€ ìˆ«ìë¡œ ë„£ì–´ì£¼ì„¸ìš”\n");
 				}
 			}
 		});
 
-		f.add(new Label("À½·á¼ö¸¦ °í¸£¼¼¿ä."));
+		f.add(new Label("ìŒë£Œìˆ˜ë¥¼ ê³ ë¥´ì„¸ìš”."));
 		TextField tf2 = new TextField(6);
 		f.add(tf2);
 
-		Button b2 = new Button("¼±ÅÃ");
+		Button b2 = new Button("ì„ íƒ");
 		f.add(b2);
 		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					if (Integer.parseInt(tf2.getText()) >= 10) {
-						ta2.append("¸Ş´ºÀÇ ¹üÀ§¸¦ ¹ş¾î³ª¿ä\n");
+						ta2.append("ë©”ë‰´ì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ìš”\n");
 					} else
-						ta2.append(menu[Integer.parseInt(tf2.getText()) - 1] + "¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+						ta2.append(menu[Integer.parseInt(tf2.getText()) - 1] + "ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
 				} catch (Exception e2) {
-					ta2.append("¸Ş´º´Â ¼ıÀÚ·Î ³Ö¾îÁÖ¼¼¿ä\n");
+					ta2.append("ë©”ë‰´ëŠ” ìˆ«ìë¡œ ë„£ì–´ì£¼ì„¸ìš”\n");
 				}
 
 			}
@@ -71,16 +71,16 @@ public class Machine {
 
 		f.add(ta2);
 
-		Button b3 = new Button("°è»êÇÏ±â");
+		Button b3 = new Button("ê³„ì‚°í•˜ê¸°");
 		f.add(b3);
 		b3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int money = Integer.valueOf(tf1.getText());
 				int select = Integer.valueOf(tf2.getText()) - 1;
-				ta2.append("\nÀÜµ· : " + (money - price[select]) + "\n" + "500¿ø : " + (money - price[select]) / 500
-						+ "°³\n" + "100¿ø : " + (money - price[select]) % 500 / 100 + "°³\n" + " 50¿ø : "
-						+ (money - price[select]) % 100 / 50 + "°³\n" + " 10¿ø : " + (money - price[select]) % 50 / 10
-						+ "°³\n" + "±¸¸Å¿Ï·á!!\n\n");
+				ta2.append("\nì”ëˆ : " + (money - price[select]) + "\n" + "500ì› : " + (money - price[select]) / 500
+						+ "ê°œ\n" + "100ì› : " + (money - price[select]) % 500 / 100 + "ê°œ\n" + " 50ì› : "
+						+ (money - price[select]) % 100 / 50 + "ê°œ\n" + " 10ì› : " + (money - price[select]) % 50 / 10
+						+ "ê°œ\n" + "êµ¬ë§¤ì™„ë£Œ!!\n\n");
 			}
 		});
 

@@ -25,7 +25,7 @@ public class Upload {
 
 		PrintWriter pw = new PrintWriter("C:\\Users\\Administrator\\Desktop\\array\\allfile.txt");
 		for(int i = 1; i < name.size(); i++) {
-//			String data = i+" ¹øÂ° ÁÙÀÔ´Ï´Ù.";
+//			String data = i+" ë²ˆì§¸ ì¤„ìž…ë‹ˆë‹¤.";
 			pw.println(name.get(i));
 		}
 		pw.close();
@@ -33,14 +33,14 @@ public class Upload {
 		//		try{
 		//			BufferedWriter fw = new BufferedWriter(new FileWriter(fileName, true));
 		//			
-		//			// ÆÄÀÏ¾È¿¡ ¹®ÀÚ¿­ ¾²±â
+		//			// íŒŒì¼ì•ˆì— ë¬¸ìžì—´ ì“°ê¸°
 		//			for (int i = 0; i < name.size(); i++) {
 		//				fw.write(name.get(i));
 		//			}
 		//			
 		//			fw.flush();
 		//			
-		//			// °´Ã¼ ´Ý±â
+		//			// ê°ì²´ ë‹«ê¸°
 		//			fw.close(); 
 		//			
 		//			

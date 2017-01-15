@@ -15,9 +15,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ¹öÆ°ÀÇ ÀÌº¥Æ® Ã³¸®¹æ¹ı : xml¿¡¼­ ÀÌº¥Æ® µî·Ï
-		// ÀåÁ¡ : ÄÚµå°¡ °£´Ü
-		// ´ÜÁ¡ : ÃßÀû(µğ¹ö±ë)ÀÌ ¾î·Æ´Ù
+		// ë²„íŠ¼ì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²• : xmlì—ì„œ ì´ë²¤íŠ¸ ë“±ë¡
+		// ì¥ì  : ì½”ë“œê°€ ê°„ë‹¨
+		// ë‹¨ì  : ì¶”ì (ë””ë²„ê¹…)ì´ ì–´ë µë‹¤
 
 		et = (EditText) findViewById(R.id.editText1);
 		// Button b1 = (Button)findViewById(R.id.button1);

@@ -1,33 +1,33 @@
 /**
- * Äİ½ºÅÃ
+ * ì½œìŠ¤íƒ
  */
 public class TestCallStack {
 	public static void main(String[] args) {
-		System.out.println("main½ÃÀÛ");
+		System.out.println("mainì‹œì‘");
 
 		new TT().first();
 
-		System.out.println("main³¡");
+		System.out.println("mainë");
 
 	}// end of main
 }// end of class
 
 class TT {
 	void first() {
-		System.out.println("1½ÃÀÛ");
+		System.out.println("1ì‹œì‘");
 		second();
-		System.out.println("1³¡");
+		System.out.println("1ë");
 	}
 
 	void second() {
-		System.out.println("2½ÃÀÛ");
+		System.out.println("2ì‹œì‘");
 		third();
-		System.out.println("2³¡");
+		System.out.println("2ë");
 	}
 
 	void third() {
-		System.out.println("3½ÃÀÛ");
+		System.out.println("3ì‹œì‘");
 
-		System.out.println("3³¡");
+		System.out.println("3ë");
 	}
 }

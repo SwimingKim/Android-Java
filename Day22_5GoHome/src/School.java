@@ -48,9 +48,9 @@ class Course {
 
 	public String toString() {
 		String str = "";
-		str += out + "´Ô, ¼ö°­ Á¤¿øÀÌ " + (num <= max ? "°¡µæ" : "¾ÆÁ÷ ¾È") + " Ã¡½À´Ï´Ù.\n";
-		str += "ÀÌ ¼ö¾÷Àº " + proffessor.toString() + " ±³¼öÀÇ ¼ö¾÷ÀÔ´Ï´Ù.\n";
-		str += "¼ö°­»ı ¸ñ·ÏÀº ´ÙÀ½°ú °°½À´Ï´Ù :\n" + student.toString();
+		str += out + "ë‹˜, ìˆ˜ê°• ì •ì›ì´ " + (num <= max ? "ê°€ë“" : "ì•„ì§ ì•ˆ") + " ì°¼ìŠµë‹ˆë‹¤.\n";
+		str += "ì´ ìˆ˜ì—…ì€ " + proffessor.toString() + " êµìˆ˜ì˜ ìˆ˜ì—…ì…ë‹ˆë‹¤.\n";
+		str += "ìˆ˜ê°•ìƒ ëª©ë¡ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤ :\n" + student.toString();
 		return str;
 	}
 }

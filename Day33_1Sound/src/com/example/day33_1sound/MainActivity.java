@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 		findViewById(R.id.cry).setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(getApplicationContext(), CallActivity.class);
-				intent.putExtra("ªÛ", "cry");
+				intent.putExtra("ÏÉÅ", "cry");
 				startActivity(intent);
 				finish();
 			}
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 		findViewById(R.id.smile).setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(getApplicationContext(), CallActivity.class);
-				intent.putExtra("ªÛ", "smile");
+				intent.putExtra("ÏÉÅ", "smile");
 				startActivity(intent);
 				finish();
 			}
@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 		findViewById(R.id.sleep).setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(getApplicationContext(), CallActivity.class);
-				intent.putExtra("ªÛ", "good");
+				intent.putExtra("ÏÉÅ", "good");
 				startActivity(intent);
 				finish();
 			}

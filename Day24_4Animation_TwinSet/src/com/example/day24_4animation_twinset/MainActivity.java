@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// Æ®À© ¾Ö´Ï¸ŞÀÌ¼Ç - set : ¾ËÆÄ°ª, Å©±âº¯°æ, ÀÌµ¿, È¸Àü ±â´ÉÀ» Á¶ÇÕÇÒ ¼ö ÀÖ´Ù
+				// íŠ¸ìœˆ ì• ë‹ˆë©”ì´ì…˜ - set : ì•ŒíŒŒê°’, í¬ê¸°ë³€ê²½, ì´ë™, íšŒì „ ê¸°ëŠ¥ì„ ì¡°í•©í•  ìˆ˜ ìˆë‹¤
 				Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.set);
 				iv.startAnimation(animation);
 

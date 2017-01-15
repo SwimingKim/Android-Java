@@ -17,15 +17,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 /**
- * <±¸±Û ¸Ê »ç¿ëÇÏ±â>
+ * <êµ¬ê¸€ ë§µ ì‚¬ìš©í•˜ê¸°>
  * 
- * 1. ÇÁ·ÎÁ§Æ® »ı¼º½Ã google service¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Â API°¡ Æ÷ÇÔµÈ ¹öÀüÀ» ¼±ÅÃ ÈÄ »ı¼ºÇÑ´Ù.
- * 2. SDK Manager¿¡¼­ Google Play services ¼³Ä¡ ÇØ¾ß ÇÑ´Ù.(29¹öÀü)
- * 3. ÀÌÅ¬¸³½º¿¡ google-play-services_lib ÇÁ·ÎÁ§Æ®¸¦ import ÇØ¾ß ÇÑ´Ù.(lib Google API 6.0¹öÀü)
- * 4. ÀÓÆ÷Æ®ÇÑ google-play-services_lib¸¦ ¿ì¸® ÇÁ·ÎÁ§Æ®ÀÇ ¶óÀÌºê·¯¸®·Î µî·ÏÇÑ´Ù.(³»ÆÄÀÏ Google API 6.0¹öÀü)
- * 5. ±¸±Û ·Î±×ÀÎ, °³¹ßÀÚ »çÀÌÆ® API key ¹ß±Ş (SHA1 °ªÀ» µî·ÏÇØ¾ß ÇÑ´Ù)
- * 6. AndroidManifest.xml ±ÇÇÑ¼³Á¤ (°¢Á¾ ±ÇÇÑ, °³¹ßÀÚ Å°)
- * 7. FragmentActivity¸¦ »ó¼Ó¹Ş¾Æ¼­ ±¸Çö(jar->support)
+ * 1. í”„ë¡œì íŠ¸ ìƒì„±ì‹œ google serviceë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” APIê°€ í¬í•¨ëœ ë²„ì „ì„ ì„ íƒ í›„ ìƒì„±í•œë‹¤.
+ * 2. SDK Managerì—ì„œ Google Play services ì„¤ì¹˜ í•´ì•¼ í•œë‹¤.(29ë²„ì „)
+ * 3. ì´í´ë¦½ìŠ¤ì— google-play-services_lib í”„ë¡œì íŠ¸ë¥¼ import í•´ì•¼ í•œë‹¤.(lib Google API 6.0ë²„ì „)
+ * 4. ì„í¬íŠ¸í•œ google-play-services_libë¥¼ ìš°ë¦¬ í”„ë¡œì íŠ¸ì˜ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¡œ ë“±ë¡í•œë‹¤.(ë‚´íŒŒì¼ Google API 6.0ë²„ì „)
+ * 5. êµ¬ê¸€ ë¡œê·¸ì¸, ê°œë°œì ì‚¬ì´íŠ¸ API key ë°œê¸‰ (SHA1 ê°’ì„ ë“±ë¡í•´ì•¼ í•œë‹¤)
+ * 6. AndroidManifest.xml ê¶Œí•œì„¤ì • (ê°ì¢… ê¶Œí•œ, ê°œë°œì í‚¤)
+ * 7. FragmentActivityë¥¼ ìƒì†ë°›ì•„ì„œ êµ¬í˜„(jar->support)
  * 
  * */
 public class MainActivity extends FragmentActivity {
@@ -39,12 +39,12 @@ public class MainActivity extends FragmentActivity {
 		SupportMapFragment smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.fragment1);
 		map = smf.getMap();
 
-		// ÁöµµÀÇ À§Ä¡¿Í ÁÜ ·¹º§À» ¼³Á¤
+		// ì§€ë„ì˜ ìœ„ì¹˜ì™€ ì¤Œ ë ˆë²¨ì„ ì„¤ì •
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.6344024,126.9309813), 15));
-		// À§µµ °æµµ °ªÀº Áöµµ¿¡¼­ ¾ò¾î¿Â´Ù
-		// zoom °ªÀº 0 ÀÌ»óÀÇ float °ªÀ» ÀÔ·Â, ¼ıÀÚ°¡ Å¬¼ö·Ï È®´ëµÊ
+		// ìœ„ë„ ê²½ë„ ê°’ì€ ì§€ë„ì—ì„œ ì–»ì–´ì˜¨ë‹¤
+		// zoom ê°’ì€ 0 ì´ìƒì˜ float ê°’ì„ ì…ë ¥, ìˆ«ìê°€ í´ìˆ˜ë¡ í™•ëŒ€ë¨
 
-		// Áöµµ ¿ìÇÏ´Ü È®´ë/Ãà¼Ò ¹öÆ° ´Ş±â
+		// ì§€ë„ ìš°í•˜ë‹¨ í™•ëŒ€/ì¶•ì†Œ ë²„íŠ¼ ë‹¬ê¸°
 		map.getUiSettings().setZoomControlsEnabled(true);
 
 		Button bC = (Button)findViewById(R.id.button1);
@@ -52,30 +52,30 @@ public class MainActivity extends FragmentActivity {
 		Button bS = (Button)findViewById(R.id.button3);		
 		Button b = (Button)findViewById(R.id.button4);
 		
-		// ¸¶Ä¿ ´Ş±â
+		// ë§ˆì»¤ ë‹¬ê¸°
 		MarkerOptions mo1 = new MarkerOptions();
 		mo1.position(new LatLng(37.504411, 126.956965));
-		mo1.title("Áß¾Ó´ë");
-		mo1.snippet("¼­¿ï½Ã µ¿ÀÛ±¸");
-		map.addMarker(mo1).showInfoWindow(); // ¸¶Ä¿¸¦ Áöµµ¿¡ ´Ş±â
+		mo1.title("ì¤‘ì•™ëŒ€");
+		mo1.snippet("ì„œìš¸ì‹œ ë™ì‘êµ¬");
+		map.addMarker(mo1).showInfoWindow(); // ë§ˆì»¤ë¥¼ ì§€ë„ì— ë‹¬ê¸°
 
 		MarkerOptions mo2 = new MarkerOptions();
 		mo2.position(new LatLng(37.2978042,126.834793));
-		mo2.title("ÇÑ¾ç´ë");
-		mo2.snippet("°æ±âµµ ¾È»ê½Ã");
-		map.addMarker(mo2).showInfoWindow(); // ¸¶Ä¿¸¦ Áöµµ¿¡ ´Ş±â
+		mo2.title("í•œì–‘ëŒ€");
+		mo2.snippet("ê²½ê¸°ë„ ì•ˆì‚°ì‹œ");
+		map.addMarker(mo2).showInfoWindow(); // ë§ˆì»¤ë¥¼ ì§€ë„ì— ë‹¬ê¸°
 		
 		MarkerOptions mo3 = new MarkerOptions();
 		mo3.position(new LatLng(37.602638,126.9530687));
-		mo3.title("»ó¸í´ë");
-		mo3.snippet("¼­¿ï½Ã Á¾·Î±¸");
-		map.addMarker(mo3).showInfoWindow(); // ¸¶Ä¿¸¦ Áöµµ¿¡ ´Ş±â
+		mo3.title("ìƒëª…ëŒ€");
+		mo3.snippet("ì„œìš¸ì‹œ ì¢…ë¡œêµ¬");
+		map.addMarker(mo3).showInfoWindow(); // ë§ˆì»¤ë¥¼ ì§€ë„ì— ë‹¬ê¸°
 
 		MarkerOptions mo4 = new MarkerOptions();
 		mo4.position(new LatLng(37.6344024,126.9309813));
-		mo4.title("¿ì¸®Áı");
-		mo4.snippet("¼­¿ï½Ã ÀºÆò±¸");
-		map.addMarker(mo4).showInfoWindow(); // ¸¶Ä¿¸¦ Áöµµ¿¡ ´Ş±â
+		mo4.title("ìš°ë¦¬ì§‘");
+		mo4.snippet("ì„œìš¸ì‹œ ì€í‰êµ¬");
+		map.addMarker(mo4).showInfoWindow(); // ë§ˆì»¤ë¥¼ ì§€ë„ì— ë‹¬ê¸°
 		
 		
 		
@@ -114,28 +114,28 @@ public class MainActivity extends FragmentActivity {
 		
 		
 
-		// ¿À¹ö·¹ÀÌ ´Ş±â
+		// ì˜¤ë²„ë ˆì´ ë‹¬ê¸°
 		GroundOverlayOptions goo1 = new GroundOverlayOptions();
 		goo1.image(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher));
 		goo1.position(new LatLng(37.504414, 126.956965), 100, 100);
 //		map.addGroundOverlay(goo1);
 
-//		map.setMapType(GoogleMap.MAP_TYPE_SATELLITE); // À§¼º
-//		map.setMapType(GoogleMap.MAP_TYPE_TERRAIN); // ÁöÇüµµ
-		map.setMapType(GoogleMap.MAP_TYPE_NORMAL); // ÀÏ¹İÁöµµ 
+//		map.setMapType(GoogleMap.MAP_TYPE_SATELLITE); // ìœ„ì„±
+//		map.setMapType(GoogleMap.MAP_TYPE_TERRAIN); // ì§€í˜•ë„
+		map.setMapType(GoogleMap.MAP_TYPE_NORMAL); // ì¼ë°˜ì§€ë„ 
 		
 		map.setOnMapClickListener(new OnMapClickListener() {
 			public void onMapClick(LatLng arg0) {
-				// ¸ÊÀ» Å¬¸¯ÇßÀ» ¶§ È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
+				// ë§µì„ í´ë¦­í–ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
 
-				// ¸¶Ä¿ ´Ş±â
+				// ë§ˆì»¤ ë‹¬ê¸°
 				MarkerOptions mo1 = new MarkerOptions();
 				mo1.position(arg0);
-				mo1.title("¹Î±Ô¿Àºü Â¯");
-				mo1.snippet("Á¤¸»! Â¯~!");
-				map.addMarker(mo1).showInfoWindow(); // ¸¶Ä¿¸¦ Áöµµ¿¡ ´Ş±â
+				mo1.title("ë¯¼ê·œì˜¤ë¹  ì§±");
+				mo1.snippet("ì •ë§! ì§±~!");
+				map.addMarker(mo1).showInfoWindow(); // ë§ˆì»¤ë¥¼ ì§€ë„ì— ë‹¬ê¸°
 
-				// ¿À¹ö·¹ÀÌ ´Ş±â
+				// ì˜¤ë²„ë ˆì´ ë‹¬ê¸°
 				GroundOverlayOptions goo1 = new GroundOverlayOptions();
 				goo1.image(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher));
 				goo1.position(arg0, 100, 100);

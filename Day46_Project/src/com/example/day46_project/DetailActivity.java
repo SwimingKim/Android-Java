@@ -22,9 +22,9 @@ import android.widget.TextView;
 public class DetailActivity extends Activity{
 	private Spinner s;
 	private ImageView iv;
-	Android[] an = {new Android("°¡", R.drawable.ic_launcher),
-			new Android("³ª", R.drawable.ic_launcher),
-			new Android("´Ù", R.drawable.ic_launcher)};
+	Android[] an = {new Android("ê°€", R.drawable.ic_launcher),
+			new Android("ë‚˜", R.drawable.ic_launcher),
+			new Android("ë‹¤", R.drawable.ic_launcher)};
 	private SharedPreferences sp;
 	private String co;
 	private LinearLayout ll;

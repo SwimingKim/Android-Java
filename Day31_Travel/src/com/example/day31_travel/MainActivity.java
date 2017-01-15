@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				if (et.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "±İ¾×À» ÀÔ·ÂÇØÁÖ¼¼¿ä", 0).show();
+					Toast.makeText(getApplicationContext(), "ê¸ˆì•¡ì„ ì…ë ¥í•´ì£¼ì„¸ìš”", 0).show();
 				} else {
 					int num = Integer.valueOf(et.getText().toString());
 					Intent intent = new Intent(getApplicationContext(),DetailActivity.class);

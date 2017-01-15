@@ -2,44 +2,44 @@ import java.util.Scanner;
 
 public class TestMachine {
 	public static void main(String[] args) {
-		String menu[] = { "Ä­Å¸Å¸", "¹ĞÅ°½º", "¸¶¿îÆ¾µà", "·¹¾²ºñ", "»çÀÌ´Ù", "Ä«ÆäÅ¸ÀÓ", "¸ÆÄİ", "Äİ¶ó", "°ÔÅä·¹ÀÌ" };
+		String menu[] = { "ì¹¸íƒ€íƒ€", "ë°€í‚¤ìŠ¤", "ë§ˆìš´í‹´ë“€", "ë ˆì“°ë¹„", "ì‚¬ì´ë‹¤", "ì¹´í˜íƒ€ì„", "ë§¥ì½œ", "ì½œë¼", "ê²Œí† ë ˆì´" };
 		int price[] = { 1800, 800, 900, 500, 1100, 700, 600, 700, 700 };
 
 		Scanner scan = new Scanner(System.in);
 
 		while (true) {
-			System.out.println("ÀÚÆÇ±â °ñ¶ó°ñ¶ó");
+			System.out.println("ìíŒê¸° ê³¨ë¼ê³¨ë¼");
 			for (int i = 0; i < price.length; i++) {
 				System.out.println(i + 1 + ". " + menu[i] + "\t" + price[i]);
 			}
-			System.out.println("µ·À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("ëˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
 
 			int money = Integer.parseInt(scan.nextLine());
 			try {
 				if (money < 0) {
-					System.out.println("µ·Àº ¸¶ÀÌ³Ê½º´Â ¾ÈµÅ¿ä");
+					System.out.println("ëˆì€ ë§ˆì´ë„ˆìŠ¤ëŠ” ì•ˆë¼ìš”");
 					continue;
 				} else
-					System.out.println(money + "¿øÀ» ³Ö¾ú½À´Ï´Ù");
+					System.out.println(money + "ì›ì„ ë„£ì—ˆìŠµë‹ˆë‹¤");
 			} catch (NumberFormatException ae) {
-				System.out.println("µ·Àº ¼ıÀÚ·Î ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ëˆì€ ìˆ«ìë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				continue;
 			}
 
-			System.out.println("À½·á¼ö¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
+			System.out.println("ìŒë£Œìˆ˜ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”");
 			int select = Integer.parseInt(scan.nextLine());
 			try {
-				System.out.println(menu[select - 1] + "¸¦ ¼±ÅÃÇß½À´Ï´Ù");
+				System.out.println(menu[select - 1] + "ë¥¼ ì„ íƒí–ˆìŠµë‹ˆë‹¤");
 			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println("¸Ş´º¼±ÅÃÀÇ ¹üÀ§¸¦ ¹ş¾î³ª¿ä");
+				System.out.println("ë©”ë‰´ì„ íƒì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ìš”");
 				continue;
 			}
 
-			System.out.println("ÀÜµ·Àº " + (money - price[select - 1]));
-			System.out.println("500¿ø " + (money - price[select - 1]) / 500 + "°³\n" + "100¿ø "
-					+ (money - price[select - 1]) % 500 / 100 + "°³\n" + "50¿ø " + (money - price[select - 1]) % 100 / 50
-					+ "°³\n" + "10¿ø " + (money - price[select - 1]) % 50 / 10 + "°³");
-			System.out.println("±¸¸Å¿Ï·á\n");
+			System.out.println("ì”ëˆì€ " + (money - price[select - 1]));
+			System.out.println("500ì› " + (money - price[select - 1]) / 500 + "ê°œ\n" + "100ì› "
+					+ (money - price[select - 1]) % 500 / 100 + "ê°œ\n" + "50ì› " + (money - price[select - 1]) % 100 / 50
+					+ "ê°œ\n" + "10ì› " + (money - price[select - 1]) % 50 / 10 + "ê°œ");
+			System.out.println("êµ¬ë§¤ì™„ë£Œ\n");
 
 		}
 	}// end of main

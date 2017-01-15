@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
 /**
- * ¿¹¿ÜÃ³¸®
+ * ì˜ˆì™¸ì²˜ë¦¬
  */
 public class TestException2 {
 	public static void main(String[] args) {
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹Ş¾Æ¼­ 3/n
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ì•„ì„œ 3/n
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 
 		while (true) {
 			int num = scan.nextInt();
-			// if (num==0) System.out.println("0¸¦ ÀÔ·ÂÇÏ¸é ¾ÈµË´Ï´Ù");//ÀÌ·¸°Ô Ã³¸®ÇÒ ¼öµµ ÀÖ´Ù
+			// if (num==0) System.out.println("0ë¥¼ ì…ë ¥í•˜ë©´ ì•ˆë©ë‹ˆë‹¤");//ì´ë ‡ê²Œ ì²˜ë¦¬í•  ìˆ˜ë„ ìˆë‹¤
 			try {
 				System.out.println(3 / num);
 				break;
 			} catch (ArithmeticException ae) {
-				System.out.println("0¸¦ ÀÔ·ÂÇÏ¸é ¾ÈµË´Ï´Ù");
+				System.out.println("0ë¥¼ ì…ë ¥í•˜ë©´ ì•ˆë©ë‹ˆë‹¤");
 			}
 		}
 

@@ -6,24 +6,24 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
- * »ç¿ëÀÚÀÇ ÀÔ·Â¹Ş±â
+ * ì‚¬ìš©ìì˜ ì…ë ¥ë°›ê¸°
  */
 public class TestInput {
 	public static void main(String[] args) throws IOException {
 
 		// BufferedReader br = new BufferedReader(new
 		// InputStreamReader(System.in));
-		// System.out.println("ÀÔ·ÂÇÏ¼¼¿ä");
+		// System.out.println("ì…ë ¥í•˜ì„¸ìš”");
 		// String str = br.readLine();
-		// System.out.println(str+"ÀÔ´Ï´Ù");
+		// System.out.println(str+"ì…ë‹ˆë‹¤");
 
 		// Scanner scan = new Scanner(System.in);
-		// System.out.println("ÀÔ·ÂÇÏ¼¼¿ä");
+		// System.out.println("ì…ë ¥í•˜ì„¸ìš”");
 		// String str2 = br.readLine();
-		// System.out.println(str2+"ÀÔ´Ï´Ù");
+		// System.out.println(str2+"ì…ë‹ˆë‹¤");
 
-		String name = JOptionPane.showInputDialog("¾È³çÇÏ¼¼¿ä ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		System.out.println(name + "ÀÌÁÒ?");
+		String name = JOptionPane.showInputDialog("ì•ˆë…•í•˜ì„¸ìš” ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
+		System.out.println(name + "ì´ì£ ?");
 
 	}// end of main
 }// end of class

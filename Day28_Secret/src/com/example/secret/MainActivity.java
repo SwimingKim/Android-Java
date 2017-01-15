@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 	SQLiteDatabase db;
 	EditText et_result;
 	Cursor c;
-	arrArray a = new arrArray(0, "»çÀÌÆ®", "¾ÆÀÌµğ", "ºñ¹Ğ¹øÈ£");
+	arrArray a = new arrArray(0, "ì‚¬ì´íŠ¸", "ì•„ì´ë””", "ë¹„ë°€ë²ˆí˜¸");
 	arrArray ba[] = new arrArray[100];
 	AlertDialog.Builder dialog4;
 	ArrayList<arrArray> arr;
@@ -70,9 +70,9 @@ public class MainActivity extends Activity {
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				if (et_search.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä", 0).show();
+					Toast.makeText(getApplicationContext(), "ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”", 0).show();
 				} else {
-					db = hm.getReadableDatabase(); // °Ë»öÀ» À§ÇØ ÀĞ±â¸ğµå
+					db = hm.getReadableDatabase(); // ê²€ìƒ‰ì„ ìœ„í•´ ì½ê¸°ëª¨ë“œ
 					Cursor c = db.query("array", null, "site=?", new String[] { et_search.getText().toString() }, null,
 							null, null);
 
@@ -96,7 +96,7 @@ public class MainActivity extends Activity {
 
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				db = hm.getReadableDatabase(); // °Ë»öÀ» À§ÇØ ÀĞ±â¸ğµå
+				db = hm.getReadableDatabase(); // ê²€ìƒ‰ì„ ìœ„í•´ ì½ê¸°ëª¨ë“œ
 				Cursor c = db.query("array", null, "site=?", new String[] { arr.get(position).site }, null, null, null);
 
 				while (c.moveToNext()) {
@@ -202,7 +202,7 @@ public class MainActivity extends Activity {
 			et_id.setText(a.id);
 			et_pass.setText(a.pass);
 
-			dialog4.setPositiveButton("¼öÁ¤", new DialogInterface.OnClickListener() {
+			dialog4.setPositiveButton("ìˆ˜ì •", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					db = hm.getWritableDatabase();
 					ContentValues values = new ContentValues();
@@ -211,9 +211,9 @@ public class MainActivity extends Activity {
 					values.put("pass", et_pass.getText().toString());
 
 					db.update("array", values, "num=?", new String[] { "a.num" });
-					Toast.makeText(getApplicationContext(), "¼öÁ¤¿Ï·á", 0).show();
+					Toast.makeText(getApplicationContext(), "ìˆ˜ì •ì™„ë£Œ", 0).show();
 
-					et_result.setText("È¸¿ø°¡ÀÔ¸ñ·Ï");
+					et_result.setText("íšŒì›ê°€ì…ëª©ë¡");
 					Cursor c = db.query("array", null, null, null, null, null, null);
 					while (c.moveToNext()) {
 						int num = c.getInt(c.getColumnIndex("num"));
@@ -243,16 +243,16 @@ public class MainActivity extends Activity {
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			final View myView = lif.inflate(R.layout.plus, null);
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("Ãß°¡ÇÏ±â");
+			dialog.setTitle("ì¶”ê°€í•˜ê¸°");
 			dialog.setView(myView);
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					final EditText et_site = (EditText) myView.findViewById(R.id.editText1);
 					final EditText et_id = (EditText) myView.findViewById(R.id.editText2);
 					final EditText et_pass = (EditText) myView.findViewById(R.id.editText3);
 					if (et_site.getText().toString().equals("") && et_id.getText().toString().equals("")
 							&& et_pass.getText().toString().equals("")) {
-						Toast.makeText(getApplicationContext(), "³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä", 0).show();
+						Toast.makeText(getApplicationContext(), "ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”", 0).show();
 					} else {
 						db = hm.getWritableDatabase();
 						ContentValues values = new ContentValues();
@@ -280,41 +280,41 @@ public class MainActivity extends Activity {
 
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿ä", null);
+			dialog.setNegativeButton("ì•„ë‹ˆìš”", null);
 			return dialog.create();
 		case DIALOG_INTRO:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("°³¹ßÀÚ ¼Ò°³");
-			dialog2.setMessage("ÀüÈ­¹øÈ£ : 010-9622-0213\n°³¹ßÀÚ¿¡°Ô ¿¬¶ôÇØº¸½Ã°Ú½À´Ï±î?");
-			dialog2.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog2.setTitle("ê°œë°œì ì†Œê°œ");
+			dialog2.setMessage("ì „í™”ë²ˆí˜¸ : 010-9622-0213\nê°œë°œìì—ê²Œ ì—°ë½í•´ë³´ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog2.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:010-9622-0213"));
 					startActivity(intent);
 				}
 			});
-			dialog2.setNegativeButton("¾Æ´Ï¿À", null);
+			dialog2.setNegativeButton("ì•„ë‹ˆì˜¤", null);
 			return dialog2.create();
 
 		case DIALOG_WAY:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			dialog3.setTitle("ÀÌ¿ë ¾È³»");
-			dialog3.setMessage("ÀÒ¾î¹ö¸®±â ½¬¿î ¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ ¼Õ½±°Ô ÀúÀåÇÏ¼¼¿ä.");
-			dialog3.setPositiveButton("¿¹", null);
+			dialog3.setTitle("ì´ìš© ì•ˆë‚´");
+			dialog3.setMessage("ìƒì–´ë²„ë¦¬ê¸° ì‰¬ìš´ ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì†ì‰½ê²Œ ì €ì¥í•˜ì„¸ìš”.");
+			dialog3.setPositiveButton("ì˜ˆ", null);
 			return dialog3.create();
 		case DIALOG_RESULT:
 			LayoutInflater lif2 = (LayoutInflater) getApplicationContext()
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View MyView2 = lif2.inflate(R.layout.look, null);
 			dialog4 = new Builder(this);
-			dialog4.setTitle("°Ë»ö °á°ú");
+			dialog4.setTitle("ê²€ìƒ‰ ê²°ê³¼");
 			dialog4.setView(MyView2);
 
-			dialog4.setNegativeButton("È®ÀÎ", null);
-			dialog4.setNeutralButton("»èÁ¦", new DialogInterface.OnClickListener() {
+			dialog4.setNegativeButton("í™•ì¸", null);
+			dialog4.setNeutralButton("ì‚­ì œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					db = hm.getWritableDatabase();
 					int result = db.delete("array", "site=?", new String[] { a.site });
-					Toast.makeText(getApplicationContext(), "»èÁ¦¿Ï·á", 0).show();
+					Toast.makeText(getApplicationContext(), "ì‚­ì œì™„ë£Œ", 0).show();
 
 					Cursor c = db.query("array", null, null, null, null, null, null);
 					while (c.moveToNext()) {

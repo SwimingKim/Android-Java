@@ -8,8 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-	MediaPlayer mp;// ¹Ìµğ¾î ÇÃ·¹ÀÌ¾î º¯¼ö
-	// int position;//ÀÏ½ÃÁ¤Áö¿ë
+	MediaPlayer mp;// ë¯¸ë””ì–´ í”Œë ˆì´ì–´ ë³€ìˆ˜
+	// int position;//ì¼ì‹œì •ì§€ìš©
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +27,14 @@ public class MainActivity extends Activity {
 		bStop.setEnabled(false);
 
 		bStart.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {// À½¾Ç½ÃÀÛ
-				// MediaPlayer °´Ã¼¸¦ ÃÊ±âÈ­ ÀÛ¾÷ÇÑ´Ù
+			public void onClick(View v) {// ìŒì•…ì‹œì‘
+				// MediaPlayer ê°ì²´ë¥¼ ì´ˆê¸°í™” ì‘ì—…í•œë‹¤
 				if (mp == null || !mp.isPlaying()) {
-					mp = MediaPlayer.create(getApplicationContext(), // ÇöÀç È­¸é
-																		// Á¦¾î±ÇÀÚ
-							R.raw.dontgo);// ³ë·¡ÆÄÀÏ
-					mp.start();// ³ë·¡½ÃÀÛ
-					mp.setLooping(true);// ¹İº¹ Àç»ı ¿©ºÎ
+					mp = MediaPlayer.create(getApplicationContext(), // í˜„ì¬ í™”ë©´
+																		// ì œì–´ê¶Œì
+							R.raw.dontgo);// ë…¸ë˜íŒŒì¼
+					mp.start();// ë…¸ë˜ì‹œì‘
+					mp.setLooping(true);// ë°˜ë³µ ì¬ìƒ ì—¬ë¶€
 
 					bStart.setEnabled(false);
 					bPause.setEnabled(true);
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 		bStop.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				if (mp != null) {
-					mp.stop();// ³ë·¡ ¸ØÃß±â
+					mp.stop();// ë…¸ë˜ ë©ˆì¶”ê¸°
 
 					bStart.setEnabled(true);
 					bPause.setEnabled(false);
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				if (mp != null) {
 					// position = mp.getCurrentPosition();
-					mp.pause();// ³ë·¡ ÀÏ½ÃÁ¤Áö
+					mp.pause();// ë…¸ë˜ ì¼ì‹œì •ì§€
 
 					bStart.setEnabled(true);
 					bPause.setEnabled(false);

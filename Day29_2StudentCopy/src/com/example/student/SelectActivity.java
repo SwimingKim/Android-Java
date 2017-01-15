@@ -69,14 +69,14 @@ public class SelectActivity extends Activity {
 
 		// TextView tv = (TextView)findViewById(R.id.textView1);
 
-		// tv.append("\nÀÌ¸§\t\t|\t\tÇĞ¹ø\t\t|\t\t±¹¾î\t\t|\t\t¿µ¾î\t\t|\t\t¼öÇĞ");
+		// tv.append("\nì´ë¦„\t\t|\t\tí•™ë²ˆ\t\t|\t\têµ­ì–´\t\t|\t\tì˜ì–´\t\t|\t\tìˆ˜í•™");
 
 		helper = new MySQLite3(getApplicationContext(), "Student2.db", null, 1);
 
 		db = helper.getReadableDatabase();
 		Cursor c = db.query("student", null, null, null, null, null, null);
 
-		// tv.setText("ÇĞ»ı ¸ñ·Ï");
+		// tv.setText("í•™ìƒ ëª©ë¡");
 
 		while (c.moveToNext()) {
 			int p = c.getInt(c.getColumnIndex("p"));

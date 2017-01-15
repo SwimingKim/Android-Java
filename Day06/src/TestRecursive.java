@@ -1,5 +1,5 @@
 /**
- * Àç±ÍÇÔ¼ö
+ * ì¬ê·€í•¨ìˆ˜
  */
 public class TestRecursive {
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class TestRecursive {
 }// end of class
 
 class M {
-	long re(long n) {// Àç±ÍÇÔ¼ö -Å»ÃâÆ÷ÀÎÆ®¸¦ ÀÛ¼ºÇØ¾ßÇÑ´Ù
+	long re(long n) {// ì¬ê·€í•¨ìˆ˜ -íƒˆì¶œí¬ì¸íŠ¸ë¥¼ ì‘ì„±í•´ì•¼í•œë‹¤
 		if (n == 1) {
 			return 1;
 		} else {

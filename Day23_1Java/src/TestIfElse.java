@@ -1,11 +1,11 @@
 
 public class TestIfElse {
 	public static void main(String[] args) {
-		// if (Á¶°Ç½Ä) {
-		// Á¶°Ç½ÄÀÌ ÂüÀÏ °æ¿ì ¹ß»ı
+		// if (ì¡°ê±´ì‹) {
+		// ì¡°ê±´ì‹ì´ ì°¸ì¼ ê²½ìš° ë°œìƒ
 		// }
 
-		// switch (Á¤¼ö) {// switch¹®¿¡ »ç¿ëµÉ ¼ö ÀÖ´Â Á¶°Ç½Ä : int¹üÀ§³»ÀÇ Á¤¼ö, ¹®ÀÚ¿­µµ °¡´É
+		// switch (ì •ìˆ˜) {// switchë¬¸ì— ì‚¬ìš©ë  ìˆ˜ ìˆëŠ” ì¡°ê±´ì‹ : intë²”ìœ„ë‚´ì˜ ì •ìˆ˜, ë¬¸ìì—´ë„ ê°€ëŠ¥
 		// case value:
 		//
 		// break;
@@ -14,28 +14,28 @@ public class TestIfElse {
 		// break;
 		// }
 
-		// ¼ö100~90 ¿ì89~80 ¹Ì79~70 ¾ç69~60 °¡59~0 Ãâ·Â
+		// ìˆ˜100~90 ìš°89~80 ë¯¸79~70 ì–‘69~60 ê°€59~0 ì¶œë ¥
 		int jumsoo = 73;
 		switch (jumsoo / 10) {
 		case 10:
 		case 9:
-			System.out.println("¼ö");
+			System.out.println("ìˆ˜");
 			break;
 		case 8:
-			System.out.println("¿ì");
+			System.out.println("ìš°");
 			break;
 		case 7:
-			System.out.println("¹Ì");
+			System.out.println("ë¯¸");
 			break;
 		case 6:
-			System.out.println("¾ç");
+			System.out.println("ì–‘");
 			break;
 		case 5:
 		case 4:
 		case 3:
 		case 2:
 		case 1:
-			System.out.println("°¡");
+			System.out.println("ê°€");
 			break;
 		default:
 			break;

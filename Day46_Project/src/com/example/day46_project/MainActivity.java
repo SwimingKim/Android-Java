@@ -18,14 +18,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	Text str[] = {new Text("È­¸é", "Dialog, Toast, Intent, Tab"),
-			new Text("¼Ò¸®", "MediaPlayer, SoundPlayer, Áøµ¿"),
-			new Text("¾î´ğÅÍºä", "ListView, Gallery, GridView"),
-			new Text("¹öÆ°", "selector, touch, click"),
-			new Text("½Ã°£°ü¸®", "TimerTask, Handler, Chrometer"),
-			new Text("¾Ö´Ï¸ŞÀÌ¼Ç", "FrameAnimation, AlphaAnimation"),
-			new Text("ÆÄÀÏ", "MySQlite3, ³»ºÎÆÄÀÏ, ¿ÜºÎÆÄÀÏ"),
-			new Text("À¥", "web, parser")};
+	Text str[] = {new Text("í™”ë©´", "Dialog, Toast, Intent, Tab"),
+			new Text("ì†Œë¦¬", "MediaPlayer, SoundPlayer, ì§„ë™"),
+			new Text("ì–´ëŒ‘í„°ë·°", "ListView, Gallery, GridView"),
+			new Text("ë²„íŠ¼", "selector, touch, click"),
+			new Text("ì‹œê°„ê´€ë¦¬", "TimerTask, Handler, Chrometer"),
+			new Text("ì• ë‹ˆë©”ì´ì…˜", "FrameAnimation, AlphaAnimation"),
+			new Text("íŒŒì¼", "MySQlite3, ë‚´ë¶€íŒŒì¼, ì™¸ë¶€íŒŒì¼"),
+			new Text("ì›¹", "web, parser")};
 	private TextView tv;
 	private String co;
 	private SharedPreferences sp;

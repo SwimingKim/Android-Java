@@ -16,7 +16,7 @@ public class memo {
 
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print(arr[i][j] == 0 ? "¡à " : "¡á ");
+				System.out.print(arr[i][j] == 0 ? "â–¡ " : "â–  ");
 			}
 			System.out.println("");
 		}
@@ -30,7 +30,7 @@ public class memo {
 
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[i].length; j++) {
-				System.out.print(array[i][j] == 0 ? "¡à " : "¡á ");
+				System.out.print(array[i][j] == 0 ? "â–¡ " : "â–  ");
 			}
 			System.out.println("");
 		}

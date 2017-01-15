@@ -25,59 +25,59 @@ public class MainActivity extends Activity {
 
 		final TextView tv = (TextView) findViewById(R.id.textView1);
 
-		b1.setOnClickListener(new OnClickListener() {// ´õÇÏ±â¿¬»ê
+		b1.setOnClickListener(new OnClickListener() {// ë”í•˜ê¸°ì—°ì‚°
 			public void onClick(View v) {
 				try {
 					int num1 = Integer.valueOf(ed1.getText().toString());
 					int num2 = Integer.valueOf(ed2.getText().toString());
-					tv.setText("µ¡¼À °á°ú = " + (num1 + num2) + "");
+					tv.setText("ë§ì…ˆ ê²°ê³¼ = " + (num1 + num2) + "");
 				} catch (NumberFormatException e) {
-					tv.setText("¼ıÀÚ¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					tv.setText("ìˆ«ìë¥¼ ì •í™•íˆ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				}
 			}
 		});
-		b2.setOnClickListener(new OnClickListener() {// »©±â¿¬»ê
+		b2.setOnClickListener(new OnClickListener() {// ë¹¼ê¸°ì—°ì‚°
 			public void onClick(View v) {
 				try {
 					int num1 = Integer.valueOf(ed1.getText().toString());
 					int num2 = Integer.valueOf(ed2.getText().toString());
-					tv.setText("»¬¼À °á°ú = " + (num1 - num2) + "");
+					tv.setText("ëº„ì…ˆ ê²°ê³¼ = " + (num1 - num2) + "");
 				} catch (NumberFormatException e) {
-					tv.setText("¼ıÀÚ¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					tv.setText("ìˆ«ìë¥¼ ì •í™•íˆ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				}
 			}
 		});
-		b3.setOnClickListener(new OnClickListener() {// °öÇÏ±â¿¬»ê
+		b3.setOnClickListener(new OnClickListener() {// ê³±í•˜ê¸°ì—°ì‚°
 			public void onClick(View v) {
 				try {
 					int num1 = Integer.valueOf(ed1.getText().toString());
 					int num2 = Integer.valueOf(ed2.getText().toString());
-					tv.setText("°ö¼À °á°ú = " + (num1 * num2) + "");
+					tv.setText("ê³±ì…ˆ ê²°ê³¼ = " + (num1 * num2) + "");
 					// if (num1==0&&num2==0) {
-					// tv.setText("°öÇÏ´Â ¼ö´Â 0ÀÌ¸é ¾ÈµÅ¿ä");
+					// tv.setText("ê³±í•˜ëŠ” ìˆ˜ëŠ” 0ì´ë©´ ì•ˆë¼ìš”");
 					// }
 				} catch (NumberFormatException e) {
-					tv.setText("¼ıÀÚ¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					tv.setText("ìˆ«ìë¥¼ ì •í™•íˆ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				}
 			}
 		});
-		b4.setOnClickListener(new OnClickListener() {// ³ª´©±â¿¬»ê
+		b4.setOnClickListener(new OnClickListener() {// ë‚˜ëˆ„ê¸°ì—°ì‚°
 			public void onClick(View v) {
 				try {
 					int num1 = Integer.valueOf(ed1.getText().toString());
 					int num2 = Integer.valueOf(ed2.getText().toString());
 
-					// num2°¡ 0ÀÌ¸é ³ª´©Áö ¾Êµµ·Ï
+					// num2ê°€ 0ì´ë©´ ë‚˜ëˆ„ì§€ ì•Šë„ë¡
 					if (num2 == 0) {
-						// tv.setText("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù");
-						throw new Exception("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù");// ÆøÅºÁ¦Á¶
-					} else {// 0ÀÌ ¾Æ´Ò ¶§ : Á¤»ó
-						tv.setText("³ª´°¼À °á°ú = " + (double) num1 / num2 + "");
+						// tv.setText("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤");
+						throw new Exception("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤");// í­íƒ„ì œì¡°
+					} else {// 0ì´ ì•„ë‹ ë•Œ : ì •ìƒ
+						tv.setText("ë‚˜ëˆ—ì…ˆ ê²°ê³¼ = " + (double) num1 / num2 + "");
 					}
 				} catch (NumberFormatException e) {
-					tv.setText("¼ıÀÚ¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					tv.setText("ìˆ«ìë¥¼ ì •í™•íˆ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				} catch (Exception e) {
-					tv.setText("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù");
+					tv.setText("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤");
 				}
 			}
 		});

@@ -15,25 +15,25 @@ public class TestChoice {
 		f.setLayout(new FlowLayout());
 
 		Choice c = new Choice();
-		c.add("ÀÏ¿äÀÏ");
-		c.add("¿ù¿äÀÏ");
-		c.add("È­¿äÀÏ");
-		c.add("¼ö¿äÀÏ");
-		c.add("¸ñ¿äÀÏ");
-		c.add("±İ¿äÀÏ");
-		c.add("Åä¿äÀÏ");
+		c.add("ì¼ìš”ì¼");
+		c.add("ì›”ìš”ì¼");
+		c.add("í™”ìš”ì¼");
+		c.add("ìˆ˜ìš”ì¼");
+		c.add("ëª©ìš”ì¼");
+		c.add("ê¸ˆìš”ì¼");
+		c.add("í† ìš”ì¼");
 
-		c.remove("±İ¿äÀÏ");// ¸ñ·Ï »èÁ¦
-		c.remove(2);// ÀÎµ¦½º 2¹øÀÎ È­¿äÀÏ ¸ñ·Ï »èÁ¦
+		c.remove("ê¸ˆìš”ì¼");// ëª©ë¡ ì‚­ì œ
+		c.remove(2);// ì¸ë±ìŠ¤ 2ë²ˆì¸ í™”ìš”ì¼ ëª©ë¡ ì‚­ì œ
 
 		f.add(c);
 
-		System.out.println("0¹ø¤Š ¹®ÀÚ¿­ :" + c.getItem(0));
-		System.out.println("¸ñ·ÏÀÇ °³¼ö : " + c.getItemCount());
-		System.out.println("¼±ÅÃµÈ ¸ñ·ÏÀÇ index : " + c.getSelectedIndex());
-		System.out.println("¼±ÅÃÇÑ ¸ñ·Ï ¹®ÀÚ¿­ : " + c.getSelectedItem());
+		System.out.println("0ë²ˆì¨° ë¬¸ìì—´ :" + c.getItem(0));
+		System.out.println("ëª©ë¡ì˜ ê°œìˆ˜ : " + c.getItemCount());
+		System.out.println("ì„ íƒëœ ëª©ë¡ì˜ index : " + c.getSelectedIndex());
+		System.out.println("ì„ íƒí•œ ëª©ë¡ ë¬¸ìì—´ : " + c.getSelectedItem());
 
-		Button b = new Button("¹öÆ°");
+		Button b = new Button("ë²„íŠ¼");
 		f.add(b);
 
 		f.setVisible(true);

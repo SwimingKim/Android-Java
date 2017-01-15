@@ -23,9 +23,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			,R.drawable.kakao_09,R.drawable.kakao_10,R.drawable.kakao_11,R.drawable.kakao_12,R.drawable.kakao_13
 			,R.drawable.kakao_14,R.drawable.kakao_15,R.drawable.kakao_16};
 
-	int index[] = new int [16]; //¼¯ÀÎ ÀÎµ¦½º¸¦ ÀúÀåÇÒ ¹è¿­
-	int indexBlankImg; // ºó ÀÌ¹ÌÁöÀÇ ÀÎµ¦½º 
-	int moveCount; // ÀÌµ¿È½¼ö 
+	int index[] = new int [16]; //ì„ì¸ ì¸ë±ìŠ¤ë¥¼ ì €ì¥í•  ë°°ì—´
+	int indexBlankImg; // ë¹ˆ ì´ë¯¸ì§€ì˜ ì¸ë±ìŠ¤ 
+	int moveCount; // ì´ë™íšŸìˆ˜ 
 	private Button bStart;
 	private Button bSuffle;
 	private Button bHint;
@@ -40,7 +40,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_main);
 
 		tvMoveCount = (TextView)findViewById(R.id.textView1);
-		tvMessage = (TextView)findViewById(R.id.textView2); // °ÔÀÓ¼³¸í
+		tvMessage = (TextView)findViewById(R.id.textView2); // ê²Œì„ì„¤ëª…
 
 		iv[0] = (ImageView)findViewById(R.id.imageView1);
 		iv[1] = (ImageView)findViewById(R.id.imageView2);
@@ -66,7 +66,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		setIVEnable(false);
 
-		for (int i = 0; i < iv.length; i++) { // index¹è¿­ ÃÊ±âÈ­
+		for (int i = 0; i < iv.length; i++) { // indexë°°ì—´ ì´ˆê¸°í™”
 			index[i] = i;
 
 		}
@@ -75,8 +75,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		for (int i = 0; i < iv.length; i++) {
 			iv[i].setOnClickListener(this);
-			iv[i].setTag(i); // °¢ ÀÌ¹ÌÁöºä¸¦ ±¸ºĞÇÏ±â À§ÇÑ tag°ªÀ» ÀúÀå 
-			iv[i].setImageResource(img[index[i]]); // ÀÌ¹ÌÁö ¼¼ÆÃ , ÃÊ±âÈ­
+			iv[i].setTag(i); // ê° ì´ë¯¸ì§€ë·°ë¥¼ êµ¬ë¶„í•˜ê¸° ìœ„í•œ tagê°’ì„ ì €ì¥ 
+			iv[i].setImageResource(img[index[i]]); // ì´ë¯¸ì§€ ì„¸íŒ… , ì´ˆê¸°í™”
 
 
 		}
@@ -85,24 +85,24 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		bStart.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				if (bStart.getText().toString().equals("°ÔÀÓ½ÃÀÛ")){ // °ÔÀÓ ½ÃÀÛ
+				if (bStart.getText().toString().equals("ê²Œì„ì‹œì‘")){ // ê²Œì„ ì‹œì‘
 					suffle();
-					chro.setBase(SystemClock.elapsedRealtime()); // ½Ã°£ÃÊ±âÈ­ 
+					chro.setBase(SystemClock.elapsedRealtime()); // ì‹œê°„ì´ˆê¸°í™” 
 
-					chro.start(); // ½Ã°£ ½ÃÀÛ 
-					bStart.setText("°ÔÀÓÁ¾·á");
+					chro.start(); // ì‹œê°„ ì‹œì‘ 
+					bStart.setText("ê²Œì„ì¢…ë£Œ");
 
-					// ¸ğµç ÀÌ¹ÌÁö ºä¸¦ Å¬¸¯ÇÒ ¼ö ÀÖ°Ô 
+					// ëª¨ë“  ì´ë¯¸ì§€ ë·°ë¥¼ í´ë¦­í•  ìˆ˜ ìˆê²Œ 
 					for (int i = 0; i < iv.length; i++) {
 						setIVEnable(true);
 					}
 
 
-				} else {// °ÔÀÓ Á¾·áÇÏ±â 
+				} else {// ê²Œì„ ì¢…ë£Œí•˜ê¸° 
 					chro.stop();
-					bStart.setText("°ÔÀÓ½ÃÀÛ");
+					bStart.setText("ê²Œì„ì‹œì‘");
 					setIVEnable(true);
-					// ¸ğµç imageView¸¦ Å¬¸¯ÇÏÁö ¸øÇÏ°Ô 
+					// ëª¨ë“  imageViewë¥¼ í´ë¦­í•˜ì§€ ëª»í•˜ê²Œ 
 					for (int i = 0; i < iv.length; i++) {
 						iv[i].setEnabled(false);
 					}
@@ -113,20 +113,20 @@ public class MainActivity extends Activity implements OnClickListener {
 		});
 
 		bSuffle.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) { // ¼ø¼­¼¯±â
+			public void onClick(View v) { // ìˆœì„œì„ê¸°
 				suffle();
 			}
 		});
 
 		bHint.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
-				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ¹öÆ°À» ´­·¶À» ¶§ 
-					for (int i = 0; i < iv.length; i++) {// Á¤´äÈ­¸éÀ» º¸¿©ÁÖ±â 
+				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ 
+					for (int i = 0; i < iv.length; i++) {// ì •ë‹µí™”ë©´ì„ ë³´ì—¬ì£¼ê¸° 
 						iv[i].setImageResource(img[i]); 
 					}
 
-				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ¹öÆ°À» ¶¼¾úÀ»¶§
-					for (int i = 0; i < iv.length; i++) {// ´Ù½Ã °ÔÀÓÈ­¸éÀ¸·Î µ¹¾Æ°¡±â 
+				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ë²„íŠ¼ì„ ë–¼ì—ˆì„ë•Œ
+					for (int i = 0; i < iv.length; i++) {// ë‹¤ì‹œ ê²Œì„í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸° 
 						iv[i].setImageResource(img[index[i]]); 
 					}
 				}
@@ -135,7 +135,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		});
 
 
-		//		chro.start(); // ½Ã°£ ½ÃÀÛ 
+		//		chro.start(); // ì‹œê°„ ì‹œì‘ 
 		//		chro.stop(); 
 
 
@@ -143,29 +143,29 @@ public class MainActivity extends Activity implements OnClickListener {
 	} // end of onCreate
 
 
-	public void onClick(View v) { // ÀÌ¹ÌÁöºä¸¦ Å¬¸¯½Ã ÀÌº¥Æ® Ã³¸® 
-		int clickIndex = (Integer) v.getTag(); // ÇöÀç »ç¿ëÀÚ°¡ Å¬¸¯ÇÑ ÀÌ¹ÌÁö index
-		// indexBlankImg : ºóÄ­ÀÌ¹ÌÁöÀÇ index
-		if (clickIndex-4 >= 0 && clickIndex-4 == indexBlankImg) { // Å¬¸¯ÀÇ À§ÂÊÀÌ ºóÄ­?
-			//À§ÂÊ(ºóÄ­)°ú ³»²¨¸¦ º¯°æ
+	public void onClick(View v) { // ì´ë¯¸ì§€ë·°ë¥¼ í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì²˜ë¦¬ 
+		int clickIndex = (Integer) v.getTag(); // í˜„ì¬ ì‚¬ìš©ìê°€ í´ë¦­í•œ ì´ë¯¸ì§€ index
+		// indexBlankImg : ë¹ˆì¹¸ì´ë¯¸ì§€ì˜ index
+		if (clickIndex-4 >= 0 && clickIndex-4 == indexBlankImg) { // í´ë¦­ì˜ ìœ„ìª½ì´ ë¹ˆì¹¸?
+			//ìœ„ìª½(ë¹ˆì¹¸)ê³¼ ë‚´êº¼ë¥¼ ë³€ê²½
 			//			swapImage(clickIndex);
 
-		} else if (clickIndex+4 < iv.length && clickIndex+4 == indexBlankImg){ //¾Æ·¡ÂÊ
-			//¾Æ·¡ÂÊ(ºóÄ­)°ú ³»²¨¸¦ º¯°æ
+		} else if (clickIndex+4 < iv.length && clickIndex+4 == indexBlankImg){ //ì•„ë˜ìª½
+			//ì•„ë˜ìª½(ë¹ˆì¹¸)ê³¼ ë‚´êº¼ë¥¼ ë³€ê²½
 			swapImage(clickIndex);
 
-		} else if (clickIndex%4 != 0 && clickIndex-1 == indexBlankImg ){ // ¿ŞÂÊ 
-			//¿ŞÂÊ(ºóÄ­)°ú ³»²¨¸¦ º¯°æ
+		} else if (clickIndex%4 != 0 && clickIndex-1 == indexBlankImg ){ // ì™¼ìª½ 
+			//ì™¼ìª½(ë¹ˆì¹¸)ê³¼ ë‚´êº¼ë¥¼ ë³€ê²½
 			//			swapImage(clickIndex);
 
-		} else if (clickIndex%4 != 3 && clickIndex+1 == indexBlankImg ){ // ¿À¸¥ÂÊ
-			//¿À¸¥ÂÊ(ºóÄ­)°ú ³»²¨¸¦ º¯°æ
+		} else if (clickIndex%4 != 3 && clickIndex+1 == indexBlankImg ){ // ì˜¤ë¥¸ìª½
+			//ì˜¤ë¥¸ìª½(ë¹ˆì¹¸)ê³¼ ë‚´êº¼ë¥¼ ë³€ê²½
 			//			swapImage(clickIndex);
 
 		}
 		
 		if (indexBlankImg-4<iv.length&&(clickIndex-indexBlankImg)%4==0&&indexBlankImg<clickIndex) {
-			// ºóÄ­ÀÌ À§ÂÊ¿¡ ÀÖÀ» ¶§
+			// ë¹ˆì¹¸ì´ ìœ„ìª½ì— ìˆì„ ë•Œ
 			for (int i = 1; i <= (clickIndex-indexBlankImg)/4; i++) {
 				int temp = index[clickIndex];
 				index[clickIndex] = index[clickIndex-i*4];
@@ -176,7 +176,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			}
 			indexBlankImg = clickIndex;
 		} else if(indexBlankImg-4>=0&&(indexBlankImg-clickIndex)%4==0&&indexBlankImg>clickIndex) {
-			// ºóÄ­ÀÌ ¾Æ·¡ÂÊ¿¡ ÀÖÀ» ¶§
+			// ë¹ˆì¹¸ì´ ì•„ë˜ìª½ì— ìˆì„ ë•Œ
 			for (int i = 1; i <= (indexBlankImg-clickIndex)/4; i++) {
 				int temp = index[clickIndex];
 				index[clickIndex] = index[clickIndex+i*4];
@@ -188,7 +188,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			indexBlankImg = clickIndex;
 		} else if (clickIndex%4!=0&&clickIndex/4==indexBlankImg/4&&
 				(clickIndex-indexBlankImg)<4&&indexBlankImg<clickIndex){
-			// ºóÄ­ÀÌ ¿ŞÂÊ¿¡ ÀÖÀ» ¶§
+			// ë¹ˆì¹¸ì´ ì™¼ìª½ì— ìˆì„ ë•Œ
 			for (int i = 1; i <= clickIndex-indexBlankImg; i++) {
 				int temp = index[clickIndex];
 				index[clickIndex] = index[clickIndex-i];
@@ -200,7 +200,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			indexBlankImg = clickIndex;
 		} else if (clickIndex%4!=3&&clickIndex/4==indexBlankImg/4&&
 				(indexBlankImg-clickIndex)<4&&indexBlankImg>clickIndex) {
-			// ºóÄ­ÀÌ ¿À¸¥ÂÊ¿¡ ÀÖÀ» ¶§
+			// ë¹ˆì¹¸ì´ ì˜¤ë¥¸ìª½ì— ìˆì„ ë•Œ
 			for (int i = 1; i <= indexBlankImg-clickIndex; i++) {
 				int temp = index[clickIndex];
 				index[clickIndex] = index[clickIndex+i];
@@ -213,11 +213,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		} 
 
 
-		//		Toast.makeText(getApplicationContext(), clickIndex+"¹øÂ° ÀÌ¹ÌÁö Å¬¸¯", Toast.LENGTH_SHORT).show();
+		//		Toast.makeText(getApplicationContext(), clickIndex+"ë²ˆì§¸ ì´ë¯¸ì§€ í´ë¦­", Toast.LENGTH_SHORT).show();
 
 	} // end of onClick(View v)
 
-	void swapImage(int clickIndex) { //ºóÄ­°ú ³» ÀÌ¹ÌÁö¸¦ ±³Ã¼ÇÏ´Â ¸Ş¼­µå
+	void swapImage(int clickIndex) { //ë¹ˆì¹¸ê³¼ ë‚´ ì´ë¯¸ì§€ë¥¼ êµì²´í•˜ëŠ” ë©”ì„œë“œ
 		int temp = index[clickIndex];
 		index[clickIndex] = index[indexBlankImg];
 		index[indexBlankImg] = temp;
@@ -225,11 +225,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		iv[clickIndex].setImageResource(img[index[clickIndex]]);
 		iv[indexBlankImg].setImageResource(img[index[indexBlankImg]]);
 
-		indexBlankImg = clickIndex; // ºóÄ­ÀÇ À§Ä¡¸¦ º¯°æÇØÁÜ
+		indexBlankImg = clickIndex; // ë¹ˆì¹¸ì˜ ìœ„ì¹˜ë¥¼ ë³€ê²½í•´ì¤Œ
 
 	}
 
-	void suffle() { // ¹«ÀÛÀ§·Î ¼ÅÇÃ 
+	void suffle() { // ë¬´ì‘ìœ„ë¡œ ì…”í”Œ 
 		Random ran = new Random();
 
 		for (int i = 0; i < iv.length; i++) {
@@ -242,19 +242,19 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		}
 
-		//indexBlankImgÀÇ À§Ä¡ ¼³Á¤ 
+		//indexBlankImgì˜ ìœ„ì¹˜ ì„¤ì • 
 		for (int i = 0; i < iv.length; i++) {
 			if(index[i] == 15 ) {
-				indexBlankImg = i; //ºóÄ­ÀÇ ÀÌ¹ÌÁö°¡ µé¾îÀÖ´Â ¹æ ÀÎµ¦½º
+				indexBlankImg = i; //ë¹ˆì¹¸ì˜ ì´ë¯¸ì§€ê°€ ë“¤ì–´ìˆëŠ” ë°© ì¸ë±ìŠ¤
 				break;
 			}
 
 		}
 
 
-		// iv¿¡ image¸¦ index ¹æÀÇ °ªÀ¸·Î ±³Ã¼ÇÏ±â 
+		// ivì— imageë¥¼ index ë°©ì˜ ê°’ìœ¼ë¡œ êµì²´í•˜ê¸° 
 		for (int i = 0; i < iv.length; i++) {
-			iv[i].setImageResource(img[index[i]]); //¼¯ÀÎ ¹øÈ£´ë·Î ÀÌ¹ÌÁö Àç¹èÄ¡ 
+			iv[i].setImageResource(img[index[i]]); //ì„ì¸ ë²ˆí˜¸ëŒ€ë¡œ ì´ë¯¸ì§€ ì¬ë°°ì¹˜ 
 		}
 	}
 

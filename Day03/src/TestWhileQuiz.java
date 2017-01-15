@@ -1,11 +1,11 @@
 /**
- * while È°¿ë
+ * while í™œìš©
  */
 public class TestWhileQuiz {
 	public static void main(String[] args) {
 		// 1+2+3+4 ..args + 9+10
 
-		int sum = 0;// °ªÀ» ´©ÀûÇÒ º¯¼ö
+		int sum = 0;// ê°’ì„ ëˆ„ì í•  ë³€ìˆ˜
 		for (int i = 1; i <= 10; i++) {
 			// System.out.println(i);
 			sum = sum + i;
@@ -19,7 +19,7 @@ public class TestWhileQuiz {
 		}
 		System.out.println(sum);
 
-		// 7+14+21+... ÇÕÀÌ 1000À» ³Ñ´Â ¼ø°£ ÇÕÀ» Ãâ·Â
+		// 7+14+21+... í•©ì´ 1000ì„ ë„˜ëŠ” ìˆœê°„ í•©ì„ ì¶œë ¥
 		sum = 0;
 		for (int i = 7; sum <= 1000; i += 7) {
 			sum += i;
@@ -37,7 +37,7 @@ public class TestWhileQuiz {
 		}
 		System.out.println(sum);
 
-		// sumÀÌ 1000À» ³Ñ±â Á÷Àü¿¡ ¸ØÃç¶ó
+		// sumì´ 1000ì„ ë„˜ê¸° ì§ì „ì— ë©ˆì¶°ë¼
 		sum = 0;
 		add = 7;
 		while (true) {

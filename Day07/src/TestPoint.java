@@ -1,5 +1,5 @@
 /**
- * Å¬·¡½º »ó¼Ó
+ * í´ë˜ìŠ¤ ìƒì†
  */
 public class TestPoint {
 	public static void main(String[] args) {
@@ -18,14 +18,14 @@ public class TestPoint {
 	}// end of main
 }// end of class
 
-// Áßº¹À» ÁÙÀÌ±â À§ÇÏ¿© ±âÁ¸¿¡ »ç¿ëÇÏ´ø Å¬·¡½º¸¦ ÀçÈ°¿ë
-class Point {// 2Â÷¿ø ÁÂÇ¥°èÀÇ Á¡À» Ç¥ÇöÇÏ±â À§ÇÑ Å¬·¡½º
+// ì¤‘ë³µì„ ì¤„ì´ê¸° ìœ„í•˜ì—¬ ê¸°ì¡´ì— ì‚¬ìš©í•˜ë˜ í´ë˜ìŠ¤ë¥¼ ì¬í™œìš©
+class Point {// 2ì°¨ì› ì¢Œí‘œê³„ì˜ ì ì„ í‘œí˜„í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤
 	int x;
 	int y;
 
 }
 
-class Point3D extends Point {// 3Â÷¿ø ÁÂÇ¥°èÀÇ Á¡À» Ç¥ÇöÇÏ±â À§ÇÑ Å¬·¡½º
+class Point3D extends Point {// 3ì°¨ì› ì¢Œí‘œê³„ì˜ ì ì„ í‘œí˜„í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤
 	// int x;
 	// int y;
 	int z;

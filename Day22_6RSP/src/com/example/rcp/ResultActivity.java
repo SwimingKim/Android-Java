@@ -39,21 +39,21 @@ public class ResultActivity extends Activity{
 			int i = 0;
 			while (true) {
 				String str = br.readLine();
-				Log.e("xxx", "ÇÑÁÙ"+i+":"+str);
+				Log.e("xxx", "í•œì¤„"+i+":"+str);
 				i++;
 				if (str==null) break;
-				if (str.substring(0, 2).equals("°è:")) {
+				if (str.substring(0, 2).equals("ê³„:")) {
 					na = str.substring(2);
 				} 
 				str = br.readLine();
-				if (str.substring(0, 2).equals("½Â:")) {
+				if (str.substring(0, 2).equals("ìŠ¹:")) {
 					wi = Integer.valueOf(str.substring(2));
 				} 
 				str = br.readLine();
-				if (str.substring(0, 2).equals("ÆÐ:")) {
+				if (str.substring(0, 2).equals("íŒ¨:")) {
 					lo = Integer.valueOf(str.substring(2));
 				}
-				result += "°èÁ¤:"+na+"\t\t\t\t½Â¸®:"+wi+"\t\t\t\tÆÐ¹è:"+lo+"\n";
+				result += "ê³„ì •:"+na+"\t\t\t\tìŠ¹ë¦¬:"+wi+"\t\t\t\tíŒ¨ë°°:"+lo+"\n";
 			}
 			et.setText(result);
 			br.close();

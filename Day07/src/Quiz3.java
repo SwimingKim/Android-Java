@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Åð±Ù¹®Á¦3 : Á¤·Ä
+ * í‡´ê·¼ë¬¸ì œ3 : ì •ë ¬
  */
 public class Quiz3 {
 	public static void main(String[] args) {

@@ -5,16 +5,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity {// ÇÏ³ªÀÇ È­¸éÀ» ±¸¼º
+public class MainActivity extends Activity {// í•˜ë‚˜ì˜ í™”ë©´ì„ êµ¬ì„±
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);// ºÎ¸ğÀÇ onCreate¸¦ ½ÇÇà
-		setContentView(R.layout.activity_main);// ·¹ÀÌ¾Æ¿ô°ú ¿¬°á
+		super.onCreate(savedInstanceState);// ë¶€ëª¨ì˜ onCreateë¥¼ ì‹¤í–‰
+		setContentView(R.layout.activity_main);// ë ˆì´ì•„ì›ƒê³¼ ì—°ê²°
 
 	}// end of onCreate
 }// end of class
 
-// android acitivity ÇÑ È­¸éÀÇ ±¸¼º¹æ¹ı
-// service ¹é±×¶ó¿îµå ¼­ºñ½º
-// content provider ÀÀ´äÇÏ´Â ÇÁ·Î±×·¥
-// brodecast °øÀ¯
+// android acitivity í•œ í™”ë©´ì˜ êµ¬ì„±ë°©ë²•
+// service ë°±ê·¸ë¼ìš´ë“œ ì„œë¹„ìŠ¤
+// content provider ì‘ë‹µí•˜ëŠ” í”„ë¡œê·¸ë¨
+// brodecast ê³µìœ 

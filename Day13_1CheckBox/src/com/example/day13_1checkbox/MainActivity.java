@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 				// Toast.makeText(getApplicationContext(),
 				// cb4.getText().toString(), Toast.LENGTH_SHORT).show();
 				// } else {
-				// Toast.makeText(getApplicationContext(), "º±≈√«ÿæﬂ¡“",
+				// Toast.makeText(getApplicationContext(), "ÏÑ†ÌÉùÌï¥ÏïºÏ£†",
 				// Toast.LENGTH_LONG).show();
 				// }
 			}

@@ -1,9 +1,9 @@
 /**
- * Å¬·¡½º È°¿ë
+ * í´ë˜ìŠ¤ í™œìš©
  */
 public class TestTime {
 	public static void main(String[] args) {
-		// Ãâ±Ù ½Ã°£, Á¡½É ½Ã°£, Åğ±Ù ½Ã°£
+		// ì¶œê·¼ ì‹œê°„, ì ì‹¬ ì‹œê°„, í‡´ê·¼ ì‹œê°„
 		Time tStart = new Time();
 		tStart.h = 10;
 		tStart.m = 0;
@@ -25,7 +25,7 @@ public class TestTime {
 	}// end of main
 }// end of class
 
-class Time {// »õ·Î¿î Å¸ÀÔÀÇ Á¤ÀÇ : Ãß»óÈ­ ÀÛ¾÷
+class Time {// ìƒˆë¡œìš´ íƒ€ì…ì˜ ì •ì˜ : ì¶”ìƒí™” ì‘ì—…
 	int h;
 	int m;
 	int s;

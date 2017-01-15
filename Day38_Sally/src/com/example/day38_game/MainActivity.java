@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
 	AnimationDrawable ad_ka;
 
 	int count = 0;
-	int chance = 1; String heart = "¢¾¢¾¢¾";
+	int chance = 1; String heart = "â™¥â™¥â™¥";
 	final int MAX_ED_NUM = 20;
 	final int MAX_KA_NUM = 5;
 	ArrayList<EdWard> list = new ArrayList<EdWard>();
@@ -76,9 +76,9 @@ public class MainActivity extends Activity {
 
 	private Intent intent;
 	Handler handler = new Handler();
-	Runnable r_ed = new Runnable() {//¿¡µå¿öµå¿Í Ä«Ä«¿ÀÅå »ı¼º
+	Runnable r_ed = new Runnable() {//ì—ë“œì›Œë“œì™€ ì¹´ì¹´ì˜¤í†¡ ìƒì„±
 		public void run() {
-			// Ä«Ä«¿ÀÅå »ı¼º
+			// ì¹´ì¹´ì˜¤í†¡ ìƒì„±
 			if (list.size()<MAX_ED_NUM) {
 				ImageView iv = new ImageView(getApplicationContext());
 				iv.setBackgroundResource(R.drawable.frame_chink);
@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
 							TimerTask task = new TimerTask() {
 								public void run() {
 									handler.removeCallbacks(r_finish);
-									intent.putExtra("°á°ú", "¶óÀÎ");
+									intent.putExtra("ê²°ê³¼", "ë¼ì¸");
 									startActivity(intent);
 									finish();
 								}
@@ -160,7 +160,7 @@ public class MainActivity extends Activity {
 			}
 
 
-			// Ä«Ä«¿ÀÅå °ü¸®
+			// ì¹´ì¹´ì˜¤í†¡ ê´€ë¦¬
 			if (rival.size()<MAX_KA_NUM) {
 				ImageView iv_ka = new ImageView(getApplicationContext());
 				iv_ka.setBackgroundResource(R.drawable.frame_ka);
@@ -213,7 +213,7 @@ public class MainActivity extends Activity {
 						TimerTask task = new TimerTask() {
 							public void run() {
 								handler.removeCallbacks(r_finish);								
-								intent.putExtra("°á°ú", "Ä«Åå");
+								intent.putExtra("ê²°ê³¼", "ì¹´í†¡");
 								startActivity(intent);
 								finish();
 							}
@@ -274,7 +274,7 @@ public class MainActivity extends Activity {
 		
 		tv_level.setText("Level : "+0);
 		tv_fish.setText("Catch : "+0);
-		tv_chance.setText("Chance : "+"¢¾¢¾¢¾");
+		tv_chance.setText("Chance : "+"â™¥â™¥â™¥");
 		
 		final Button b_all = (Button)findViewById(R.id.all);
 		final Button b_line = (Button)findViewById(R.id.line);
@@ -321,17 +321,17 @@ public class MainActivity extends Activity {
 		});
 		
 		Intent pri = getIntent();
-		String str = pri.getStringExtra("¸ğµå");
+		String str = pri.getStringExtra("ëª¨ë“œ");
 		sm = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
 		sc = new SensorClass();
 		
-		if ("¼¾¼­".equals(str)) {
+		if ("ì„¼ì„œ".equals(str)) {
 			up.setVisibility(View.GONE);
 			down.setVisibility(View.GONE);
 			left.setVisibility(View.GONE);
 			right.setVisibility(View.GONE);
 			sensor = sm.getDefaultSensor(Sensor.TYPE_ORIENTATION);
-		} else if ("ÅÍÄ¡".equals(str)) {
+		} else if ("í„°ì¹˜".equals(str)) {
 			sm.unregisterListener(sc);
 		}
 		

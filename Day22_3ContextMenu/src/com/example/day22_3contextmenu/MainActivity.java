@@ -20,8 +20,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ÄÁÅØ½ºÆ® ¸Ş´º : »ç¿ëÀÚ°¡ À§Á¬À» ¿À·§µ¿¾È ´­·¶À» ¶§ ¹ß»ı½ÃÅ°´Â ¸Ş´º
-		// ÄÁÅØ½ºÆ® ¸Ş´º¸¦ µî·ÏÇÒ À§Á¬¿¡ ¿¬°áÇØÁà¾ß ÇÑ´Ù
+		// ì»¨í…ìŠ¤íŠ¸ ë©”ë‰´ : ì‚¬ìš©ìê°€ ìœ„ì ¯ì„ ì˜¤ë«ë™ì•ˆ ëˆŒë €ì„ ë•Œ ë°œìƒì‹œí‚¤ëŠ” ë©”ë‰´
+		// ì»¨í…ìŠ¤íŠ¸ ë©”ë‰´ë¥¼ ë“±ë¡í•  ìœ„ì ¯ì— ì—°ê²°í•´ì¤˜ì•¼ í•œë‹¤
 
 		Button b = (Button) findViewById(R.id.button1);
 		registerForContextMenu(b);
@@ -31,22 +31,22 @@ public class MainActivity extends Activity {
 	}// end of onCreate
 
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
-		getMenuInflater().inflate(R.menu.contextmenu, menu);// ¸Ş´º¿¡ xmlÀ» µî·Ï
+		getMenuInflater().inflate(R.menu.contextmenu, menu);// ë©”ë‰´ì— xmlì„ ë“±ë¡
 		super.onCreateContextMenu(menu, v, menuInfo);
 	}
 
 	public boolean onContextItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_red:
-			Toast.makeText(getApplicationContext(), "»¡°­ ¼±ÅÃ", 1).show();
+			Toast.makeText(getApplicationContext(), "ë¹¨ê°• ì„ íƒ", 1).show();
 			ll.setBackgroundColor(Color.RED);
 			break;
 		case R.id.menu_yellow:
-			Toast.makeText(getApplicationContext(), "³ë¶û ¼±ÅÃ", 1).show();
+			Toast.makeText(getApplicationContext(), "ë…¸ë‘ ì„ íƒ", 1).show();
 			ll.setBackgroundColor(Color.YELLOW);
 			break;
 		case R.id.menu_blue:
-			Toast.makeText(getApplicationContext(), "ÆÄ¶û ¼±ÅÃ", 1).show();
+			Toast.makeText(getApplicationContext(), "íŒŒë‘ ì„ íƒ", 1).show();
 			ll.setBackgroundColor(Color.BLUE);
 			break;
 

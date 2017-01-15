@@ -19,7 +19,7 @@ public class One extends Activity{
 	MediaPlayer mp;
 	Handler handler = new Handler();
 	Runnable r = new Runnable() {
-		String say[] = {"°¡·ç¾ß!!","¿À´Ã Áß¿äÇÑ ¼Õ´ÔÀÌ ¿À½Ã´Ï,","Æ¯º° Â¥Àå¸éÀ» ¸¸µé²¨¾ß","±×·¯´Ï±î ½ºÆä¼È ÃáÀåÀ» »ç¿Í~","Àú ¹®À» ÅëÇØ ³ª°¥ ¼ö ÀÖ¾î", "²À »ç¿ÃÅ×´Ï±î ±â´Ù·Á"};
+		String say[] = {"ê°€ë£¨ì•¼!!","ì˜¤ëŠ˜ ì¤‘ìš”í•œ ì†ë‹˜ì´ ì˜¤ì‹œë‹ˆ,","íŠ¹ë³„ ì§œì¥ë©´ì„ ë§Œë“¤êº¼ì•¼","ê·¸ëŸ¬ë‹ˆê¹Œ ìŠ¤í˜ì…œ ì¶˜ì¥ì„ ì‚¬ì™€~","ì € ë¬¸ì„ í†µí•´ ë‚˜ê°ˆ ìˆ˜ ìˆì–´", "ê¼­ ì‚¬ì˜¬í…Œë‹ˆê¹Œ ê¸°ë‹¤ë ¤"};
 		int i = 0;
 		public void run() {
 			if (i==say.length-1) {
@@ -68,7 +68,7 @@ public class One extends Activity{
 		
 		bu.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
-				if ("²À »ç¿ÃÅ×´Ï±î ±â´Ù·Á".equals(tvga.getText().toString())) {
+				if ("ê¼­ ì‚¬ì˜¬í…Œë‹ˆê¹Œ ê¸°ë‹¤ë ¤".equals(tvga.getText().toString())) {
 					if (event.getAction() == MotionEvent.ACTION_UP) {
 						float xd = Math.abs(bu.getX()-door.getX());
 						float yd = Math.abs(bu.getY()-door.getY());
@@ -77,7 +77,7 @@ public class One extends Activity{
 							bu.setX(door.getX());
 							bu.setY(door.getY());
 							tv.setText("");
-							tvga.setText("¹®À» Å¬¸¯ÇØÁÖ¼¼¿ä");
+							tvga.setText("ë¬¸ì„ í´ë¦­í•´ì£¼ì„¸ìš”");
 						} else{
 							float x = bu.getX()-(difX);
 							float y = bu.getY()-(difY);
@@ -106,7 +106,7 @@ public class One extends Activity{
 							bu.setX(door.getX());
 							bu.setY(door.getY());
 							tv.setText("");
-							tvga.setText("¹®À» Å¬¸¯ÇØÁÖ¼¼¿ä");
+							tvga.setText("ë¬¸ì„ í´ë¦­í•´ì£¼ì„¸ìš”");
 						} else{
 							moveX = event.getX();
 							moveY = event.getY();
@@ -137,8 +137,8 @@ public class One extends Activity{
 		door.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				if (event.getAction()==MotionEvent.ACTION_DOWN) {
-					if ("¹®À» Å¬¸¯ÇØÁÖ¼¼¿ä".equals(tvga.getText().toString())) {
-						intent.putExtra("³ë·¡", mp.getCurrentPosition());
+					if ("ë¬¸ì„ í´ë¦­í•´ì£¼ì„¸ìš”".equals(tvga.getText().toString())) {
+						intent.putExtra("ë…¸ë˜", mp.getCurrentPosition());
 						startActivity(intent);
 						finish();
 					}

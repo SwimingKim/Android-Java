@@ -1,19 +1,19 @@
 /**
- * ¿À¹ö·Îµù : °°Àº Å¬·¡½º¾È¿¡¼­ ¸Þ¼­µåÀÇ ÀÎÀÚ°ªÀÌ °³¼ö or¼ø¼­ orÅ¸ÀÔÀÌ ´Ù¸£¸é µ¿ÀÏÇÑ ¸Þ¼­µå¸íÀ» »ç¿ëÇÒ ¼ö ÀÖµµ·Ï Çã¿ëÇÏ´Â ±â¹ý
- * ¿À¹ö¶óÀÌµù : »ó¼Ó°ü°èÀÇ Å¬·¡½º¿¡¼­ ºÎ¸ð Å¬·¡½ºÀÇ ¸Þ¼­µå¸¦ ÀÚ½ÄÅ¬·¡½º¿¡¼­ ÀçÁ¤ÀÇÇÏ´Â °Í
+ * ì˜¤ë²„ë¡œë”© : ê°™ì€ í´ëž˜ìŠ¤ì•ˆì—ì„œ ë©”ì„œë“œì˜ ì¸ìžê°’ì´ ê°œìˆ˜ orìˆœì„œ oríƒ€ìž…ì´ ë‹¤ë¥´ë©´ ë™ì¼í•œ ë©”ì„œë“œëª…ì„ ì‚¬ìš©í•  ìˆ˜ ìžˆë„ë¡ í—ˆìš©í•˜ëŠ” ê¸°ë²•
+ * ì˜¤ë²„ë¼ì´ë”© : ìƒì†ê´€ê³„ì˜ í´ëž˜ìŠ¤ì—ì„œ ë¶€ëª¨ í´ëž˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ ìžì‹í´ëž˜ìŠ¤ì—ì„œ ìž¬ì •ì˜í•˜ëŠ” ê²ƒ
  */
 public class TestClass3 {
 	public static void main(String[] args) {
-		// ¿À¹ö·Îµù : ÇÑ Å¬·¡½º µ¿ÀÏÇÑ ¸Þ¼­µå¸í (ÀÎÀÚ°ªÀÇ °³¼ö, ¼ø¼­, Å¸ÀÔ º¯°æ)
-		// ¿À¹ö¶óÀÌµù : »ó¼Ó ¸Þ¼­µå ÀçÁ¤ÀÇ
+		// ì˜¤ë²„ë¡œë”© : í•œ í´ëž˜ìŠ¤ ë™ì¼í•œ ë©”ì„œë“œëª… (ì¸ìžê°’ì˜ ê°œìˆ˜, ìˆœì„œ, íƒ€ìž… ë³€ê²½)
+		// ì˜¤ë²„ë¼ì´ë”© : ìƒì† ë©”ì„œë“œ ìž¬ì •ì˜
 
 		new Child().ppp();
 
 	}// end of main
 }// end of class
 
-class MyClass { // ¿À¹ö·Îµù : µ¿ÀÏÇÑ ÀÌ¸§À¸·Î ¸Þ¼­µå¸íÀ» ÀÛ¼ºÇÏ´Â °Í,
-	// ÀÎÀÚ°ªÀÇ °³¼ö, Å¸ÀÔ, ¼ø¼­¸¦ ´Ù¸£°Ô ÇØ¾ß ÇÑ´Ù
+class MyClass { // ì˜¤ë²„ë¡œë”© : ë™ì¼í•œ ì´ë¦„ìœ¼ë¡œ ë©”ì„œë“œëª…ì„ ìž‘ì„±í•˜ëŠ” ê²ƒ,
+	// ì¸ìžê°’ì˜ ê°œìˆ˜, íƒ€ìž…, ìˆœì„œë¥¼ ë‹¤ë¥´ê²Œ í•´ì•¼ í•œë‹¤
 	void bb() {
 	}
 
@@ -33,15 +33,15 @@ class MyClass { // ¿À¹ö·Îµù : µ¿ÀÏÇÑ ÀÌ¸§À¸·Î ¸Þ¼­µå¸íÀ» ÀÛ¼ºÇÏ´Â °Í,
 
 class Parent {
 	void ppp() {
-		System.out.println("³ª´Â pppÀÔ´Ï´Ù");
+		System.out.println("ë‚˜ëŠ” pppìž…ë‹ˆë‹¤");
 	}
 
 }
 
 class Child extends Parent {
 
-	void ppp() { // ¿À¹ö¶óÀÌµù : ºÎ¸ðÅ¬·¡½ºÀÇ ¸Þ¼­µå¸¦ ÀçÁ¤ÀÇÇÏ´Â °Í
-		System.out.println("³ª´Â ÀÚ½ÄÀÇ ÇÇÇÇÇÇÀÔ´Ï´Ù");
+	void ppp() { // ì˜¤ë²„ë¼ì´ë”© : ë¶€ëª¨í´ëž˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ ìž¬ì •ì˜í•˜ëŠ” ê²ƒ
+		System.out.println("ë‚˜ëŠ” ìžì‹ì˜ í”¼í”¼í”¼ìž…ë‹ˆë‹¤");
 	}
 
 }

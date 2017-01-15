@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 		Button b1 = (Button)findViewById(R.id.button1);
 		Button b2 = (Button)findViewById(R.id.button2);
 		
-// ¼³Á¤°ªÀúÀå ¹æ¹ı : SharedPreferences ÆÄÀÏÀ» ´Ù¸¥ ¾Û°ú °øÀ¯ÇÒ ¼ö ÀÖ´Ù		
+// ì„¤ì •ê°’ì €ì¥ ë°©ë²• : SharedPreferences íŒŒì¼ì„ ë‹¤ë¥¸ ì•±ê³¼ ê³µìœ í•  ìˆ˜ ìˆë‹¤		
 		
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {

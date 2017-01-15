@@ -16,20 +16,20 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	Student stu[] = { new Student("È«Á¤ÅÃ", 24, "³ªÀÌ¸¦ ¼ÓÀÓ", R.drawable.kae), new Student("Àåµ¿Áø", 27, "¿ÍÃò°í³ªµÎ", R.drawable.kae),
-			new Student("ÁÖÈñÁø", 24, "ºÒ°¡´ÉÇÑÀÏ", R.drawable.kae), new Student("±èº´ÀÏ", 24, "»óÃßÀÇ¸ñÀ»º¨", R.drawable.kae),
-			new Student("¹®»õ¹Ì", 25, "Áı¿¡ °¡°í½Í´Ù", R.drawable.kae), new Student("·ù¿¬Áö", 24, "³ªµµ", R.drawable.kae),
-			new Student("¼­¹Î±Ô", 26, "È¥ÀÚ¼­¾ÉÀ»¼öÀÖ¾î¿ä", R.drawable.kae), new Student("±è¼ö¿µ", 24, "½É½ÉÇØ", R.drawable.kae), };
+	Student stu[] = { new Student("í™ì •íƒ", 24, "ë‚˜ì´ë¥¼ ì†ì„", R.drawable.kae), new Student("ì¥ë™ì§„", 27, "ì™€ì¸„ê³ ë‚˜ë‘", R.drawable.kae),
+			new Student("ì£¼í¬ì§„", 24, "ë¶ˆê°€ëŠ¥í•œì¼", R.drawable.kae), new Student("ê¹€ë³‘ì¼", 24, "ìƒì¶”ì˜ëª©ì„ë²°", R.drawable.kae),
+			new Student("ë¬¸ìƒˆë¯¸", 25, "ì§‘ì— ê°€ê³ ì‹¶ë‹¤", R.drawable.kae), new Student("ë¥˜ì—°ì§€", 24, "ë‚˜ë„", R.drawable.kae),
+			new Student("ì„œë¯¼ê·œ", 26, "í˜¼ìì„œì•‰ì„ìˆ˜ìˆì–´ìš”", R.drawable.kae), new Student("ê¹€ìˆ˜ì˜", 24, "ì‹¬ì‹¬í•´", R.drawable.kae), };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ListView »ç¿ë¹æ¹ı
-		// 1.´Ù·®ÀÇ µ¥ÀÌÅÍ ÁØºñ
-		// 2.¾Æ´äÅ¸ ±¸¼º(ÇÑÇàÀÇ Layout, ¾Æ´äÅ¸ ±¸¼º)
-		// 3.¾Æ´äÅ¸ºä¿¡ ¾Æ´äÅ¸ ±¸¼º
+		// ListView ì‚¬ìš©ë°©ë²•
+		// 1.ë‹¤ëŸ‰ì˜ ë°ì´í„° ì¤€ë¹„
+		// 2.ì•„ë‹µíƒ€ êµ¬ì„±(í•œí–‰ì˜ Layout, ì•„ë‹µíƒ€ êµ¬ì„±)
+		// 3.ì•„ë‹µíƒ€ë·°ì— ì•„ë‹µíƒ€ êµ¬ì„±
 
 		ListView lv = (ListView) findViewById(R.id.listView1);
 
@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 
 		lv.setAdapter(adapter);
 
-		// ÀÌº¥Æ®Ã³¸®
+		// ì´ë²¤íŠ¸ì²˜ë¦¬
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				Toast.makeText(getApplicationContext(), stu[position].message, 1).show();
@@ -62,21 +62,21 @@ class MyAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public int getCount() {// È­¸é¿¡ º¸¿©ÁÙ ListÀÇ °³¼ö(µ¥ÀÌÅÍÀÇ °³¼ö)
+	public int getCount() {// í™”ë©´ì— ë³´ì—¬ì¤„ Listì˜ ê°œìˆ˜(ë°ì´í„°ì˜ ê°œìˆ˜)
 		return stu.length;
 	}
 
 	@Override
-	public Object getItem(int position) {// ÇØ´ç ¹øÂ°ÀÇ item
+	public Object getItem(int position) {// í•´ë‹¹ ë²ˆì§¸ì˜ item
 		return stu[position];
 	}
 
 	@Override
-	public long getItemId(int position) {// ÇØ´ç ¹øÂ°ÀÇ itemÀÇ °íÀ¯ÇÑ id
+	public long getItemId(int position) {// í•´ë‹¹ ë²ˆì§¸ì˜ itemì˜ ê³ ìœ í•œ id
 		return position;
 	}
 
-	// ÇÑ ÇàÀÇ layout°ú µ¥ÀÌÅÍ¸¦ ¿¬°á
+	// í•œ í–‰ì˜ layoutê³¼ ë°ì´í„°ë¥¼ ì—°ê²°
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
@@ -89,14 +89,14 @@ class MyAdapter extends BaseAdapter {
 
 		iv.setImageResource(stu[position].img);
 		tvName.setText(stu[position].name);
-		tvAge.setText(stu[position].age + "»ì");
+		tvAge.setText(stu[position].age + "ì‚´");
 		tvMessage.setText(stu[position].message);
 
 		return convertView;
 	}
 }
 
-class Student {// ÇÑ ¸íÀÇ Á¤º¸¸¦ ÀúÀåÇÒ °´Ã¼
+class Student {// í•œ ëª…ì˜ ì •ë³´ë¥¼ ì €ì¥í•  ê°ì²´
 	String name;
 	int age;
 	String message;

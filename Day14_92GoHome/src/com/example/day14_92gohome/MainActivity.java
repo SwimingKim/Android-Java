@@ -45,10 +45,10 @@ public class MainActivity extends Activity {
 
 			String str = "";
 			if (rect_mu.intersect(rect_ic)) {
-				to.setText("Ãæµ¹");
+				to.setText("ì¶©ëŒ");
 				to.setDuration(Toast.LENGTH_SHORT);
 				to.show();
-				str = "Ãæµ¹";		
+				str = "ì¶©ëŒ";		
 			} 
 			
 			Log.d("line", "mu"+rect_mu.left+","+rect_mu.top+","+rect_mu.right+","+rect_mu.bottom + ",    ic"+rect_ic.left+","+rect_ic.top+","+rect_ic.right+","+rect_ic.bottom + ",    " + str);
@@ -93,12 +93,12 @@ public class MainActivity extends Activity {
 		Log.e("line", "b11 : " + b11);
 		
 		//1. post -> postdelay
-		//2. ºäÀÇ ÁÂÇ¥ ´Â ºÎ¸ğÀÇ ºä ¾È¿¡¼­ ÁÂÇ¥¸¦ °áÁ¤ÇÏ±â ¶§¹®¿¡, ºÎ¸ğÀÇ ÁÂÇ¥¸¦ ¾ò¾î¼­ ´õÇØÁà¾ß ÃÖÁ¾ Àı´ëÁÂÇ¥°¡ µÊ
-		//3. ºäÀÇ Å©±â¸¦ °áÁ¤ÇÏ´Â ½Ã±â
+		//2. ë·°ì˜ ì¢Œí‘œ ëŠ” ë¶€ëª¨ì˜ ë·° ì•ˆì—ì„œ ì¢Œí‘œë¥¼ ê²°ì •í•˜ê¸° ë•Œë¬¸ì—, ë¶€ëª¨ì˜ ì¢Œí‘œë¥¼ ì–»ì–´ì„œ ë”í•´ì¤˜ì•¼ ìµœì¢… ì ˆëŒ€ì¢Œí‘œê°€ ë¨
+		//3. ë·°ì˜ í¬ê¸°ë¥¼ ê²°ì •í•˜ëŠ” ì‹œê¸°
 		
 		iv_mu.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
 			@Override
-			public void onGlobalLayout() { // È­¸éÅ©±â¸¦ ÀĞ¾î¿À´Â ÄÚµå¸¦ ÀÛ¼º
+			public void onGlobalLayout() { // í™”ë©´í¬ê¸°ë¥¼ ì½ì–´ì˜¤ëŠ” ì½”ë“œë¥¼ ì‘ì„±
 				rect_mu.left = (int)iv_mu.getX();
 				rect_mu.top = (int)iv_mu.getY();
 				rect_mu.right = (int)(iv_mu.getX()+iv_mu.getWidth());
@@ -122,11 +122,11 @@ public class MainActivity extends Activity {
 				rect_mu.bottom = (int)iv_mu.getY();
 				String str = "";
 				if (rect_mu.intersect(rect_ic)) {
-					to.setText("Ãæµ¹");
+					to.setText("ì¶©ëŒ");
 					to.setDuration(Toast.LENGTH_SHORT);
 					to.show();
-					str = "Ãæµ¹";
-					Log.e("line", "Ãæµ¹");
+					str = "ì¶©ëŒ";
+					Log.e("line", "ì¶©ëŒ");
 				} 
 				Log.d("line", "mu"+rect_mu.left+","+rect_mu.top+","+rect_mu.right+","+rect_mu.bottom + ",    ic"+rect_ic.left+","+rect_ic.top+","+rect_ic.right+","+rect_ic.bottom + ",    " + str);
 				return true;
@@ -141,11 +141,11 @@ public class MainActivity extends Activity {
 				rect_mu.bottom = (int)iv_mu.getY();
 				String str = "";
 				if (rect_mu.intersect(rect_ic)) {
-					to.setText("Ãæµ¹");
+					to.setText("ì¶©ëŒ");
 					to.setDuration(Toast.LENGTH_SHORT);
 					to.show();
-					str = "Ãæµ¹";
-					Log.e("line", "Ãæµ¹");
+					str = "ì¶©ëŒ";
+					Log.e("line", "ì¶©ëŒ");
 				} 
 				Log.d("line", "mu"+rect_mu.left+","+rect_mu.top+","+rect_mu.right+","+rect_mu.bottom + ",    ic"+rect_ic.left+","+rect_ic.top+","+rect_ic.right+","+rect_ic.bottom + ",    " + str);
 				return true;
@@ -160,11 +160,11 @@ public class MainActivity extends Activity {
 				rect_mu.bottom = (int)iv_mu.getY();
 				String str = "";
 				if (rect_mu.intersect(rect_ic)) {
-					to.setText("Ãæµ¹");
+					to.setText("ì¶©ëŒ");
 					to.setDuration(Toast.LENGTH_SHORT);
 					to.show();
-					str = "Ãæµ¹";
-					Log.e("line", "Ãæµ¹");
+					str = "ì¶©ëŒ";
+					Log.e("line", "ì¶©ëŒ");
 				} 
 				Log.d("line", "mu"+rect_mu.left+","+rect_mu.top+","+rect_mu.right+","+rect_mu.bottom + ",    ic"+rect_ic.left+","+rect_ic.top+","+rect_ic.right+","+rect_ic.bottom + ",    " + str);
 				return true;
@@ -179,11 +179,11 @@ public class MainActivity extends Activity {
 				rect_mu.bottom = (int)iv_mu.getY();
 				String str = "";
 				if (rect_mu.intersect(rect_ic)) {
-					to.setText("Ãæµ¹");
+					to.setText("ì¶©ëŒ");
 					to.setDuration(Toast.LENGTH_SHORT);
 					to.show();
-					str = "Ãæµ¹";
-					Log.e("line", "Ãæµ¹");
+					str = "ì¶©ëŒ";
+					Log.e("line", "ì¶©ëŒ");
 				} 
 				Log.d("line", "mu"+rect_mu.left+","+rect_mu.top+","+rect_mu.right+","+rect_mu.bottom + ",    ic"+rect_ic.left+","+rect_ic.top+","+rect_ic.right+","+rect_ic.bottom + ",    " + str);
 				return true;

@@ -1,8 +1,8 @@
 
 public class TestCar {
 	public static void main(String[] args) {
-		SportsCar c1 = new SportsCar("º¥Ã÷", 4, "°ËÁ¤", false);
-		SportsCar c2 = new SportsCar("¶÷º¸¸£±â´Ï", 2, "»¡°­", true);
+		SportsCar c1 = new SportsCar("ë²¤ì¸ ", 4, "ê²€ì •", false);
+		SportsCar c2 = new SportsCar("ëžŒë³´ë¥´ê¸°ë‹ˆ", 2, "ë¹¨ê°•", true);
 
 		c1.print();
 		c2.print();
@@ -43,6 +43,6 @@ class SportsCar extends Car {
 	}
 
 	void print() {
-		System.out.println(name + "\t" + door + "°³\t" + color + "»ö\t" + (openRoof ? "ÁöºØ ¿­¸²" : "ÁöºØ ¾È¿­¸²"));
+		System.out.println(name + "\t" + door + "ê°œ\t" + color + "ìƒ‰\t" + (openRoof ? "ì§€ë¶• ì—´ë¦¼" : "ì§€ë¶• ì•ˆì—´ë¦¼"));
 	}
 }

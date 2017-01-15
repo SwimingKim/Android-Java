@@ -17,10 +17,10 @@ public class MainActivity extends Activity {
 		final TextView tv2 = (TextView) findViewById(R.id.textView2);
 		Button b1 = (Button) findViewById(R.id.button1);
 
-		// ¹öÆ°À» Å¬¸¯µ¿ÀÛÀ» ÇßÀ» ¶§ (text1 => text2)
+		// ë²„íŠ¼ì„ í´ë¦­ë™ì‘ì„ í–ˆì„ ë•Œ (text1 => text2)
 		b1.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View v) { // ¹öÆ°ÀÌ Å¬¸¯µÇ¾úÀ» ¶§, È£ÃâµÇ´Â Äİ¹é¸Ş¼­µå
+			public void onClick(View v) { // ë²„íŠ¼ì´ í´ë¦­ë˜ì—ˆì„ ë•Œ, í˜¸ì¶œë˜ëŠ” ì½œë°±ë©”ì„œë“œ
 				String str = tv1.getText().toString();
 				tv2.setText(str);
 			}

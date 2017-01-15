@@ -36,13 +36,13 @@ public class IntroActivity extends Activity {
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View mv = lif.inflate(R.layout.bo, null);
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("º¸¾È");
-			dialog.setMessage("ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			dialog.setTitle("ë³´ì•ˆ");
+			dialog.setMessage("ë¹„ë°€ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”");
 			dialog.setView(mv);
 
 			final EditText et = (EditText) mv.findViewById(R.id.editText1);
 
-			dialog.setPositiveButton("ÀÔ·Â¿Ï·á", new DialogInterface.OnClickListener() {
+			dialog.setPositiveButton("ìž…ë ¥ì™„ë£Œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					if (et.getText().toString().equals("882530")) {
 						Intent intent = new Intent(getApplicationContext(), MainActivity.class);

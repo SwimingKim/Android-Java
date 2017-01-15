@@ -1,94 +1,94 @@
 /**
- * Á¶°Ç¹® : if~else, switch~case, »ïÇ×¿¬»êÀÚ
+ * ì¡°ê±´ë¬¸ : if~else, switch~case, ì‚¼í•­ì—°ì‚°ì
  */
 public class IfElse {
 	public static void main(String[] args) {
-		// if¹®ÀÇ Á¶°Ç½ÄÀº Âü, °ÅÁşÀ¸·Î °á°ú°¡ ³ª¿Í¾ß ÇÑ´Ù
+		// ifë¬¸ì˜ ì¡°ê±´ì‹ì€ ì°¸, ê±°ì§“ìœ¼ë¡œ ê²°ê³¼ê°€ ë‚˜ì™€ì•¼ í•œë‹¤
 		boolean b = false;
 		if (b) {
-			// Á¶°Ç½ÄÀÌ ÂüÀÏ °æ¿ì ºí·°ÀÇ ½ÇÇà¹®À» ¼öÇà
+			// ì¡°ê±´ì‹ì´ ì°¸ì¼ ê²½ìš° ë¸”ëŸ­ì˜ ì‹¤í–‰ë¬¸ì„ ìˆ˜í–‰
 		}
 		if (b) {
-			// Á¶°Ç½ÄÀÌ ÂüÀÏ °æ¿ì ºí·°ÀÇ ½ÇÇà¹®À» ¼öÇà
+			// ì¡°ê±´ì‹ì´ ì°¸ì¼ ê²½ìš° ë¸”ëŸ­ì˜ ì‹¤í–‰ë¬¸ì„ ìˆ˜í–‰
 		} else {
-			// Á¶°Ç½ÄÀÌ °ÅÁşÀÏ °æ¿ì ºí·°ÀÇ ½ÇÇà¹®À» ¼öÇà
+			// ì¡°ê±´ì‹ì´ ê±°ì§“ì¼ ê²½ìš° ë¸”ëŸ­ì˜ ì‹¤í–‰ë¬¸ì„ ìˆ˜í–‰
 		}
 
-		boolean gender = true;// ¿©ÀÚ, ³²ÀÚ´Â false
+		boolean gender = true;// ì—¬ì, ë‚¨ìëŠ” false
 		if (gender) {
-			System.out.println("¿©ÀÚ");
+			System.out.println("ì—¬ì");
 		} else {
-			System.out.println("³²ÀÚ");
+			System.out.println("ë‚¨ì");
 		}
-		System.out.println(gender ? "¿©ÀÚ" : "³²ÀÚ");
+		System.out.println(gender ? "ì—¬ì" : "ë‚¨ì");
 
 		int score = 87;
 		if (score == 10 || score == 9) {
-			System.out.println("¼ö");
+			System.out.println("ìˆ˜");
 		} else if (score == 8) {
-			System.out.println("¿ì");
+			System.out.println("ìš°");
 		} else if (score == 7) {
-			System.out.println("¹Ì");
+			System.out.println("ë¯¸");
 		} else if (score == 6) {
-			System.out.println("¾ç");
+			System.out.println("ì–‘");
 		} else {
-			System.out.println("°¡");
+			System.out.println("ê°€");
 		}
 
 		int number = 87;
 		if (number == 100 && number >= 90) {
-			System.out.println("¼ö");
+			System.out.println("ìˆ˜");
 		} else if (number >= 80) {
-			System.out.println("¿ì");
+			System.out.println("ìš°");
 		} else if (number >= 70) {
-			System.out.println("¹Ì");
+			System.out.println("ë¯¸");
 		} else {
-			System.out.println("°¡");
+			System.out.println("ê°€");
 		}
 
 		int num = 7;
-		// Â¦¼ö, È¦¼ö ÆÇº°ÇØ¼­ Ãâ·ÂÇÏ±â
+		// ì§ìˆ˜, í™€ìˆ˜ íŒë³„í•´ì„œ ì¶œë ¥í•˜ê¸°
 		if (num % 2 == 0) {
-			System.out.println("Â¦¼ö");
+			System.out.println("ì§ìˆ˜");
 		} else {
-			System.out.println("È¦¼ö");
+			System.out.println("í™€ìˆ˜");
 		}
 
-		System.out.println((num % 2 == 0) ? "Â¦¼ö" : "È¦¼ö");
+		System.out.println((num % 2 == 0) ? "ì§ìˆ˜" : "í™€ìˆ˜");
 
 		char c = 'w';
 		if (c == 'x') {
-			System.out.println("¿¢½ºÀÔ´Ï´Ù");
+			System.out.println("ì—‘ìŠ¤ì…ë‹ˆë‹¤");
 		} else {
-			System.out.println("¿¢½º°¡ ¾Æ´Õ´Ï´Ù");
+			System.out.println("ì—‘ìŠ¤ê°€ ì•„ë‹™ë‹ˆë‹¤");
 		}
 
-		// ÁßÃ¸ if¹®
+		// ì¤‘ì²© ifë¬¸
 		int q = 5;
 		if (q > 4) {
-			if (q > 6) {// q´Â 4º¸´Ù Å©°í
+			if (q > 6) {// qëŠ” 4ë³´ë‹¤ í¬ê³ 
 
-			} else {// q´Â 4º¸´Ù Å©°í, 6º¸´Ù ÀÛ°Å³ª °°´Ù
+			} else {// qëŠ” 4ë³´ë‹¤ í¬ê³ , 6ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ë‹¤
 
 			}
-		} else { // q´Â 4º¸´Ù ÀÛ°Å³ª °°´Ù
+		} else { // qëŠ” 4ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ë‹¤
 
 		}
 
 		boolean isOn = false;
 		if (isOn) {
-			System.out.println("ÄÑÁ®ÀÖ´Ù");
+			System.out.println("ì¼œì ¸ìˆë‹¤");
 		}
 
-		// ¹®ÀÚ¿­ÀÇ ºñ±³
-		String str = "È«±æµ¿";
-		if (str.equals("È«±æµ¿")) {// ¹®ÀÚ¿­ÀÌ °°ÀºÁö ºñ±³
-			System.out.println("È«±æµ¿ ¸Â½À´Ï´Ù");
+		// ë¬¸ìì—´ì˜ ë¹„êµ
+		String str = "í™ê¸¸ë™";
+		if (str.equals("í™ê¸¸ë™")) {// ë¬¸ìì—´ì´ ê°™ì€ì§€ ë¹„êµ
+			System.out.println("í™ê¸¸ë™ ë§ìŠµë‹ˆë‹¤");
 		}
 
-		// ¹®ÀÚ¿­ÀÇ ºñ±³
-		if (!str.equals("È«±æµ¿")) {// ¹®ÀÚ¿­ÀÌ ´Ù¸¥Áö ºñ±³
-			System.out.println("È«±æµ¿ÀÌ ¾Æ´Õ´Ï´Ù");
+		// ë¬¸ìì—´ì˜ ë¹„êµ
+		if (!str.equals("í™ê¸¸ë™")) {// ë¬¸ìì—´ì´ ë‹¤ë¥¸ì§€ ë¹„êµ
+			System.out.println("í™ê¸¸ë™ì´ ì•„ë‹™ë‹ˆë‹¤");
 		}
 
 	}// end of main

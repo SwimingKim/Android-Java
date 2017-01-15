@@ -21,10 +21,10 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ¾Æ´äÅ¸ºä (ListView, GridView, Gallery, Spinner)
-		// 1. ´Ù·®ÀÇ µ¥ÀÌÅÍ ÁØºñ
-		// 2. adapter ±¸¼º(ÇÑ ÇàÀ» ´ã´çÇÒ layout, Å¬·¡½º ÀÛ¼º)
-		// 3. ¾Æ´äÅ¸ºä¿¡ adapter¸¦ µî·ÏÇÑ´Ù
+		// ì•„ë‹µíƒ€ë·° (ListView, GridView, Gallery, Spinner)
+		// 1. ë‹¤ëŸ‰ì˜ ë°ì´í„° ì¤€ë¹„
+		// 2. adapter êµ¬ì„±(í•œ í–‰ì„ ë‹´ë‹¹í•  layout, í´ë˜ìŠ¤ ì‘ì„±)
+		// 3. ì•„ë‹µíƒ€ë·°ì— adapterë¥¼ ë“±ë¡í•œë‹¤
 
 		GridView gv = (GridView) findViewById(R.id.gridView1);
 		MyAdapter adapter = new MyAdapter(getApplicationContext(), R.layout.row, img);

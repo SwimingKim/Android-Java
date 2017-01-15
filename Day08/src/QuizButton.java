@@ -8,21 +8,21 @@ import java.awt.event.WindowListener;
 
 public class QuizButton {
 	public static void main(String[] args) {
-		Frame f = new Frame("¹öÆ° ¸ğ¿©¶ó");
+		Frame f = new Frame("ë²„íŠ¼ ëª¨ì—¬ë¼");
 		f.setBounds(100, 100, 300, 400);
 		f.setLayout(null);
 
-		Button b1 = new Button("»¡°­");
+		Button b1 = new Button("ë¹¨ê°•");
 		b1.setBounds(80, 50, 50, 50);
 		b1.setBackground(Color.red);
 		b1.setVisible(true);
 
-		Button b2 = new Button("ÆÄ¶û");
+		Button b2 = new Button("íŒŒë‘");
 		b2.setBounds(80, 100, 50, 50);
 		b2.setBackground(Color.blue);
 		b2.setVisible(true);
 
-		Button b3 = new Button("³ë¶û");
+		Button b3 = new Button("ë…¸ë‘");
 		b3.setBounds(80, 150, 50, 50);
 		b3.setBackground(Color.YELLOW);
 		b3.setVisible(true);
@@ -33,55 +33,55 @@ public class QuizButton {
 		f.setVisible(true);
 
 		b1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {// Å¬¸¯ÇÏ¸é ½ÇÇà
+			public void actionPerformed(ActionEvent arg0) {// í´ë¦­í•˜ë©´ ì‹¤í–‰
 				f.setBackground(Color.red);
 			}
 		});
 
 		b2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {// Å¬¸¯ÇÏ¸é ½ÇÇà
+			public void actionPerformed(ActionEvent arg0) {// í´ë¦­í•˜ë©´ ì‹¤í–‰
 				f.setBackground(Color.blue);
 			}
 		});
 
 		b3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {// Å¬¸¯ÇÏ¸é ½ÇÇà
+			public void actionPerformed(ActionEvent arg0) {// í´ë¦­í•˜ë©´ ì‹¤í–‰
 				f.setBackground(Color.yellow);
 			}
 		});
 		f.addWindowListener(new WindowListener() {
 
 			public void windowOpened(WindowEvent e) {
-				System.out.println("Ã¢ÀÌ ¿­·ÈÀ» ¶§");
-			}// Ã¢ÀÌ ¿­·ÈÀ» ¶§
+				System.out.println("ì°½ì´ ì—´ë ¸ì„ ë•Œ");
+			}// ì°½ì´ ì—´ë ¸ì„ ë•Œ
 
 			public void windowIconified(WindowEvent e) {
-				System.out.println("ÃÖ¼ÒÈ­ ´­·¶À» ‹š");
-			}// ÃÖ¼ÒÈ­ ´­·¶À» ¶§
+				System.out.println("ìµœì†Œí™” ëˆŒë €ì„ ë–„");
+			}// ìµœì†Œí™” ëˆŒë €ì„ ë•Œ
 
 			public void windowDeiconified(WindowEvent e) {
-				System.out.println("ÃÖ¼ÒÈ­ º¹±¸½Ã");
-			}// ÃÖ¼ÒÈ­ º¹±¸½Ã
+				System.out.println("ìµœì†Œí™” ë³µêµ¬ì‹œ");
+			}// ìµœì†Œí™” ë³µêµ¬ì‹œ
 
 			public void windowDeactivated(WindowEvent e) {
-				System.out.println("ºñÈ°¼ºÈ­½Ã");
-			}// ºñÈ°¼ºÈ­½Ã
+				System.out.println("ë¹„í™œì„±í™”ì‹œ");
+			}// ë¹„í™œì„±í™”ì‹œ
 
 			public void windowClosing(WindowEvent e) {
-				System.out.println("Ã¢´İ±â¹öÆ° Å¬¸¯½Ã");
-				f.setTitle("Ã¢ ´İÈú ÁÙ ¾Ë¾ÒÁö??");
-				// f.setVisible(false);//È­¸é¿¡¼­ °¡·ÁÁÖ±â
-				f.dispose();// frame°´Ã¼¸¦ ¸Ş¸ğ¸®¿¡¼­ Á¦°ÅÇÏ±â
-				// System.exit(0);//ÇÁ·Î±×·¥À» ¿ÏÀüÈ÷ Á¾·á
-			}// Ã¢´İ±â¹öÆ° Å¬¸¯½Ã
+				System.out.println("ì°½ë‹«ê¸°ë²„íŠ¼ í´ë¦­ì‹œ");
+				f.setTitle("ì°½ ë‹«í ì¤„ ì•Œì•˜ì§€??");
+				// f.setVisible(false);//í™”ë©´ì—ì„œ ê°€ë ¤ì£¼ê¸°
+				f.dispose();// frameê°ì²´ë¥¼ ë©”ëª¨ë¦¬ì—ì„œ ì œê±°í•˜ê¸°
+				// System.exit(0);//í”„ë¡œê·¸ë¨ì„ ì™„ì „íˆ ì¢…ë£Œ
+			}// ì°½ë‹«ê¸°ë²„íŠ¼ í´ë¦­ì‹œ
 
 			public void windowClosed(WindowEvent e) {
-				System.out.println("Ã¢ÀÌ ´İÇûÀ» ¶§");
-			}// Ã¢ÀÌ ´İÇûÀ» ‹š
+				System.out.println("ì°½ì´ ë‹«í˜”ì„ ë•Œ");
+			}// ì°½ì´ ë‹«í˜”ì„ ë–„
 
 			public void windowActivated(WindowEvent e) {
-				System.out.println("È°¼ºÈ­ µÆÀ» ¶§");
-			}// È°¼ºÈ­ µÆÀ»¶§
+				System.out.println("í™œì„±í™” ëì„ ë•Œ");
+			}// í™œì„±í™” ëì„ë•Œ
 		});
 
 	}// end of main

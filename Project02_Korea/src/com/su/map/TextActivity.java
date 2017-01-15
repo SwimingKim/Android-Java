@@ -15,8 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TextActivity extends Activity{
-	String [] str = {"°­¿øµµ", "¼öµµ±Ç", "°æ»ó³²µµ", "°æ»óºÏµµ", "´ëÀü±¤¿ª½Ã","¿ï¸ªµµµ¶µµ" , "Àü¶ó³²µµ", "Àü¶óºÏµµ", 
-			"ÃæÃ»³²µµ", "ÃæÃ»ºÏµµ", "Á¦ÁÖµµ"};
+	String [] str = {"ê°•ì›ë„", "ìˆ˜ë„ê¶Œ", "ê²½ìƒë‚¨ë„", "ê²½ìƒë¶ë„", "ëŒ€ì „ê´‘ì—­ì‹œ","ìš¸ë¦‰ë„ë…ë„" , "ì „ë¼ë‚¨ë„", "ì „ë¼ë¶ë„", 
+			"ì¶©ì²­ë‚¨ë„", "ì¶©ì²­ë¶ë„", "ì œì£¼ë„"};
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class TextActivity extends Activity{
 			public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
 //				Toast.makeText(getApplicationContext(), str[position], 0).show();
 				Intent intent = new Intent(getApplicationContext(), RowActivity.class);
-				intent.putExtra("±¸ºĞ", position);
+				intent.putExtra("êµ¬ë¶„", position);
 				startActivity(intent);
 			}
 		});

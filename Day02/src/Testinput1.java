@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
 /**
- * »ç¿ëÀÚ ÀÔ·Â¹Ş±â1 - Scanner
+ * ì‚¬ìš©ì ì…ë ¥ë°›ê¸°1 - Scanner
  */
 public class Testinput1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		// »ç¿ëÀÚÀÔ·ÂÀ» ¹Ş±â À§ÇÑ °´Ã¼¸¦ ÁØºñÇÑ´Ù(ÇÁ·Î±×·¥¿¡¼­ ÇÑ¹ø¸¸ ¼±¾ğÇÏ¸é µÊ)
-		// Scanner Å¬·¡½º¸¦ importÇÑ´Ù
+		// ì‚¬ìš©ìì…ë ¥ì„ ë°›ê¸° ìœ„í•œ ê°ì²´ë¥¼ ì¤€ë¹„í•œë‹¤(í”„ë¡œê·¸ë¨ì—ì„œ í•œë²ˆë§Œ ì„ ì–¸í•˜ë©´ ë¨)
+		// Scanner í´ë˜ìŠ¤ë¥¼ importí•œë‹¤
 
-		System.out.println("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		int age = scan.nextInt(); // »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹Ş¾Æ¿Â´Ù
+		System.out.println("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		int age = scan.nextInt(); // ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ì•„ì˜¨ë‹¤
 
-		System.out.println("´ç½ÅÀÌ ÀÔ·ÂÇÑ ³ªÀÌ´Â" + age + "»ì");
+		System.out.println("ë‹¹ì‹ ì´ ì…ë ¥í•œ ë‚˜ì´ëŠ”" + age + "ì‚´");
 
-		System.out.println("¸ö¹«°Ô¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ëª¸ë¬´ê²Œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		int weight = scan.nextInt();
-		System.out.println("´ç½ÅÀÇ ¸ö¹«°Ô´Â" + weight + "kgÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì˜ ëª¸ë¬´ê²ŒëŠ”" + weight + "kgì…ë‹ˆë‹¤");
 
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		String name = scan.next();// ¹®ÀÚ¿­ÀÔ·Â¹Ş±â
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº" + name + "ÀÔ´Ï´Ù");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
+		String name = scan.next();// ë¬¸ìì—´ì…ë ¥ë°›ê¸°
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì€" + name + "ì…ë‹ˆë‹¤");
 	}// end of main
 }// end of class

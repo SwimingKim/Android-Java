@@ -2,50 +2,50 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * °¡À§¹ÙÀ§º¸ °ÔÀÓ - »ç¿ëÀÚ°¡ °¡À§,¹ÙÀ§,º¸ Áß ÇÏ³ª¸¦ ÀÔ·Â, »ç¿ëÀÚ°¡ ÀÌ°å´ÂÁö Ãâ·Â
+ * ê°€ìœ„ë°”ìœ„ë³´ ê²Œì„ - ì‚¬ìš©ìê°€ ê°€ìœ„,ë°”ìœ„,ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥, ì‚¬ìš©ìê°€ ì´ê²¼ëŠ”ì§€ ì¶œë ¥
  */
 public class TestRock {
 	public static void main(String[] args) {
-		// »ç¿ëÀÚ ÀÔ·Â ¹®ÀÚ¿­·Î ¹Ş±â
-		// ¹®ÀÚ¿­ ºñ±³
-		// ·£´ıÀ¸·Î °ª »ı¼º
+		// ì‚¬ìš©ì ì…ë ¥ ë¬¸ìì—´ë¡œ ë°›ê¸°
+		// ë¬¸ìì—´ ë¹„êµ
+		// ëœë¤ìœ¼ë¡œ ê°’ ìƒì„±
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("°¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		String user = scan.nextLine();
-		System.out.println("´ç½ÅÀº " + user + "ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì€ " + user + "ì…ë‹ˆë‹¤");
 
 		Random ran = new Random();
-		int com = ran.nextInt(3);// 0 °¡À§, 1 ¹ÙÀ§, 2 º¸
-		System.out.println("ÄÄÇ»ÅÍ´Â " + com + "ÀÔ´Ï´Ù");
+		int com = ran.nextInt(3);// 0 ê°€ìœ„, 1 ë°”ìœ„, 2 ë³´
+		System.out.println("ì»´í“¨í„°ëŠ” " + com + "ì…ë‹ˆë‹¤");
 
 		switch (user) {
-		case "°¡À§":
+		case "ê°€ìœ„":
 			if (com == 0)
-				System.out.println("ºñ°å½À´Ï´Ù");
+				System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤");
 			else if (com == 1)
-				System.out.println("Á³½À´Ï´Ù");
+				System.out.println("ì¡ŒìŠµë‹ˆë‹¤");
 			else
-				System.out.println("ÀÌ°å½À´Ï´Ù");
+				System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤");
 			break;
-		case "¹ÙÀ§":
+		case "ë°”ìœ„":
 			if (com == 0)
-				System.out.println("ÀÌ°å½À´Ï´Ù");
+				System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤");
 			else if (com == 1)
-				System.out.println("ºñ°å½À´Ï´Ù");
+				System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤");
 			else
-				System.out.println("Á³½À´Ï´Ù");
+				System.out.println("ì¡ŒìŠµë‹ˆë‹¤");
 			break;
-		case "º¸":
+		case "ë³´":
 			if (com == 0)
-				System.out.println("Á³½À´Ï´Ù");
+				System.out.println("ì¡ŒìŠµë‹ˆë‹¤");
 			else if (com == 1)
-				System.out.println("ÀÌ°å½À´Ï´Ù");
+				System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤");
 			else
-				System.out.println("ºñ°å½À´Ï´Ù");
+				System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤");
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤");
 			break;
 		}
 

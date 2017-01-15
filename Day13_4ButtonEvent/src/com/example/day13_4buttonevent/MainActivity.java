@@ -22,17 +22,17 @@ public class MainActivity extends Activity {
 		Button b3 = (Button) findViewById(R.id.button3);
 		Button b4 = (Button) findViewById(R.id.button4);
 
-		// 1.ÀÍ¸íÅ¬·¡½º¸¦ ÀÌ¿ëÇÏ´Â ¹æ¹ı
-		// 2.¸Ş¼­µå ¾ÈÂÊ¿¡ Å¬·¡½º¸¦ ¼±¾ğÇÏ´Â ¹æ¹ı
-		// ³»ºÎ¿¡¼­ »ç¿ëÇÏ´Â º¯¼öµéÀ» ¸¶À½²¯ »ç¿ëÇÒ ¼ö ÀÖ´Ù(ÀåÁ¡)
-		// ¿ÜºÎ¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø´Ù
+		// 1.ìµëª…í´ë˜ìŠ¤ë¥¼ ì´ìš©í•˜ëŠ” ë°©ë²•
+		// 2.ë©”ì„œë“œ ì•ˆìª½ì— í´ë˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ëŠ” ë°©ë²•
+		// ë‚´ë¶€ì—ì„œ ì‚¬ìš©í•˜ëŠ” ë³€ìˆ˜ë“¤ì„ ë§ˆìŒê» ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤(ì¥ì )
+		// ì™¸ë¶€ì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤
 		class MyEvent implements OnClickListener {
-			public void onClick(View v) {// Å¬¸¯½Ã ÀÌº¥Æ® Ã³¸®
+			public void onClick(View v) {// í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì²˜ë¦¬
 				Button b = (Button) v;
 				et.append(b.getText());
 			}
 		}
-		MyEvent me = new MyEvent();// ÀÌº¥Æ®°´Ã¼»ı¼º
+		MyEvent me = new MyEvent();// ì´ë²¤íŠ¸ê°ì²´ìƒì„±
 		b1.setOnClickListener(me);
 		b2.setOnClickListener(me);
 		b3.setOnClickListener(me);
@@ -40,26 +40,26 @@ public class MainActivity extends Activity {
 
 	}// end of onCreate
 
-	// 3.Àü¿ªº¯¼ö ¿µ¿ª¿¡ Å¬·¡½º ¼±¾ğÇÏ´Â ¹æ¹ı
-	// ´Ù¸¥ ¸Ş¼­µå¿¡¼­µµ Å¬·¡½º¸¦ °°ÀÌ »ç¿ëÇÒ ¼ö ÀÖ´Ù(ÀåÁ¡)
-	// Áö¿ªº¯¼ö °ª¿¡ Á¢±ÙÇÒ ¼ö ¾ø´Ù(´ÜÁ¡)
+	// 3.ì „ì—­ë³€ìˆ˜ ì˜ì—­ì— í´ë˜ìŠ¤ ì„ ì–¸í•˜ëŠ” ë°©ë²•
+	// ë‹¤ë¥¸ ë©”ì„œë“œì—ì„œë„ í´ë˜ìŠ¤ë¥¼ ê°™ì´ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤(ì¥ì )
+	// ì§€ì—­ë³€ìˆ˜ ê°’ì— ì ‘ê·¼í•  ìˆ˜ ì—†ë‹¤(ë‹¨ì )
 	class MyEvent implements OnClickListener {
-		public void onClick(View v) {// Å¬¸¯½Ã ÀÌº¥Æ® Ã³¸®
+		public void onClick(View v) {// í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì²˜ë¦¬
 			Button b = (Button) v;
 			et.append(b.getText());
 		}
 	}
 }// end of class
 
-// 4.¿ÜºÎ ¿µ¿ª¿¡ Å¬·¡½º ¼±¾ğÇÏ´Â ¹ı
-// ³»ºÎ ÀÚ¿ø¿¡ Á¢±ÙÇÏ±â°¡ ¸Å¿ì ¾î·Æ´Ù(´ÜÁ¡)
-// static ¸¸À¸·Î Á¢±ÙÇÒ ¼ö ÀÖ´Ù
+// 4.ì™¸ë¶€ ì˜ì—­ì— í´ë˜ìŠ¤ ì„ ì–¸í•˜ëŠ” ë²•
+// ë‚´ë¶€ ìì›ì— ì ‘ê·¼í•˜ê¸°ê°€ ë§¤ìš° ì–´ë µë‹¤(ë‹¨ì )
+// static ë§Œìœ¼ë¡œ ì ‘ê·¼í•  ìˆ˜ ìˆë‹¤
 class MyEvent implements OnClickListener {
-	public void onClick(View v) {// Å¬¸¯½Ã ÀÌº¥Æ® Ã³¸®
+	public void onClick(View v) {// í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì²˜ë¦¬
 		Button b = (Button) v;
 		MainActivity.et.append(b.getText());
 	}
 }
 
-// 5.³»Å¬·¡½º¿¡¼­this·Î ±¸ÇöÇÏ´Â ¹æ¹ı
-// 6.xml·Î ¼±¾ğÇÏ´Â ¹æ¹ı
+// 5.ë‚´í´ë˜ìŠ¤ì—ì„œthisë¡œ êµ¬í˜„í•˜ëŠ” ë°©ë²•
+// 6.xmlë¡œ ì„ ì–¸í•˜ëŠ” ë°©ë²•

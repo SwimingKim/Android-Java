@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class Quiz {
 	public static void main(String[] args) {
 
-		System.out.println("ÃÑ ¹®Á¦ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì´ ë¬¸ì œì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		Scanner scan = new Scanner(System.in);
 		int T = Integer.valueOf(scan.nextLine());
 		int og = T;
 
-		// Æ¯Á¤ ¼ıÀÚµéÀÌ 1±îÁö °¡´Â °æ·Î´Â ±¸ÇÔ
+		// íŠ¹ì • ìˆ«ìë“¤ì´ 1ê¹Œì§€ ê°€ëŠ” ê²½ë¡œëŠ” êµ¬í•¨
 		int num_og = 0;
 		int num = 0;
 
@@ -29,8 +29,8 @@ public class Quiz {
 		// }
 		// }
 		// System.out.println("");
-		// System.out.println(num_og+"°¡ 1±îÁö °¡´Â °æ·Î´Â "+path);
-		// System.out.println(path+"¹ø¿¡ 1±îÁö °¡´Â ¼ıÀÚ´Â "+num_og+"\n");
+		// System.out.println(num_og+"ê°€ 1ê¹Œì§€ ê°€ëŠ” ê²½ë¡œëŠ” "+path);
+		// System.out.println(path+"ë²ˆì— 1ê¹Œì§€ ê°€ëŠ” ìˆ«ìëŠ” "+num_og+"\n");
 		// }
 		//
 		int one;

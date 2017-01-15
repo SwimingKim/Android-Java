@@ -2,28 +2,28 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * ¼¯±â
+ * ì„žê¸°
  */
 public class TestShuffle {
 	public static void main(String[] args) {
-		int num[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };// 10°³
+		int num[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };// 10ê°œ
 		// for (int i = 0; i < num.length; i++) {
 		// System.out.println(num[i]);
 		// }
-		System.out.println(Arrays.toString(num));// ¹è¿­³»¿ë Ãâ·Â
+		System.out.println(Arrays.toString(num));// ë°°ì—´ë‚´ìš© ì¶œë ¥
 
 		Random ran = new Random();
 
-		// 0¹øÂ°¿Í index ¹øÂ° °ªÀ» ¹Ù²ÙÀÚ
+		// 0ë²ˆì§¸ì™€ index ë²ˆì§¸ ê°’ì„ ë°”ê¾¸ìž
 
-		for (int i = 0; i < 20; i++) {// ¿©·¯¹ø ¼¯±â
+		for (int i = 0; i < 20; i++) {// ì—¬ëŸ¬ë²ˆ ì„žê¸°
 			int index = ran.nextInt(num.length);// 0~9
 			int temp = num[0];
 			num[0] = num[index];
 			num[index] = temp;
 		}
 
-		System.out.println("¼¯Àº ÈÄ");
+		System.out.println("ì„žì€ í›„");
 		System.out.println(Arrays.toString(num));
 
 	}// end of main

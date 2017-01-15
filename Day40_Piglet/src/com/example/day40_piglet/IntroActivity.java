@@ -19,7 +19,7 @@ public class IntroActivity extends Activity{
 		
 		b_new.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				intent.putExtra("¸ðµå", "NEW");
+				intent.putExtra("ëª¨ë“œ", "NEW");
 				startActivity(intent);
 				finish();
 			}
@@ -27,7 +27,7 @@ public class IntroActivity extends Activity{
 		
 		b_load.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				intent.putExtra("¸ðµå", "LOAD");
+				intent.putExtra("ëª¨ë“œ", "LOAD");
 				startActivity(intent);
 				finish();
 			}

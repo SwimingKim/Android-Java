@@ -1,22 +1,22 @@
 /**
- * Å¬·¡½º È°¿ë
+ * í´ë˜ìŠ¤ í™œìš©
  */
 public class TestMart {
 	public static void main(String[] args) {
 		Mart m1 = new Mart();
-		m1.name = "È¨ÇÃ·¯½º";
+		m1.name = "í™ˆí”ŒëŸ¬ìŠ¤";
 		m1.ball = 10000;
 		m1.pen = 3000;
 
 		m1.printPrice();
 
-		System.out.println("\n¼¼ÀÏ ÈÄÀÇ °¡°İ");
+		System.out.println("\nì„¸ì¼ í›„ì˜ ê°€ê²©");
 		m1.sale();
 
 		m1.printPrice();
 
 		Mart m2 = new Mart();
-		m2.name = "ÀÌ¸¶Æ®";
+		m2.name = "ì´ë§ˆíŠ¸";
 		m2.ball = 9000;
 		m2.pen = 2500;
 
@@ -33,7 +33,7 @@ class Mart {
 	int ball;
 	int pen;
 
-	void sale() {// 10%ÇÒÀÎ
+	void sale() {// 10%í• ì¸
 		ball = (int) (ball * 0.9);
 		// ball = ball * 9 / 10
 		// ball *= 0.9;
@@ -41,6 +41,6 @@ class Mart {
 	}
 
 	void printPrice() {
-		System.out.println(name + "¸¶Æ®ÀÇ °¡°İÁ¤º¸´Â\n" + "º¼ÀÇ °¡°İÀº " + ball + "¿øÀÌ°í\n" + "ÆæÀÇ °¡°İÀº " + pen + "¿øÀÌ´Ù.");
+		System.out.println(name + "ë§ˆíŠ¸ì˜ ê°€ê²©ì •ë³´ëŠ”\n" + "ë³¼ì˜ ê°€ê²©ì€ " + ball + "ì›ì´ê³ \n" + "íœì˜ ê°€ê²©ì€ " + pen + "ì›ì´ë‹¤.");
 	}
 }

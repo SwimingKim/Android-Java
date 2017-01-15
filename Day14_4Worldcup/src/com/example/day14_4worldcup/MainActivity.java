@@ -10,10 +10,10 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 	int man[] = { R.drawable.eric, R.drawable.jae, R.drawable.jin, R.drawable.seo, R.drawable.kae, R.drawable.kang,
 			R.drawable.lee, R.drawable.park };
-	String name[] = { "¿¡¸¯", "ÀçÈñ", "Áø±¸", "¼­ÀÎ±¹", "°³¸®", "°­ÁöÈ¯", "ÀÌÇö", "¹Ú±â¿õ" };
+	String name[] = { "ì—ë¦­", "ì¬í¬", "ì§„êµ¬", "ì„œì¸êµ­", "ê°œë¦¬", "ê°•ì§€í™˜", "ì´í˜„", "ë°•ê¸°ì›…" };
 	int indexL = 0;
 	int indexR = 1;
-	int index = 1;// ÇöÀç ÀÎµ¦½º
+	int index = 1;// í˜„ì¬ ì¸ë±ìŠ¤
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +26,11 @@ public class MainActivity extends Activity {
 		ivL.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				index++;
-				if (index == man.length) {// ÃÖÁ¾½Â¸®
+				if (index == man.length) {// ìµœì¢…ìŠ¹ë¦¬
 					ivR.setImageResource(R.drawable.ic_launcher);
-					// Åä½ºÆ®¶Ù¿ì±â"ÃÖÁ¾½Â¸®"
-					Toast.makeText(getApplicationContext(), "ÃÖÁ¾½Â¸®", 1).show();
-					// ´õÀÌ»ó ÁøÇàµÇÁö ¾Ê°Ô - Å¬¸¯¸·±â
+					// í† ìŠ¤íŠ¸ë›°ìš°ê¸°"ìµœì¢…ìŠ¹ë¦¬"
+					Toast.makeText(getApplicationContext(), "ìµœì¢…ìŠ¹ë¦¬", 1).show();
+					// ë”ì´ìƒ ì§„í–‰ë˜ì§€ ì•Šê²Œ - í´ë¦­ë§‰ê¸°
 					ivR.setClickable(false);
 					ivL.setClickable(false);
 				} else {
@@ -45,9 +45,9 @@ public class MainActivity extends Activity {
 				index++;
 				if (index == man.length) {
 					ivL.setImageResource(R.drawable.ic_launcher);
-					// Åä½ºÆ®¶Ù¿ì±â"ÃÖÁ¾½Â¸®"
-					Toast.makeText(getApplicationContext(), "ÃÖÁ¾½Â¸®", 1).show();
-					// ´õÀÌ»ó ÁøÇàµÇÁö ¾Ê°Ô - Å¬¸¯¸·±â
+					// í† ìŠ¤íŠ¸ë›°ìš°ê¸°"ìµœì¢…ìŠ¹ë¦¬"
+					Toast.makeText(getApplicationContext(), "ìµœì¢…ìŠ¹ë¦¬", 1).show();
+					// ë”ì´ìƒ ì§„í–‰ë˜ì§€ ì•Šê²Œ - í´ë¦­ë§‰ê¸°
 					ivR.setClickable(false);
 					ivL.setClickable(false);
 				} else {

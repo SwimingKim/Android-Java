@@ -1,5 +1,5 @@
 /**
- * Åğ±Ù¹®Á¦ String
+ * í‡´ê·¼ë¬¸ì œ String
  */
 public class TestString2 {
 	public static void main(String[] args) {
@@ -7,15 +7,15 @@ public class TestString2 {
 		String str1 = new String("HelloWorld");
 		// oWorl
 		System.out.println(str1.substring(4, 9));
-		// ¹®ÀÚ¿­ ±æÀÌ Ãâ·Â
+		// ë¬¸ìì—´ ê¸¸ì´ ì¶œë ¥
 		System.out.println(str1.length() + "");
-		// ¹®ÀÚ¿­À» ¿ª¼øÀ¸·Î Ãâ·Â
+		// ë¬¸ìì—´ì„ ì—­ìˆœìœ¼ë¡œ ì¶œë ¥
 		int count[] = new int[10];
 		for (int i = str1.length() - 1; i >= 0; i--) {
 			System.out.print(str1.charAt(i));
 		}
 		System.out.println();
-		// ÀÏºÎ °ª º¯°æ
+		// ì¼ë¶€ ê°’ ë³€ê²½
 		System.out.println(str1.replace("ll", "LL"));
 		// HELLOWORLD
 		System.out.println(str1.toUpperCase());

@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 /**
- * ¹İº¹¹® : for, while, do~while
+ * ë°˜ë³µë¬¸ : for, while, do~while
  */
 public class TestWhile {
 	public static void main(String[] args) {
-		// while(Á¶°Ç½Ä){//Á¶°Ç½Ä : Âü or °ÅÁş
-		// ¹İº¹ÇÒ ½ÇÇà¹®;
+		// while(ì¡°ê±´ì‹){//ì¡°ê±´ì‹ : ì°¸ or ê±°ì§“
+		// ë°˜ë³µí•  ì‹¤í–‰ë¬¸;
 		// }
-		// ¹İº¹ÇÒ È½¼ö³ª ¹üÀ§°¡ Á¤ÇØÁö¸é while»ç¿ë
+		// ë°˜ë³µí•  íšŸìˆ˜ë‚˜ ë²”ìœ„ê°€ ì •í•´ì§€ë©´ whileì‚¬ìš©
 
 		boolean b = false;
 		while (b) {
@@ -25,18 +25,18 @@ public class TestWhile {
 			System.out.println("xxxx");
 		}
 
-		// »ç¿ëÀÚ°¡ ¼ıÀÚ¸¦ ÀÔ·Â¹Ş¾Æ¼­ ±×´ë·Î Ãâ·Â
-		// »ç¿ëÀÚÀÇ ÀÔ·Â¼ıÀÚ°¡ 0ÀÌ¸é Á¾·á
+		// ì‚¬ìš©ìê°€ ìˆ«ìë¥¼ ì…ë ¥ë°›ì•„ì„œ ê·¸ëŒ€ë¡œ ì¶œë ¥
+		// ì‚¬ìš©ìì˜ ì…ë ¥ìˆ«ìê°€ 0ì´ë©´ ì¢…ë£Œ
 
 		Scanner scan = new Scanner(System.in);
 		while (true) {
-			System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			int n = scan.nextInt();
 			System.out.println(n);
 
 			if (n == 0) {
-				System.out.println("0À» ÀÔ·ÂÇØ¼­ Á¾·áÇÔ");
-				break;// °¡±î¿î switch¹® ¶Ç´Â ¹İº¹¹® ÇÏ³ª¸¸ ºüÁ®³ª°£´Ù
+				System.out.println("0ì„ ì…ë ¥í•´ì„œ ì¢…ë£Œí•¨");
+				break;// ê°€ê¹Œìš´ switchë¬¸ ë˜ëŠ” ë°˜ë³µë¬¸ í•˜ë‚˜ë§Œ ë¹ ì ¸ë‚˜ê°„ë‹¤
 			}
 		}
 

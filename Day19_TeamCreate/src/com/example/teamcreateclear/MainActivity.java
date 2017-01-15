@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	String arrName[] = { "±èº´ÀÏ", "±è¼ö¿µ", "¹®»õ¹Ì", "½Å³ªÀº", "Àåµ¿Áø", "ÁÖÈñÁø", "È«Á¤ÅÃ", "È²º¸¶÷" };
+	String arrName[] = { "ê¹€ë³‘ì¼", "ê¹€ìˆ˜ì˜", "ë¬¸ìƒˆë¯¸", "ì‹ ë‚˜ì€", "ì¥ë™ì§„", "ì£¼í¬ì§„", "í™ì •íƒ", "í™©ë³´ëŒ" };
 	CheckBox arrCB[] = new CheckBox[arrName.length];
 
 	@Override
@@ -36,20 +36,20 @@ public class MainActivity extends Activity {
 			arrCB[i].setText(arrName[i]);
 		}
 
-		final TextView tvNum = (TextView) findViewById(R.id.textView2);// ÃÑÀÎ¿ø¼ö
-		final EditText etNum = (EditText) findViewById(R.id.editText1);// ÆÀ¼ö
+		final TextView tvNum = (TextView) findViewById(R.id.textView2);// ì´ì¸ì›ìˆ˜
+		final EditText etNum = (EditText) findViewById(R.id.editText1);// íŒ€ìˆ˜
 		final TextView tvNameList = (TextView) findViewById(R.id.tvNameList);
 		final TextView tvTeamList = (TextView) findViewById(R.id.tvTeamList);
 		Button b = (Button) findViewById(R.id.button1);
 
 		class MyCCListener implements OnCheckedChangeListener {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				// Ã¼Å©¹Ú½º º¯°æ ½Ã È£ÃâµÇ´Â Äİ¹é ¸Ş¼¼µå
-				String result = "";// Ã¼Å©µÈ ¸í´Ü
-				int num = 0;// Ã¼Å©µÈ ÀÎ¿ø¼ö
+				// ì²´í¬ë°•ìŠ¤ ë³€ê²½ ì‹œ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„¸ë“œ
+				String result = "";// ì²´í¬ëœ ëª…ë‹¨
+				int num = 0;// ì²´í¬ëœ ì¸ì›ìˆ˜
 
 				for (int i = 0; i < arrName.length; i++) {
-					if (arrCB[i].isChecked()) {// Ã¼Å©µÈ »óÅÂ
+					if (arrCB[i].isChecked()) {// ì²´í¬ëœ ìƒíƒœ
 						num++;
 						result += arrCB[i].getText().toString() + ", ";
 					}
@@ -64,60 +64,60 @@ public class MainActivity extends Activity {
 			arrCB[i].setOnCheckedChangeListener(nccl);
 		}
 
-		// ÆÀ ·£´ı »ı¼ºÇÏ±â
+		// íŒ€ ëœë¤ ìƒì„±í•˜ê¸°
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				int teamNum = 0;
 				try {
 					teamNum = Integer.valueOf(etNum.getText().toString());
 				} catch (Exception e) {
-					Toast.makeText(getApplicationContext(), "ÆÀ¼ö¸¦ ¼ıÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä", 1).show();
-					return;// onClick¸Ş¼­µå¸¦ ºüÁ®³ª°¨
+					Toast.makeText(getApplicationContext(), "íŒ€ìˆ˜ë¥¼ ìˆ«ìë¡œ ì…ë ¥í•˜ì„¸ìš”", 1).show();
+					return;// onClickë©”ì„œë“œë¥¼ ë¹ ì ¸ë‚˜ê°
 				}
 
 				if (teamNum <= 0) {
-					Toast.makeText(getApplicationContext(), "0À» ÀÔ·ÂÇÏ¸é ¾ÈµÅ¿ä", 1).show();
+					Toast.makeText(getApplicationContext(), "0ì„ ì…ë ¥í•˜ë©´ ì•ˆë¼ìš”", 1).show();
 					return;
 				}
 
 				int num = Integer.valueOf(tvNum.getText().toString());
 				int checkIndex[] = new int[num];
 
-				// Ã¼Å©µÈ Ã¼Å©¹Ú½ºÀÇ index¸¸ ¹è¿­¿¡ ÀúÀåÇÔ
+				// ì²´í¬ëœ ì²´í¬ë°•ìŠ¤ì˜ indexë§Œ ë°°ì—´ì— ì €ì¥í•¨
 				for (int i = 0, j = 0; i < arrName.length; i++) {
-					if (arrCB[i].isChecked()) {// Ã¼Å©µÈ »óÅÂ
+					if (arrCB[i].isChecked()) {// ì²´í¬ëœ ìƒíƒœ
 						checkIndex[j] = i;
 						j++;
 					}
 				}
 
-				// checkBox ¹è¿­ÀÇ ¼ø¼­¸¦ ¼¯´Â´Ù(¼ÅÇÃ)
+				// checkBox ë°°ì—´ì˜ ìˆœì„œë¥¼ ì„ëŠ”ë‹¤(ì…”í”Œ)
 				Random ran = new Random();
 				for (int i = 0; i < checkIndex.length * 2; i++) {
 					int n1 = ran.nextInt(checkIndex.length);
 					int n2 = ran.nextInt(checkIndex.length);
 
 					// checkIndex[?]<->checkIndex[?]
-					// ÀÚ¸®¹Ù²Ù±â swap
+					// ìë¦¬ë°”ê¾¸ê¸° swap
 					int temp = checkIndex[n1];
 					checkIndex[n1] = checkIndex[n2];
 					checkIndex[n2] = temp;
 				}
 
-				// ÆÀ ÀÛ¼º
-				String result = "·£´ıÀ¸·Î ÆÀ ±¸¼º\n";
-				int x = num / teamNum;// ÇÑ ÆÀÀÇ ÀÎ¿ø=Ã¼Å©µÈ ÀÎ¿ø/ÆÀ ¼ö
-				int rest = num % teamNum;// ¶³°ÅÁö ÀÎ¿ø
+				// íŒ€ ì‘ì„±
+				String result = "ëœë¤ìœ¼ë¡œ íŒ€ êµ¬ì„±\n";
+				int x = num / teamNum;// í•œ íŒ€ì˜ ì¸ì›=ì²´í¬ëœ ì¸ì›/íŒ€ ìˆ˜
+				int rest = num % teamNum;// ë–¨ê±°ì§€ ì¸ì›
 
-				// result¿¡ Ãâ·ÂÇÒ ¹®ÀÚ¿­À» ´ã±â
+				// resultì— ì¶œë ¥í•  ë¬¸ìì—´ì„ ë‹´ê¸°
 				int count = 0;
-				for (int i = 1; i <= teamNum; i++) {// ÇÑÆÀ ÀÛ¼º
-					result += "\n" + i + "ÆÀ : ";
-					for (int j = 0; j < x; j++) {// ÇÑÆÀÀÇ ÀÎ¿ø¸¸Å­ ¹İº¹
+				for (int i = 1; i <= teamNum; i++) {// í•œíŒ€ ì‘ì„±
+					result += "\n" + i + "íŒ€ : ";
+					for (int j = 0; j < x; j++) {// í•œíŒ€ì˜ ì¸ì›ë§Œí¼ ë°˜ë³µ
 						result += arrName[checkIndex[count]] + ", ";
 						count++;
 					}
-					if (rest > 0) {// ¶³°ÅÁö ÀÎ¿øÀÌ ³²¾Æ ÀÖÀ¸¸é 1¸íÀ» Ãß°¡
+					if (rest > 0) {// ë–¨ê±°ì§€ ì¸ì›ì´ ë‚¨ì•„ ìˆìœ¼ë©´ 1ëª…ì„ ì¶”ê°€
 						result += arrName[checkIndex[count]] + ", ";
 						count++;
 						rest--;

@@ -1,5 +1,5 @@
 /**
- * Modifiers Á¦¾îÀÚ =>Ä¸½¶È­
+ * Modifiers ì œì–´ì =>ìº¡ìŠí™”
  */
 public class TestEncapsulation {
 	public static void main(String[] args) {
@@ -17,10 +17,10 @@ class Time {
 	private int minute;
 	private int second;
 
-	// setter ¸Ş¼­µå
+	// setter ë©”ì„œë“œ
 	public void setHour(int hour) {
 		if (hour < 0 || hour > 23) {
-			System.out.println("½Ã°£ÀÇ ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù");
+			System.out.println("ì‹œê°„ì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤");
 			return;
 		}
 		this.hour = hour;
@@ -28,7 +28,7 @@ class Time {
 
 	public void setMinute(int minute) {
 		if (minute < 0 || minute > 60) {
-			System.out.println("ºĞÀÇ ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù");
+			System.out.println("ë¶„ì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤");
 			return;
 		}
 		this.minute = minute;
@@ -36,13 +36,13 @@ class Time {
 
 	public void setSecond(int second) {
 		if (second < 0 || second > 100) {
-			System.out.println("ÃÊÀÇ ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù");
+			System.out.println("ì´ˆì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤");
 			return;
 		}
 		this.second = second;
 	}
 
-	// getter ¸Ş¼­µå
+	// getter ë©”ì„œë“œ
 	int getHour() {
 		return hour;
 	}

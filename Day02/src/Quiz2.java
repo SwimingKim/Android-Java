@@ -5,30 +5,30 @@ import org.omg.Messaging.SyncScopeHelper;
 public class Quiz2 {
 	public static void main(String[] args) {
 
-		// ¸ö¹«°Ô¿Í Å°¸¦ »ç¿ëÀÚ ÀÔ·ÂÀ» ¹Ş¾Æ
-		// ºñ¸¸ÀÎÁö¸¦ ÆÇº°ÇÏ¿© Ãâ·Â
-		// ½ÅÃ¼Áú·®Áö¼ö(BMI)=Ã¼Áß(kg)/[½ÅÀå(m)]
-		// ÀúÃ¼Áß 20 ¹Ì¸¸
-		// Á¤»ó 20ÀÌ»ó-25¹Ì¸¸
-		// °úÃ¼Áß 25ÀÌ»ó-30¹Ì¸¸
-		// ºñ¸¸ 30ÀÌ»ó
+		// ëª¸ë¬´ê²Œì™€ í‚¤ë¥¼ ì‚¬ìš©ì ì…ë ¥ì„ ë°›ì•„
+		// ë¹„ë§Œì¸ì§€ë¥¼ íŒë³„í•˜ì—¬ ì¶œë ¥
+		// ì‹ ì²´ì§ˆëŸ‰ì§€ìˆ˜(BMI)=ì²´ì¤‘(kg)/[ì‹ ì¥(m)]
+		// ì €ì²´ì¤‘ 20 ë¯¸ë§Œ
+		// ì •ìƒ 20ì´ìƒ-25ë¯¸ë§Œ
+		// ê³¼ì²´ì¤‘ 25ì´ìƒ-30ë¯¸ë§Œ
+		// ë¹„ë§Œ 30ì´ìƒ
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("¸ö¹«°Ô¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ëª¸ë¬´ê²Œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		int weight = scan.nextInt();
-		System.out.println("Å°¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("í‚¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		double height = scan.nextInt();
 		double bmi = weight / ((height / 100) * (height / 100));
-		System.out.println("´ç½ÅÀÇ BMI´Â" + bmi + "ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì˜ BMIëŠ”" + bmi + "ì…ë‹ˆë‹¤");
 
 		if (bmi >= 30) {
-			System.out.println("ºñ¸¸ÀÔ´Ï´Ù");
+			System.out.println("ë¹„ë§Œì…ë‹ˆë‹¤");
 		} else if (bmi >= 25) {
-			System.out.println("°úÃ¼ÁßÀÔ´Ï´Ù");
+			System.out.println("ê³¼ì²´ì¤‘ì…ë‹ˆë‹¤");
 		} else if (bmi >= 20) {
-			System.out.println("Á¤»óÀÔ´Ï´Ù");
+			System.out.println("ì •ìƒì…ë‹ˆë‹¤");
 		} else {
-			System.out.println("ÀúÃ¼ÁßÀÔ´Ï´Ù");
+			System.out.println("ì €ì²´ì¤‘ì…ë‹ˆë‹¤");
 		}
 
 	}// end of main

@@ -46,7 +46,7 @@ public class TwoActivity extends Activity{
 				cycle = 0;
 			}
 			handler.postDelayed(r1, 500);
-			tv.setText("ÀâÀºÈ½¼ö : "+good);
+			tv.setText("ì¡ì€íšŸìˆ˜ : "+good);
 		}
 	};
 	Runnable r2 = new Runnable() {
@@ -62,7 +62,7 @@ public class TwoActivity extends Activity{
 				cycle = 0;
 			}
 			handler.postDelayed(r2, 500);
-			tv.setText("ÀâÀºÈ½¼ö : "+good);
+			tv.setText("ì¡ì€íšŸìˆ˜ : "+good);
 		}
 	};
 	Runnable r3 = new Runnable() {
@@ -83,7 +83,7 @@ public class TwoActivity extends Activity{
 			}
 			handler.post(r_check);
 			handler.postDelayed(r3, 500);
-			tv.setText("ÀâÀºÈ½¼ö : "+good);
+			tv.setText("ì¡ì€íšŸìˆ˜ : "+good);
 		}
 	};
 	Runnable r_end = new Runnable() {
@@ -104,7 +104,7 @@ public class TwoActivity extends Activity{
 	};
 	Runnable r_check= new Runnable() {
 		public void run() {
-			tv.setText("ÀâÀºÈ½¼ö : "+good);
+			tv.setText("ì¡ì€íšŸìˆ˜ : "+good);
 			for (int i = iv.length-1; i >= 0; i--) {
 				if (iv[i].getTag().equals("no")) {
 					a++;
@@ -117,7 +117,7 @@ public class TwoActivity extends Activity{
 				}
 
 			}
-			Log.e("line", "ÇÚµé·¯ÁøÇàÁß");
+			Log.e("line", "í•¸ë“¤ëŸ¬ì§„í–‰ì¤‘");
 			handler.post(r_check);
 		}
 	};
@@ -132,7 +132,7 @@ public class TwoActivity extends Activity{
 		setContentView(R.layout.two);
 
 		chro = (Chronometer)findViewById(R.id.chronometer1);
-		chro.setBase(SystemClock.elapsedRealtime()); // ½Ã°£ÃÊ±âÈ­ 
+		chro.setBase(SystemClock.elapsedRealtime()); // ì‹œê°„ì´ˆê¸°í™” 
 		chro.start();
 
 		vib = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
@@ -157,7 +157,7 @@ public class TwoActivity extends Activity{
 		iv[15] = (ImageView)findViewById(R.id.ImageView16);
 
 		tv = (TextView)findViewById(R.id.tv);
-		tv.setText("ÀâÀºÈ½¼ö : 0");
+		tv.setText("ì¡ì€íšŸìˆ˜ : 0");
 
 		final Button b_colum = (Button)findViewById(R.id.button1);
 		final Button b_row = (Button)findViewById(R.id.button2);
@@ -236,9 +236,9 @@ public class TwoActivity extends Activity{
 		};
 
 		timer = new Timer();
-		timer.schedule(task1, 10000);// 1´Ü°è Á¾·á&2´Ü°è ½ÃÀÛ
-		timer.schedule(task2, 20000);// 2´Ü°è Á¾·á&3´Ü°è ½ÃÀÛ
-		timer.schedule(task3, 30000);// 3´Ü°è Á¾·á&´ÙÀ½È­¸é ÀüÈ¯
+		timer.schedule(task1, 10000);// 1ë‹¨ê³„ ì¢…ë£Œ&2ë‹¨ê³„ ì‹œì‘
+		timer.schedule(task2, 20000);// 2ë‹¨ê³„ ì¢…ë£Œ&3ë‹¨ê³„ ì‹œì‘
+		timer.schedule(task3, 30000);// 3ë‹¨ê³„ ì¢…ë£Œ&ë‹¤ìŒí™”ë©´ ì „í™˜
 
 
 		MyEvent me = new MyEvent();
@@ -288,16 +288,16 @@ public class TwoActivity extends Activity{
 			handler.removeCallbacks(r3);
 			handler.removeCallbacks(r_end);
 			timer.cancel();
-			dialog.setTitle("½ÇÆĞ");
-			dialog.setMessage("µÎ´õÁö°¡ ¸ğµÎ ¸¶À»·Î Ä§ÀÔÇß½À´Ï´Ù. ´Ù½Ã µµÀüÇÏ½Ã°Ú½À´Ï±î?");
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setTitle("ì‹¤íŒ¨");
+			dialog.setMessage("ë‘ë”ì§€ê°€ ëª¨ë‘ ë§ˆì„ë¡œ ì¹¨ì…í–ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ë„ì „í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}
@@ -306,16 +306,16 @@ public class TwoActivity extends Activity{
 			return dialog.create();
 		} else if (id==5) {
 			AlertDialog.Builder dialog1 = new Builder(this);
-			dialog1.setTitle("¼º°ø");
-			dialog1.setMessage("°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï±î?");
-			dialog1.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog1.setTitle("ì„±ê³µ");
+			dialog1.setMessage("ê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ê² ìŠµë‹ˆê¹Œ?");
+			dialog1.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog1.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog1.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}

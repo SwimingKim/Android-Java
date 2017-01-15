@@ -9,13 +9,13 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// onCreate ¸Ş¼­µå : MainActivity È­¸é¿¡ ±×·ÁÁú ¶§ °¡Àå ¸ÕÀú È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
-		super.onCreate(savedInstanceState);// ºÎ¸ğÀÇ onCreate¸Ş¼­µå¸¦ È£Ãâ
-		setContentView(R.layout.activity_main);// xml°ú ¿¬°á
-		// º¸Åë ÇÏ³ªÀÇ È­¸éÀº xml°ú java µÎ °³ÀÇ ÆÄÀÏ·Î ±¸¼ºµÈ´Ù
+		// onCreate ë©”ì„œë“œ : MainActivity í™”ë©´ì— ê·¸ë ¤ì§ˆ ë•Œ ê°€ì¥ ë¨¼ì € í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
+		super.onCreate(savedInstanceState);// ë¶€ëª¨ì˜ onCreateë©”ì„œë“œë¥¼ í˜¸ì¶œ
+		setContentView(R.layout.activity_main);// xmlê³¼ ì—°ê²°
+		// ë³´í†µ í•˜ë‚˜ì˜ í™”ë©´ì€ xmlê³¼ java ë‘ ê°œì˜ íŒŒì¼ë¡œ êµ¬ì„±ëœë‹¤
 
 		TextView tv1 = (TextView) findViewById(R.id.textView1);
-		// xml¿¡¼­ ¼±¾ğÇÑ ÀÚ¿øÀ» java ¼Ò½º¿¡¼­ »ç¿ëÇÒ ¼ö ÀÖµµ·Ï °´Ã¼¸¦ °¡Á®¿À´Â ¹æ¹ı
+		// xmlì—ì„œ ì„ ì–¸í•œ ìì›ì„ java ì†ŒìŠ¤ì—ì„œ ì‚¬ìš©í•  ìˆ˜ ìˆë„ë¡ ê°ì²´ë¥¼ ê°€ì ¸ì˜¤ëŠ” ë°©ë²•
 		TextView tv2 = (TextView) findViewById(R.id.textView2);
 		TextView tv3 = (TextView) findViewById(R.id.textView3);
 		TextView tv4 = (TextView) findViewById(R.id.textView4);
@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		String str = tv1.getText().toString();
 		tv2.setText(str);
 
-		tv3.setText("¼­¹Î±Ô");
+		tv3.setText("ì„œë¯¼ê·œ");
 		tv3.setTextColor(Color.GREEN);
 
 		tv4.setBackgroundColor(0xffff00ff);

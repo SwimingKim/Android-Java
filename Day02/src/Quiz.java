@@ -1,29 +1,29 @@
 /**
- * Á¡½É¹®Á¦
+ * ì ì‹¬ë¬¸ì œ
  */
 public class Quiz {
 	public static void main(String[] args) {
-		// »ï°¢ÇüÀÇ ³ĞÀÌ¸¦ Ãâ·ÂÇÏ´Â ÄÚµå ÀÛ¼º
+		// ì‚¼ê°í˜•ì˜ ë„“ì´ë¥¼ ì¶œë ¥í•˜ëŠ” ì½”ë“œ ì‘ì„±
 		int width = 7;
 		int height = 5;
 		System.out.println(width * height / 2.);
 
-		// »ç°ú¸¦ ´ã´Âµ¥ ÇÊ¿äÇÑ ¹Ù±¸´Ï(¹öÄÏ)ÀÇ ¼ö¸¦ ±¸ÇÏ´Â ÄÚµåÀÛ¼º
-		// ¸¸ÀÏ »ç°úÀÇ ¼ö°¡ 123°³ÀÌ°í ÇÏ³ªÀÇ ¹Ù±¸´Ï¿¡´Â 10°³ÀÇ »ç°ú¸¦ ´ãÀ» ¼ö ÀÖ´Ù¸é,
-		// 13°³ÀÇ ¹Ù±¸´Ï°¡ ÇÊ¿äÇÒ °ÍÀÌ´Ù.
-		int numOfApples = 123;// »ç°úÀÇ °³¼ö
-		int sizeOfBucket = 10;// ¹Ù±¸´ÏÀÇ Å©±â(¹Ù±¸´Ï¿¡ ´ãÀ» ¼ö ÀÖ´Â »ç°úÀÇ °³¼ö)
+		// ì‚¬ê³¼ë¥¼ ë‹´ëŠ”ë° í•„ìš”í•œ ë°”êµ¬ë‹ˆ(ë²„ì¼“)ì˜ ìˆ˜ë¥¼ êµ¬í•˜ëŠ” ì½”ë“œì‘ì„±
+		// ë§Œì¼ ì‚¬ê³¼ì˜ ìˆ˜ê°€ 123ê°œì´ê³  í•˜ë‚˜ì˜ ë°”êµ¬ë‹ˆì—ëŠ” 10ê°œì˜ ì‚¬ê³¼ë¥¼ ë‹´ì„ ìˆ˜ ìˆë‹¤ë©´,
+		// 13ê°œì˜ ë°”êµ¬ë‹ˆê°€ í•„ìš”í•  ê²ƒì´ë‹¤.
+		int numOfApples = 123;// ì‚¬ê³¼ì˜ ê°œìˆ˜
+		int sizeOfBucket = 10;// ë°”êµ¬ë‹ˆì˜ í¬ê¸°(ë°”êµ¬ë‹ˆì— ë‹´ì„ ìˆ˜ ìˆëŠ” ì‚¬ê³¼ì˜ ê°œìˆ˜)
 		int numOfBucket = numOfApples / sizeOfBucket + (numOfApples % sizeOfBucket == 0 ? 0 : 1);
-		System.out.println("ÇÊ¿äÇÑ ¹Ù±¸´ÏÀÇ ¼ö : " + numOfBucket);
+		System.out.println("í•„ìš”í•œ ë°”êµ¬ë‹ˆì˜ ìˆ˜ : " + numOfBucket);
 
-		// ÃÖ¼ÒÀÇ µ¿Àü °³¼ö·Î °Å½º¸§µ·À» ÁÖ·Á¸é ¾î¶»°Ô ¹èºĞÇØ¾ß ÇÒ±î¿ä?
-		int change = 3780;// ¿ø °Å½º¸§µ·
+		// ìµœì†Œì˜ ë™ì „ ê°œìˆ˜ë¡œ ê±°ìŠ¤ë¦„ëˆì„ ì£¼ë ¤ë©´ ì–´ë–»ê²Œ ë°°ë¶„í•´ì•¼ í• ê¹Œìš”?
+		int change = 3780;// ì› ê±°ìŠ¤ë¦„ëˆ
 
-		System.out.println("500¿ø" + change / 500 + "°³");
+		System.out.println("500ì›" + change / 500 + "ê°œ");
 		int coin = change % 500; // 3780 - 500*change/500;
-		System.out.println("100d¿ø" + change % 500 / 100 + "°³");
-		System.out.println("50¿ø" + change % 100 / 50 + "°³");
-		System.out.println("10¿ø" + change % 50 / 10 + "°³");
+		System.out.println("100dì›" + change % 500 / 100 + "ê°œ");
+		System.out.println("50ì›" + change % 100 / 50 + "ê°œ");
+		System.out.println("10ì›" + change % 50 / 10 + "ê°œ");
 
 	}// end of main
 }// end of class

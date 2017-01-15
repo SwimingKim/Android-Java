@@ -18,12 +18,12 @@ public class ReadSetting extends Activity{
 		TextView tv3 = (TextView)findViewById(R.id.textView3);
 		TextView tv4 = (TextView)findViewById(R.id.textView4);
 	
-// ¼³Á¤°ª PrefereceÀÇ ÆÄÀÏ¿¡¼­ °ªÀ» ÀĞ¾î¿À±â
+// ì„¤ì •ê°’ Prefereceì˜ íŒŒì¼ì—ì„œ ê°’ì„ ì½ì–´ì˜¤ê¸°
 		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 		tv1.setText(sp.getString("ip", ""));
-		tv2.setText(sp.getBoolean("sound", false)?"¼³Á¤":"ÇØÁ¦");
+		tv2.setText(sp.getBoolean("sound", false)?"ì„¤ì •":"í•´ì œ");
 		tv3.setText(sp.getString("time", ""));
-		tv4.setText(sp.getBoolean("screen", false)?"¼³Á¤":"ÇØÁ¦");
+		tv4.setText(sp.getBoolean("screen", false)?"ì„¤ì •":"í•´ì œ");
 		
 		
 		

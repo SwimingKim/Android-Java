@@ -7,20 +7,20 @@ import java.awt.Panel;
 import javax.swing.JButton;
 
 /**
- * ·¹ÀÌ¾Æ¿ô ¸Å´ÏÀú ÇÔ²² ¾²±â(penel) »ç¿ë
+ * ë ˆì´ì•„ì›ƒ ë§¤ë‹ˆì € í•¨ê»˜ ì“°ê¸°(penel) ì‚¬ìš©
  */
 public class TestLayout2 {
 	public static void main(String[] args) {
-		Frame f = new Frame("·¹ÀÌ¾Æ¿ô ¸Å´ÏÀú ÇÔ²²¾²±â");
+		Frame f = new Frame("ë ˆì´ì•„ì›ƒ ë§¤ë‹ˆì € í•¨ê»˜ì“°ê¸°");
 		f.setBounds(100, 100, 300, 400);
 		f.setLayout(new BorderLayout());
-		f.add(new Button("¹öÆ°"), BorderLayout.NORTH);
-		f.add(new Button("¹öÆ°"), BorderLayout.SOUTH);
-		f.add(new Button("¹öÆ°"), BorderLayout.EAST);
-		f.add(new Button("¹öÆ°"), BorderLayout.WEST);
+		f.add(new Button("ë²„íŠ¼"), BorderLayout.NORTH);
+		f.add(new Button("ë²„íŠ¼"), BorderLayout.SOUTH);
+		f.add(new Button("ë²„íŠ¼"), BorderLayout.EAST);
+		f.add(new Button("ë²„íŠ¼"), BorderLayout.WEST);
 
-		// ÄÄÆ÷³ÍÆ® : ¹öÆ°, ÅØ½ºÆ®ÇÊµå, ¶óº§, ÃÊÀÌ½º..
-		// ÄÁÅ×ÀÌ³Ê : ¿©·¯°³ÀÇ ÄÄÆ÷³ÍÆ®¸¦ ÇÏ³ªÀÇ µ¢¾î¸®·Î ¹­¾îÁÖ´Â °³³ä
+		// ì»´í¬ë„ŒíŠ¸ : ë²„íŠ¼, í…ìŠ¤íŠ¸í•„ë“œ, ë¼ë²¨, ì´ˆì´ìŠ¤..
+		// ì»¨í…Œì´ë„ˆ : ì—¬ëŸ¬ê°œì˜ ì»´í¬ë„ŒíŠ¸ë¥¼ í•˜ë‚˜ì˜ ë©ì–´ë¦¬ë¡œ ë¬¶ì–´ì£¼ëŠ” ê°œë…
 		Panel p = new Panel();
 		p.setLayout(new GridLayout(3, 2));
 		p.add(new JButton("Button"));

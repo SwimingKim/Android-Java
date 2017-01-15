@@ -1,22 +1,22 @@
 import java.util.Arrays;
 
 /**
- * String Å¬·¡½º¸¦ È°¿ëÇØ¼­ ¹®ÀÚ¿­ Ã³¸®ÇÏ´Â ¹æ¹ıÀ» ¾Ë¾Æº¸ÀÚ
+ * String í´ë˜ìŠ¤ë¥¼ í™œìš©í•´ì„œ ë¬¸ìì—´ ì²˜ë¦¬í•˜ëŠ” ë°©ë²•ì„ ì•Œì•„ë³´ì
  * */
 public class TestString {
 	public static void main(String[] args) {
-// Ã£°íÀÚÇÏ´Â ¹®ÀÚ¿­ÀÌ "ÀÌ¸§:" ÀÌÈÄ¿¡ ÀÖÀ» ¶§ ÃßÃâ¹æ¹ı
-		String str1 = "ÀÌ¸§:¼­¹Î±Ô";
+// ì°¾ê³ ìí•˜ëŠ” ë¬¸ìì—´ì´ "ì´ë¦„:" ì´í›„ì— ìˆì„ ë•Œ ì¶”ì¶œë°©ë²•
+		String str1 = "ì´ë¦„:ì„œë¯¼ê·œ";
 //		System.out.println(str1.substring(3));
 		
-// Ã£°íÀÚÇÏ´Â ¹®ÀÚ¿­ÀÌ "ÀÌ¸§:"°ú "´Ü°è:"»çÀÌ¿¡ ÀÖÀ» ¶§ ÃßÃâ¹æ¹ı
-		String str2 = "ÀÌ¸§:¼­¹Î±Ô´Ü°è:9";
-		int index = str2.indexOf("´Ü°è:");
-		System.out.println(str2.substring(3, index));//¼­¹Î±Ô
-//		System.out.println(str2.substring(str2.indexOf("´Ü°è:")+3));
+// ì°¾ê³ ìí•˜ëŠ” ë¬¸ìì—´ì´ "ì´ë¦„:"ê³¼ "ë‹¨ê³„:"ì‚¬ì´ì— ìˆì„ ë•Œ ì¶”ì¶œë°©ë²•
+		String str2 = "ì´ë¦„:ì„œë¯¼ê·œë‹¨ê³„:9";
+		int index = str2.indexOf("ë‹¨ê³„:");
+		System.out.println(str2.substring(3, index));//ì„œë¯¼ê·œ
+//		System.out.println(str2.substring(str2.indexOf("ë‹¨ê³„:")+3));
 		
-// "ÀÌ¸§/´Ü°è/Á¡¼ö/ÁÖ¼Ò" ±¸ºĞÀÚ¸¦ ³»°¢ Á¤ÇØ³õ°í ±â¾ïÇÏÀÚ
-		String str3 = "¼­¹Î±Ô/9/98/Bucheon";
+// "ì´ë¦„/ë‹¨ê³„/ì ìˆ˜/ì£¼ì†Œ" êµ¬ë¶„ìë¥¼ ë‚´ê° ì •í•´ë†“ê³  ê¸°ì–µí•˜ì
+		String str3 = "ì„œë¯¼ê·œ/9/98/Bucheon";
 		String arr[] = str3.split("/");
 		System.out.println(Arrays.toString(arr));
 		String name = arr[0];

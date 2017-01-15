@@ -13,7 +13,7 @@ public class UpActivity extends Activity{
 		
 		Intent intent = getIntent();
 		ImageView iv = (ImageView)findViewById(R.id.imageView1);
-		iv.setImageResource(intent.getIntExtra("±×¸²", 0));
+		iv.setImageResource(intent.getIntExtra("ê·¸ë¦¼", 0));
 	}
 
 }

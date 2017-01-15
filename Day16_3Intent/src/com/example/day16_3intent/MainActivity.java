@@ -14,19 +14,19 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// È­¸éÀüÈ¯ ÇÏ±â
-		// 1. ´ÙÀ½ ³Ñ¾î°¥ È­¸éÀ» ÁØºñÇÑ´Ù.(·¹ÀÌ¾Æ¿ôxml, ¼Ò½ºjava)
-		// 2. ´ÙÀ½ È­¸éÀ» AndroidManifest.xml µî·ÏÇÑ´Ù.
-		// 3. ´ÙÀ½ È­¸éÀ¸·Î ÀüÈ¯ÇÏ±â(Intent °´Ã¼ »ı¼º ÈÄ ÀÎÅÙÆ® ³¯¸®±â startActivity)
+		// í™”ë©´ì „í™˜ í•˜ê¸°
+		// 1. ë‹¤ìŒ ë„˜ì–´ê°ˆ í™”ë©´ì„ ì¤€ë¹„í•œë‹¤.(ë ˆì´ì•„ì›ƒxml, ì†ŒìŠ¤java)
+		// 2. ë‹¤ìŒ í™”ë©´ì„ AndroidManifest.xml ë“±ë¡í•œë‹¤.
+		// 3. ë‹¤ìŒ í™”ë©´ìœ¼ë¡œ ì „í™˜í•˜ê¸°(Intent ê°ì²´ ìƒì„± í›„ ì¸í…íŠ¸ ë‚ ë¦¬ê¸° startActivity)
 
 		Button b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ¹öÆ° Å¬¸¯½Ã µÎ¹ø¤Š È­¸éÀ¸·Î ÀüÈ¯ÇÏ±â
-				Intent intent = new Intent(getApplicationContext(), // ÇöÀçÈ­¸éÀÇ
-																	// Á¦¾î±ÇÀÚ
-						SecondActivity.class);// ´ÙÀ½ ³Ñ¾î°¥ È­¸é.class
-				startActivity(intent);// È­¸éÀüÈ¯ÇÏ±â
+				// ë²„íŠ¼ í´ë¦­ì‹œ ë‘ë²ˆì¨° í™”ë©´ìœ¼ë¡œ ì „í™˜í•˜ê¸°
+				Intent intent = new Intent(getApplicationContext(), // í˜„ì¬í™”ë©´ì˜
+																	// ì œì–´ê¶Œì
+						SecondActivity.class);// ë‹¤ìŒ ë„˜ì–´ê°ˆ í™”ë©´.class
+				startActivity(intent);// í™”ë©´ì „í™˜í•˜ê¸°
 			}
 		});
 

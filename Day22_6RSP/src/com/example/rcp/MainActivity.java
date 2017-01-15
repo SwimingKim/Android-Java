@@ -58,13 +58,13 @@ public class MainActivity extends Activity {
 		iv_red = (ImageView)findViewById(R.id.imageView7);
 
 		final Animation animaiton = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bl);
-		// ÄÄÇ»ÅÍ¿Í À¯ÀúÀÇ »çÁø ¼³Á¤
+		// ì»´í“¨í„°ì™€ ìœ ì €ì˜ ì‚¬ì§„ ì„¤ì •
 		iv_com.setImageResource(R.drawable.umm);
 		user[0].setImageResource(R.drawable.rc);
 		user[1].setImageResource(R.drawable.sc);
 		user[2].setImageResource(R.drawable.pc);
 
-		//À¯Àú Å¬¸¯½Ã ÄÄÇ»ÅÍÀÇ ÆĞ+°á°úÃ¢
+		//ìœ ì € í´ë¦­ì‹œ ì»´í“¨í„°ì˜ íŒ¨+ê²°ê³¼ì°½
 		class MyEvent implements OnClickListener {
 			public void onClick(View v) {
 				ImageView iv = (ImageView)v;
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
 				Random ran = new Random();
 				computer = ran.nextInt(3);
 
-				switch (computer) {//ÄÄÇ»ÅÍÀÇ ÆĞ Á¤ÇÏ±â
+				switch (computer) {//ì»´í“¨í„°ì˜ íŒ¨ ì •í•˜ê¸°
 				case 0:
 					iv_com.setImageResource(R.drawable.rc);
 					break;
@@ -86,15 +86,15 @@ public class MainActivity extends Activity {
 					break;
 				}	
 
-				for (int i = 0; i < user.length; i++) {//»ç¿ëÀÚÀÇ ¼±ÅÃ ºÒ·¯¿À±â
+				for (int i = 0; i < user.length; i++) {//ì‚¬ìš©ìì˜ ì„ íƒ ë¶ˆëŸ¬ì˜¤ê¸°
 					if(iv==user[i]) choice = i;
 				}
 
-				if (rcp) {//°¡À§¹ÙÀ§º¸Áß	
-					if (computer==choice) {//¹«½ÂºÎ
+				if (rcp) {//ê°€ìœ„ë°”ìœ„ë³´ì¤‘	
+					if (computer==choice) {//ë¬´ìŠ¹ë¶€
 						iv_red.setTranslationX(0);iv_red.setTranslationY(0);
 						iv_blue.setTranslationX(0);iv_blue.setTranslationY(0);
-					} else if (//»ç¿ëÀÚ ½Â
+					} else if (//ì‚¬ìš©ì ìŠ¹
 							(choice==0&&computer==1
 							||choice==1&&computer==2
 							||choice==2&&computer==0)){
@@ -103,14 +103,14 @@ public class MainActivity extends Activity {
 						iv_blue.setTranslationX(0);iv_blue.setTranslationY(0);
 						rcp = false;
 						result=true;
-					} else {//»ç¿ëÀÚ ÆĞ
+					} else {//ì‚¬ìš©ì íŒ¨
 						rcp = false;
 						result=false;
 						iv_blue.setTranslationX(200);iv_blue.setTranslationY(-200);
 						iv_red.setTranslationX(0);iv_red.setTranslationY(0);
 					}
-				} else {//¹¬Âîºü ÁøÇàÁß
-					if (computer==choice){//ºñ±â¸é Á¾·á
+				} else {//ë¬µì°Œë¹  ì§„í–‰ì¤‘
+					if (computer==choice){//ë¹„ê¸°ë©´ ì¢…ë£Œ
 						if (result) {
 							iv_red.setTranslationX(-400);iv_red.setTranslationY(-250);
 							win++;
@@ -123,7 +123,7 @@ public class MainActivity extends Activity {
 							rcp = true;
 						}
 					} else {
-						if (//»ç¿ëÀÚ ½Â
+						if (//ì‚¬ìš©ì ìŠ¹
 								(choice==0&&computer==1
 								||choice==1&&computer==2
 								||choice==2&&computer==0)){
@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
 							iv_red.setTranslationX(-200);iv_red.setTranslationY(-200);
 							iv_blue.setTranslationX(0);iv_blue.setTranslationY(0);
 							result=true;
-						} else {//»ç¿ëÀÚ ÆĞ
+						} else {//ì‚¬ìš©ì íŒ¨
 							result=false;
 							iv_blue.setTranslationX(200);iv_blue.setTranslationY(-200);
 							iv_red.setTranslationX(0);iv_red.setTranslationY(0);
@@ -179,13 +179,13 @@ public class MainActivity extends Activity {
 		AlertDialog d = (AlertDialog) dialog;
 		switch (id) {
 		case DIALOG_WIN:
-			d.setMessage("¿Í¿ì!! ÀÌ°å¾î¿ä\n"+"´ç½ÅÀº "+win+"½Â "+lose+"ÆĞ¸¦ Çß½À´Ï´Ù.");
+			d.setMessage("ì™€ìš°!! ì´ê²¼ì–´ìš”\n"+"ë‹¹ì‹ ì€ "+win+"ìŠ¹ "+lose+"íŒ¨ë¥¼ í–ˆìŠµë‹ˆë‹¤.");
 			return;
 		case DIALOG_LOOSE:
-			d.setMessage("Àú·±!! Á³¾î¿ä\n"+"´ç½ÅÀº "+win+"½Â "+lose+"ÆĞ¸¦ Çß½À´Ï´Ù.");
+			d.setMessage("ì €ëŸ°!! ì¡Œì–´ìš”\n"+"ë‹¹ì‹ ì€ "+win+"ìŠ¹ "+lose+"íŒ¨ë¥¼ í–ˆìŠµë‹ˆë‹¤.");
 			return;
 		case DIALOG_SAVE:
-			d.setMessage("´ç½ÅÀº "+win+"½Â "+lose+"ÆĞ¸¦ Çß½À´Ï´Ù.\nÀúÀåÇÏ·Á¸é ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			d.setMessage("ë‹¹ì‹ ì€ "+win+"ìŠ¹ "+lose+"íŒ¨ë¥¼ í–ˆìŠµë‹ˆë‹¤.\nì €ì¥í•˜ë ¤ë©´ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			return;
 		}
 	}
@@ -193,26 +193,26 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DIALOG_DRAW:
 			AlertDialog.Builder dialog1 = new Builder(this);
-			dialog1.setTitle("¹«½ÂºÎ");
-			dialog1.setMessage("¾î¶ó!! ºñ°å¾î¿ä");
+			dialog1.setTitle("ë¬´ìŠ¹ë¶€");
+			dialog1.setMessage("ì–´ë¼!! ë¹„ê²¼ì–´ìš”");
 			return dialog1.create();
 		case DIALOG_WIN:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("½Â¸®");
-			dialog2.setMessage("¿Í¿ì!! ÀÌ°å¾î¿ä\n"+"´ç½ÅÀº "+win+"½Â "+lose+"ÆĞ¸¦ Çß½À´Ï´Ù.");
-			dialog2.setPositiveButton("´Ù½ÃÇÏ±â",new DialogInterface.OnClickListener() {
+			dialog2.setTitle("ìŠ¹ë¦¬");
+			dialog2.setMessage("ì™€ìš°!! ì´ê²¼ì–´ìš”\n"+"ë‹¹ì‹ ì€ "+win+"ìŠ¹ "+lose+"íŒ¨ë¥¼ í–ˆìŠµë‹ˆë‹¤.");
+			dialog2.setPositiveButton("ë‹¤ì‹œí•˜ê¸°",new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					iv_com.setImageResource(R.drawable.umm);
 					iv_red.setTranslationX(0);
 					iv_red.setTranslationY(0);
 				}
 			});
-			dialog2.setNegativeButton("³ª°¡±â", new DialogInterface.OnClickListener() {
+			dialog2.setNegativeButton("ë‚˜ê°€ê¸°", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}
 			});
-			dialog2.setNeutralButton("ÀúÀåÇÏ±â", new DialogInterface.OnClickListener() {
+			dialog2.setNeutralButton("ì €ì¥í•˜ê¸°", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface arg0, int arg1) {
 					showDialog(DIALOG_SAVE);
 				}
@@ -220,21 +220,21 @@ public class MainActivity extends Activity {
 			return dialog2.create();
 		case DIALOG_LOOSE:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			dialog3.setTitle("ÆĞ¹è");
-			dialog3.setMessage("Àú·±!! Á³¾î¿ä\n"+"´ç½ÅÀº "+win+"½Â "+lose+"ÆĞ¸¦ Çß½À´Ï´Ù.");
-			dialog3.setPositiveButton("´Ù½ÃÇÏ±â",new DialogInterface.OnClickListener() {
+			dialog3.setTitle("íŒ¨ë°°");
+			dialog3.setMessage("ì €ëŸ°!! ì¡Œì–´ìš”\n"+"ë‹¹ì‹ ì€ "+win+"ìŠ¹ "+lose+"íŒ¨ë¥¼ í–ˆìŠµë‹ˆë‹¤.");
+			dialog3.setPositiveButton("ë‹¤ì‹œí•˜ê¸°",new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					iv_com.setImageResource(R.drawable.umm);
 					iv_blue.setTranslationX(0);
 					iv_blue.setTranslationY(0);
 				}
 			});
-			dialog3.setNegativeButton("³ª°¡±â", new DialogInterface.OnClickListener() {
+			dialog3.setNegativeButton("ë‚˜ê°€ê¸°", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}
 			});
-			dialog3.setNeutralButton("ÀúÀåÇÏ±â", new DialogInterface.OnClickListener() {
+			dialog3.setNeutralButton("ì €ì¥í•˜ê¸°", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					showDialog(DIALOG_SAVE);					
 				}
@@ -242,31 +242,31 @@ public class MainActivity extends Activity {
 			return dialog3.create();
 		case DIALOG_INTRO:
 			AlertDialog.Builder dialog4 = new Builder(this);
-			dialog4.setTitle("¼Ò°³");
-			dialog4.setMessage("°³¹ßÀÚ \nÀÌ¸ŞÀÏ : rumex13@naver.com");
+			dialog4.setTitle("ì†Œê°œ");
+			dialog4.setMessage("ê°œë°œì \nì´ë©”ì¼ : rumex13@naver.com");
 			return dialog4.create();
 		case DIALOG_RULE:
 			AlertDialog.Builder dialog5 = new Builder(this);
-			dialog5.setTitle("±ÔÄ¢");
-			dialog5.setMessage("°¡À§¹ÙÀ§º¸ Áß ÇÏ³ª¸¦ ¼±ÅÃÇÏ¸é ÄÄÇ»ÅÍ¿Í ´ë°áÀ» ÇÕ´Ï´Ù\nÄÄÇ»ÅÍ¿ÍÀÇ ´ë°á¿¡¼­ ½Â¸®ÇÏ¼¼¿ä");
+			dialog5.setTitle("ê·œì¹™");
+			dialog5.setMessage("ê°€ìœ„ë°”ìœ„ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ë©´ ì»´í“¨í„°ì™€ ëŒ€ê²°ì„ í•©ë‹ˆë‹¤\nì»´í“¨í„°ì™€ì˜ ëŒ€ê²°ì—ì„œ ìŠ¹ë¦¬í•˜ì„¸ìš”");
 			return dialog5.create();
 		case DIALOG_SAVE:
 			LayoutInflater lif = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			final View MyView = (View)lif.inflate(R.layout.save, null);
 			AlertDialog.Builder dialog6 = new Builder(this);
-			dialog6.setTitle("ÀúÀåÇÏ±â");
+			dialog6.setTitle("ì €ì¥í•˜ê¸°");
 			dialog6.setView(MyView);
-			dialog6.setMessage("´ç½ÅÀº "+win+"½Â "+lose+"ÆĞ¸¦ Çß½À´Ï´Ù.\nÀúÀåÇÏ·Á¸é ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
-			dialog6.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog6.setMessage("ë‹¹ì‹ ì€ "+win+"ìŠ¹ "+lose+"íŒ¨ë¥¼ í–ˆìŠµë‹ˆë‹¤.\nì €ì¥í•˜ë ¤ë©´ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
+			dialog6.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface arg0, int arg1) {
 					EditText et = (EditText)MyView.findViewById(R.id.editText1);
 					String str = et.getText().toString();	
 					try {
 						FileOutputStream fos = openFileOutput("game.txt", Context.MODE_APPEND);
 						PrintWriter out = new PrintWriter(fos);
-						out.println("°è:"+str);
-						out.println("½Â:"+win);
-						out.println("ÆĞ:"+lose);
+						out.println("ê³„:"+str);
+						out.println("ìŠ¹:"+win);
+						out.println("íŒ¨:"+lose);
 						out.close();
 					} catch (FileNotFoundException e) {
 						e.printStackTrace();
@@ -277,7 +277,7 @@ public class MainActivity extends Activity {
 					finish();
 				}
 			});
-			dialog6.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog6.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 					

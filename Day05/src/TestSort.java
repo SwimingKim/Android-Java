@@ -1,19 +1,19 @@
 import java.util.Arrays;
 
 /**
- * sort : Á¤·Ä
+ * sort : ì •ë ¬
  */
 public class TestSort {
 	public static void main(String[] args) {
 		// {3,1,4,7,8,2,4,2,4,2,3,8,1}
-		// ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÏ½Ã¿À.
+		// ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•˜ì‹œì˜¤.
 
-		// ¼±ÅÃÁ¤·Ä
+		// ì„ íƒì •ë ¬
 		int num[] = { 3, 1, 4, 7, 8, 2, 4, 2, 4, 2, 3, 8, 1 };
 
-		// Á¤·Ä - »ğÀÔÁ¤·Ä (ÃÖ¼Ò°ª, ±³È¯)
+		// ì •ë ¬ - ì‚½ì…ì •ë ¬ (ìµœì†Œê°’, êµí™˜)
 
-		// ÃÖ¼Ò°ªÀ» Ã£´Â´Ù
+		// ìµœì†Œê°’ì„ ì°¾ëŠ”ë‹¤
 		int minIndex;
 		for (int i = 0; i < num.length; i++) {
 			minIndex = i;
@@ -21,15 +21,15 @@ public class TestSort {
 				if (num[minIndex] > num[j])
 					minIndex = j;
 			}
-			// Ã£Àº ÃÖ¼Ò°ªÀº Ã¹¹øÂ° °á°ú¸¦ ±³È¯ÇÑ´Ù
-			// swap : i¹øÂ° °ª°ú minIndex¹øÂ°ÀÇ °ªÀ» ±³È¯
+			// ì°¾ì€ ìµœì†Œê°’ì€ ì²«ë²ˆì§¸ ê²°ê³¼ë¥¼ êµí™˜í•œë‹¤
+			// swap : ië²ˆì§¸ ê°’ê³¼ minIndexë²ˆì§¸ì˜ ê°’ì„ êµí™˜
 			int temp = num[i];
 			num[i] = num[minIndex];
 			num[minIndex] = temp;
 
 		}
 
-		System.out.println(Arrays.toString(num));// Á¤·ÄµÈ °ª Ãâ·Â
+		System.out.println(Arrays.toString(num));// ì •ë ¬ëœ ê°’ ì¶œë ¥
 
 	}// end of main
 }// end of class

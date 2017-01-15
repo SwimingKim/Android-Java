@@ -1,5 +1,5 @@
 /**
- * static È°¿ë Á¦Ç°ÀÇ °íÀ¶ÇÑ Á¤º¸¸¦ ³ªÅ¸³»±â À§ÇØ¼­ Serial Number
+ * static í™œìš© ì œí’ˆì˜ ê³ ìœµí•œ ì •ë³´ë¥¼ ë‚˜íƒ€ë‚´ê¸° ìœ„í•´ì„œ Serial Number
  */
 public class TestSerialNumber {
 	public static void main(String[] args) {
@@ -15,8 +15,8 @@ public class TestSerialNumber {
 	}// end of main
 }// end of class
 
-class Product {// Á¦Ç°
-	static int count = 0;// ÇöÀç±îÁö Á¦Ç° ¸î¹øÂ°±îÁö »ç¿ëÇß´ÂÁö ±â¾ïÇÒ º¯¼ö
-	int SN;// ½Ã¸®¾ó ³Ñ¹ö
+class Product {// ì œí’ˆ
+	static int count = 0;// í˜„ì¬ê¹Œì§€ ì œí’ˆ ëª‡ë²ˆì§¸ê¹Œì§€ ì‚¬ìš©í–ˆëŠ”ì§€ ê¸°ì–µí•  ë³€ìˆ˜
+	int SN;// ì‹œë¦¬ì–¼ ë„˜ë²„
 
 }

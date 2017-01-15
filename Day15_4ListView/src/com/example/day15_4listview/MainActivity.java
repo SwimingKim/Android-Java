@@ -14,71 +14,71 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	String str[] = { "»ç°ú", "µş±â", "¹è", "¼ö¹Ú", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¹æ¿ïÅä¸¶Åä", "»ç°ú", "µş±â", "¹è", "¼ö¹Ú", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¹æ¿ïÅä¸¶Åä", "»ç°ú",
-			"µş±â", "¹è", "¼ö¹Ú", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¹æ¿ïÅä¸¶Åä", "»ç°ú", "µş±â", "¹è", "¼ö¹Ú", "¹Ù³ª³ª", "ÆÄÀÎ¾ÖÇÃ", "¹æ¿ïÅä¸¶Åä", };
+	String str[] = { "ì‚¬ê³¼", "ë”¸ê¸°", "ë°°", "ìˆ˜ë°•", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ë°©ìš¸í† ë§ˆí† ", "ì‚¬ê³¼", "ë”¸ê¸°", "ë°°", "ìˆ˜ë°•", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ë°©ìš¸í† ë§ˆí† ", "ì‚¬ê³¼",
+			"ë”¸ê¸°", "ë°°", "ìˆ˜ë°•", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ë°©ìš¸í† ë§ˆí† ", "ì‚¬ê³¼", "ë”¸ê¸°", "ë°°", "ìˆ˜ë°•", "ë°”ë‚˜ë‚˜", "íŒŒì¸ì• í”Œ", "ë°©ìš¸í† ë§ˆí† ", };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// °í±ŞÀ§Á¬ : ListView ¸¸µé±â
-		// 1. ´Ù·®ÀÇ µ¥ÀÌÅÍ
-		// 2. ¾Æ´äÅ¸¸¦ ±¸¼ºÇÑ´Ù(ÇÏ³ªÀÇ Çà¿¡ ÇØ´çÇÏ´Â layout ÁØºñ, ¾Æ´äÅ¸ ±¸Çö)
-		// 3. ¾Æ´äÅ¸ºä(ListView, GridView, Gallery, Spinner)¿¡ ¾Æ´äÅ¸¸¦ µî·ÏÇÑ´Ù
+		// ê³ ê¸‰ìœ„ì ¯ : ListView ë§Œë“¤ê¸°
+		// 1. ë‹¤ëŸ‰ì˜ ë°ì´í„°
+		// 2. ì•„ë‹µíƒ€ë¥¼ êµ¬ì„±í•œë‹¤(í•˜ë‚˜ì˜ í–‰ì— í•´ë‹¹í•˜ëŠ” layout ì¤€ë¹„, ì•„ë‹µíƒ€ êµ¬í˜„)
+		// 3. ì•„ë‹µíƒ€ë·°(ListView, GridView, Gallery, Spinner)ì— ì•„ë‹µíƒ€ë¥¼ ë“±ë¡í•œë‹¤
 
 		ListView lv = (ListView) findViewById(R.id.listView1);
 
-		// 2. ¾Æ´äÅ¸¸¦ ±¸¼ºÇÑ´Ù
-		MyAdapter ma = new MyAdapter(getApplicationContext(), // ÇöÀçÈ­¸éÀÇ Á¦¾î±ÇÀÚ
-				R.layout.row, // ListView¿¡ º¸¿©ÁÙ ÇÑ Çà layout
-				str);// ´Ù·®ÀÇµ¥ÀÌÅÍ
-		lv.setAdapter(ma);// 3.¾Æ´äÅ¸ºä¿¡ ¾Æ´äÅ¸µî·Ï
+		// 2. ì•„ë‹µíƒ€ë¥¼ êµ¬ì„±í•œë‹¤
+		MyAdapter ma = new MyAdapter(getApplicationContext(), // í˜„ì¬í™”ë©´ì˜ ì œì–´ê¶Œì
+				R.layout.row, // ListViewì— ë³´ì—¬ì¤„ í•œ í–‰ layout
+				str);// ë‹¤ëŸ‰ì˜ë°ì´í„°
+		lv.setAdapter(ma);// 3.ì•„ë‹µíƒ€ë·°ì— ì•„ë‹µíƒ€ë“±ë¡
 
 	}// end of onCreate
 }// end of class
 
-// ³»°¡ ¸¸µç ¾Æ´äÅ¸ - µ¥ÀÌÅÍ¸¦ row·¹ÀÌ¾Æ¿ôÀÇ ¾îµğ¿¡ ¾î¶»°Ô ¹èÄ¡ÇÒÁö ¿¬°á
+// ë‚´ê°€ ë§Œë“  ì•„ë‹µíƒ€ - ë°ì´í„°ë¥¼ rowë ˆì´ì•„ì›ƒì˜ ì–´ë””ì— ì–´ë–»ê²Œ ë°°ì¹˜í• ì§€ ì—°ê²°
 class MyAdapter extends BaseAdapter {
 	// Context context;
 	int layout;
 	String[] str;
-	LayoutInflater lif; // ÇÑÇàÀ» ´ã´çÇÏ´Â ·¹ÀÌ¾Æ¿ôÀÇ ÀÚ¿øÀ» ¿¬°áÇÏ±â À§ÇØ
+	LayoutInflater lif; // í•œí–‰ì„ ë‹´ë‹¹í•˜ëŠ” ë ˆì´ì•„ì›ƒì˜ ìì›ì„ ì—°ê²°í•˜ê¸° ìœ„í•´
 
 	public MyAdapter() {
-	}// ±âº» »ı¼ºÀÚ
+	}// ê¸°ë³¸ ìƒì„±ì
 
-	public MyAdapter(Context context, int layout, String[] str) {// »ı¼ºÀÚ
+	public MyAdapter(Context context, int layout, String[] str) {// ìƒì„±ì
 		// this.context = context;
 		this.layout = layout;
 		this.str = str;
-		lif = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);// C,c¿©µµ
-																							// »ó°ü¾ø´Ù
-																							// ±×·¯³ª
-																							// ´ë¹®ÀÚ
-																							// ±ÇÀå
+		lif = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);// C,cì—¬ë„
+																							// ìƒê´€ì—†ë‹¤
+																							// ê·¸ëŸ¬ë‚˜
+																							// ëŒ€ë¬¸ì
+																							// ê¶Œì¥
 	}
 
-	public int getCount() {// ÇÊ¼ö : ¸®½ºÆ®ÀÇ ÃÑ ¸ñ·ÏÀÇ °³¼ö
+	public int getCount() {// í•„ìˆ˜ : ë¦¬ìŠ¤íŠ¸ì˜ ì´ ëª©ë¡ì˜ ê°œìˆ˜
 		return str.length;
 	}
 
-	public Object getItem(int position) {// ¼±ÅÃ : ¸®½ºÆ® Ç×¸ñÀÇ ÇØ´ç µ¥ÀÌÅÍ
+	public Object getItem(int position) {// ì„ íƒ : ë¦¬ìŠ¤íŠ¸ í•­ëª©ì˜ í•´ë‹¹ ë°ì´í„°
 		return str[position];
 	}
 
-	public long getItemId(int position) {// ¼±ÅÃ : ¸®½ºÆ® Ç×¸ñÀÇ ÇØ´ç µ¥ÀÌÅÍÀÇ °íÀ¯id
+	public long getItemId(int position) {// ì„ íƒ : ë¦¬ìŠ¤íŠ¸ í•­ëª©ì˜ í•´ë‹¹ ë°ì´í„°ì˜ ê³ ìœ id
 		return position;
 	}
 
-	// getView ÇÊ¼ö : µ¥ÀÌÅÍ¸¦ row ·¹ÀÌ¾Æ¿ôÀÇ ¾îµğ¿¡ ¾î¶»°Ô ¹èÄ¡ÇÒÁö ¿¬°á
+	// getView í•„ìˆ˜ : ë°ì´í„°ë¥¼ row ë ˆì´ì•„ì›ƒì˜ ì–´ë””ì— ì–´ë–»ê²Œ ë°°ì¹˜í• ì§€ ì—°ê²°
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// °¡Àå Áß¿äÇÑ ¸Ş¼­µå ¡Ú¡Ú¡Ú¡Ú¡Ú
+		// ê°€ì¥ ì¤‘ìš”í•œ ë©”ì„œë“œ â˜…â˜…â˜…â˜…â˜…
 		if (convertView == null) {
 			convertView = lif.inflate(layout, null);
 		}
 		TextView tv = (TextView) convertView.findViewById(R.id.textView1);
 		tv.setText(str[position]);
-		return convertView;// ÇÑ ÇàÀÇ µ¥ÀÌÅÍ¸¦ ¿¬°áÇØ¼­ ¸®ÅÏ
+		return convertView;// í•œ í–‰ì˜ ë°ì´í„°ë¥¼ ì—°ê²°í•´ì„œ ë¦¬í„´
 	}
 }

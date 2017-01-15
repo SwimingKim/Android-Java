@@ -23,14 +23,14 @@ public class LastActivity extends Activity{
 		LinearLayout ll = (LinearLayout)findViewById(R.id.mylayout);
 		
 		Intent intent = getIntent();
-		String str = intent.getStringExtra("∞·∞˙");
+		String str = intent.getStringExtra("Í≤∞Í≥º");
 		tv.setText(str);
-		if ("∂Û¿Œ".equals(str)){
+		if ("ÎùºÏù∏".equals(str)){
 			iv.setImageResource(R.drawable.win);
 			ll.setBackgroundColor(Color.rgb(77, 174, 207));
 			tv.setText("Shark Win");
 		} 
-		if ("ƒ´≈Â".equals(str)){
+		if ("Ïπ¥ÌÜ°".equals(str)){
 			iv.setImageResource(R.drawable.loose);
 			ll.setBackgroundColor(Color.rgb(223, 186, 186));
 			tv.setText("Shark Lose");

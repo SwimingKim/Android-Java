@@ -18,17 +18,17 @@ public class MainActivity extends TabActivity{
 		TabHost host = getTabHost();
 		
 		TabSpec tab1 = host.newTabSpec("1");
-		tab1.setIndicator("«¡∑π¿”");
+		tab1.setIndicator("ÌîÑÎ†àÏûÑ");
 		tab1.setContent(new Intent(getApplicationContext(), OneActivity.class));
 		host.addTab(tab1);
 		
 		TabSpec tab2 = host.newTabSpec("2");
-		tab2.setIndicator("∆Æ¿©");
+		tab2.setIndicator("Ìä∏Ïúà");
 		tab2.setContent(new Intent(getApplicationContext(), TwoActivity.class));
 		host.addTab(tab2);
 		
 		TabSpec tab3 = host.newTabSpec("3");
-		tab3.setIndicator("º”º∫");
+		tab3.setIndicator("ÏÜçÏÑ±");
 		tab3.setContent(new Intent(getApplicationContext(), ThreeActivity.class));
 		host.addTab(tab3);
 	

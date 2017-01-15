@@ -1,6 +1,6 @@
 /**
- * (¸Þ¼­µå)¿À¹ö·Îµù : ÇÏ³ªÀÇ Å¬·¡½º¿¡¼­ °°Àº ÀÌ¸§ÀÇ ¸Þ¼­µå¸íÀ» Çã¿ëÇÏ´Â ±â¹ý Á¶°Ç : ÀÎÀÚ°ªÀÇ °³¼ö, ¶Ç´Â Å¸ÀÔ, ¶Ç´Â ¼ø¼­°¡ ´Þ¶ó¾ß
- * ÇÑ´Ù.
+ * (ë©”ì„œë“œ)ì˜¤ë²„ë¡œë”© : í•˜ë‚˜ì˜ í´ëž˜ìŠ¤ì—ì„œ ê°™ì€ ì´ë¦„ì˜ ë©”ì„œë“œëª…ì„ í—ˆìš©í•˜ëŠ” ê¸°ë²• ì¡°ê±´ : ì¸ìžê°’ì˜ ê°œìˆ˜, ë˜ëŠ” íƒ€ìž…, ë˜ëŠ” ìˆœì„œê°€ ë‹¬ë¼ì•¼
+ * í•œë‹¤.
  */
 public class TestOverloading {
 	public static void main(String[] args) {

@@ -19,19 +19,19 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class RowActivity extends Activity{
-	String [] str = {"°­¿øµµ", "¼öµµ±Ç", "°æ»ó³²µµ", "°æ»óºÏµµ", "´ëÀü±¤¿ª½Ã","¿ï¸ªµµµ¶µµ" , "Àü¶ó³²µµ", "Àü¶óºÏµµ", 
-			"ÃæÃ»³²µµ", "ÃæÃ»ºÏµµ", "Á¦ÁÖµµ"};
-	List[] st = { new List("°­¿øµµ", "¾È¸ñÇØº¯", 4, "ka.txt", R.drawable.kaim,37.7731182,128.9429963),
-			new List("¼öµµ±Ç", "ÀÏ»ê È£¼ö°ø¿ø", 4.5f, "su.txt", R.drawable.suim,37.6584131,126.7620336),
-			new List("°æ»ó³²µµ", "Åë¿µ ¼Ò¸Å¹°µµ", 5, "kn.txt", R.drawable.knim,34.6222575,128.5459788),
-			new List("°æ»óºÏµµ", "°æÁÖ ¾È¾ĞÁö", 4.5f, "kb.txt", R.drawable.kbim,35.8347202,129.2247643),
-			new List("´ëÀü±¤¿ª½Ã", "´ëµ¿ÇÏ´Ã°ø¿ø", 3, "da.txt", R.drawable.daim,36.3325029,127.4492084),
-			new List("¿ï¸ªµµµ¶µµ", "µ¶µµ", 4, "wd.txt", R.drawable.wdim,37.2419723,131.862681),
-			new List("Àü¶ó³²µµ", "´ã¾ç Á×³ì¿ø", 4.5f, "jn.txt", R.drawable.jnim,35.3258532,126.9841248),
-			new List("Àü¶óºÏµµ", "ÀüÁÖ ÇÑ¿Á¸¶À»", 4, "jb.txt", R.drawable.jbim,35.8153767,127.1059535),
-			new List("ÃæÃ»³²µµ", "º¸·É ´ëÃµÇØ¼ö¿åÀå", 3.5f, "cn.txt", R.drawable.cnim,36.3056132,126.5072723),
-			new List("ÃæÃ»ºÏµµ", "´Ü¾ç µµ´ã»ïºÀ", 3, "cb.txt", R.drawable.cbim,36.9999664,128.3417429),
-			new List("Á¦ÁÖµµ", "ÇÑ¶ó»ê", 4, "je.txt", R.drawable.jeim,33.3616837,126.5203904)};
+	String [] str = {"ê°•ì›ë„", "ìˆ˜ë„ê¶Œ", "ê²½ìƒë‚¨ë„", "ê²½ìƒë¶ë„", "ëŒ€ì „ê´‘ì—­ì‹œ","ìš¸ë¦‰ë„ë…ë„" , "ì „ë¼ë‚¨ë„", "ì „ë¼ë¶ë„", 
+			"ì¶©ì²­ë‚¨ë„", "ì¶©ì²­ë¶ë„", "ì œì£¼ë„"};
+	List[] st = { new List("ê°•ì›ë„", "ì•ˆëª©í•´ë³€", 4, "ka.txt", R.drawable.kaim,37.7731182,128.9429963),
+			new List("ìˆ˜ë„ê¶Œ", "ì¼ì‚° í˜¸ìˆ˜ê³µì›", 4.5f, "su.txt", R.drawable.suim,37.6584131,126.7620336),
+			new List("ê²½ìƒë‚¨ë„", "í†µì˜ ì†Œë§¤ë¬¼ë„", 5, "kn.txt", R.drawable.knim,34.6222575,128.5459788),
+			new List("ê²½ìƒë¶ë„", "ê²½ì£¼ ì•ˆì••ì§€", 4.5f, "kb.txt", R.drawable.kbim,35.8347202,129.2247643),
+			new List("ëŒ€ì „ê´‘ì—­ì‹œ", "ëŒ€ë™í•˜ëŠ˜ê³µì›", 3, "da.txt", R.drawable.daim,36.3325029,127.4492084),
+			new List("ìš¸ë¦‰ë„ë…ë„", "ë…ë„", 4, "wd.txt", R.drawable.wdim,37.2419723,131.862681),
+			new List("ì „ë¼ë‚¨ë„", "ë‹´ì–‘ ì£½ë…¹ì›", 4.5f, "jn.txt", R.drawable.jnim,35.3258532,126.9841248),
+			new List("ì „ë¼ë¶ë„", "ì „ì£¼ í•œì˜¥ë§ˆì„", 4, "jb.txt", R.drawable.jbim,35.8153767,127.1059535),
+			new List("ì¶©ì²­ë‚¨ë„", "ë³´ë ¹ ëŒ€ì²œí•´ìˆ˜ìš•ì¥", 3.5f, "cn.txt", R.drawable.cnim,36.3056132,126.5072723),
+			new List("ì¶©ì²­ë¶ë„", "ë‹¨ì–‘ ë„ë‹´ì‚¼ë´‰", 3, "cb.txt", R.drawable.cbim,36.9999664,128.3417429),
+			new List("ì œì£¼ë„", "í•œë¼ì‚°", 4, "je.txt", R.drawable.jeim,33.3616837,126.5203904)};
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.row);
@@ -43,13 +43,13 @@ public class RowActivity extends Activity{
 		ImageView iv = (ImageView)findViewById(R.id.imageView1);
 
 		Intent intent = getIntent();
-		final int num = intent.getIntExtra("±¸ºĞ", 0);
-		tv_name.setText(st[intent.getIntExtra("±¸ºĞ", 0)].name);
-		tv_division.append(" : "+st[intent.getIntExtra("±¸ºĞ", 0)].division);
-		rate.setRating(st[intent.getIntExtra("±¸ºĞ", 0)].point);
-		//		intro.setText(st[intent.getIntExtra("±¸ºĞ", 0)].intro);
+		final int num = intent.getIntExtra("êµ¬ë¶„", 0);
+		tv_name.setText(st[intent.getIntExtra("êµ¬ë¶„", 0)].name);
+		tv_division.append(" : "+st[intent.getIntExtra("êµ¬ë¶„", 0)].division);
+		rate.setRating(st[intent.getIntExtra("êµ¬ë¶„", 0)].point);
+		//		intro.setText(st[intent.getIntExtra("êµ¬ë¶„", 0)].intro);
 		File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-				st[intent.getIntExtra("±¸ºĞ", 0)].intro);
+				st[intent.getIntExtra("êµ¬ë¶„", 0)].intro);
 		String result = "";
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
@@ -66,11 +66,11 @@ public class RowActivity extends Activity{
 		}
 		intro.setText(result);
 
-		iv.setImageResource(st[intent.getIntExtra("±¸ºĞ", 0)].image);
+		iv.setImageResource(st[intent.getIntExtra("êµ¬ë¶„", 0)].image);
 		iv.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(getApplicationContext(),UpActivity.class);
-				intent.putExtra("±×¸²", st[num].image);
+				intent.putExtra("ê·¸ë¦¼", st[num].image);
 				startActivity(intent);
 			}
 		});

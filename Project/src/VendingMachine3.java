@@ -12,69 +12,69 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * ÀÚÆÇ±â ÇÁ·ÎÁ§Æ® 
+ * ìíŒê¸° í”„ë¡œì íŠ¸ 
  * */
 public class VendingMachine3 {
-	static int money;//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ µ·
+	static int money;//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ëˆ
 	static TextArea ta;
-//	static String itemName = "";//»ç¿ëÀÚ°¡ ¼±ÅÃÇÑ Á¦Ç°
-//	static int itemValue;//»ç¿ëÀÚ°¡ ¼±ÅÃÇÑ Á¦Ç°ÀÇ °¡°İ
+//	static String itemName = "";//ì‚¬ìš©ìê°€ ì„ íƒí•œ ì œí’ˆ
+//	static int itemValue;//ì‚¬ìš©ìê°€ ì„ íƒí•œ ì œí’ˆì˜ ê°€ê²©
 	
 	public static void main(String[] args) {
 		
 		
-		Frame f = new Frame("ÀÚÆÇ±â ÇÁ·Î±×·¥");
+		Frame f = new Frame("ìíŒê¸° í”„ë¡œê·¸ë¨");
 		f.setBounds(100, 100, 400, 300);
 		f.setLayout(new FlowLayout());
-		f.setResizable(false); //»ç¿ëÀÚ°¡ Ã¢ÀÇ Å©±â¸¦ Á¶ÀıÇÏÁö ¸øÇÏ°Ô ¸·À½
-		f.setFont(new Font("¸¼Àº°íµñ",Font.BOLD, 15));
+		f.setResizable(false); //ì‚¬ìš©ìê°€ ì°½ì˜ í¬ê¸°ë¥¼ ì¡°ì ˆí•˜ì§€ ëª»í•˜ê²Œ ë§‰ìŒ
+		f.setFont(new Font("ë§‘ì€ê³ ë”•",Font.BOLD, 15));
 
-		Panel p = new Panel();//ÄÁÅ×ÀÌ³Ê - ÄÄÆ÷³ÍÆ®¸¦ ´ãÀ» ¼ö ÀÖ´Â ÄÄÆ÷³ÍÆ®
+		Panel p = new Panel();//ì»¨í…Œì´ë„ˆ - ì»´í¬ë„ŒíŠ¸ë¥¼ ë‹´ì„ ìˆ˜ ìˆëŠ” ì»´í¬ë„ŒíŠ¸
 		p.setLayout(new GridLayout(3, 3,5,5));
-		Button b1 = new Button("Ä­Å¸Å¸ 1820¿ø"); p.add(b1);
-		Button b2 = new Button("¹ĞÅ°½º 870¿ø"); p.add(b2);
-		Button b3 = new Button("¸¶¿îÆ¾µà 960¿ø"); p.add(b3);
-		Button b4 = new Button("·¹¾²ºñ 510¿ø"); p.add(b4);
-		Button b5 = new Button("»çÀÌ´Ù 1190¿ø"); p.add(b5);
-		Button b6 = new Button("Ä«ÆäÅ¸ÀÓ 740¿ø"); p.add(b6);
-		Button b7 = new Button("¸ÆÄİ 660¿ø"); p.add(b7);
-		Button b8 = new Button("Äİ¶ó 720¿ø"); p.add(b8);
-		Button b9 = new Button("°ÔÅä·¹ÀÌ 780¿ø"); p.add(b9);
+		Button b1 = new Button("ì¹¸íƒ€íƒ€ 1820ì›"); p.add(b1);
+		Button b2 = new Button("ë°€í‚¤ìŠ¤ 870ì›"); p.add(b2);
+		Button b3 = new Button("ë§ˆìš´í‹´ë“€ 960ì›"); p.add(b3);
+		Button b4 = new Button("ë ˆì“°ë¹„ 510ì›"); p.add(b4);
+		Button b5 = new Button("ì‚¬ì´ë‹¤ 1190ì›"); p.add(b5);
+		Button b6 = new Button("ì¹´í˜íƒ€ì„ 740ì›"); p.add(b6);
+		Button b7 = new Button("ë§¥ì½œ 660ì›"); p.add(b7);
+		Button b8 = new Button("ì½œë¼ 720ì›"); p.add(b8);
+		Button b9 = new Button("ê²Œí† ë ˆì´ 780ì›"); p.add(b9);
 	
 		f.add(p);
 		
 		TextField tfMoney = new TextField(20); 
 		f.add(tfMoney);
 		
-		Button bMoney = new Button("µ· ÀÔ·Â"); 
+		Button bMoney = new Button("ëˆ ì…ë ¥"); 
 		f.add(bMoney);
 		
 		ta = new TextArea(5,40);
 		f.add(ta);
-		ta.setEditable(false);//»ç¿ëÀÚ°¡ °ªÀ» ¼öÁ¤ÇÏÁö ¸øÇÏ°Ô ¸·À½
+		ta.setEditable(false);//ì‚¬ìš©ìê°€ ê°’ì„ ìˆ˜ì •í•˜ì§€ ëª»í•˜ê²Œ ë§‰ìŒ
 		
 		f.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {//´İ±â ¹öÆ° ´­·¶À»¶§
+			public void windowClosing(WindowEvent e) {//ë‹«ê¸° ë²„íŠ¼ ëˆŒë €ì„ë•Œ
 				f.dispose();
 			}
 		});		
 		
 		
-		bMoney.addActionListener(new ActionListener() {//µ· ÀÔ·Â ¹öÆ° Å¬¸¯½Ã
+		bMoney.addActionListener(new ActionListener() {//ëˆ ì…ë ¥ ë²„íŠ¼ í´ë¦­ì‹œ
 			public void actionPerformed(ActionEvent e) {
 				try {
 					String strMoney = tfMoney.getText();
 					int num = Integer.valueOf(strMoney);
-					if (num<0) {//À½¼ö ÀÔ·Â½Ã
-						ta.append("µ·Àº ¾ç¼ö·Î ÀÔ·ÂÇØÁÖ¼¼¿ä\n");
+					if (num<0) {//ìŒìˆ˜ ì…ë ¥ì‹œ
+						ta.append("ëˆì€ ì–‘ìˆ˜ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”\n");
 					} else {
-						ta.append(num+"¿øÀ» ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù\n");
-						money += num;//ÀÔ·ÂÇÑ µ·À» ´©Àû
-						ta.append("ÃÑ ÀÔ·Â ±İ¾× : "+money+"¿ø\n");
+						ta.append(num+"ì›ì„ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤\n");
+						money += num;//ì…ë ¥í•œ ëˆì„ ëˆ„ì 
+						ta.append("ì´ ì…ë ¥ ê¸ˆì•¡ : "+money+"ì›\n");
 					}
-					tfMoney.setText("");//Textfield¸¦ ºñ¿ö ÁÜ	
+					tfMoney.setText("");//Textfieldë¥¼ ë¹„ì›Œ ì¤Œ	
 				} catch (NumberFormatException e2) {
-					ta.append("µ·Àº ¼ıÀÚ·Î ÀÔ·ÂÇØÁÖ¼¼¿ä\n");
+					ta.append("ëˆì€ ìˆ«ìë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”\n");
 				}
 							
 			}
@@ -82,47 +82,47 @@ public class VendingMachine3 {
 		
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("Ä­Å¸Å¸", 1820);
+				buttonClick("ì¹¸íƒ€íƒ€", 1820);
 			}
 		});
 		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("¹ĞÅ°½º", 870);
+				buttonClick("ë°€í‚¤ìŠ¤", 870);
 			}
 		});
 		b3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("¸¶¿îÆ¾µà", 960);
+				buttonClick("ë§ˆìš´í‹´ë“€", 960);
 			}
 		});
 		b4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("·¹¾²ºñ", 510);
+				buttonClick("ë ˆì“°ë¹„", 510);
 			}
 		});
 		b5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("»çÀÌ´Ù", 1190);
+				buttonClick("ì‚¬ì´ë‹¤", 1190);
 			}
 		});
 		b6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("Ä«ÆäÅ¸ÀÓ", 740);
+				buttonClick("ì¹´í˜íƒ€ì„", 740);
 			}
 		});
 		b7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("¸ÆÄİ", 660);
+				buttonClick("ë§¥ì½œ", 660);
 			}
 		});
 		b8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("Äİ¶ó", 720);
+				buttonClick("ì½œë¼", 720);
 			}
 		});
 		b9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buttonClick("°ÔÅä·¹ÀÌ", 780);
+				buttonClick("ê²Œí† ë ˆì´", 780);
 			}
 		});
 		
@@ -131,20 +131,20 @@ public class VendingMachine3 {
 		f.setVisible(true);
 	}//end of main
 	static void buttonClick(String itemName, int itemValue) {
-		//ÀÔ·ÂÇÑ µ·ÀÌ Á¦Ç°°¡°İº¸´Ù Å©°Å³ª °°Àº Áö È®ÀÎ
+		//ì…ë ¥í•œ ëˆì´ ì œí’ˆê°€ê²©ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ì€ ì§€ í™•ì¸
 		if (money>=itemValue) {
-			ta.append("¼±ÅÃÇÑ Á¦Ç°Àº "+itemName+"ÀÔ´Ï´Ù\n");
-			ta.append("¼±ÅÃÇÑ Á¦Ç°ÀÇ °¡°İÀº "+itemValue+"ÀÔ´Ï´Ù\n");
+			ta.append("ì„ íƒí•œ ì œí’ˆì€ "+itemName+"ì…ë‹ˆë‹¤\n");
+			ta.append("ì„ íƒí•œ ì œí’ˆì˜ ê°€ê²©ì€ "+itemValue+"ì…ë‹ˆë‹¤\n");
 			int change = money - itemValue;
-			ta.append("ÀÜ¾×Àº "+change+"ÀÔ´Ï´Ù\n");
-			ta.append("500¿ø - "+change/500+"°³\n");
-			ta.append("100¿ø - "+change%500/100+"°³\n");
-			ta.append(" 50¿ø - "+change%100/50+"°³\n");
-			ta.append(" 10¿ø - "+change%50/10+"°³\n");
+			ta.append("ì”ì•¡ì€ "+change+"ì…ë‹ˆë‹¤\n");
+			ta.append("500ì› - "+change/500+"ê°œ\n");
+			ta.append("100ì› - "+change%500/100+"ê°œ\n");
+			ta.append(" 50ì› - "+change%100/50+"ê°œ\n");
+			ta.append(" 10ì› - "+change%50/10+"ê°œ\n");
 			
 			money -= itemValue;
 		} else {
-			ta.append("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù\n");//TextArea¿¡ ±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù Ãâ·Â
+			ta.append("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤\n");//TextAreaì— ê¸ˆì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤ ì¶œë ¥
 		}
 		
 	}

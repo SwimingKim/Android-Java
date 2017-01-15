@@ -28,7 +28,7 @@ public class OneActivity extends Activity{
 	int allNum[] = new int[64];// 1~50
 	int num[] = new int[16];
 	TextView arrTv[] = new TextView[16];
-	int count = 1; // ÇöÀç ´­·¯¾ßÇÒ ¼ıÀÚ
+	int count = 1; // í˜„ì¬ ëˆŒëŸ¬ì•¼í•  ìˆ«ì
 	private Chronometer chro;
 	private TextView tvMoveCount;
 	private Vibrator vib;
@@ -41,7 +41,7 @@ public class OneActivity extends Activity{
 
 		tvMoveCount = (TextView)findViewById(R.id.tv);
 		chro = (Chronometer)findViewById(R.id.chronometer1);
-		chro.setBase(SystemClock.elapsedRealtime()); // ½Ã°£ÃÊ±âÈ­ 
+		chro.setBase(SystemClock.elapsedRealtime()); // ì‹œê°„ì´ˆê¸°í™” 
 		chro.start();
 
 		vib = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
@@ -66,9 +66,9 @@ public class OneActivity extends Activity{
 		for (int i = 0; i < allNum.length; i++) {
 			allNum[i] = i + 1;
 		}
-		// ´äÀ» ¼¯±â(Shuffle)
+		// ë‹µì„ ì„ê¸°(Shuffle)
 		ran = new Random();
-		for (int j = 0; j < allNum.length; j += 16) {// ±¸°£º°·Î ¼¯±â À§ÇØ
+		for (int j = 0; j < allNum.length; j += 16) {// êµ¬ê°„ë³„ë¡œ ì„ê¸° ìœ„í•´
 			for (int i = 0; i < 16 * 2; i++) {// 0~15
 				int n1 = ran.nextInt(16) + j;
 				int n2 = ran.nextInt(16) + j;
@@ -83,10 +83,10 @@ public class OneActivity extends Activity{
 
 		mcl = new MyClickListener();
 
-		// ´äÁß¿¡ 16°³¸¸ TextView¿¡ º¸¿©ÁÖ±â
+		// ë‹µì¤‘ì— 16ê°œë§Œ TextViewì— ë³´ì—¬ì£¼ê¸°
 		for (int i = 0; i < arrTv.length; i++) {
 			arrTv[i].setText(allNum[i] + "");
-			// ÀÌº¥Æ® Ã³¸® - ¼ø¼­¿¡ ¸Â´Â ¼ıÀÚ¸¦ ´­·¶À» ¶§¸¸ ÁøÇàÇÏ±â
+			// ì´ë²¤íŠ¸ ì²˜ë¦¬ - ìˆœì„œì— ë§ëŠ” ìˆ«ìë¥¼ ëˆŒë €ì„ ë•Œë§Œ ì§„í–‰í•˜ê¸°
 			arrTv[i].setOnClickListener(mcl);
 		}
 		
@@ -104,7 +104,7 @@ public class OneActivity extends Activity{
 					allNum[i] = i + 1;
 				}
 				
-				for (int j = 0; j < allNum.length; j += 16) {// ±¸°£º°·Î ¼¯±â À§ÇØ
+				for (int j = 0; j < allNum.length; j += 16) {// êµ¬ê°„ë³„ë¡œ ì„ê¸° ìœ„í•´
 					for (int i = 0; i < 16 * 2; i++) {// 0~15
 						int n1 = ran.nextInt(16) + j;
 						int n2 = ran.nextInt(16) + j;
@@ -117,18 +117,18 @@ public class OneActivity extends Activity{
 				}
 				for (int i = 0; i < arrTv.length; i++) {
 					arrTv[i].setText(allNum[i] + "");
-					// ÀÌº¥Æ® Ã³¸® - ¼ø¼­¿¡ ¸Â´Â ¼ıÀÚ¸¦ ´­·¶À» ¶§¸¸ ÁøÇàÇÏ±â
+					// ì´ë²¤íŠ¸ ì²˜ë¦¬ - ìˆœì„œì— ë§ëŠ” ìˆ«ìë¥¼ ëˆŒë €ì„ ë•Œë§Œ ì§„í–‰í•˜ê¸°
 					arrTv[i].setOnClickListener(mcl);
 				}
 				count=1; moveCount=0;
-				tvMoveCount.setText("Å¬¸¯È½¼ö : "+moveCount);
+				tvMoveCount.setText("í´ë¦­íšŸìˆ˜ : "+moveCount);
 			}
 
 		});
 		b_colum.setOnTouchListener(new OnTouchListener() {
 			int temp[] = new int[16];
 			public boolean onTouch(View v, MotionEvent event) {
-				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ¹öÆ°À» ´­·¶À» ¶§ 
+				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ 
 					for (int i = 0; i < arrTv.length; i++) {
 						if (arrTv[i].getText().toString().equals(count+"")) {
 							arrTv[i].setBackgroundColor(Color.WHITE);
@@ -136,11 +136,11 @@ public class OneActivity extends Activity{
 					}
 //					gv.setAdapter(mg);
 
-				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ¹öÆ°À» ¶¼¾úÀ»¶§
+				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ë²„íŠ¼ì„ ë–¼ì—ˆì„ë•Œ
 //					for (int i = 0; i < index.length; i++) {
 //						index[i] = temp[i];
 //					}
-//					gv.setAdapter(mg);// ´Ù½Ã °ÔÀÓÈ­¸éÀ¸·Î µ¹¾Æ°¡±â 
+//					gv.setAdapter(mg);// ë‹¤ì‹œ ê²Œì„í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸° 
 					for (int i = 0; i < arrTv.length; i++) {
 						if (arrTv[i].getText().toString().equals(count+"")) {
 							arrTv[i].setBackgroundColor(Color.rgb(188, 86, 81));
@@ -172,36 +172,36 @@ public class OneActivity extends Activity{
 			try {
 				userNum = Integer.valueOf(tv.getText().toString());
 			} catch (Exception e) {
-				return;// 50 ³Ñ´Â(¼ıÀÚ°¡ ¾²¿©ÀÖÁö ¾ÊÀº)¹öÆ°À» ´©¸¦ °æ¿ì
+				return;// 50 ë„˜ëŠ”(ìˆ«ìê°€ ì“°ì—¬ìˆì§€ ì•Šì€)ë²„íŠ¼ì„ ëˆ„ë¥¼ ê²½ìš°
 			}
-			// ´©¸¥ TextView °ª°ú count(ÀÌ¹ø¿¡ ´­·¯¾ß µÉ ¼ıÀÚ) °°ÀºÁö Ã¼Å©
+			// ëˆ„ë¥¸ TextView ê°’ê³¼ count(ì´ë²ˆì— ëˆŒëŸ¬ì•¼ ë  ìˆ«ì) ê°™ì€ì§€ ì²´í¬
 			if (userNum == count) {
 				moveCount++;
 				if (userNum>=49) {
 					tv.setText("");
 					tv.setEnabled(false);
 				} else if (userNum + 15 <= allNum.length && allNum[userNum + 15] <= 50) {
-					// °°À¸¸é ´ÙÀ½ ¼ıÀÚ¸¦ º¸¿©ÁØ´Ù,
+					// ê°™ìœ¼ë©´ ë‹¤ìŒ ìˆ«ìë¥¼ ë³´ì—¬ì¤€ë‹¤,
 					tv.setText(allNum[userNum + 15] + "");
-				} else {// 50º¸´Ù Å« ¼ıÀÚ´Â º¸¿©ÁÖÁö ¾Ê°í, Å¬¸¯À» ¸·±â
+				} else {// 50ë³´ë‹¤ í° ìˆ«ìëŠ” ë³´ì—¬ì£¼ì§€ ì•Šê³ , í´ë¦­ì„ ë§‰ê¸°
 					tv.setText("");
 					tv.setEnabled(false);
 				}
 				count++;
 
-				if (count > 50) {// 50À» ´©¸£¸é °ÔÀÓÁ¾·á
+				if (count > 50) {// 50ì„ ëˆ„ë¥´ë©´ ê²Œì„ì¢…ë£Œ
 					chro.stop();
 					showDialog(0);
 				}
 
-			} else {// ´Ù¸£¸é ±×³É ºüÁ®³ª°¨
-				Toast.makeText(getApplicationContext(), "¶¯!! " + count + "¸¦ ´©¸£¼¼¿ä", 0).show();
+			} else {// ë‹¤ë¥´ë©´ ê·¸ëƒ¥ ë¹ ì ¸ë‚˜ê°
+				Toast.makeText(getApplicationContext(), "ë•¡!! " + count + "ë¥¼ ëˆ„ë¥´ì„¸ìš”", 0).show();
 				moveCount++;
-				tvMoveCount.setText("Å¬¸¯È½¼ö : "+moveCount);
+				tvMoveCount.setText("í´ë¦­íšŸìˆ˜ : "+moveCount);
 				vib.vibrate(300);
 				return;
 			}
-			tvMoveCount.setText("Å¬¸¯È½¼ö : "+moveCount);
+			tvMoveCount.setText("í´ë¦­íšŸìˆ˜ : "+moveCount);
 		}
 	}
 
@@ -209,16 +209,16 @@ public class OneActivity extends Activity{
 	protected Dialog onCreateDialog(int id) {
 		if (id==0) {
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("¼º°ø");
-			dialog.setMessage("°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï±î?");
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setTitle("ì„±ê³µ");
+			dialog.setMessage("ê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ê² ìŠµë‹ˆê¹Œ?");
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}

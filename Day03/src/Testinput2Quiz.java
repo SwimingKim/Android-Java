@@ -3,14 +3,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Buffered Reader È°¿ëÇÏ±â
+ * Buffered Reader í™œìš©í•˜ê¸°
  */
 public class Testinput2Quiz {
 	public static void main(String[] args) throws IOException {
-		// Buffered Reader¸¦ »ç¿ëÇØ¼­ »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹ŞÀ¸¼¼¿ä
-		// ¼ıÀÚ3°³ ÀÔ·Â ¹Ş¾Æ¼­ ÃÖ´ë°ªÀ» Ãâ·ÂÇÏ¼¼¿ä
+		// Buffered Readerë¥¼ ì‚¬ìš©í•´ì„œ ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ìœ¼ì„¸ìš”
+		// ìˆ«ì3ê°œ ì…ë ¥ ë°›ì•„ì„œ ìµœëŒ€ê°’ì„ ì¶œë ¥í•˜ì„¸ìš”
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("¼ıÀÚ 3°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ìˆ«ì 3ê°œë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		String str = br.readLine();
 		int num1 = Integer.parseInt(str);
 
@@ -27,7 +27,7 @@ public class Testinput2Quiz {
 			max = num2;
 		if (max < num3)
 			max = num3;
-		System.out.println("ÃÖ´ë°ªÀº" + max + "ÀÔ´Ï´Ù");
+		System.out.println("ìµœëŒ€ê°’ì€" + max + "ì…ë‹ˆë‹¤");
 
 	}// end of main
 }// end of class

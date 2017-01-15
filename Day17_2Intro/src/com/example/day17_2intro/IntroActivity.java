@@ -13,11 +13,11 @@ public class IntroActivity extends Activity {
 		setContentView(R.layout.intro);
 
 		TimerTask task = new TimerTask() {
-			public void run() {// ½ÇÇàÇÒ ÀÛ¾÷À» ±â¼ú
+			public void run() {// ì‹¤í–‰í•  ì‘ì—…ì„ ê¸°ìˆ 
 				Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 				startActivity(intent);
 
-				finish();// ÀÎÆ®È£ È­¸éÀº ¾ø¾Ö¹ö¸®±â
+				finish();// ì¸íŠ¸í˜¸ í™”ë©´ì€ ì—†ì• ë²„ë¦¬ê¸°
 			}
 		};
 

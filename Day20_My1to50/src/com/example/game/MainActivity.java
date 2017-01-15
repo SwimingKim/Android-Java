@@ -17,12 +17,12 @@ public class MainActivity extends Activity {
 	int num[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
 	TextView tv[] = new TextView[16];
 	int now = 1;
-	int dap1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }; // 1¿¡¼­
-																			// 16±îÁö
-	int dap2[] = { 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 }; // 17¿¡¼­
-																						// 32±îÁö
-	int dap3[] = { 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 }; // 33¿¡¼­
-																						// 48±îÁö
+	int dap1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }; // 1ì—ì„œ
+																			// 16ê¹Œì§€
+	int dap2[] = { 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 }; // 17ì—ì„œ
+																						// 32ê¹Œì§€
+	int dap3[] = { 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 }; // 33ì—ì„œ
+																						// 48ê¹Œì§€
 	int dap4[] = { 49, 50 };// 49~50
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 
 		TextView a = (TextView) findViewById(R.id.textView17);
 
-		// 1¿¡¼­ 16±îÁöÀÇ ¹è¿­
+		// 1ì—ì„œ 16ê¹Œì§€ì˜ ë°°ì—´
 		Random ran = new Random();
 		for (int i = 0; i < num.length * 2; i++) {
 			int n1 = ran.nextInt(num.length);
@@ -98,10 +98,10 @@ public class MainActivity extends Activity {
 					} else if (now >= 33 && now <= 34) {
 						tv.setText(dap4[now - 33] + "");
 					} else if (now == 50) {
-						Toast.makeText(getApplicationContext(), "¼º°ø À¯ÈŞ", 0).show();
+						Toast.makeText(getApplicationContext(), "ì„±ê³µ ìœ íœ´", 0).show();
 						tv.setText("");
 						for (int i = 0; i < MainActivity.this.tv.length; i++) {
-							MainActivity.this.tv[i].setText("±»");
+							MainActivity.this.tv[i].setText("êµ³");
 							tv.setEnabled(false);
 						}
 						sp.play(soundID2, 1, 1, 0, 0, 1);
@@ -114,7 +114,7 @@ public class MainActivity extends Activity {
 				} else {
 					Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 					vib.vibrate(500);
-					Toast.makeText(getApplicationContext(), now + " ¶¯", 0).show();
+					Toast.makeText(getApplicationContext(), now + " ë•¡", 0).show();
 					sp.play(soundID2, 1, 1, 0, 0, 1);
 				}
 

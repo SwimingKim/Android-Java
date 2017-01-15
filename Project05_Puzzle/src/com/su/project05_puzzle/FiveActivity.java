@@ -40,8 +40,8 @@ public class FiveActivity extends Activity{
 		Button b2 = (Button)findViewById(R.id.button2);
 		Button b3 = (Button)findViewById(R.id.button3);
 		chro = (Chronometer)findViewById(R.id.chronometer1);
-		chro.setBase(SystemClock.elapsedRealtime()); // ½Ã°£ÃÊ±âÈ­ 
-		chro.start(); // ½Ã°£ ½ÃÀÛ 
+		chro.setBase(SystemClock.elapsedRealtime()); // ì‹œê°„ì´ˆê¸°í™” 
+		chro.start(); // ì‹œê°„ ì‹œì‘ 
 		
 		tv[0] = (TextView) findViewById(R.id.textView1);
 		tv[1] = (TextView) findViewById(R.id.textView2);
@@ -61,7 +61,7 @@ public class FiveActivity extends Activity{
 					tv[i].setBackgroundColor(Color.WHITE);
 				}
 //				count = 0; 
-				tvMoveCount.setText("Å¬¸¯È½¼ö : 0");
+				tvMoveCount.setText("í´ë¦­íšŸìˆ˜ : 0");
 			}
 
 		});
@@ -79,7 +79,7 @@ public class FiveActivity extends Activity{
 		});
 		
 		class MyEvent implements android.view.View.OnClickListener {
-			/** ÇÑÁÙ ¿Ï¼ºµÇ¾ú´ÂÁö È®ÀÎ ÈÄ °á°ú¸¦ ¸®ÅÏÇÏ´Â ¸Ş¼­µå */
+			/** í•œì¤„ ì™„ì„±ë˜ì—ˆëŠ”ì§€ í™•ì¸ í›„ ê²°ê³¼ë¥¼ ë¦¬í„´í•˜ëŠ” ë©”ì„œë“œ */
 			boolean isLine(TextView t1, TextView t2, TextView t3, String ox) {
 				String s1 = t1.getText().toString();
 				String s2 = t2.getText().toString();
@@ -92,20 +92,20 @@ public class FiveActivity extends Activity{
 			}
 
 			public void onClick(View v) {
-				// ÇöÀç Å¬¸¯µÈ ¹öÆ°ÀÌ °ªÀÌ ½áÁ® ÀÖ´ÂÁö È®ÀÎ
+				// í˜„ì¬ í´ë¦­ëœ ë²„íŠ¼ì´ ê°’ì´ ì¨ì ¸ ìˆëŠ”ì§€ í™•ì¸
 				TextView tt = (TextView) v;
 				
 				if (tt.getText().toString().equals("")) {
-					// È¦Â¦ ±¸ºĞÇØ¼­ OX ¾²±â
-					tvMoveCount.setText("Å¬¸¯È½¼ö : "+((count/2)+(count%2)));
+					// í™€ì§ êµ¬ë¶„í•´ì„œ OX ì“°ê¸°
+					tvMoveCount.setText("í´ë¦­íšŸìˆ˜ : "+((count/2)+(count%2)));
 					tt.setText(count % 2 == 0 ? "X" : "O");
 					tt.setBackgroundColor(count % 2 == 0 ? Color.rgb(202,28,41) : Color.rgb(0,113,189));
-				} else { // ÀÌ¹Ì Å¬¸¯µÈ ¹öÆ°ÀÌ¶ó¸é
-					return; // ±×³É ºüÁ® ³ª°¡±â
+				} else { // ì´ë¯¸ í´ë¦­ëœ ë²„íŠ¼ì´ë¼ë©´
+					return; // ê·¸ëƒ¥ ë¹ ì ¸ ë‚˜ê°€ê¸°
 				}
 				count++;
 
-				// ÇÑ ÁÙ ¿Ï¼ºµÇ¾ú´ÂÁö È®ÀÎ
+				// í•œ ì¤„ ì™„ì„±ë˜ì—ˆëŠ”ì§€ í™•ì¸
 				if (isLine(tv[0], tv[1], tv[2], "X") || isLine(tv[3], tv[4], tv[5], "X")
 						|| isLine(tv[6], tv[7], tv[8], "X")
 
@@ -123,13 +123,13 @@ public class FiveActivity extends Activity{
 						|| isLine(tv[0], tv[4], tv[8], "O") || isLine(tv[2], tv[4], tv[6], "O")) {
 					showDialog(DIALOG_ID_WIN_O);
 				} else if (count >= 10) {
-					// ²ËÂ÷¼­ ´õÀÌ»ó ÁøÇàºÒ°¡
+					// ê½‰ì°¨ì„œ ë”ì´ìƒ ì§„í–‰ë¶ˆê°€
 					showDialog(DIALOG_ID_GAMEOVER);
 				}
 				
 
-				// Ä«¿îÆ® ¿Ã·ÁÁÖ±â
-				// Ä«¿îÆ®°¡ 9ÀÎÁö È®ÀÎ
+				// ì¹´ìš´íŠ¸ ì˜¬ë ¤ì£¼ê¸°
+				// ì¹´ìš´íŠ¸ê°€ 9ì¸ì§€ í™•ì¸
 
 			}
 		}
@@ -146,23 +146,23 @@ public class FiveActivity extends Activity{
 	
 	protected Dialog onCreateDialog(int id) {
 		final SoundPool sp = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
-//		final int soundID1 = sp.load(this, R.raw.clear, 1);// Àç»ı¿ì¼±¼øÀ§
+//		final int soundID1 = sp.load(this, R.raw.clear, 1);// ì¬ìƒìš°ì„ ìˆœìœ„
 //		final int soundID2 = sp.load(this, R.raw.wrong, 1);
 		switch (id) {
 		case DIALOG_ID_WIN_X:
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("ÆĞ¹è");
-			dialog.setMessage("°ÔÀÓ¿¡¼­ ÆĞ¹èÇÏ¼Ì½À´Ï´Ù.\n°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ½Ã°Ú½À´Ï±î?");
+			dialog.setTitle("íŒ¨ë°°");
+			dialog.setMessage("ê²Œì„ì—ì„œ íŒ¨ë°°í•˜ì…¨ìŠµë‹ˆë‹¤.\nê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 
 //			sp.play(soundID1, 1, 1, 0, 0, 1);
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}
@@ -170,17 +170,17 @@ public class FiveActivity extends Activity{
 			return dialog.create();
 		case DIALOG_ID_WIN_O:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("½Â¸®");
-			dialog2.setMessage("°ÔÀÓ¿¡¼­ ½Â¸®ÇÏ¼Ì½À´Ï´Ù.\n°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ½Ã°Ú½À´Ï±î?");
+			dialog2.setTitle("ìŠ¹ë¦¬");
+			dialog2.setMessage("ê²Œì„ì—ì„œ ìŠ¹ë¦¬í•˜ì…¨ìŠµë‹ˆë‹¤.\nê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 //			sp.play(soundID1, 1, 1, 0, 0, 1);
-			dialog2.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog2.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog2.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog2.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}
@@ -188,17 +188,17 @@ public class FiveActivity extends Activity{
 			return dialog2.create();
 		case DIALOG_ID_GAMEOVER:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			dialog3.setTitle("¿À·ù!");
-			dialog3.setMessage("È½¼ö¸¦ ÃÊ°úÇÏ¿´½À´Ï´Ù.\n°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ½Ã°Ú½À´Ï±î?");
+			dialog3.setTitle("ì˜¤ë¥˜!");
+			dialog3.setMessage("íšŸìˆ˜ë¥¼ ì´ˆê³¼í•˜ì˜€ìŠµë‹ˆë‹¤.\nê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 //			sp.play(soundID2, 1, 1, 0, 0, 1);
-			dialog3.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog3.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog3.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog3.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}

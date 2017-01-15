@@ -52,9 +52,9 @@ public class LastActivity extends Activity {
 	protected Dialog onCreateDialog(int id) {
 		if (id == 0) {
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("¼º°ø");
-			dialog.setMessage("´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï±î??");
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setTitle("ì„±ê³µ");
+			dialog.setMessage("ë‹¤ì‹œ ì‹œìž‘í•˜ê² ìŠµë‹ˆê¹Œ??");
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 					startActivity(intent);

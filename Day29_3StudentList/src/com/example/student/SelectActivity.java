@@ -93,7 +93,7 @@ public class SelectActivity extends Activity{
 		//			
 		//		}
 
-		// DataBase¿¡¼­ ÀĞ¾î¼­ ListView¿¡ º¸¿©ÁÖ±â - 1. ¹è¿­»ç¿ë
+		// DataBaseì—ì„œ ì½ì–´ì„œ ListViewì— ë³´ì—¬ì£¼ê¸° - 1. ë°°ì—´ì‚¬ìš©
 
 		//		SQLiteDatabase db = helper.getReadableDatabase();
 		//		Cursor c = db.query("student", null, null, null, null, null, null);
@@ -113,7 +113,7 @@ public class SelectActivity extends Activity{
 		//		ListView lv = (ListView)findViewById(R.id.listView1);
 		//		MyAdapter adapter = new MyAdapter(getApplicationContext(),R.layout.row, arrS);
 		//		lv.setAdapter(adapter);
-		// DataBase¿¡¼­ ÀĞ¾î¼­ ListView¿¡ º¸¿©ÁÖ±â - 2. ArrayList
+		// DataBaseì—ì„œ ì½ì–´ì„œ ListViewì— ë³´ì—¬ì£¼ê¸° - 2. ArrayList
 		//		
 		//		SQLiteDatabase db = helper.getReadableDatabase();
 		//		Cursor c = db.query("student", null, null, null, null, null, null);
@@ -131,7 +131,7 @@ public class SelectActivity extends Activity{
 		//		ListView lv = (ListView)findViewById(R.id.listView1);
 		//		MyAdapter adapter = new MyAdapter(getApplicationContext(),R.layout.row, al);
 		//		lv.setAdapter(adapter);
-		// DataBase¿¡¼­ ÀĞ¾î¼­ ListView¿¡ º¸¿©ÁÖ±â - 2. ArrayList
+		// DataBaseì—ì„œ ì½ì–´ì„œ ListViewì— ë³´ì—¬ì£¼ê¸° - 2. ArrayList
 		//		
 		//		SQLiteDatabase db = helper.getReadableDatabase();
 		//		Cursor c = db.query("student", null, null, null, null, null, null);
@@ -149,7 +149,7 @@ public class SelectActivity extends Activity{
 		//		ListView lv = (ListView)findViewById(R.id.listView1);
 		//		MyAdapter adapter = new MyAdapter(getApplicationContext(),R.layout.row, al);
 		//		lv.setAdapter(adapter);
-		// DataBase¿¡¼­ ÀĞ¾î¼­ ListView¿¡ º¸¿©ÁÖ±â - 3. CursorAdapter
+		// DataBaseì—ì„œ ì½ì–´ì„œ ListViewì— ë³´ì—¬ì£¼ê¸° - 3. CursorAdapter
 
 		helper = new MySQLite3(getApplicationContext(), "Student3.db", null, 1);
 		SQLiteDatabase db = helper.getReadableDatabase();
@@ -193,13 +193,13 @@ public class SelectActivity extends Activity{
 	//		LayoutInflater lif;
 	//		Cursor c;
 	//		MyStudent[] arrS;
-	//// ¹è¿­ »ç¿ë½Ã »ı¼ºÀÚ		
+	//// ë°°ì—´ ì‚¬ìš©ì‹œ ìƒì„±ì		
 	//		public MyAdapter(Context context, int row, MyStudent[] arrS) {
 	//			this.row = row;
 	//			this.arrS = arrS;
 	//			this.lif = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 	//		}
-	//// Arraylist »ç¿ë½Ã »ı¼ºÀÚ
+	//// Arraylist ì‚¬ìš©ì‹œ ìƒì„±ì
 	//		public MyAdapter(Context context, int row,ArrayList<MyStudent> al) {
 	//			this.row = row;
 	//			this.al = al;
@@ -208,16 +208,16 @@ public class SelectActivity extends Activity{
 	//
 	//
 	//		public int getCount() {
-	//			// ¹è¿­ »ç¿ë½Ã
+	//			// ë°°ì—´ ì‚¬ìš©ì‹œ
 	////			return arrS.length;
-	//			// ArrayList »ç¿ë½Ã	
+	//			// ArrayList ì‚¬ìš©ì‹œ	
 	//			return al.size();
 	//		}
 	//
 	//		public Object getItem(int position) {
-	//			// ¹è¿­ »ç¿ë½Ã
+	//			// ë°°ì—´ ì‚¬ìš©ì‹œ
 	////			return arrS[position];
-	//			// ArrayList »ç¿ë½Ã	
+	//			// ArrayList ì‚¬ìš©ì‹œ	
 	//			return al.get(position);
 	//		}
 	//
@@ -243,14 +243,14 @@ public class SelectActivity extends Activity{
 	////			tv_en.setText(arrStu.get(position).en+"");
 	//			
 	//			
-	//// ¹è¿­ »ç¿ë½Ã			
+	//// ë°°ì—´ ì‚¬ìš©ì‹œ			
 	////			tv_num.setText(arrS[position].id+"");
 	////			tv_name.setText(arrS[position].name);
 	////			tv_ko.setText(arrS[position].ko+"");
 	////			tv_ma.setText(arrS[position].ma+"");
 	////			tv_en.setText(arrS[position].en+"");
 	//			
-	//// ArrayList »ç¿ë½Ã			
+	//// ArrayList ì‚¬ìš©ì‹œ			
 	//			MyStudent s = al.get(position);
 	//			tv_num.setText(s.id+"");
 	//			tv_name.setText(s.name);
@@ -273,14 +273,14 @@ public class SelectActivity extends Activity{
 			super(context, c, autoRequery);
 			this.row = row;
 		}
-		// ÇÑ Çà¿¡ ÇØ´çÇÏ´Â View¸¦ »ı¼º : xml¿¡¼­ °¡Á®¿Â layoutÀ» °´Ã¼·Î ÁØºñ
+		// í•œ í–‰ì— í•´ë‹¹í•˜ëŠ” Viewë¥¼ ìƒì„± : xmlì—ì„œ ê°€ì ¸ì˜¨ layoutì„ ê°ì²´ë¡œ ì¤€ë¹„
 		public View newView(Context context, Cursor cursor, ViewGroup parent) {
 			LayoutInflater lif = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 			View view = lif.inflate(row, null);
 			return view;
 		}
 
-		// newView¿¡¼­ ÁØºñÇÑ ÇÑ ÇàÀÇ ºä¸¦ ¾î¶² µ¥ÀÌÅÍ¿Í ¿¬°áÇÒÁö ¼³Á¤
+		// newViewì—ì„œ ì¤€ë¹„í•œ í•œ í–‰ì˜ ë·°ë¥¼ ì–´ë–¤ ë°ì´í„°ì™€ ì—°ê²°í• ì§€ ì„¤ì •
 		public void bindView(View view, Context context, Cursor cursor) {
 			TextView tv_num = (TextView)view.findViewById(R.id.num);
 			TextView tv_name = (TextView)view.findViewById(R.id.nm);

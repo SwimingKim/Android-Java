@@ -1,5 +1,5 @@
 /**
- * ¾ÆÄ§¹®Á¦
+ * ì•„ì¹¨ë¬¸ì œ
  */
 public class Test {
 	public static void main(String[] args) {
@@ -8,8 +8,8 @@ public class Test {
 
 		System.out.println("a = " + a + ", b = " + b);// a=3, b=4
 
-		// ÄÚµå ÀÛ¼º a <-> b ±³Ã¼
-		int temp = a; // ÀÓ½Ã·Î a °ªÀ» º¸Á¸
+		// ì½”ë“œ ì‘ì„± a <-> b êµì²´
+		int temp = a; // ì„ì‹œë¡œ a ê°’ì„ ë³´ì¡´
 		a = b; // a = 4
 		b = temp; // b = 3
 
@@ -19,7 +19,7 @@ public class Test {
 
 		System.out.println("" + c + d + f); // 471
 
-		// °ªÀ» ±³Ã¼ swap
+		// ê°’ì„ êµì²´ swap
 		temp = c;
 		c = d;
 		d = f;
@@ -33,7 +33,7 @@ public class Test {
 
 		System.out.println("" + c + d + f); // 471
 
-		// °ªÀ» ±³Ã¼ swap
+		// ê°’ì„ êµì²´ swap
 		temp = f;
 		f = d;
 		d = c;

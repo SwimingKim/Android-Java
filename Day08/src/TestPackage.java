@@ -1,16 +1,16 @@
 
 /**
- * package ÆĞÅ°Áö : Å¬·¡½ºµéÀÇ ¹­À½
- * 		°ü¸®¸¦ Æí¸®ÇÏ°Ô ÇÏ±â À§ÇØ, °ü·ÃµÈ Å¬·¡½ºµé³¢¸® ±¸ºĞÇØ¼­ ¹­¾îÁÜ
- * 		ÆĞÅ°ÁöÀÇ ÀÌ¸§Àº ¼Ò¹®ÀÚ·Î ÀÛ¼ºÇÏÀÚ
- * Å¬·¡½ºÀÇ full name : ÆĞÅ°Áö¸í. Å¬·¡½º¸í		 
+ * package íŒ¨í‚¤ì§€ : í´ë˜ìŠ¤ë“¤ì˜ ë¬¶ìŒ
+ * 		ê´€ë¦¬ë¥¼ í¸ë¦¬í•˜ê²Œ í•˜ê¸° ìœ„í•´, ê´€ë ¨ëœ í´ë˜ìŠ¤ë“¤ë¼ë¦¬ êµ¬ë¶„í•´ì„œ ë¬¶ì–´ì¤Œ
+ * 		íŒ¨í‚¤ì§€ì˜ ì´ë¦„ì€ ì†Œë¬¸ìë¡œ ì‘ì„±í•˜ì
+ * í´ë˜ìŠ¤ì˜ full name : íŒ¨í‚¤ì§€ëª…. í´ë˜ìŠ¤ëª…		 
  * */
 
 import java.io.BufferedReader;
 //import java.util.Calendar;
 //import java.util.Date;
 //import java.util.Scanner;
-//°°Àº ÆĞÅ°Áö¸¦ ÇÑ ÁÙ·Î Ç¥½ÃÇÒ ¼ö ÀÖ´Ù
+//ê°™ì€ íŒ¨í‚¤ì§€ë¥¼ í•œ ì¤„ë¡œ í‘œì‹œí•  ìˆ˜ ìˆë‹¤
 import java.util.*;
 
 import angel.kr.ac.www.TestCAU;
@@ -19,14 +19,14 @@ public class TestPackage {
 	public static void main(String[] args) {
 		Scanner scan;
 		// angel.kr.ac.www.TestCAU cau = new angel.kr.ac.www.TestCAU();
-		TestCAU cau = new TestCAU();// Ç®³×ÀÓ ÀÛ¼ºÇÏÁö ¾Ê°í Å¬·¡½º ¸íÀ¸·Î Á¢±Ù - importÇÏÁö ¾ÊÀ½
+		TestCAU cau = new TestCAU();// í’€ë„¤ì„ ì‘ì„±í•˜ì§€ ì•Šê³  í´ë˜ìŠ¤ ëª…ìœ¼ë¡œ ì ‘ê·¼ - importí•˜ì§€ ì•ŠìŒ
 		Date d;
 		BufferedReader br;
 		Calendar c;
 		Bcc b;
-		// ÄÄÆÄÀÏ·¯°¡ java.lang ÆĞÅ°Áö¸¦ ÀÓÆ÷Æ®ÇØÁØ´Ù
-		String str;// import¾øÀÌ »ç¿ë
-		Math.random();// import¾øÀÌ »ç¿ë
+		// ì»´íŒŒì¼ëŸ¬ê°€ java.lang íŒ¨í‚¤ì§€ë¥¼ ì„í¬íŠ¸í•´ì¤€ë‹¤
+		String str;// importì—†ì´ ì‚¬ìš©
+		Math.random();// importì—†ì´ ì‚¬ìš©
 
 	}// end of main
 }// end of class

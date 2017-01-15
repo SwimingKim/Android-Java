@@ -34,10 +34,10 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		//¾Æ´äÅ¸ºä (ListView, GridView, Gallery, Spinner)
-		//1. ´Ù·®ÀÇ µ¥ÀÌÅÍ
-		//2. ¾Æ´äÅ¸ (layout, Å¬·¡½º ÀÛ¼º)
-		//3. ¾Æ´äÅ¸ºä¿¡ ¾Æ´äÅ¸ ¿¬°á
+		//ì•„ë‹µíƒ€ë·° (ListView, GridView, Gallery, Spinner)
+		//1. ë‹¤ëŸ‰ì˜ ë°ì´í„°
+		//2. ì•„ë‹µíƒ€ (layout, í´ëž˜ìŠ¤ ìž‘ì„±)
+		//3. ì•„ë‹µíƒ€ë·°ì— ì•„ë‹µíƒ€ ì—°ê²°
 
 		iv = (ImageView)findViewById(R.id.imageView1);
 
@@ -94,11 +94,11 @@ public class MainActivity extends Activity {
 		public void onSensorChanged(SensorEvent event) {
 			float[] x = event.values;
 			if (event.values!=null) {
-				if (event.values[0]>=3) {//¿À¸¥ÂÊÀ¸·Î °¡±â
+				if (event.values[0]>=3) {//ì˜¤ë¥¸ìª½ìœ¼ë¡œ ê°€ê¸°
 					p++; 
 //					event.values[0] = x[0];
 					if (p>=img.length-1) p = img.length-1;
-				} else if (event.values[0]<=-3){//¿ÞÂÊÀ¸·Î °¡±â
+				} else if (event.values[0]<=-3){//ì™¼ìª½ìœ¼ë¡œ ê°€ê¸°
 					p--;
 //					event.values[0] = x[0];
 					if (p<=0) p = 0;

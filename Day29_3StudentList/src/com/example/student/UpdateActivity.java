@@ -37,7 +37,7 @@ public class UpdateActivity extends Activity{
 				if (et_ko.getText().toString().equals("")&&
 						et_ma.getText().toString().equals("")&&
 						et_en.getText().toString().equals("")){
-					Toast.makeText(getApplicationContext(), "³»¿ëÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä", 0).show();
+					Toast.makeText(getApplicationContext(), "ë‚´ìš©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”", 0).show();
 				} else {
 					db = helper.getWritableDatabase();
 					ContentValues values = new ContentValues();

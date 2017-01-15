@@ -3,25 +3,25 @@ import java.util.Random;
 
 public class End {
 	public static void main(String[] args) {
-		// ÀÚ½ÅÀÇ ³ªÀÌ¸¦ »ó¼ö¿¡ ÀúÀåÈÄ Ãâ·Â
-		// ÀÚ½ÅÀÇ ÀÌ¸§À» º¯¼ö¿¡ ÀúÀåÈÄ Ãâ·Â
+		// ìì‹ ì˜ ë‚˜ì´ë¥¼ ìƒìˆ˜ì— ì €ì¥í›„ ì¶œë ¥
+		// ìì‹ ì˜ ì´ë¦„ì„ ë³€ìˆ˜ì— ì €ì¥í›„ ì¶œë ¥
 
 		final int AGE = 26;
-		String name = "¼­¹Î±Ô";
-		System.out.println(AGE + " »ì");
+		String name = "ì„œë¯¼ê·œ";
+		System.out.println(AGE + " ì‚´");
 		System.out.println(name);
 
-		// ¼÷Á¦ : ¿À´Ã ¹è¿î ³»¿ë º¹½À (1. È¯°æ¼³Ä¡, 2. º¯¼ö)
+		// ìˆ™ì œ : ì˜¤ëŠ˜ ë°°ìš´ ë‚´ìš© ë³µìŠµ (1. í™˜ê²½ì„¤ì¹˜, 2. ë³€ìˆ˜)
 		double d = 3.14;
 		float f = 3.14f;
 		f = (float) d;
 
 		int num[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 		int now = 1;
-		int dap1[] = new int[16]; // 1¿¡¼­ 16±îÁö
-		int dap2[] = new int[16]; // 17¿¡¼­ 32±îÁö
-		int dap3[] = new int[16]; // 33¿¡¼­ 48±îÁö
-		int dap4[] = { 49, 50 }; // 49¿¡¼­ 50±îÁö
+		int dap1[] = new int[16]; // 1ì—ì„œ 16ê¹Œì§€
+		int dap2[] = new int[16]; // 17ì—ì„œ 32ê¹Œì§€
+		int dap3[] = new int[16]; // 33ì—ì„œ 48ê¹Œì§€
+		int dap4[] = { 49, 50 }; // 49ì—ì„œ 50ê¹Œì§€
 
 		Random ran = new Random();
 		for (int i = 0; i < num.length * 2; i++) {

@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 		tv[8] = (TextView) findViewById(R.id.textView9);
 
 		class MyEvent implements android.view.View.OnClickListener {
-			/** ÇÑÁÙ ¿Ï¼ºµÇ¾ú´ÂÁö È®ÀÎ ÈÄ °á°ú¸¦ ¸®ÅÏÇÏ´Â ¸Ş¼­µå */
+			/** í•œì¤„ ì™„ì„±ë˜ì—ˆëŠ”ì§€ í™•ì¸ í›„ ê²°ê³¼ë¥¼ ë¦¬í„´í•˜ëŠ” ë©”ì„œë“œ */
 			boolean isLine(TextView t1, TextView t2, TextView t3, String ox) {
 				String s1 = t1.getText().toString();
 				String s2 = t2.getText().toString();
@@ -49,17 +49,17 @@ public class MainActivity extends Activity {
 			}
 
 			public void onClick(View v) {
-				// ÇöÀç Å¬¸¯µÈ ¹öÆ°ÀÌ °ªÀÌ ½áÁ® ÀÖ´ÂÁö È®ÀÎ
+				// í˜„ì¬ í´ë¦­ëœ ë²„íŠ¼ì´ ê°’ì´ ì¨ì ¸ ìˆëŠ”ì§€ í™•ì¸
 				TextView tt = (TextView) v;
 				if (tt.getText().toString().equals("")) {
-					// È¦Â¦ ±¸ºĞÇØ¼­ OX ¾²±â
+					// í™€ì§ êµ¬ë¶„í•´ì„œ OX ì“°ê¸°
 					tt.setText(count % 2 == 0 ? "X" : "O");
 					tt.setBackgroundColor(count % 2 == 0 ? Color.RED : Color.BLUE);
-				} else { // ÀÌ¹Ì Å¬¸¯µÈ ¹öÆ°ÀÌ¶ó¸é
-					return; // ±×³É ºüÁ® ³ª°¡±â
+				} else { // ì´ë¯¸ í´ë¦­ëœ ë²„íŠ¼ì´ë¼ë©´
+					return; // ê·¸ëƒ¥ ë¹ ì ¸ ë‚˜ê°€ê¸°
 				}
 
-				// ÇÑ ÁÙ ¿Ï¼ºµÇ¾ú´ÂÁö È®ÀÎ
+				// í•œ ì¤„ ì™„ì„±ë˜ì—ˆëŠ”ì§€ í™•ì¸
 				if (isLine(tv[0], tv[1], tv[2], "X") || isLine(tv[3], tv[4], tv[5], "X")
 						|| isLine(tv[6], tv[7], tv[8], "X")
 
@@ -78,11 +78,11 @@ public class MainActivity extends Activity {
 					showDialog(DIALOG_ID_WIN_O);
 				}
 
-				// Ä«¿îÆ® ¿Ã·ÁÁÖ±â
+				// ì¹´ìš´íŠ¸ ì˜¬ë ¤ì£¼ê¸°
 				count++;
-				// Ä«¿îÆ®°¡ 9ÀÎÁö È®ÀÎ
+				// ì¹´ìš´íŠ¸ê°€ 9ì¸ì§€ í™•ì¸
 				if (count == 10) {
-					// ²ËÂ÷¼­ ´õÀÌ»ó ÁøÇàºÒ°¡
+					// ê½‰ì°¨ì„œ ë”ì´ìƒ ì§„í–‰ë¶ˆê°€
 					showDialog(DIALOG_ID_GAMEOVER);
 				}
 
@@ -100,40 +100,40 @@ public class MainActivity extends Activity {
 
 	protected Dialog onCreateDialog(int id) {
 		final SoundPool sp = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
-		final int soundID1 = sp.load(this, R.raw.clear, 1);// Àç»ı¿ì¼±¼øÀ§
+		final int soundID1 = sp.load(this, R.raw.clear, 1);// ì¬ìƒìš°ì„ ìˆœìœ„
 		final int soundID2 = sp.load(this, R.raw.wrong, 1);
 		switch (id) {
 		case DIALOG_ID_WIN_X:
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("½Â¸®!");
-			dialog.setMessage("(Ãà) X ½Â¸®");
+			dialog.setTitle("ìŠ¹ë¦¬!");
+			dialog.setMessage("(ì¶•) X ìŠ¹ë¦¬");
 
 			sp.play(soundID1, 1, 1, 0, 0, 1);
-			dialog.setPositiveButton("È®ÀÎ", new DialogInterface.OnClickListener() {
+			dialog.setPositiveButton("í™•ì¸", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					finish();// ¾ÛÁ¾·á
+					finish();// ì•±ì¢…ë£Œ
 				}
 			});
 			return dialog.create();
 		case DIALOG_ID_WIN_O:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("½Â¸®!");
-			dialog2.setMessage("(Ãà) O ½Â¸®");
+			dialog2.setTitle("ìŠ¹ë¦¬!");
+			dialog2.setMessage("(ì¶•) O ìŠ¹ë¦¬");
 			sp.play(soundID1, 1, 1, 0, 0, 1);
-			dialog2.setPositiveButton("È®ÀÎ", new DialogInterface.OnClickListener() {
+			dialog2.setPositiveButton("í™•ì¸", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					finish();// ¾ÛÁ¾·á
+					finish();// ì•±ì¢…ë£Œ
 				}
 			});
 			return dialog2.create();
 		case DIALOG_ID_GAMEOVER:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			dialog3.setTitle("¿À·ù!");
-			dialog3.setMessage("È½¼ö¸¦ ÃÊ°úÇÏ¿´½À´Ï´Ù");
+			dialog3.setTitle("ì˜¤ë¥˜!");
+			dialog3.setMessage("íšŸìˆ˜ë¥¼ ì´ˆê³¼í•˜ì˜€ìŠµë‹ˆë‹¤");
 			sp.play(soundID2, 1, 1, 0, 0, 1);
-			dialog3.setPositiveButton("È®ÀÎ", new DialogInterface.OnClickListener() {
+			dialog3.setPositiveButton("í™•ì¸", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					finish();// ¾ÛÁ¾·á
+					finish();// ì•±ì¢…ë£Œ
 				}
 			});
 			return dialog3.create();

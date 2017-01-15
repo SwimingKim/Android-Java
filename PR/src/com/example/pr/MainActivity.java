@@ -17,14 +17,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	Act ac[] = { new Act("È«º¸´Ü", R.drawable.h, "2014.04.07~2014.12.31\n" + "°í¾ç½Ã ÀÚ¿øºÀ»ç¼¾ÅÍ È«º¸´Ü ¹× ±âÀÚ´ÜÈ°µ¿\n" + "°í¾ç ½ÃÀå Ç¥Ã¢Àå ¼ö¿©"),
-			new Act("ÇØ¿ÜºÀ»ç", R.drawable.c, "2016.01.12~2016.01.25\n" + "Ä¯º¸µð¾Æ ÃÊµîÇÐ»ý 1000¸í ´ë»ó\n±³À°ºÀ»ç, ³ë·ÂºÀ»ç, ¹®È­±³·ùÈ°µ¿"),
-			new Act("¼­ºê¿þÀÌ", R.drawable.s, "2013.08.24~2014.12.28\n" + "°í°´ ÀÀ´ë ¹× ¸ÅÀå °ü¸®, Àç·á ¹ßÁÖ,\n»÷µåÀ§Ä¡ Á¦Á¶ ¹× ÆÇ¸Å"),
-			new Act("ºÀ»çÈ°µ¿", R.drawable.b, "500½Ã°£ ºÀ»çÈ°µ¿ ¼öÇà\n" + "º¥Ã÷ ¸ð¹ÙÀÏÅ°Áî ±³À°ºÀ»ç´Ü, ½¯°¡ Áö¿ª¾Æµ¿¼¾ÅÍ, ¹é¼Û ³ëÀÎÁÖ°£¼¾ÅÍ, YMCA"),
-			new Act("R", R.drawable.wom, "Åë°èÇÐ¼úµ¿¾Æ¸® 1³â°£ È°µ¿\n" + "Twitter API·Î µ·°ú °ü·ÃÇÑ »ç¶÷ÀÇ ÀÎ½ÄÀ»\nºÐ¼®ÇÏ¿© wordcloud »ý¼º"),
-			new Act("SPSS", R.drawable.wom, "»çÈ¸Á¶»çºÐ¼®»ç 2±Þ Ãëµæ\n" + "Á¤Çü µ¥ÀÌÅÍ¿¡ ¿¬°üºÐ¼®, »ó°üºÐ¼® µî Åë°èÀû ±â¹ý Àû¿ë"),
-			new Act("Excel", R.drawable.wom, "ÄÄÇ»ÅÍÈ°¿ë´É·Â 2±Þ Ãëµæ\n" + "°í±Þ ÇÔ¼ö ¹× ¸ÅÅ©·Î È°¿ë °¡´É"),
-			new Act("Java", R.drawable.m, "ÇÁ·Î±×·¡¹ÖÀÇ ±âÃÊ ÀÌÇØ\n" + "ÀÚÆÇ±â ÇÁ·Î±×·¥ ±¸Çö") };
+	Act ac[] = { new Act("í™ë³´ë‹¨", R.drawable.h, "2014.04.07~2014.12.31\n" + "ê³ ì–‘ì‹œ ìžì›ë´‰ì‚¬ì„¼í„° í™ë³´ë‹¨ ë° ê¸°ìžë‹¨í™œë™\n" + "ê³ ì–‘ ì‹œìž¥ í‘œì°½ìž¥ ìˆ˜ì—¬"),
+			new Act("í•´ì™¸ë´‰ì‚¬", R.drawable.c, "2016.01.12~2016.01.25\n" + "ìº„ë³´ë””ì•„ ì´ˆë“±í•™ìƒ 1000ëª… ëŒ€ìƒ\nêµìœ¡ë´‰ì‚¬, ë…¸ë ¥ë´‰ì‚¬, ë¬¸í™”êµë¥˜í™œë™"),
+			new Act("ì„œë¸Œì›¨ì´", R.drawable.s, "2013.08.24~2014.12.28\n" + "ê³ ê° ì‘ëŒ€ ë° ë§¤ìž¥ ê´€ë¦¬, ìž¬ë£Œ ë°œì£¼,\nìƒŒë“œìœ„ì¹˜ ì œì¡° ë° íŒë§¤"),
+			new Act("ë´‰ì‚¬í™œë™", R.drawable.b, "500ì‹œê°„ ë´‰ì‚¬í™œë™ ìˆ˜í–‰\n" + "ë²¤ì¸  ëª¨ë°”ì¼í‚¤ì¦ˆ êµìœ¡ë´‰ì‚¬ë‹¨, ì‰´ê°€ ì§€ì—­ì•„ë™ì„¼í„°, ë°±ì†¡ ë…¸ì¸ì£¼ê°„ì„¼í„°, YMCA"),
+			new Act("R", R.drawable.wom, "í†µê³„í•™ìˆ ë™ì•„ë¦¬ 1ë…„ê°„ í™œë™\n" + "Twitter APIë¡œ ëˆê³¼ ê´€ë ¨í•œ ì‚¬ëžŒì˜ ì¸ì‹ì„\në¶„ì„í•˜ì—¬ wordcloud ìƒì„±"),
+			new Act("SPSS", R.drawable.wom, "ì‚¬íšŒì¡°ì‚¬ë¶„ì„ì‚¬ 2ê¸‰ ì·¨ë“\n" + "ì •í˜• ë°ì´í„°ì— ì—°ê´€ë¶„ì„, ìƒê´€ë¶„ì„ ë“± í†µê³„ì  ê¸°ë²• ì ìš©"),
+			new Act("Excel", R.drawable.wom, "ì»´í“¨í„°í™œìš©ëŠ¥ë ¥ 2ê¸‰ ì·¨ë“\n" + "ê³ ê¸‰ í•¨ìˆ˜ ë° ë§¤í¬ë¡œ í™œìš© ê°€ëŠ¥"),
+			new Act("Java", R.drawable.m, "í”„ë¡œê·¸ëž˜ë°ì˜ ê¸°ì´ˆ ì´í•´\n" + "ìžíŒê¸° í”„ë¡œê·¸ëž¨ êµ¬í˜„") };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

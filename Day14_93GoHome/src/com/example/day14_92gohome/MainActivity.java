@@ -34,10 +34,10 @@ public class MainActivity extends Activity {
 	Runnable r = new Runnable() {
 		public void run() {
 			if (rect_iv.intersects(390,410,390+300,410+300)) {
-				Toast.makeText(getApplicationContext(), "¡¢±Ÿ", 0).show();
+				Toast.makeText(getApplicationContext(), "Ï†ëÍ∑º", 0).show();
 			}
 //			if {
-//				Toast.makeText(getApplicationContext(), "¡§ªÛ", 0).show();
+//				Toast.makeText(getApplicationContext(), "Ï†ïÏÉÅ", 0).show();
 //				
 //			}
 			handler.post(r);

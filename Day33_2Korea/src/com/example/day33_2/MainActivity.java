@@ -18,13 +18,13 @@ public class MainActivity extends TabActivity {
 		TabHost host = getTabHost();
 		
 		TabSpec tab1 = host.newTabSpec("1");
-		tab1.setIndicator("¡ˆµµ ∫∏±‚");
+		tab1.setIndicator("ÏßÄÎèÑ Î≥¥Í∏∞");
 		tab1.setContent(new Intent(getApplicationContext(), MapActivity.class));
 		host.addTab(tab1);
 		
 		TabSpec tab2 = host.newTabSpec("2");
 		tab2.setContent(new Intent(getApplicationContext(), TextActivity.class));
-		tab2.setIndicator("∏Ò∑œ ∫∏±‚");
+		tab2.setIndicator("Î™©Î°ù Î≥¥Í∏∞");
 		host.addTab(tab2);
 		
 		

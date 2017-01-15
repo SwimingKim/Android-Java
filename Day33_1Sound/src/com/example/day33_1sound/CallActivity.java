@@ -32,23 +32,23 @@ public class CallActivity extends Activity{
 		soundID3 = sp3.load(this,R.raw.good,soundID3);
 		
 		Intent intent = getIntent();
-		if (intent.getStringExtra("»ó").equals("cry")) {
+		if (intent.getStringExtra("ìƒ").equals("cry")) {
 			
-			mp = MediaPlayer.create(getApplicationContext(), //ÇöÀç È­¸é Á¦¾î±ÇÀÚ
+			mp = MediaPlayer.create(getApplicationContext(), //í˜„ì¬ í™”ë©´ ì œì–´ê¶Œì
 					R.raw.cry);
 			mp.start();
 //			sp1.play(soundID1, 1, 1, 0, 0, 1);
 		} 
-		if (intent.getStringExtra("»ó").equals("smile")) {
+		if (intent.getStringExtra("ìƒ").equals("smile")) {
 //			if(mp!=null&&mp.isPlaying()) mp.stop();
-			mp = MediaPlayer.create(getApplicationContext(), //ÇöÀç È­¸é Á¦¾î±ÇÀÚ
+			mp = MediaPlayer.create(getApplicationContext(), //í˜„ì¬ í™”ë©´ ì œì–´ê¶Œì
 					R.raw.smile);
 			mp.start();
 //			sp2.play(soundID2, 1, 1, 0, 0, 1);
 		} 
-		if (intent.getStringExtra("»ó").equals("good")) {
+		if (intent.getStringExtra("ìƒ").equals("good")) {
 //			if(mp!=null&&mp.isPlaying()) mp.stop();
-			mp = MediaPlayer.create(getApplicationContext(), //ÇöÀç È­¸é Á¦¾î±ÇÀÚ
+			mp = MediaPlayer.create(getApplicationContext(), //í˜„ì¬ í™”ë©´ ì œì–´ê¶Œì
 					R.raw.good);
 			mp.start();
 //			sp3.play(soundID3, 1, 1, 0, 0, 1);
@@ -59,7 +59,7 @@ public class CallActivity extends Activity{
 
 		findViewById(R.id.imageView2).setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "ÅëÈ­Á¾·á", 0).show();
+				Toast.makeText(getApplicationContext(), "í†µí™”ì¢…ë£Œ", 0).show();
 				Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 				if(mp!=null&&mp.isPlaying()) mp.stop();
 				startActivity(intent);

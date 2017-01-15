@@ -3,19 +3,19 @@ import java.awt.Frame;
 import java.awt.Label;
 
 /**
- * AWT-Label ¶óº§ : ´Ü¼øÇÑ ¹®ÀÚ¿­ Ç¥½Ã
+ * AWT-Label ë¼ë²¨ : ë‹¨ìˆœí•œ ë¬¸ìì—´ í‘œì‹œ
  * 
  */
 public class TestLabel {
 	public static void main(String[] args) {
-		Frame f = new Frame("¶óº§ È°¿ë");
+		Frame f = new Frame("ë¼ë²¨ í™œìš©");
 		f.setBounds(100, 100, 300, 200);
 		f.setLayout(new FlowLayout());
 
-		Label l = new Label("°èÁÂ¹øÈ£¸¦ ¾Ë·ÁÁÖ¼¼¿ä");
+		Label l = new Label("ê³„ì¢Œë²ˆí˜¸ë¥¼ ì•Œë ¤ì£¼ì„¸ìš”");
 		System.out.println(l.getText());
-		l.setText("°èÁÂ¹øÈ£´Â ¾Ë·ÁÁÙ ¼ö ¾ø¾î¿ä");
-		l.setAlignment(Label.RIGHT);// ÁÂ, ¿ì , ¼¾ÅÍ
+		l.setText("ê³„ì¢Œë²ˆí˜¸ëŠ” ì•Œë ¤ì¤„ ìˆ˜ ì—†ì–´ìš”");
+		l.setAlignment(Label.RIGHT);// ì¢Œ, ìš° , ì„¼í„°
 
 		f.add(l);
 		f.setVisible(true);

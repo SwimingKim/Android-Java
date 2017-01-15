@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * ¹Ýº¹¹® È°¿ë
+ * ë°˜ë³µë¬¸ í™œìš©
  */
 public class TestStar {
 	public static void main(String[] args) {
@@ -99,7 +99,7 @@ public class TestStar {
 		// ******6 4
 		// ****4 6
 		// **2 8
-		System.out.println("¿©±â");
+		System.out.println("ì—¬ê¸°");
 		for (int i = 2; i <= 18; i += 2) {
 			if (i <= 10) {
 				for (int j = 0; j < i; j++) {

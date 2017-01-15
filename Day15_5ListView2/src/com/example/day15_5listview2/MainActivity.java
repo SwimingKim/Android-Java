@@ -18,30 +18,30 @@ public class MainActivity extends Activity {
 			R.drawable.jae, R.drawable.kang, R.drawable.jin, R.drawable.park, R.drawable.seo, R.drawable.jae,
 			R.drawable.kang, R.drawable.jin, R.drawable.park, R.drawable.seo, R.drawable.jae, R.drawable.kang,
 			R.drawable.jin, R.drawable.park, R.drawable.seo, R.drawable.jae, R.drawable.kang, R.drawable.jin,
-			R.drawable.park };// ¸¶Áö¸· ÄÄ¸¶´Â ¿¡·¯·Î ÀÎÁ¤ÇÏÁö ¾Ê´Â´Ù
-	String name[] = { "¼­ÀÎ±¹", "ÀçÈñ", "°­ÁöÈ¯", "Áø±¸", "¹Ú±â¿õ", "¼­ÀÎ±¹", "ÀçÈñ", "°­ÁöÈ¯", "Áø±¸", "¹Ú±â¿õ", "¼­ÀÎ±¹", "ÀçÈñ", "°­ÁöÈ¯", "Áø±¸", "¹Ú±â¿õ",
-			"¼­ÀÎ±¹", "ÀçÈñ", "°­ÁöÈ¯", "Áø±¸", "¹Ú±â¿õ", "¼­ÀÎ±¹", "ÀçÈñ", "°­ÁöÈ¯", "Áø±¸", "¹Ú±â¿õ", "¼­ÀÎ±¹", "ÀçÈñ", "°­ÁöÈ¯", "Áø±¸", "¹Ú±â¿õ", };
+			R.drawable.park };// ë§ˆì§€ë§‰ ì»´ë§ˆëŠ” ì—ëŸ¬ë¡œ ì¸ì •í•˜ì§€ ì•ŠëŠ”ë‹¤
+	String name[] = { "ì„œì¸êµ­", "ì¬í¬", "ê°•ì§€í™˜", "ì§„êµ¬", "ë°•ê¸°ì›…", "ì„œì¸êµ­", "ì¬í¬", "ê°•ì§€í™˜", "ì§„êµ¬", "ë°•ê¸°ì›…", "ì„œì¸êµ­", "ì¬í¬", "ê°•ì§€í™˜", "ì§„êµ¬", "ë°•ê¸°ì›…",
+			"ì„œì¸êµ­", "ì¬í¬", "ê°•ì§€í™˜", "ì§„êµ¬", "ë°•ê¸°ì›…", "ì„œì¸êµ­", "ì¬í¬", "ê°•ì§€í™˜", "ì§„êµ¬", "ë°•ê¸°ì›…", "ì„œì¸êµ­", "ì¬í¬", "ê°•ì§€í™˜", "ì§„êµ¬", "ë°•ê¸°ì›…", };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ListView ÀÛ¼ºÇÏ±â
-		// 1. ´Ù·®ÀÇ µ¥ÀÌÅÍ ÁØºñ
-		// 2. ¾Æ´äÅ¸ ±¸¼º(ÇÑ ÇàÀ» ´ã´çÇÏ´Â Layout, ¾Æ´äÅ¸ ±¸¼º)
-		// 3. ¾Æ´äÅ¸ ºä(ListView, GridView, Gallery, Spinner)¿¡ ¾Æ´äÅ¸ µî·Ï
+		// ListView ì‘ì„±í•˜ê¸°
+		// 1. ë‹¤ëŸ‰ì˜ ë°ì´í„° ì¤€ë¹„
+		// 2. ì•„ë‹µíƒ€ êµ¬ì„±(í•œ í–‰ì„ ë‹´ë‹¹í•˜ëŠ” Layout, ì•„ë‹µíƒ€ êµ¬ì„±)
+		// 3. ì•„ë‹µíƒ€ ë·°(ListView, GridView, Gallery, Spinner)ì— ì•„ë‹µíƒ€ ë“±ë¡
 		ListView lv = (ListView) findViewById(R.id.listView1);
 
-		// ¾Æ´äÅ¸
-		MyAdapter ma = new MyAdapter(getApplicationContext(), // ÇöÀçÈ­¸éÀÇ Á¦¾î±ÇÀÚ
-				R.layout.row, // ¸®½ºÆ®ÀÇ ÇÑ Çà¿¡ ±×·ÁÁÙ ·¹ÀÌ¾Æ¿ô
+		// ì•„ë‹µíƒ€
+		MyAdapter ma = new MyAdapter(getApplicationContext(), // í˜„ì¬í™”ë©´ì˜ ì œì–´ê¶Œì
+				R.layout.row, // ë¦¬ìŠ¤íŠ¸ì˜ í•œ í–‰ì— ê·¸ë ¤ì¤„ ë ˆì´ì•„ì›ƒ
 				img);
 		lv.setAdapter(ma);
 
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Toast.makeText(getApplicationContext(), "Å¬¸¯ÇÑ Æ÷Áö¼Ç : " + name[position], 1).show();
+				Toast.makeText(getApplicationContext(), "í´ë¦­í•œ í¬ì§€ì…˜ : " + name[position], 1).show();
 			}
 		});
 
@@ -63,21 +63,21 @@ class MyAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public int getCount() {// ÇÊ¼ö : ¸®½ºÆ® º¸¿©ÁÙ ¸ñ·ÏÀÇ ÃÑ °³¼ö(µ¥ÀÌÅÍÀÇ °³¼ö)
+	public int getCount() {// í•„ìˆ˜ : ë¦¬ìŠ¤íŠ¸ ë³´ì—¬ì¤„ ëª©ë¡ì˜ ì´ ê°œìˆ˜(ë°ì´í„°ì˜ ê°œìˆ˜)
 		return img.length;
 	}
 
 	@Override
-	public Object getItem(int position) {// ¼±ÅÃ : ÇØ´ç position¹øÂ°ÀÇ µ¥ÀÌÅÍ
+	public Object getItem(int position) {// ì„ íƒ : í•´ë‹¹ positionë²ˆì§¸ì˜ ë°ì´í„°
 		return img[position];
 	}
 
 	@Override
-	public long getItemId(int position) {// ¼±ÅÃ : ÇØ´ç position¹øÂ°ÀÇ µ¥ÀÌÅÍÀÇ °íÀ¯id
+	public long getItemId(int position) {// ì„ íƒ : í•´ë‹¹ positionë²ˆì§¸ì˜ ë°ì´í„°ì˜ ê³ ìœ id
 		return position;
 	}
 
-	// ÇÊ¼ö : ¸®½ºÆ®ÀÇ ÇÑ Çà¿¡ ¾î¶² µ¥ÀÌÅÍ¸¦ ¾îµğ À§Á¬¿¡ º¸¿©ÁÙ °ÍÀÎÁö ¼³Á¤
+	// í•„ìˆ˜ : ë¦¬ìŠ¤íŠ¸ì˜ í•œ í–‰ì— ì–´ë–¤ ë°ì´í„°ë¥¼ ì–´ë”” ìœ„ì ¯ì— ë³´ì—¬ì¤„ ê²ƒì¸ì§€ ì„¤ì •
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
 			convertView = lif.inflate(layout, null);

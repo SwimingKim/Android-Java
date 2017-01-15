@@ -26,16 +26,16 @@ public class MainActivity extends Activity {
 	b1.setOnClickListener(new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			// ´ÙÀÌ¾ó·Î±× ¶ç¿ì±â
+			// ë‹¤ì´ì–¼ë¡œê·¸ ë„ìš°ê¸°
 			showDialog(DIALOG_ID_DELETE);
-			// ´ÙÀÌ¾ó·Î±×ÀÇ »ı¸íÁÖ±âµµ ¾Èµå·ÎÀÌµåos¿¡¼­ °ü¸®ÇÑ´Ù.
+			// ë‹¤ì´ì–¼ë¡œê·¸ì˜ ìƒëª…ì£¼ê¸°ë„ ì•ˆë“œë¡œì´ë“œosì—ì„œ ê´€ë¦¬í•œë‹¤.
 		}
 	});
 	b2.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View v) {
-			// ´ÙÀÌ¾ó·Î±× ¶ç¿ì±â
+			// ë‹¤ì´ì–¼ë¡œê·¸ ë„ìš°ê¸°
 			showDialog(DIALOG_ID_GOTOLUNCH);
 			
 		}
@@ -43,38 +43,38 @@ public class MainActivity extends Activity {
 	}//end of onCreate
 	
 	protected Dialog onCreateDialog(int id){
-		// ÀÎÀÚ°ª : showDialog ¸Ş¼­µå È£Ãâ½Ã Áø´ÜÇÑ ´ÙÀÌ¾ó·Î±× ID °ª
+		// ì¸ìê°’ : showDialog ë©”ì„œë“œ í˜¸ì¶œì‹œ ì§„ë‹¨í•œ ë‹¤ì´ì–¼ë¡œê·¸ ID ê°’
 		switch (id) {
 		case DIALOG_ID_DELETE:
-			// dialog °´Ã¼¸¦ »ı¼ºÇÑ´Ù. ÇöÀçÈ­¸éÀÇ Á¦¾î±ÇÀÚ¸¦ this·Î Ç¥½ÃÇØÁØ´Ù
+			// dialog ê°ì²´ë¥¼ ìƒì„±í•œë‹¤. í˜„ì¬í™”ë©´ì˜ ì œì–´ê¶Œìë¥¼ thisë¡œ í‘œì‹œí•´ì¤€ë‹¤
 			AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-			dialog.setTitle("»èÁ¦").setMessage("Á¤¸»·Î »èÁ¦ÇÏ°Ú½À´Ï±î?")
-				.setPositiveButton("»èÁ¦", new DialogInterface.OnClickListener() {
-			// ´ÙÀÌ¾ó·Î±× ¹öÆ° ÀÌº¥Æ® Ã³¸®½Ã DialogInterface.onClickLister ÀÌ¸§À» Á¤È®È÷ ½á¾ßÇÔ
+			dialog.setTitle("ì‚­ì œ").setMessage("ì •ë§ë¡œ ì‚­ì œí•˜ê² ìŠµë‹ˆê¹Œ?")
+				.setPositiveButton("ì‚­ì œ", new DialogInterface.OnClickListener() {
+			// ë‹¤ì´ì–¼ë¡œê·¸ ë²„íŠ¼ ì´ë²¤íŠ¸ ì²˜ë¦¬ì‹œ DialogInterface.onClickLister ì´ë¦„ì„ ì •í™•íˆ ì¨ì•¼í•¨
 					@Override
 					public void onClick(DialogInterface dialog, int which){
-					Toast.makeText(getApplicationContext(),"»èÁ¦µÊ.",Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(),"ì‚­ì œë¨.",Toast.LENGTH_SHORT).show();
 					}
 				
 				});
-			dialog.setNegativeButton("Ãë¼Ò",null);
-			return dialog.create();// ¶ç¾îÁÙ ´ÙÀÌ¾ó·Î±×¸¦ ¸¸µé¾î¼­ ¸®ÅÏ
+			dialog.setNegativeButton("ì·¨ì†Œ",null);
+			return dialog.create();// ë„ì–´ì¤„ ë‹¤ì´ì–¼ë¡œê·¸ë¥¼ ë§Œë“¤ì–´ì„œ ë¦¬í„´
 		case DIALOG_ID_GOTOLUNCH:
 			AlertDialog.Builder dialog2 = new AlertDialog.Builder(this);
-			dialog2.setTitle("Á¡½É");
-			dialog2.setMessage("Á¡½É¸ÔÀ»·¯ °¥·¡¿ä?");
-			dialog2.setPositiveButton("¿¹ Áö±İ ¤¡¤¡",new DialogInterface.OnClickListener() {
+			dialog2.setTitle("ì ì‹¬");
+			dialog2.setMessage("ì ì‹¬ë¨¹ì„ëŸ¬ ê°ˆë˜ìš”?");
+			dialog2.setPositiveButton("ì˜ˆ ì§€ê¸ˆ ã„±ã„±",new DialogInterface.OnClickListener() {
 				
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					// TODO Auto-generated method stub
-					Toast.makeText(getApplicationContext(),"¹ä¸Ô±â",Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(),"ë°¥ë¨¹ê¸°",Toast.LENGTH_SHORT).show();
 				}});
-			dialog2.setNegativeButton("¾Æ´Ï¿À ´ÙÀÌ¾îÆ®",null);
+			dialog2.setNegativeButton("ì•„ë‹ˆì˜¤ ë‹¤ì´ì–´íŠ¸",null);
 			
-			return dialog2.create();//¶ç¾îÁÙ ´ÙÀÌ¾ó·Î±×¸¦ ¸¸µé¾î¼­ ¸®ÅÏ
+			return dialog2.create();//ë„ì–´ì¤„ ë‹¤ì´ì–¼ë¡œê·¸ë¥¼ ë§Œë“¤ì–´ì„œ ë¦¬í„´
 		default:
-			return null;//¶ç¾îÁÙ ´ÙÀÌ¾ó·Î±×¸¦ ¸¸µé¾î¼­ ¸®ÅÏ
+			return null;//ë„ì–´ì¤„ ë‹¤ì´ì–¼ë¡œê·¸ë¥¼ ë§Œë“¤ì–´ì„œ ë¦¬í„´
 		}
 	}
 }//end of class

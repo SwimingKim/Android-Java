@@ -3,13 +3,13 @@ public class TestCard {
 	public static void main(String[] args) {
 
 		Card ca1 = new Card();
-		ca1.kind = "ÇÏÆ®";
+		ca1.kind = "í•˜íŠ¸";
 		ca1.number = 4;
 
 		ca1.printCard();
 
 		Card ca2 = new Card();
-		ca2.kind = "´ÙÀÌ¾Æ¸óµå";
+		ca2.kind = "ë‹¤ì´ì•„ëª¬ë“œ";
 		ca2.number = 9;
 
 		ca2.printCard();
@@ -30,7 +30,7 @@ class Card {
 	int number;
 
 	void printCard() {
-		System.out.println("Ä«µåÀÇ ¹«´Ì´Â " + kind + "ÀÌ°í\n" + "Ä«µåÀÇ ¼ıÀÚ´Â " + number + "ÀÔ´Ï´Ù.");
+		System.out.println("ì¹´ë“œì˜ ë¬´ëŠ¬ëŠ” " + kind + "ì´ê³ \n" + "ì¹´ë“œì˜ ìˆ«ìëŠ” " + number + "ì…ë‹ˆë‹¤.");
 	}
 
 }

@@ -81,18 +81,18 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DIALOG_O:
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("Á¾·á");
-			dialog.setMessage("O°¡ ½Â¸®Çß½À´Ï´Ù.");
+			dialog.setTitle("ì¢…ë£Œ");
+			dialog.setMessage("Oê°€ ìŠ¹ë¦¬í–ˆìŠµë‹ˆë‹¤.");
 			return dialog.create();
 		case DIALOG_X:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("Á¾·á");
-			dialog2.setMessage("X°¡ ½Â¸®Çß½À´Ï´Ù.");
+			dialog2.setTitle("ì¢…ë£Œ");
+			dialog2.setMessage("Xê°€ ìŠ¹ë¦¬í–ˆìŠµë‹ˆë‹¤.");
 			return dialog2.create();
 		case DIALOG_END:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			dialog3.setTitle("Á¾·á");
-			dialog3.setMessage("È½¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.");
+			dialog3.setTitle("ì¢…ë£Œ");
+			dialog3.setMessage("íšŸìˆ˜ë¥¼ ì´ˆê³¼í–ˆìŠµë‹ˆë‹¤.");
 			return dialog3.create();
 
 		default:

@@ -43,7 +43,7 @@ public class InsertActivity extends Activity {
 				if (dt_name.getText().toString().equals("") && dt_id.getText().toString().equals("")
 						&& dt_ko.getText().toString().equals("") && dt_en.getText().toString().equals("")
 						&& dt_ma.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä", 0).show();
+					Toast.makeText(getApplicationContext(), "ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”", 0).show();
 				} else {
 					db = helper.getWritableDatabase();
 					ContentValues values = new ContentValues();

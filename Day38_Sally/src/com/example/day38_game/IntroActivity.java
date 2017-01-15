@@ -44,18 +44,18 @@ public class IntroActivity extends Activity{
 		switch (id) {
 		case DIALOG_START:
 			AlertDialog.Builder dialog1 = new Builder(this);
-			dialog1.setTitle("°ÔÀÓ½ÃÀÛ");
-			dialog1.setMessage("°ÔÀÓ¸ğµå¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
-			dialog1.setPositiveButton("¼¾¼­¸ğµå", new DialogInterface.OnClickListener() {
+			dialog1.setTitle("ê²Œì„ì‹œì‘");
+			dialog1.setMessage("ê²Œì„ëª¨ë“œë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”");
+			dialog1.setPositiveButton("ì„¼ì„œëª¨ë“œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					intent.putExtra("¸ğµå", "¼¾¼­");
+					intent.putExtra("ëª¨ë“œ", "ì„¼ì„œ");
 					startActivity(intent);
 					finish();
 				}
 			});
-			dialog1.setNegativeButton("ÅÍÄ¡¸ğµå", new DialogInterface.OnClickListener() {
+			dialog1.setNegativeButton("í„°ì¹˜ëª¨ë“œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					intent.putExtra("¸ğµå", "ÅÍÄ¡");
+					intent.putExtra("ëª¨ë“œ", "í„°ì¹˜");
 					startActivity(intent);
 					finish();
 				}
@@ -63,13 +63,13 @@ public class IntroActivity extends Activity{
 			return dialog1.create();
 		case DIALOG_WAY:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("°ÔÀÓ¹æ¹ı");
-			dialog2.setMessage("¶óÀÎ VS Ä«Ä«¿ÀÅå\nÄ«Ä«¿ÀÅå VS ¶óÀÎ\n"
-					+ "¼¼±âÀÇ ´ë°á ´©°¡ ½Â¸®ÇÒ °ÍÀÎ°¡?\n"
-					+ "30¸¶¸® ¿¡µå¿öµå ÀâÀ¸¸é ¶óÀÎÀÌ,\n"
-					+ "3°³ÀÇ ·Î°í¸¦ ÀâÀ¸¸é Ä«Ä«¿ÀÅåÀÌ\n"
-					+ "½Â¸®ÇÏ°Ô µË´Ï´Ù!!");
-			dialog2.setPositiveButton("È®ÀÎ", null);
+			dialog2.setTitle("ê²Œì„ë°©ë²•");
+			dialog2.setMessage("ë¼ì¸ VS ì¹´ì¹´ì˜¤í†¡\nì¹´ì¹´ì˜¤í†¡ VS ë¼ì¸\n"
+					+ "ì„¸ê¸°ì˜ ëŒ€ê²° ëˆ„ê°€ ìŠ¹ë¦¬í•  ê²ƒì¸ê°€?\n"
+					+ "30ë§ˆë¦¬ ì—ë“œì›Œë“œ ì¡ìœ¼ë©´ ë¼ì¸ì´,\n"
+					+ "3ê°œì˜ ë¡œê³ ë¥¼ ì¡ìœ¼ë©´ ì¹´ì¹´ì˜¤í†¡ì´\n"
+					+ "ìŠ¹ë¦¬í•˜ê²Œ ë©ë‹ˆë‹¤!!");
+			dialog2.setPositiveButton("í™•ì¸", null);
 			return dialog2.create();
 		default:
 			break;

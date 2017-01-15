@@ -3,15 +3,15 @@ import java.lang.invoke.SwitchPoint;
 import javax.swing.JOptionPane;
 
 /**
- * Èå¸§Á¦¾î : if, switch, »ïÇ×¿¬»êÀÚ
+ * íë¦„ì œì–´ : if, switch, ì‚¼í•­ì—°ì‚°ì
  */
 public class TestSwitchQuiz {
 	public static void main(String[] args) {
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¼ıÀÚ·Î ¹Ş¾Æ¼­(´Ş ÀÔ·Â 1~12)
-		// ±× ´ŞÀÇ ³¯Â¥¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		String str = JOptionPane.showInputDialog("1~12 Áß¿¡¼­ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ ìˆ«ìë¡œ ë°›ì•„ì„œ(ë‹¬ ì…ë ¥ 1~12)
+		// ê·¸ ë‹¬ì˜ ë‚ ì§œë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		String str = JOptionPane.showInputDialog("1~12 ì¤‘ì—ì„œ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		int month = Integer.parseInt(str);
-		System.out.println("´ç½ÅÀÌ ¼±ÅÃÇÑ ´ŞÀº " + month + "¿ù ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì´ ì„ íƒí•œ ë‹¬ì€ " + month + "ì›” ì…ë‹ˆë‹¤");
 
 		if (month == 2) {
 			System.out.println(28);

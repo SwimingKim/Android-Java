@@ -1,77 +1,77 @@
 import javax.swing.JOptionPane;
 
 /**
- * ÀÚÆÇ±â ÇÁ·Î±×·¥
+ * ìíŒê¸° í”„ë¡œê·¸ë¨
  * */
 public class VendingMachine2 {
 	public static void main(String[] args) {
 		
 		while (true) {
 			
-			String item[] = {"","Ä­Å¸Å¸","¹ĞÅ°½º","¸¶¿îÆ¾ µà","·¹¾²ºñ","»çÀÌ´Ù"
-					,"Ä«ÆäÅ¸ÀÓ","¸ÆÄİ","Äİ¶ó","°ÔÅä·¹ÀÌ"};
+			String item[] = {"","ì¹¸íƒ€íƒ€","ë°€í‚¤ìŠ¤","ë§ˆìš´í‹´ ë“€","ë ˆì“°ë¹„","ì‚¬ì´ë‹¤"
+					,"ì¹´í˜íƒ€ì„","ë§¥ì½œ","ì½œë¼","ê²Œí† ë ˆì´"};
 			int value[] = {0,1800,800,900,500,1100,700,600,700,700};
 						
-			System.out.println("1. Ä­Å¸Å¸ 1800\n"
-					+ "2. ¹ĞÅ°½º 800\n"
-					+ "3. ¸¶¿îÆ¾ µà 900\n"
-					+ "4. ·¹¾²ºñ 500\n"
-					+ "5. »çÀÌ´Ù 1100\n"
-					+ "6. Ä«ÆäÅ¸ÀÓ 700\n"
-					+ "7. ¸ÆÄİ 600\n"
-					+ "8. Äİ¶ó 700\n"
-					+ "9. °ÔÅä·¹ÀÌ 700\n");
-			System.out.println("¿ì¸® ÀÚÆÇ±â °ñ¶ó°ñ¶ó~");
+			System.out.println("1. ì¹¸íƒ€íƒ€ 1800\n"
+					+ "2. ë°€í‚¤ìŠ¤ 800\n"
+					+ "3. ë§ˆìš´í‹´ ë“€ 900\n"
+					+ "4. ë ˆì“°ë¹„ 500\n"
+					+ "5. ì‚¬ì´ë‹¤ 1100\n"
+					+ "6. ì¹´í˜íƒ€ì„ 700\n"
+					+ "7. ë§¥ì½œ 600\n"
+					+ "8. ì½œë¼ 700\n"
+					+ "9. ê²Œí† ë ˆì´ 700\n");
+			System.out.println("ìš°ë¦¬ ìíŒê¸° ê³¨ë¼ê³¨ë¼~");
 						
 			int money;
 			while (true){
 				try {
-					String strMoney = JOptionPane.showInputDialog("µ·À» ³ÖÀ¸¼¼¿ä");
+					String strMoney = JOptionPane.showInputDialog("ëˆì„ ë„£ìœ¼ì„¸ìš”");
 					money = Integer.valueOf(strMoney);
-					if (money<0) {//0º¸´Ù Ä¿¾ßÇÑ´Ù
-						System.out.println("µ·Àº ¾ç¼ö·Î ÀÔ·ÂÇÏ¼Å¾ß ÇÕ´Ï´Ù");
-					} else {//0º¸´Ù Å¬ ¶§ - Á¦´ë·Î ÀÔ·ÂÇßÀ» °æ¿ì
+					if (money<0) {//0ë³´ë‹¤ ì»¤ì•¼í•œë‹¤
+						System.out.println("ëˆì€ ì–‘ìˆ˜ë¡œ ì…ë ¥í•˜ì…”ì•¼ í•©ë‹ˆë‹¤");
+					} else {//0ë³´ë‹¤ í´ ë•Œ - ì œëŒ€ë¡œ ì…ë ¥í–ˆì„ ê²½ìš°
 						break;
 					}
-				} catch (Exception e) {//intÇü ¼ıÀÚ°¡ ¾Æ´Ò °æ¿ì(±ÛÀÚ ÀÍ¼Á¼Ç Ã³¸®)
-					System.out.println("µ·Àº ¼ıÀÚ·Î ÀÔ·ÂÇÏ¼Å¾ß ÇÕ´Ï´Ù");
+				} catch (Exception e) {//intí˜• ìˆ«ìê°€ ì•„ë‹ ê²½ìš°(ê¸€ì ìµì…‰ì…˜ ì²˜ë¦¬)
+					System.out.println("ëˆì€ ìˆ«ìë¡œ ì…ë ¥í•˜ì…”ì•¼ í•©ë‹ˆë‹¤");
 				}			
 			}
 							
-			//1~9»çÀÌÀÇ Á¤¼ö¿©¾ß ÇÑ´Ù
+			//1~9ì‚¬ì´ì˜ ì •ìˆ˜ì—¬ì•¼ í•œë‹¤
 			int menu;
 			while (true) {
 				try {
-					String strMenu = JOptionPane.showInputDialog("À½·á¼ö¸¦ °í¸£¼¼¿ä");
+					String strMenu = JOptionPane.showInputDialog("ìŒë£Œìˆ˜ë¥¼ ê³ ë¥´ì„¸ìš”");
 					menu = Integer.valueOf(strMenu);
-					if (menu>=1 && menu <=9) {//1~9»çÀÌÀÇ Á¤¼ö¿©¾ß ÇÑ´Ù
-						break;//Á¦´ë·Î ÀÔ·ÂµÊ
+					if (menu>=1 && menu <=9) {//1~9ì‚¬ì´ì˜ ì •ìˆ˜ì—¬ì•¼ í•œë‹¤
+						break;//ì œëŒ€ë¡œ ì…ë ¥ë¨
 					} else {
-						System.out.println("¸Ş´º´Â 1~9»çÀÌÀÇ Á¤¼ö¿©¾ß ÇÑ´Ù");
+						System.out.println("ë©”ë‰´ëŠ” 1~9ì‚¬ì´ì˜ ì •ìˆ˜ì—¬ì•¼ í•œë‹¤");
 					}
-				} catch (Exception e) {// ±ÛÀÚ ÀÔ·Â ÀÍ¼Á¼Ç Ã³¸®
-					System.out.println("¸Ş´º´Â ¼ıÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä");
+				} catch (Exception e) {// ê¸€ì ì…ë ¥ ìµì…‰ì…˜ ì²˜ë¦¬
+					System.out.println("ë©”ë‰´ëŠ” ìˆ«ìë¡œ ì…ë ¥í•˜ì„¸ìš”");
 				}
 				
 			}
 			
 			
-			if (money>value[menu]) {//Á¦Ç°µµ¹Ù ³ÖÀº µ·ÀÌ Å¬ ¶§ 
+			if (money>value[menu]) {//ì œí’ˆë„ë°” ë„£ì€ ëˆì´ í´ ë•Œ 
 
-				System.out.println(item[menu]+" ¼±ÅÃÇÏ¼Ì½À´Ï´Ù");
-				System.out.println("³ÖÀº µ· : "+money+"¿ø");
-				System.out.println("¼±ÅÃÇÑ Á¦Ç° : "+item[menu]);
-				System.out.println("Á¦Ç° °¡°İ : "+value[menu]+"¿ø\n");
+				System.out.println(item[menu]+" ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤");
+				System.out.println("ë„£ì€ ëˆ : "+money+"ì›");
+				System.out.println("ì„ íƒí•œ ì œí’ˆ : "+item[menu]);
+				System.out.println("ì œí’ˆ ê°€ê²© : "+value[menu]+"ì›\n");
 				int change = money - value[menu];
-				System.out.println("ÀÜµ· : "+change);
-				System.out.println("500¿ø - "+change/500+"°³\n"
-						+ "100¿ø - "+change%500/100+"°³\n"
-						+ " 50¿ø - "+change%100/50+"°³\n"
-						+ " 10¿ø - "+change%50/10+"°³\n"
-						+ "±¸¸Å¿Ï·á\n\n");		
+				System.out.println("ì”ëˆ : "+change);
+				System.out.println("500ì› - "+change/500+"ê°œ\n"
+						+ "100ì› - "+change%500/100+"ê°œ\n"
+						+ " 50ì› - "+change%100/50+"ê°œ\n"
+						+ " 10ì› - "+change%50/10+"ê°œ\n"
+						+ "êµ¬ë§¤ì™„ë£Œ\n\n");		
 				break;
-			} else {//Á¦Ç°º¸´Ù ³ÖÀº µ·ÀÌ ÀûÀ¸¸é
-				System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù");
+			} else {//ì œí’ˆë³´ë‹¤ ë„£ì€ ëˆì´ ì ìœ¼ë©´
+				System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤");
 			}
 				
 		}

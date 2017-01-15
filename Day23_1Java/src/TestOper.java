@@ -1,42 +1,42 @@
 /**
- * ¿¬»êÀÚ
+ * ì—°ì‚°ì
  */
 public class TestOper {
 	public static void main(String[] args) {
-		// ¿¬»êÀÚ¸¦ ÇÇ¿¬»êÀÚÀÇ °³¼ö¿¡ µû¶ó
-		// ´ÜÇ×¿¬»êÀÚ, ÀÌÇ×¿¬»êÀÚ, »ïÇ×¿¬»êÀÚ, ´ëÀÔ¿¬»êÀÚ
-		// ´ÜÇ×¿¬»êÀÚ : ++ -- +/- !
+		// ì—°ì‚°ìë¥¼ í”¼ì—°ì‚°ìì˜ ê°œìˆ˜ì— ë”°ë¼
+		// ë‹¨í•­ì—°ì‚°ì, ì´í•­ì—°ì‚°ì, ì‚¼í•­ì—°ì‚°ì, ëŒ€ì…ì—°ì‚°ì
+		// ë‹¨í•­ì—°ì‚°ì : ++ -- +/- !
 		int a = 3;
 		a++;// 4
 		++a;// 5
 		a--;// 4
 
-		a = -3;// ºÎÈ£¿¬»êÀÚ
+		a = -3;// ë¶€í˜¸ì—°ì‚°ì
 		a = -a;
 
 		boolean b = false;
-		b = !b;// ³í¸®ºÎÁ¤¿¬»êÀÚ
+		b = !b;// ë…¼ë¦¬ë¶€ì •ì—°ì‚°ì
 		b = !true;
 
-		// ÀÌÇ× ¿¬»êÀÚ
+		// ì´í•­ ì—°ì‚°ì
 		int c = 3 + 4;
-		c = 5 % 2;// ³ª¸ÓÁö ¿¬»êÀÚ
+		c = 5 % 2;// ë‚˜ë¨¸ì§€ ì—°ì‚°ì
 
-		boolean bb = true && false;// ³í¸®¿¬»êÀÚ(È¿À²ÀûÀÎ ¿¬»êÀ» ÇÑ´Ù)
+		boolean bb = true && false;// ë…¼ë¦¬ì—°ì‚°ì(íš¨ìœ¨ì ì¸ ì—°ì‚°ì„ í•œë‹¤)
 		bb = true || false;
 
-		bb = false & false;// ºñÆ®¿¬»êÀÚ
+		bb = false & false;// ë¹„íŠ¸ì—°ì‚°ì
 		bb = true | false;
 
-		// if (args instanceof type) {// args º¯¼öÀÇ ³»¿ëÀÌ "type"À¸È£ Çüº¯È¯ÀÌ °¡´ÉÇÑÁö
+		// if (args instanceof type) {// args ë³€ìˆ˜ì˜ ë‚´ìš©ì´ "type"ìœ¼í˜¸ í˜•ë³€í™˜ì´ ê°€ëŠ¥í•œì§€
 		// type new_name = (type) args;
 		//
 		// }
 
-		// »ïÇ× ¿¬»êÀÚ
+		// ì‚¼í•­ ì—°ì‚°ì
 		int z = (3 < 5) ? 7 : 8;
 
-		// ´ëÀÔ ¿¬»êÀÚ : =(µîÈ£) ¿Í ÀÌÇ×¿¬»êÀÚÀÇ Á¶ÇÕ
+		// ëŒ€ì… ì—°ì‚°ì : =(ë“±í˜¸) ì™€ ì´í•­ì—°ì‚°ìì˜ ì¡°í•©
 		int y = 4;
 		y += 2; // y = y+2;
 		y -= 2;
@@ -47,7 +47,7 @@ public class TestOper {
 		int numOfApples = 123;
 		int sizeOfBucket = 10;
 		int numOfBucket = numOfApples / sizeOfBucket + (numOfApples % sizeOfBucket >= 1 ? 1 : 0);
-		System.out.println("ÇÊ¿äÇÑ ¹Ù±¸´ÏÀÇ ¼ö :" + numOfBucket);
+		System.out.println("í•„ìš”í•œ ë°”êµ¬ë‹ˆì˜ ìˆ˜ :" + numOfBucket);
 
 	}// end of main
 }// end of class

@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// internal Memory¿¡ ¾²±â		
+		// internal Memoryì— ì“°ê¸°		
 		final EditText et = (EditText)findViewById(R.id.editText1);
 		Button bWrite = (Button)findViewById(R.id.button1);
 		Button bRead = (Button)findViewById(R.id.button2);
@@ -35,19 +35,19 @@ public class MainActivity extends Activity {
 				String str = et.getText().toString();
 
 				try {
-					FileOutputStream fos = openFileOutput("myInternel.txt",//ÀúÀåÇÒ ÆÄÀÏ¸í
+					FileOutputStream fos = openFileOutput("myInternel.txt",//ì €ì¥í•  íŒŒì¼ëª…
 							Context.MODE_APPEND);
-					//MODE_APPEND : Ãß°¡. MODE_PRIVATE : µ¤¿©¾²±â
+					//MODE_APPEND : ì¶”ê°€. MODE_PRIVATE : ë®ì—¬ì“°ê¸°
 					PrintWriter out = new PrintWriter(fos);
 					out.println(str);
-					out.close();//ÆÄÀÏÀÛ¼º Á¾·á
+					out.close();//íŒŒì¼ì‘ì„± ì¢…ë£Œ
 					et.setText("");
-					Log.d("file", "³»ºÎÆÄÀÏ¾²±â¿Ï·á");
+					Log.d("file", "ë‚´ë¶€íŒŒì¼ì“°ê¸°ì™„ë£Œ");
 
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
-				//ÀúÀå¸ğµå
+				//ì €ì¥ëª¨ë“œ
 			}
 		});
 
@@ -60,13 +60,13 @@ public class MainActivity extends Activity {
 
 					while (true) {
 						String str = br.readLine();
-						if (str==null) break;//ÆÄÀÏÀÇ ³¡ÀÌ¸é ¹İº¹ Å»Ãâ
+						if (str==null) break;//íŒŒì¼ì˜ ëì´ë©´ ë°˜ë³µ íƒˆì¶œ
 						result += str+"\n";
 					}
 
 				tv.setText(result);
 				br.close();
-				Log.d("file", "³»ºÎÆÄÀÏÀĞ±â ¿Ï·á");
+				Log.d("file", "ë‚´ë¶€íŒŒì¼ì½ê¸° ì™„ë£Œ");
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

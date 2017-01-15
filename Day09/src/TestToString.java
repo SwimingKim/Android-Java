@@ -1,10 +1,10 @@
 /**
- * Object ÃÖ°íÁ¶»ó Å¬·¡½º toString - ¹®ÀÚ¿­·Î º¯°æÇØÁÖ´Â ¸Ş¼­µå
+ * Object ìµœê³ ì¡°ìƒ í´ë˜ìŠ¤ toString - ë¬¸ìì—´ë¡œ ë³€ê²½í•´ì£¼ëŠ” ë©”ì„œë“œ
  */
 public class TestToString {
 	public static void main(String[] args) {
 		Card c1 = new Card();
-		c1.kind = "´ÙÀÌ¾Æ";
+		c1.kind = "ë‹¤ì´ì•„";
 		c1.num = 7;
 		// c1.printCard();
 		System.out.println(c1);
@@ -21,7 +21,7 @@ class Card {
 	// System.out.println(kind+num);
 	// }
 
-	public String toString() {// °´Ã¼ÀÇ Á¤º¸¸¦ ¹®ÀÚ¿­·Î ¸¸µé¾î¼­ ¸®ÅÏÇØÁÖ´Â ¸Ş¼­µå
+	public String toString() {// ê°ì²´ì˜ ì •ë³´ë¥¼ ë¬¸ìì—´ë¡œ ë§Œë“¤ì–´ì„œ ë¦¬í„´í•´ì£¼ëŠ” ë©”ì„œë“œ
 		return "[" + kind + "," + num + "]";
 	}
 

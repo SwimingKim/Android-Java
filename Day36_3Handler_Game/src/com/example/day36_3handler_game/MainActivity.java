@@ -16,39 +16,39 @@ import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 	private Random ran = new Random();
-	int count = 0; // ÃÑ¾ËÀÇ °³¼ö
-	int x, y; // ÃÑ¾ËÀÇ ÁÂÇ¥
-	int dx, dy;// ÃÑ¾ËÀÇ ÀÌµ¿·®
+	int count = 0; // ì´ì•Œì˜ ê°œìˆ˜
+	int x, y; // ì´ì•Œì˜ ì¢Œí‘œ
+	int dx, dy;// ì´ì•Œì˜ ì´ë™ëŸ‰
 	Handler handler = new Handler();
 	private ImageView iv1 = null;
-	Runnable r = new Runnable() { // È­¸éÀ» °»½ÅÇÏ´Â ÀÛ¾÷ 
+	Runnable r = new Runnable() { // í™”ë©´ì„ ê°±ì‹ í•˜ëŠ” ì‘ì—… 
 
 		@Override
 		public void run() {
-			// ÀÚ¹ÙÄÚµå¿¡¼­ µ¿ÀûÀ¸·Î À§Á¬À» »ı¼ºÇÏ±â
+			// ìë°”ì½”ë“œì—ì„œ ë™ì ìœ¼ë¡œ ìœ„ì ¯ì„ ìƒì„±í•˜ê¸°
 			if (count < 1) {
 				iv1 = new ImageView(getApplicationContext());
 				iv1.setImageResource(R.drawable.ic_launcher);
 				al.addView(iv1);
 				x = ran.nextInt(al.getWidth());
-				y = ran.nextInt(al.getHeight()); // ÃÊ±âÀ§Ä¡ ÁöÁ¤
+				y = ran.nextInt(al.getHeight()); // ì´ˆê¸°ìœ„ì¹˜ ì§€ì •
 				dx = ran.nextInt(20)-10;
 				dy = ran.nextInt(20);
 				count++;
 			}
 			x+=dx;
 			y+=dy;
-			// ½ºÅ©¸° ¹ş¾î³µ´ÂÁö È®ÀÎÇÏ±â
+			// ìŠ¤í¬ë¦° ë²—ì–´ë‚¬ëŠ”ì§€ í™•ì¸í•˜ê¸°
 			if (x<0||x>al.getWidth()||y<0||y>al.getHeight()) {
-				// ½ºÅ©¸°¿¡¼­ ¹ş¾î³ª¸é ÀÌ¹ÌÁö ºä¸¦ Á¦°ÅÇÏ±â
+				// ìŠ¤í¬ë¦°ì—ì„œ ë²—ì–´ë‚˜ë©´ ì´ë¯¸ì§€ ë·°ë¥¼ ì œê±°í•˜ê¸°
 				al.removeView(iv1);
-				count--;//ÃÑ¾Ë °³¼ö 1°³ ÁÙÀÌ±â
+				count--;//ì´ì•Œ ê°œìˆ˜ 1ê°œ ì¤„ì´ê¸°
 			} else {
 				iv1.setX(x);
 				iv1.setY(y);
 			}
 
-			handler.postDelayed(r, 10);//´ÙÀ½ ÀÛ¾÷À» ¿¹¾àÇÏ°í Á¾·á
+			handler.postDelayed(r, 10);//ë‹¤ìŒ ì‘ì—…ì„ ì˜ˆì•½í•˜ê³  ì¢…ë£Œ
 		}
 	};
 	private AbsoluteLayout al;
@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 		b_start.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				handler.post(r);//È­¸éº¯°æ½ÃÀÛ
+				handler.post(r);//í™”ë©´ë³€ê²½ì‹œì‘
 			}
 		});
 		b_end.setOnClickListener(new OnClickListener() {

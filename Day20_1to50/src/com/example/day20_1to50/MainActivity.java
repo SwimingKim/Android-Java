@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
 	int allNum[] = new int[64];// 1~50
 	int num[] = new int[16];
 	TextView arrTv[] = new TextView[16];
-	int count = 1; // ÇöÀç ´­·¯¾ßÇÒ ¼ıÀÚ
+	int count = 1; // í˜„ì¬ ëˆŒëŸ¬ì•¼í•  ìˆ«ì
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,9 +43,9 @@ public class MainActivity extends Activity {
 			allNum[i] = i + 1;
 		}
 
-		// ´äÀ» ¼¯±â(Shuffle)
+		// ë‹µì„ ì„ê¸°(Shuffle)
 		Random ran = new Random();
-		for (int j = 0; j < allNum.length; j += 16) {// ±¸°£º°·Î ¼¯±â À§ÇØ
+		for (int j = 0; j < allNum.length; j += 16) {// êµ¬ê°„ë³„ë¡œ ì„ê¸° ìœ„í•´
 			for (int i = 0; i < 16 * 2; i++) {// 0~15
 				int n1 = ran.nextInt(16) + j;
 				int n2 = ran.nextInt(16) + j;
@@ -65,25 +65,25 @@ public class MainActivity extends Activity {
 				try {
 					userNum = Integer.valueOf(tv.getText().toString());
 				} catch (Exception e) {
-					return;// 50 ³Ñ´Â(¼ıÀÚ°¡ ¾²¿©ÀÖÁö ¾ÊÀº)¹öÆ°À» ´©¸¦ °æ¿ì
+					return;// 50 ë„˜ëŠ”(ìˆ«ìê°€ ì“°ì—¬ìˆì§€ ì•Šì€)ë²„íŠ¼ì„ ëˆ„ë¥¼ ê²½ìš°
 				}
-				// ´©¸¥ TextView °ª°ú count(ÀÌ¹ø¿¡ ´­·¯¾ß µÉ ¼ıÀÚ) °°ÀºÁö Ã¼Å©
+				// ëˆ„ë¥¸ TextView ê°’ê³¼ count(ì´ë²ˆì— ëˆŒëŸ¬ì•¼ ë  ìˆ«ì) ê°™ì€ì§€ ì²´í¬
 				if (userNum == count) {
 					if (userNum + 15 <= allNum.length && allNum[userNum + 15] <= 50) {
-						// °°À¸¸é ´ÙÀ½ ¼ıÀÚ¸¦ º¸¿©ÁØ´Ù,
+						// ê°™ìœ¼ë©´ ë‹¤ìŒ ìˆ«ìë¥¼ ë³´ì—¬ì¤€ë‹¤,
 						tv.setText(allNum[userNum + 15] + "");
-					} else {// 50º¸´Ù Å« ¼ıÀÚ´Â º¸¿©ÁÖÁö ¾Ê°í, Å¬¸¯À» ¸·±â
+					} else {// 50ë³´ë‹¤ í° ìˆ«ìëŠ” ë³´ì—¬ì£¼ì§€ ì•Šê³ , í´ë¦­ì„ ë§‰ê¸°
 						tv.setText("");
 						tv.setEnabled(false);
 					}
 					count++;
 
-					if (count > 50) {// 50À» ´©¸£¸é °ÔÀÓÁ¾·á
-						Toast.makeText(getApplicationContext(), "°ÔÀÓ¼º°ø", 0).show();
+					if (count > 50) {// 50ì„ ëˆ„ë¥´ë©´ ê²Œì„ì¢…ë£Œ
+						Toast.makeText(getApplicationContext(), "ê²Œì„ì„±ê³µ", 0).show();
 					}
 
-				} else {// ´Ù¸£¸é ±×³É ºüÁ®³ª°¨
-					Toast.makeText(getApplicationContext(), "¶¯!! " + count + "¸¦ ´©¸£¼¼¿ä", 0).show();
+				} else {// ë‹¤ë¥´ë©´ ê·¸ëƒ¥ ë¹ ì ¸ë‚˜ê°
+					Toast.makeText(getApplicationContext(), "ë•¡!! " + count + "ë¥¼ ëˆ„ë¥´ì„¸ìš”", 0).show();
 					return;
 				}
 
@@ -91,10 +91,10 @@ public class MainActivity extends Activity {
 		}
 		MyClickListener mcl = new MyClickListener();
 
-		// ´äÁß¿¡ 16°³¸¸ TextView¿¡ º¸¿©ÁÖ±â
+		// ë‹µì¤‘ì— 16ê°œë§Œ TextViewì— ë³´ì—¬ì£¼ê¸°
 		for (int i = 0; i < arrTv.length; i++) {
 			arrTv[i].setText(allNum[i] + "");
-			// ÀÌº¥Æ® Ã³¸® - ¼ø¼­¿¡ ¸Â´Â ¼ıÀÚ¸¦ ´­·¶À» ¶§¸¸ ÁøÇàÇÏ±â
+			// ì´ë²¤íŠ¸ ì²˜ë¦¬ - ìˆœì„œì— ë§ëŠ” ìˆ«ìë¥¼ ëˆŒë €ì„ ë•Œë§Œ ì§„í–‰í•˜ê¸°
 			arrTv[i].setOnClickListener(mcl);
 		}
 

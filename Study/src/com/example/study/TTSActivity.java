@@ -19,7 +19,7 @@ public class TTSActivity extends Activity{
 		
 		
 		// TextToSpeech
-		// 1. °¡Àå ½¬¿î ¹æ¹ı
+		// 1. ê°€ì¥ ì‰¬ìš´ ë°©ë²•
 		myTTS = new TextToSpeech(this, new OnInitListener() {
 			public void onInit(int status) {
 				if(status != TextToSpeech.ERROR) {  
@@ -31,11 +31,11 @@ public class TTSActivity extends Activity{
 		String utteranceId=this.hashCode() + "";  
 		myTTS.speak("", TextToSpeech.QUEUE_FLUSH, null, utteranceId);  
 		
-		// 2. ttsÁ¾·á È®ÀÎ
+		// 2. ttsì¢…ë£Œ í™•ì¸
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID,"stringId");
 
-		myTTS.speak("¾Æ", TextToSpeech.QUEUE_FLUSH, params);
+		myTTS.speak("ì•„", TextToSpeech.QUEUE_FLUSH, params);
 		myTTS.setOnUtteranceProgressListener(new UtteranceProgressListener() {
 			public void onStart(String utteranceId) {
 
@@ -45,7 +45,7 @@ public class TTSActivity extends Activity{
 			}
 
 			public void onDone(String utteranceId) {
-				//tts Á¾·á ÈÄ ½ÇÇà
+				//tts ì¢…ë£Œ í›„ ì‹¤í–‰
 			}
 		});
 	}

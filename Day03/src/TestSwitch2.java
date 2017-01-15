@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
 /**
- * swithÀÇ Á¶°Ç °ªÀº intÇü ¹üÀ§ ³»ÀÇ Á¤¼ö¸¸ °¡´É ¹®ÀÚ¿­µµ °¡´ÉÇÏ´Ù
+ * swithì˜ ì¡°ê±´ ê°’ì€ intí˜• ë²”ìœ„ ë‚´ì˜ ì •ìˆ˜ë§Œ ê°€ëŠ¥ ë¬¸ìì—´ë„ ê°€ëŠ¥í•˜ë‹¤
  */
 public class TestSwitch2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 
 		switch (scan.nextLine()) {
-		case "¼­¹Î±Ô":
-			System.out.println("Àß»ı°å½À´Ï´Ù");
+		case "ì„œë¯¼ê·œ":
+			System.out.println("ì˜ìƒê²¼ìŠµë‹ˆë‹¤");
 			break;
-		case "¹®»õ¹Ì":
-			System.out.println("ÀÌ»Ş´Ï´Ù");
+		case "ë¬¸ìƒˆë¯¸":
+			System.out.println("ì´ì©ë‹ˆë‹¤");
 			break;
-		case "È«Á¤ÅÃ":
-			System.out.println("¸ÚÁı´Ï´Ù");
+		case "í™ì •íƒ":
+			System.out.println("ë©‹ì§‘ë‹ˆë‹¤");
 			break;
 
 		}

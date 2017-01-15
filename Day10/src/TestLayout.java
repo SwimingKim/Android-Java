@@ -14,16 +14,16 @@ public class TestLayout {
 	public static void main(String[] args) {
 		Frame f = new Frame();
 		f.setBounds(100, 100, 300, 400);
-		f.setLayout(new FlowLayout());// ·¹ÀÌ¾Æ¿ô ¸Å´ÏÀú ¼³Á¤
-		// °øÃ¥¿¡ ÀÛ¼ºÇÏ´Â °ÍÃ³·³ À­ÁÙÀÇ ÁÂ->¿ì ¹èÄ¡ ÈÄ ´ÙÀ½ ÁÙ·Î ³»·Á¼­ ¹èÄ¡
+		f.setLayout(new FlowLayout());// ë ˆì´ì•„ì›ƒ ë§¤ë‹ˆì € ì„¤ì •
+		// ê³µì±…ì— ì‘ì„±í•˜ëŠ” ê²ƒì²˜ëŸ¼ ìœ—ì¤„ì˜ ì¢Œ->ìš° ë°°ì¹˜ í›„ ë‹¤ìŒ ì¤„ë¡œ ë‚´ë ¤ì„œ ë°°ì¹˜
 
-		f.add(new JButton("¹öÆ°"));
-		f.add(new JButton("¹öÆ°"));
-		f.add(new JButton("¹öÆ°"));
-		f.add(new JButton("¹öÆ°"));
-		f.add(new JButton("¹öÆ°"));
-		f.add(new JButton("¹öÆ°"));
-		f.add(new JButton("¹öÆ°"));
+		f.add(new JButton("ë²„íŠ¼"));
+		f.add(new JButton("ë²„íŠ¼"));
+		f.add(new JButton("ë²„íŠ¼"));
+		f.add(new JButton("ë²„íŠ¼"));
+		f.add(new JButton("ë²„íŠ¼"));
+		f.add(new JButton("ë²„íŠ¼"));
+		f.add(new JButton("ë²„íŠ¼"));
 
 		// f.setVisible(true);
 
@@ -31,11 +31,11 @@ public class TestLayout {
 		f2.setBounds(100, 400, 300, 400);
 		f2.setLayout(new BorderLayout());
 		//
-		JButton jb1 = new JButton("¹öÆ°1");
-		JButton jb2 = new JButton("¹öÆ°2");
-		JButton jb3 = new JButton("¹öÆ°3");
-		JButton jb4 = new JButton("¹öÆ°4");
-		JButton jb5 = new JButton("¹öÆ°5");
+		JButton jb1 = new JButton("ë²„íŠ¼1");
+		JButton jb2 = new JButton("ë²„íŠ¼2");
+		JButton jb3 = new JButton("ë²„íŠ¼3");
+		JButton jb4 = new JButton("ë²„íŠ¼4");
+		JButton jb5 = new JButton("ë²„íŠ¼5");
 		f2.add(jb1, BorderLayout.NORTH);
 		f2.add(jb2, BorderLayout.EAST);
 		f2.add(jb3, BorderLayout.WEST);
@@ -46,13 +46,13 @@ public class TestLayout {
 
 		Frame f3 = new Frame("GridLayout");
 		f3.setBounds(700, 100, 300, 400);
-		f3.setLayout(new GridLayout(3, 2));// Çà, ¿­
-		f3.add(new Button("¹öÆ°"));
-		f3.add(new Button("¹öÆ°"));
-		f3.add(new Button("¹öÆ°"));
-		f3.add(new Button("¹öÆ°"));
-		f3.add(new Button("¹öÆ°"));
-		f3.add(new Button("¹öÆ°"));
+		f3.setLayout(new GridLayout(3, 2));// í–‰, ì—´
+		f3.add(new Button("ë²„íŠ¼"));
+		f3.add(new Button("ë²„íŠ¼"));
+		f3.add(new Button("ë²„íŠ¼"));
+		f3.add(new Button("ë²„íŠ¼"));
+		f3.add(new Button("ë²„íŠ¼"));
+		f3.add(new Button("ë²„íŠ¼"));
 		// f3.setVisible(true);
 
 	}// end of main

@@ -2,16 +2,16 @@
 public class TestMovie {
 	public static void main(String[] args) {
 		Movie mo1 = new Movie();
-		mo1.title = "¹Ì½ºÄÁ´öÆ®";
-		mo1.type = "¾×¼Ç";
+		mo1.title = "ë¯¸ìŠ¤ì»¨ë•íŠ¸";
+		mo1.type = "ì•¡ì…˜";
 		mo1.grade = 3;
 		mo1.veiwCount = 10000;
 
 		mo1.print();
 
 		Movie mo2 = new Movie();
-		mo2.title = "¹Ì¼ÇÀÓÆÄ¼­ºí";
-		mo2.type = "¾×¼Ç";
+		mo2.title = "ë¯¸ì…˜ì„íŒŒì„œë¸”";
+		mo2.type = "ì•¡ì…˜";
 		mo2.grade = 4;
 		mo2.veiwCount = 100000;
 
@@ -25,14 +25,14 @@ public class TestMovie {
 }// end of class
 
 class Movie {
-	String title;// Á¦¸ñ
-	String type;// Àå¸£
-	int grade;// °ü°´ÆòÁ¡
-	int veiwCount;// °ü°´¼ö
+	String title;// ì œëª©
+	String type;// ì¥ë¥´
+	int grade;// ê´€ê°í‰ì 
+	int veiwCount;// ê´€ê°ìˆ˜
 
-	void print() {// ¸â¹öº¯¼ö Ãâ·Â
-		System.out.println("ÇØ´ç ¿µÈ­´Â " + title + "ÀÌ°í,\n" + "Àå¸£´Â " + type + "ÀÌ¸ç,\n" + "°ü°´ÆòÁ¡Àº " + grade + "Á¡À» ±â·ÏÇßÀ¸¸ç,\n"
-				+ "ÃÑ °ü°´ ¼ö´Â " + veiwCount + "¸íÀÔ´Ï´Ù.");
+	void print() {// ë©¤ë²„ë³€ìˆ˜ ì¶œë ¥
+		System.out.println("í•´ë‹¹ ì˜í™”ëŠ” " + title + "ì´ê³ ,\n" + "ì¥ë¥´ëŠ” " + type + "ì´ë©°,\n" + "ê´€ê°í‰ì ì€ " + grade + "ì ì„ ê¸°ë¡í–ˆìœ¼ë©°,\n"
+				+ "ì´ ê´€ê° ìˆ˜ëŠ” " + veiwCount + "ëª…ì…ë‹ˆë‹¤.");
 
 	}
 }

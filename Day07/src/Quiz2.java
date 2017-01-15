@@ -1,17 +1,17 @@
 /**
- * Åğ±Ù¹®Á¦2 : ¹İº¹¹®
+ * í‡´ê·¼ë¬¸ì œ2 : ë°˜ë³µë¬¸
  */
 public class Quiz2 {
 	public static void main(String[] args) {
 
-		// ¹İº¹¹®, Àç±ÍÇÔ¼ö
-		// 15¸¦ 10Áø¹ı¿¡¼­ 3Áø¹ıÀ¸·Î ¹Ù²ã¼­ Ãâ·Â
+		// ë°˜ë³µë¬¸, ì¬ê·€í•¨ìˆ˜
+		// 15ë¥¼ 10ì§„ë²•ì—ì„œ 3ì§„ë²•ìœ¼ë¡œ ë°”ê¿”ì„œ ì¶œë ¥
 
 		int num = 19;
 		int base = 3;
 
-		System.out.println(dap1(num, base));// ¹İº¹¹®À¸·Î Áø¹ıº¯È¯
-		System.out.println(dap2(num, base));// Àç±ÍÇÔ¼ö·Î Áø¹ıº¯È¯
+		System.out.println(dap1(num, base));// ë°˜ë³µë¬¸ìœ¼ë¡œ ì§„ë²•ë³€í™˜
+		System.out.println(dap2(num, base));// ì¬ê·€í•¨ìˆ˜ë¡œ ì§„ë²•ë³€í™˜
 
 	}// end of main
 
@@ -23,7 +23,7 @@ public class Quiz2 {
 	}
 
 	static String dap1(int num, int base) {
-		String dap = "";// Ãâ·ÂÇÒ ¹®ÀÚ¿­
+		String dap = "";// ì¶œë ¥í•  ë¬¸ìì—´
 		while (num != 0) {
 			dap = num % base + dap;
 			num = num / base;

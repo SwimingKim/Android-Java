@@ -14,12 +14,12 @@ public class StartActivity extends TabActivity {
 		TabHost host = getTabHost();
 		
 		TabSpec tab1 = host.newTabSpec("1");
-		tab1.setIndicator("∏Ò∑œ∫∏±‚");
+		tab1.setIndicator("Î™©Î°ùÎ≥¥Í∏∞");
 		tab1.setContent(new Intent(getApplicationContext(), MainActivity.class));
 		host.addTab(tab1);
 		
 		TabSpec tab2 = host.newTabSpec("2");
-		tab2.setIndicator("»Ø∞Êº≥¡§");
+		tab2.setIndicator("ÌôòÍ≤ΩÏÑ§Ï†ï");
 		tab2.setContent(new Intent(getApplicationContext(),SettingActivity.class));
 		host.addTab(tab2);
 		

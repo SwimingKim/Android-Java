@@ -1,17 +1,17 @@
 
 public class TestClass {
 	public static void main(String[] args) {
-		Boy b1 = new Boy("È«±æµ¿", 50, 15);
-		Boy b2 = new Boy("¼­¹Î±Ô", 26, 100);
+		Boy b1 = new Boy("í™ê¸¸ë™", 50, 15);
+		Boy b2 = new Boy("ì„œë¯¼ê·œ", 26, 100);
 
-		b1.name = "È«±æµ¿";
+		b1.name = "í™ê¸¸ë™";
 		b1.age = 50;
 		b1.money = 15;
 
 		System.out.println(b1.name + b1.age + b1.money);
 		b1.printBoy();
 
-		// b2.name = "¼­¹Î±Ô";
+		// b2.name = "ì„œë¯¼ê·œ";
 		// b2.age = 26;
 		// b2.money = 100;
 
@@ -25,18 +25,18 @@ class Boy {
 	int age;
 	int money;
 
-	Boy() {// ±âº» »ı¼ºÀÚ : °ªÀÇ ÃÊ±âÈ­ ÀÛ¾÷
+	Boy() {// ê¸°ë³¸ ìƒì„±ì : ê°’ì˜ ì´ˆê¸°í™” ì‘ì—…
 
 	}
 
-	Boy(String n, int a, int m) {// »ı¼ºÀÚ
-		name = n;// ¹®ÀÚ¿­ÀÇ ÃÊ±âÈ­´Â "" ºó¹®ÀÚ¿­·Î ÃÊ±âÈ­ÇÏÀÚ
+	Boy(String n, int a, int m) {// ìƒì„±ì
+		name = n;// ë¬¸ìì—´ì˜ ì´ˆê¸°í™”ëŠ” "" ë¹ˆë¬¸ìì—´ë¡œ ì´ˆê¸°í™”í•˜ì
 		age = a;
 		money = m;
 	}
 
 	void printBoy() {
-		System.out.println(name + "\t" + age + "»ì\t" + money + "¿ø");
+		System.out.println(name + "\t" + age + "ì‚´\t" + money + "ì›");
 	}
 
 }

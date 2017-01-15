@@ -14,10 +14,10 @@ import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.ImageView;
 
-class Bullet {// ÀÚ¹Ù Bean
-	int x, y;// ÃÑ¾ËÀÇ ÁÂÇ¥
-	int dx, dy;// ÃÑ¾ËÀÇ ÀÌµ¿·®
-	ImageView iv;// ÃÑ¾ËÀÇ ÀÌ¹ÌÁöºä
+class Bullet {// ìë°” Bean
+	int x, y;// ì´ì•Œì˜ ì¢Œí‘œ
+	int dx, dy;// ì´ì•Œì˜ ì´ë™ëŸ‰
+	ImageView iv;// ì´ì•Œì˜ ì´ë¯¸ì§€ë·°
 
 	public Bullet(int x, int y, int dx, int dy, ImageView iv) {
 		this.x = x;
@@ -30,60 +30,60 @@ class Bullet {// ÀÚ¹Ù Bean
 
 public class MainActivity extends Activity {
 	private Random ran = new Random();
-	final int MAX_NUM =20;// ÃÑ¾ËÀÇ ÃÖ´ë °³¼ö
+	final int MAX_NUM =20;// ì´ì•Œì˜ ìµœëŒ€ ê°œìˆ˜
 
-	ArrayList<Bullet> list = new ArrayList<Bullet>(); // ÃÑ¾Ë °´Ã¼µéÀ» ÀúÀåÇÒ ArrayList
+	ArrayList<Bullet> list = new ArrayList<Bullet>(); // ì´ì•Œ ê°ì²´ë“¤ì„ ì €ì¥í•  ArrayList
 
 	Handler handler = new Handler();
-	Runnable r = new Runnable() { // È­¸éÀ» °»½ÅÇÏ´Â ÀÛ¾÷ 
+	Runnable r = new Runnable() { // í™”ë©´ì„ ê°±ì‹ í•˜ëŠ” ì‘ì—… 
 
 		@Override
 		public void run() {
-			if (list.size() < MAX_NUM) {// ÃÑ¾Ë °´Ã¼ Ãß°¡ »ı¼º
-				// ÀÚ¹ÙÄÚµå¿¡¼­ µ¿ÀûÀ¸·Î À§Á¬À» »ı¼ºÇÏ±â
+			if (list.size() < MAX_NUM) {// ì´ì•Œ ê°ì²´ ì¶”ê°€ ìƒì„±
+				// ìë°”ì½”ë“œì—ì„œ ë™ì ìœ¼ë¡œ ìœ„ì ¯ì„ ìƒì„±í•˜ê¸°
 				ImageView iv = new ImageView(getApplicationContext());
 				iv.setImageResource(R.drawable.bb);
 				al.addView(iv, 100, 100);
-				// ÃÊ±â À§Ä¡ ÁöÁ¤
+				// ì´ˆê¸° ìœ„ì¹˜ ì§€ì •
 				int x = ran.nextInt(al.getWidth());
 				int y = ran.nextInt(al.getHeight());
-				// ÃÑ¾ËÀÇ ÀÌµ¿·® ÁöÁ¤
+				// ì´ì•Œì˜ ì´ë™ëŸ‰ ì§€ì •
 				int dx = ran.nextInt(21)-10;
 				int dy = ran.nextInt(21)-10;
-				// ÃÑ¾ËÀÇ ÀÌµ¿·®ÀÌ 0ÀÌ¸é Á¤Áö => ¿òÁ÷ÀÓÀ» ÀÓÀÇ·Î ÁöÁ¤
+				// ì´ì•Œì˜ ì´ë™ëŸ‰ì´ 0ì´ë©´ ì •ì§€ => ì›€ì§ì„ì„ ì„ì˜ë¡œ ì§€ì •
 				if (dx==0 && dy == 0) {
 					dx = ran.nextInt(10)+1;
 					dy = ran.nextInt(10)+1;
 				}
 				
-				// ÃÑ¾ËÀÌ ³¯¾Æ°¡´Â ¹æÇâÀ¸·Î È¸ÀüÇÏ°Ô ¸¸µé·Á¸é
+				// ì´ì•Œì´ ë‚ ì•„ê°€ëŠ” ë°©í–¥ìœ¼ë¡œ íšŒì „í•˜ê²Œ ë§Œë“¤ë ¤ë©´
 				iv.setRotation((float)(Math.atan2(dy,dx)*180/Math.PI)+90);
 				
 
-				list.add(new Bullet(x, y, dx, dy, iv));// ¿Ï¼ºµÈ ÃÑ¾Ë °´Ã¼¸¦ list¿¡ Ãß°¡
+				list.add(new Bullet(x, y, dx, dy, iv));// ì™„ì„±ëœ ì´ì•Œ ê°ì²´ë¥¼ listì— ì¶”ê°€
 			}
 
-			// °¢ ÃÑ¾ËÀÇ À§Ä¡¸¦ º¯È­·® ¸¸Å­ ÀÌµ¿
+			// ê° ì´ì•Œì˜ ìœ„ì¹˜ë¥¼ ë³€í™”ëŸ‰ ë§Œí¼ ì´ë™
 			//			for (int i = 0; i < list.size(); i++) {
 			//			}
-			// ÀÚ·á±¸Á¶Ãø¸é¿¡¼­ Áß°£¿¡ »èÁ¦ÇÏ¸é, °Ç³Ê ¶Ù´Â ¹®Á¦¸¦ ¹ß»ıÇÒ ¼ö ÀÖ´Ù.
-			// ¶ÇÇÑ, ¸Å¹ø ¸®½ºÆ®ÀÇ »çÀÌÁî¸¦ È®ÀÎÇØ¾ß ÇÏ±â ¶§¹®¿¡ ¼Óµµ°¡ ´õ ´À¸®´Ù.
+			// ìë£Œêµ¬ì¡°ì¸¡ë©´ì—ì„œ ì¤‘ê°„ì— ì‚­ì œí•˜ë©´, ê±´ë„ˆ ë›°ëŠ” ë¬¸ì œë¥¼ ë°œìƒí•  ìˆ˜ ìˆë‹¤.
+			// ë˜í•œ, ë§¤ë²ˆ ë¦¬ìŠ¤íŠ¸ì˜ ì‚¬ì´ì¦ˆë¥¼ í™•ì¸í•´ì•¼ í•˜ê¸° ë•Œë¬¸ì— ì†ë„ê°€ ë” ëŠë¦¬ë‹¤.
 			for (int i = list.size()-1; i >= 0; i--) {
 				Bullet b = list.get(i);
 				b.x+= b.dx;
 				b.y+= b.dy;
-				// ½ºÅ©¸° ¹ş¾î³µ´ÂÁö È®ÀÎÇÏ±â
+				// ìŠ¤í¬ë¦° ë²—ì–´ë‚¬ëŠ”ì§€ í™•ì¸í•˜ê¸°
 				if (b.x<0||b.x>al.getWidth()||b.y<0||b.y>al.getHeight()) {
-					// ½ºÅ©¸°¿¡¼­ ¹ş¾î³ª¸é ÀÌ¹ÌÁö ºä¸¦ Á¦°ÅÇÏ±â
+					// ìŠ¤í¬ë¦°ì—ì„œ ë²—ì–´ë‚˜ë©´ ì´ë¯¸ì§€ ë·°ë¥¼ ì œê±°í•˜ê¸°
 					al.removeView(b.iv);
-					list.remove(i); // ÃÑ¾ËµéÀ» ÀúÀåÇÑ List¿¡¼­µµ Á¦°Å
+					list.remove(i); // ì´ì•Œë“¤ì„ ì €ì¥í•œ Listì—ì„œë„ ì œê±°
 				} else {
 					b.iv.setX(b.x);
 					b.iv.setY(b.y);
 				}
 			}
 
-			handler.postDelayed(r, 10);//´ÙÀ½ ÀÛ¾÷À» ¿¹¾àÇÏ°í Á¾·á
+			handler.postDelayed(r, 10);//ë‹¤ìŒ ì‘ì—…ì„ ì˜ˆì•½í•˜ê³  ì¢…ë£Œ
 		}
 	};
 	private AbsoluteLayout al;
@@ -100,7 +100,7 @@ public class MainActivity extends Activity {
 		b_start.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				handler.post(r);//È­¸éº¯°æ½ÃÀÛ
+				handler.post(r);//í™”ë©´ë³€ê²½ì‹œì‘
 			}
 		});
 		b_end.setOnClickListener(new OnClickListener() {

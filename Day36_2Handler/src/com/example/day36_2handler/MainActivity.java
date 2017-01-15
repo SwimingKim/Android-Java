@@ -14,8 +14,8 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
 public class MainActivity extends Activity {
-	int x;//0~È­¸éÆø~ÀÌ¹ÌÁöÆø
-	int y;//0~È­¸é³ôÀÌ~ÀÌ¹ÌÁö³ôÀÌ~Å¸ÀÌÆ²¹Ù³ôÀÌ
+	int x;//0~í™”ë©´í­~ì´ë¯¸ì§€í­
+	int y;//0~í™”ë©´ë†’ì´~ì´ë¯¸ì§€ë†’ì´~íƒ€ì´í‹€ë°”ë†’ì´
 	Handler handler = new Handler();
 	ImageView iv;
 	ImageView iv2;
@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
 	private int h;
 	float jx;
 	float jy;
-	Runnable r = new Runnable() {//È­¸éº¯°æÀÛ¾÷
+	Runnable r = new Runnable() {//í™”ë©´ë³€ê²½ì‘ì—…
 		@Override
 		public void run() {
 			if (iv.getX()<=w-iv.getWidth()&&iv.getY()==jy) {
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 			} else {
 				iv.setY(iv.getY()-10);	
 			}
-			handler.postDelayed(r, 10); // ´ÙÀ½ ÀÛ¾÷À» ¿¹¾àÀ» °É¾î³õ°í ³¡³»±â
+			handler.postDelayed(r, 10); // ë‹¤ìŒ ì‘ì—…ì„ ì˜ˆì•½ì„ ê±¸ì–´ë†“ê³  ëë‚´ê¸°
 		}
 	};
 	Runnable r2 = new Runnable() {

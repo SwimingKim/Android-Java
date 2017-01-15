@@ -18,60 +18,60 @@ import java.awt.event.WindowListener;
 
 public class Quiz {
 	public static void main(String[] args) {
-		Frame f = new Frame("È¸¿ø°¡ÀÔ");
+		Frame f = new Frame("íšŒì›ê°€ì…");
 		f.setBounds(100, 100, 220, 400);
 		f.setLayout(new FlowLayout());
-		f.setResizable(false);// Ã¢ÀÇ Å©±â¸¦ º¯°æÇÏÁö ¸øÇÏµµ·Ï ¼³Á¤
+		f.setResizable(false);// ì°½ì˜ í¬ê¸°ë¥¼ ë³€ê²½í•˜ì§€ ëª»í•˜ë„ë¡ ì„¤ì •
 
-		f.add(new Label("ÀÌ¸§ : "));
+		f.add(new Label("ì´ë¦„ : "));
 		TextField tf1 = new TextField(18);
 		f.add(tf1);
 
-		f.add(new Label("³ªÀÌ : "));
+		f.add(new Label("ë‚˜ì´ : "));
 		TextField tf2 = new TextField(18);
 		f.add(tf2);
 
-		f.add(new Label("»ıÀÏ : "));
+		f.add(new Label("ìƒì¼ : "));
 		Choice c1 = new Choice();
 		f.add(c1);
 		for (int i = 1; i <= 12; i++) {
 			c1.add(i + "");
 		}
-		f.add(new Label("¿ù"));
+		f.add(new Label("ì›”"));
 		Choice c2 = new Choice();
 		f.add(c2);
 		for (int i = 1; i <= 31; i++) {
 			c2.add(i + "");
 		}
-		f.add(new Label("ÀÏ\n"));
+		f.add(new Label("ì¼\n"));
 
-		f.add(new Label("ÁÖ¼Ò : "));
+		f.add(new Label("ì£¼ì†Œ : "));
 		List l = new List(4);
 		f.add(l);
-		l.add("¼­¿ï");
-		l.add("°æ±â");
-		l.add("ºÎ»ê");
-		l.add("´ëÀü");
-		l.add("ÀÎÃµ");
-		l.add("´ë±¸");
+		l.add("ì„œìš¸");
+		l.add("ê²½ê¸°");
+		l.add("ë¶€ì‚°");
+		l.add("ëŒ€ì „");
+		l.add("ì¸ì²œ");
+		l.add("ëŒ€êµ¬");
 
 		TextArea ta = new TextArea(10, 25);
 		f.add(ta);
 
 		f.setVisible(true);
 
-		Button b = new Button("ÀÛ¼º¿Ï·á");
+		Button b = new Button("ì‘ì„±ì™„ë£Œ");
 		f.add(b);
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					int num = Integer.parseInt(tf2.getText());
 
-					ta.append("È¸¿ø °¡ÀÔ ¼º°ø!!\n\n" + "ÀÌ¸§ : " + tf1.getText() + "\n³ªÀÌ : " + tf2.getText() + "¼¼" + "\n»ıÀÏ : "
-							+ c1.getSelectedItem() + "¿ù " + c2.getSelectedItem() + "ÀÏ" + "\nÁÖ¼Ò : "
+					ta.append("íšŒì› ê°€ì… ì„±ê³µ!!\n\n" + "ì´ë¦„ : " + tf1.getText() + "\në‚˜ì´ : " + tf2.getText() + "ì„¸" + "\nìƒì¼ : "
+							+ c1.getSelectedItem() + "ì›” " + c2.getSelectedItem() + "ì¼" + "\nì£¼ì†Œ : "
 							+ l.getSelectedItem());
 				} catch (NumberFormatException e2) {
-					ta.append("³ªÀÌ´Â ¼ıÀÚ·Î ÀÔ·ÂÇÏ¼Å¾ß ÇÕ´Ï´Ù\n\n");
+					ta.append("ë‚˜ì´ëŠ” ìˆ«ìë¡œ ì…ë ¥í•˜ì…”ì•¼ í•©ë‹ˆë‹¤\n\n");
 					tf2.setText("");
 				}
 			}

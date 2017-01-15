@@ -9,7 +9,7 @@ public class Match {
 		ArrayList<String> name = new ArrayList<>();
 		ArrayList<String> sound = new ArrayList<>();
 
-		// »çÁø ¸ñ·Ï ºÎ¸£±â
+		// ì‚¬ì§„ ëª©ë¡ ë¶€ë¥´ê¸°
 		File dir = new File("C:\\Users\\Administrator\\Desktop\\halfdata\\words\\images\\"); 
 		File[] fileList = dir.listFiles(); 
 		for(int i = 0 ; i < fileList.length ; i++){
@@ -28,7 +28,7 @@ public class Match {
 		}
 		System.out.println(name.size());
 
-		// À½¼º ¸ñ·Ï ºÎ¸£±â
+		// ìŒì„± ëª©ë¡ ë¶€ë¥´ê¸°
 		File dir2 = new File("C:\\Users\\Administrator\\Desktop\\halfdata\\words\\sounds\\"); 
 		File[] fileList2 = dir2.listFiles(); 
 		for(int i = 0 ; i < fileList2.length ; i++){
@@ -50,7 +50,7 @@ public class Match {
 
 		System.out.println(name.size());
 		for (int i = 0; i < name.size(); i++) {
-			System.out.println("´©¶ô = "+name.get(i));
+			System.out.println("ëˆ„ë½ = "+name.get(i));
 		}
 
 

@@ -1,7 +1,7 @@
 import java.util.Random;
 
 /**
- * ·£´ı - ¹«ÀÛÀ§ÀÇ ¼ö¸¦ ¾òÀ» ¼ö ÀÖ´Â ¹æ¹ı Math Å¬·¡½ºÀÇ random()¸Å¼­µå Random Å¬·¡½º¿¡¼­µµ Á¦°øÇÑ´Ù
+ * ëœë¤ - ë¬´ì‘ìœ„ì˜ ìˆ˜ë¥¼ ì–»ì„ ìˆ˜ ìˆëŠ” ë°©ë²• Math í´ë˜ìŠ¤ì˜ random()ë§¤ì„œë“œ Random í´ë˜ìŠ¤ì—ì„œë„ ì œê³µí•œë‹¤
  */
 public class TestRandom {
 	public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class TestRandom {
 
 		System.out.println(str[0]);
 
-		String menu[] = { "´ß°¥ºñ", "Ä®±¹¼ö", "±¹¹ä", "µÈÀåÂî°³", "Â¥Àå¸é" };
+		String menu[] = { "ë‹­ê°ˆë¹„", "ì¹¼êµ­ìˆ˜", "êµ­ë°¥", "ëœì¥ì°Œê°œ", "ì§œì¥ë©´" };
 
 		Random ran2 = new Random();
 		ran2.nextInt(menu.length);

@@ -26,82 +26,82 @@ public class MainActivity extends Activity {
 		Button b_drop = (Button) findViewById(R.id.button5);
 		Button b_select = (Button) findViewById(R.id.button6);
 
-		Log.d("sqlite3", "onCreat ½ÃÀÛ");
+		Log.d("sqlite3", "onCreat ì‹œì‘");
 		b_create.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// °´Ã¼»ı¼º - »ı¼ºÀÚ È£Ãâ
-				helper = new PPSQLiteOpenHelper(getApplicationContext(), // ÇöÀçÈ­¸éÀÇ
-																			// Á¦¾î±ÇÀÚ
-						"myfile4.db", // µ¥ÀÌÅÍº£ÀÌ½º ÆÄÀÏ¸í
-						null, // Ç¥ÁØ Ä¿¼­»ç¿ë
-						1);// µ¥ÀÌÅÍº£ÀÌ½º¹öÀü
-				Log.d("sqlite3", "DB °´Ã¼ »ı¼º");
+				// ê°ì²´ìƒì„± - ìƒì„±ì í˜¸ì¶œ
+				helper = new PPSQLiteOpenHelper(getApplicationContext(), // í˜„ì¬í™”ë©´ì˜
+																			// ì œì–´ê¶Œì
+						"myfile4.db", // ë°ì´í„°ë² ì´ìŠ¤ íŒŒì¼ëª…
+						null, // í‘œì¤€ ì»¤ì„œì‚¬ìš©
+						1);// ë°ì´í„°ë² ì´ìŠ¤ë²„ì „
+				Log.d("sqlite3", "DB ê°ì²´ ìƒì„±");
 			}
 		});
 
-		// µ¥ÀÌÅÍ »ğÀÔ - insert
+		// ë°ì´í„° ì‚½ì… - insert
 		b_insert.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				db = helper.getWritableDatabase();
-				// db.execSQL("insert into desk values (1, 'È«')");
-				ContentValues values = new ContentValues();// insertÇÒ ³»¿ëÀ» ÀÛ¼º
+				// db.execSQL("insert into desk values (1, 'í™')");
+				ContentValues values = new ContentValues();// insertí•  ë‚´ìš©ì„ ì‘ì„±
 				values.put("id", 3);
-				values.put("name", "ÇÏÇÏ");
+				values.put("name", "í•˜í•˜");
 				long result = db.insert("desk", null, values);
-				Log.d("sqlite3", result + "¹øÂ° insert ¿Ï·á");
+				Log.d("sqlite3", result + "ë²ˆì§¸ insert ì™„ë£Œ");
 
 			}
 		});
 
 		b_select.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// µ¥ÀÌÅÍ Á¶È¸ - select
-				db = helper.getReadableDatabase();// ÀĞ±âÀü¿ë
+				// ë°ì´í„° ì¡°íšŒ - select
+				db = helper.getReadableDatabase();// ì½ê¸°ì „ìš©
 				Cursor c = db.query("desk", null, null, null, null, null, null);
-				// Å×ÀÌºí¸í
+				// í…Œì´ë¸”ëª…
 
 				while (c.moveToNext()) {
-					// ´ÙÀ½ µ¥ÀÌÅÍ·Î Ä¿¼­ ÀÌµ¿, ´ÙÀ½ µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏ¸é true
+					// ë‹¤ìŒ ë°ì´í„°ë¡œ ì»¤ì„œ ì´ë™, ë‹¤ìŒ ë°ì´í„°ê°€ ì¡´ì¬í•˜ë©´ true
 					int id = c.getInt(c.getColumnIndex("id"));
 					String name = c.getString(c.getColumnIndex("name"));
 
 					Log.d("sqlite3", "id : " + id + ", name : " + name);
 				}
 
-				Log.d("sqlite3", "select ¿Ï·á");
+				Log.d("sqlite3", "select ì™„ë£Œ");
 
 			}
 		});
 
 		b_update.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// ¼öÁ¤ : update
+				// ìˆ˜ì • : update
 				db = helper.getWritableDatabase();
 				ContentValues values = new ContentValues();
-				values.put("name", "¼­¹Î±Ô");
-				int result = db.update("desk", values, // ¹¹¶ó°í ¼öÁ¤ÇÒÁö
-						"id=?", // ¾î¶² Ç×¸ñÀÌ
-						new String[] { "5" });// ÀÌ·±ÇÑ °ªÀÎ µ¥ÀÌÅÍ¸¦ ¼öÁ¤ÇÏ¶ó
-				Log.d("sqlite3", result + "°³ update ¿Ï·á");
+				values.put("name", "ì„œë¯¼ê·œ");
+				int result = db.update("desk", values, // ë­ë¼ê³  ìˆ˜ì •í• ì§€
+						"id=?", // ì–´ë–¤ í•­ëª©ì´
+						new String[] { "5" });// ì´ëŸ°í•œ ê°’ì¸ ë°ì´í„°ë¥¼ ìˆ˜ì •í•˜ë¼
+				Log.d("sqlite3", result + "ê°œ update ì™„ë£Œ");
 
 			}
 		});
 
 		b_delete.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// Á¦°Å : delete
+				// ì œê±° : delete
 				db = helper.getWritableDatabase();
 				int result = db.delete("desk", "id=?", new String[] { "3" });
-				Log.d("sqlite3", result + "°³ delete ¿Ï·á");
+				Log.d("sqlite3", result + "ê°œ delete ì™„ë£Œ");
 			}
 		});
 
 		b_drop.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// Å×ÀÌºí »èÁ¦ : drop
+				// í…Œì´ë¸” ì‚­ì œ : drop
 				db = helper.getWritableDatabase();
 				db.execSQL("drop table if exists desk");
-				Log.d("sqlite3", "drop ¿Ï·á");
+				Log.d("sqlite3", "drop ì™„ë£Œ");
 			}
 		});
 

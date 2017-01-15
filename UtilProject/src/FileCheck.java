@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FileCheck {
 	public static void main(String[] args) {
 
-		// À½¼º ÆÄÀÏ ¸ñ·Ï ºÒ·¯¿À±â
+		// ìŒì„± íŒŒì¼ ëª©ë¡ ë¶ˆëŸ¬ì˜¤ê¸°
 		ArrayList<String> eng = new ArrayList<String>();
 		try {
 			FileInputStream fis = new FileInputStream("C:\\Users\\SuYoung\\Desktop\\allfile.txt");
@@ -18,7 +18,7 @@ public class FileCheck {
 		}
 
 
-		// ÇÊ¿äÇÑ ÆÄÀÏ ºÒ·¯¿À±â
+		// í•„ìš”í•œ íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 		ArrayList<String> word = new ArrayList<String>();
 		try {
 			FileInputStream fis = new FileInputStream("C:\\Users\\SuYoung\\Desktop\\memo.txt");

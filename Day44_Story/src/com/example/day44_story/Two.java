@@ -14,8 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Two extends Activity{
-	String talk[] = {"1°³ ³²¾Ò³×,\nÀú°Ç ³»²¨´Ù", "Àú±â¿ä,\nÀú ¸ÕÀú »ì²²¿ä", "¾ÈµÅ¿ä ¼Õ´ÔÇÑÅ×\n´ëÁ¢ÇØ¾ß ÇØ¿ä",
-			"Àúµµ Áß¿äÇÑ ºĞ²²\n¼±¹°ÇØ¾ßµÅ¿ä", "±×·³ ¸ÕÀú ÀâÀ¸¸é\n±× »ç¶÷ÀÌ °¡Á®°¡¿ä", "ÁÁ½À´Ï´Ù\nÁ¦°¡ ºü¸£°Åµç¿ä"};
+	String talk[] = {"1ê°œ ë‚¨ì•˜ë„¤,\nì €ê±´ ë‚´êº¼ë‹¤", "ì €ê¸°ìš”,\nì € ë¨¼ì € ì‚´ê»˜ìš”", "ì•ˆë¼ìš” ì†ë‹˜í•œí…Œ\nëŒ€ì ‘í•´ì•¼ í•´ìš”",
+			"ì €ë„ ì¤‘ìš”í•œ ë¶„ê»˜\nì„ ë¬¼í•´ì•¼ë¼ìš”", "ê·¸ëŸ¼ ë¨¼ì € ì¡ìœ¼ë©´\nê·¸ ì‚¬ëŒì´ ê°€ì ¸ê°€ìš”", "ì¢‹ìŠµë‹ˆë‹¤\nì œê°€ ë¹ ë¥´ê±°ë“ ìš”"};
 	Handler handler = new Handler();
 	Runnable r = new Runnable() {
 		int i = 0;
@@ -43,11 +43,11 @@ public class Two extends Activity{
 		public void run() {
 			ab.setX(ab.getX()-30);
 			ab.setY(ab.getY()-80);
-			tv_ga.setText("¹Ì¿ä¸¦ ´©¸£¸é\n»¡¸® °¥ ¼ö ÀÖ¾î");
+			tv_ga.setText("ë¯¸ìš”ë¥¼ ëˆ„ë¥´ë©´\në¹¨ë¦¬ ê°ˆ ìˆ˜ ìˆì–´");
 			if (ga.getY()==0||ab.getY()==0) {
 				handler.removeCallbacks(rgame);
 				if (ab.getY()==0)  {
-					tv_ab.setText("¾Æ½Î!!\nÃáÀåÀ» °¡Á®°¡¾ßÁö");
+					tv_ab.setText("ì•„ì‹¸!!\nì¶˜ì¥ì„ ê°€ì ¸ê°€ì•¼ì§€");
 					tv_ga.setText("");
 				}
 				handler.removeCallbacks(rgame);
@@ -81,7 +81,7 @@ public class Two extends Activity{
 		Intent in = getIntent();
 
 		mp = MediaPlayer.create(getApplicationContext(), R.raw.china);
-		mp.seekTo(in.getIntExtra("³ë·¡", 0));
+		mp.seekTo(in.getIntExtra("ë…¸ë˜", 0));
 		mp.start();
 		mp.setLooping(true);
 
@@ -91,9 +91,9 @@ public class Two extends Activity{
 		chun.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				if (event.getAction()==MotionEvent.ACTION_DOWN) {
-					if ("¾Æ½Î!!\nÃáÀåÀ» °¡Á®°¡¾ßÁö".equals(tv_ga.getText().toString())
-							|| "¾Æ½Î!!\nÃáÀåÀ» °¡Á®°¡¾ßÁö".equals(tv_ab.getText().toString())) {
-						intent.putExtra("³ë·¡", mp.getCurrentPosition());
+					if ("ì•„ì‹¸!!\nì¶˜ì¥ì„ ê°€ì ¸ê°€ì•¼ì§€".equals(tv_ga.getText().toString())
+							|| "ì•„ì‹¸!!\nì¶˜ì¥ì„ ê°€ì ¸ê°€ì•¼ì§€".equals(tv_ab.getText().toString())) {
+						intent.putExtra("ë…¸ë˜", mp.getCurrentPosition());
 						startActivity(intent);
 						finish();
 					}
@@ -105,13 +105,13 @@ public class Two extends Activity{
 	}//end of onCreate
 
 	public boolean onTouchEvent(MotionEvent event) {
-		if ("¹Ì¿ä¸¦ ´©¸£¸é\n»¡¸® °¥ ¼ö ÀÖ¾î".equals(tv_ga.getText().toString())) {
+		if ("ë¯¸ìš”ë¥¼ ëˆ„ë¥´ë©´\në¹¨ë¦¬ ê°ˆ ìˆ˜ ìˆì–´".equals(tv_ga.getText().toString())) {
 			if (event.getAction()==MotionEvent.ACTION_MOVE
 					||event.getAction()==MotionEvent.ACTION_DOWN
 					||event.getAction()==MotionEvent.ACTION_UP) {
 				if (ga.getY()==0){
 					handler.removeCallbacks(rgame);
-					tv_ga.setText("¾Æ½Î!!\nÃáÀåÀ» °¡Á®°¡¾ßÁö");
+					tv_ga.setText("ì•„ì‹¸!!\nì¶˜ì¥ì„ ê°€ì ¸ê°€ì•¼ì§€");
 					tv_ab.setText("");
 				} else{
 					ga.setX(ga.getX()+3);

@@ -74,7 +74,7 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 			public void onClick(View v) {
 				Random ran = new Random();
 
-				for (int i = 0; i < 50; i++) {// ¿©·¯¹ø ¼¯±â
+				for (int i = 0; i < 50; i++) {// ì—¬ëŸ¬ë²ˆ ì„žê¸°
 					int index = ran.nextInt(man.length);// 0~9
 					String temp = man[0];
 					man[0] = man[index];
@@ -83,8 +83,8 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 
 				int team = Integer.valueOf(et.getText().toString());
 
-				tTeam.setText("1ÆÀ " + Arrays.toString(man) + "\n2ÆÀ " + Arrays.toString(man) + "\n3ÆÀ "
-						+ Arrays.toString(man) + "\n4ÆÀ " + Arrays.toString(man));
+				tTeam.setText("1íŒ€ " + Arrays.toString(man) + "\n2íŒ€ " + Arrays.toString(man) + "\n3íŒ€ "
+						+ Arrays.toString(man) + "\n4íŒ€ " + Arrays.toString(man));
 
 			}
 		});

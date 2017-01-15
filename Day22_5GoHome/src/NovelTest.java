@@ -2,11 +2,11 @@
 public class NovelTest {
 	public static void main(String[] args) {
 
-		Novel novel1 = new Novel("¾îµÒÀÇ ¼Óµµ", "1111");
-		novel1.setAuthor("¿¤¸®ÀÚº£½º ¹®");
-		novel1.setPublisher("ÃâÆÇ»ç A");
+		Novel novel1 = new Novel("ì–´ë‘ ì˜ ì†ë„", "1111");
+		novel1.setAuthor("ì—˜ë¦¬ìë² ìŠ¤ ë¬¸");
+		novel1.setPublisher("ì¶œíŒì‚¬ A");
 
-		Novel novel2 = new Novel("´ç½Å ÀÎ»ıÀÇ ÀÌ¾ß±â", "2222", "Å×µå Ã¢", "ÃâÆÇ»ç B");
+		Novel novel2 = new Novel("ë‹¹ì‹  ì¸ìƒì˜ ì´ì•¼ê¸°", "2222", "í…Œë“œ ì°½", "ì¶œíŒì‚¬ B");
 
 		System.out.println(novel1.read());
 		System.out.println(novel2.read());
@@ -45,7 +45,7 @@ class Novel {
 
 	public String read() {
 		String str = "";
-		str += "ISBN : " + ISBN + ", Title : " + titile + ", ÃâÆÇ»ç : " + author + ", ÀÛ°¡ : " + publisher;
+		str += "ISBN : " + ISBN + ", Title : " + titile + ", ì¶œíŒì‚¬ : " + author + ", ì‘ê°€ : " + publisher;
 		return str;
 	}
 

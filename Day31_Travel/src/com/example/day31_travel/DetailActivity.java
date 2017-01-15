@@ -47,11 +47,11 @@ public class DetailActivity extends Activity{
 			while (true) {
 				String str = br.readLine();
 				if(str==null) break;
-				if (str.substring(0,2).equals("³¯:")) {
+				if (str.substring(0,2).equals("ë‚ :")) {
 					da = Integer.valueOf(str.substring(2));
-				} else if (str.substring(0,2).equals("ÅÛ:")) {
+				} else if (str.substring(0,2).equals("í…œ:")) {
 					it = str.substring(2);
-				} else if (str.substring(0,2).equals("µ·:")) {
+				} else if (str.substring(0,2).equals("ëˆ:")) {
 					mo =  Integer.valueOf(str.substring(2));
 					maneji += mo;
 				}
@@ -59,8 +59,8 @@ public class DetailActivity extends Activity{
 
 			Log.d("file", result);
 			int a = num - maneji;
-			tv.setText("ÀüÃ¼ ¿©Çà °æºñ´Â "+ num+"ÀÔ´Ï´Ù");
-			tv.append("\n³²Àº °æºñ´Â "+ a +"ÀÔ´Ï´Ù");
+			tv.setText("ì „ì²´ ì—¬í–‰ ê²½ë¹„ëŠ” "+ num+"ì…ë‹ˆë‹¤");
+			tv.append("\në‚¨ì€ ê²½ë¹„ëŠ” "+ a +"ì…ë‹ˆë‹¤");
 			et_result.setText(result);
 			br.close();
 
@@ -78,9 +78,9 @@ public class DetailActivity extends Activity{
 					int money = Integer.valueOf(et_money.getText().toString());	
 					FileOutputStream fos = openFileOutput("travel2.txt", Context.MODE_APPEND);
 					PrintWriter out = new PrintWriter(fos);
-					out.println("³¯:"+date);
-					out.println("ÅÛ:"+item);
-					out.println("µ·:"+money);
+					out.println("ë‚ :"+date);
+					out.println("í…œ:"+item);
+					out.println("ëˆ:"+money);
 					out.close();
 					et_date.setText("");
 					et_item.setText("");
@@ -98,11 +98,11 @@ public class DetailActivity extends Activity{
 					while (true) {
 						String str = br.readLine();
 						if(str==null) break;
-						if (str.substring(0,2).equals("³¯:")) {
+						if (str.substring(0,2).equals("ë‚ :")) {
 							da = Integer.valueOf(str.substring(2));
-						} else if (str.substring(0,2).equals("ÅÛ:")) {
+						} else if (str.substring(0,2).equals("í…œ:")) {
 							it = str.substring(2);
-						} else if (str.substring(0,2).equals("µ·:")) {
+						} else if (str.substring(0,2).equals("ëˆ:")) {
 							mo =  Integer.valueOf(str.substring(2));
 							maneji += mo;
 						}
@@ -111,8 +111,8 @@ public class DetailActivity extends Activity{
 
 					Log.d("file", result);
 					int a = num - maneji;
-					tv.setText("ÀüÃ¼ ¿©Çà °æºñ´Â "+ num+"ÀÔ´Ï´Ù");
-					tv.append("\n³²Àº °æºñ´Â "+ a +"ÀÔ´Ï´Ù");
+					tv.setText("ì „ì²´ ì—¬í–‰ ê²½ë¹„ëŠ” "+ num+"ì…ë‹ˆë‹¤");
+					tv.append("\në‚¨ì€ ê²½ë¹„ëŠ” "+ a +"ì…ë‹ˆë‹¤");
 					et_result.setText(result);
 					br.close();
 

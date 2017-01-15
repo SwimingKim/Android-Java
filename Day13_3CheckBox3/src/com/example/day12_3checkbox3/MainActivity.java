@@ -22,26 +22,26 @@ public class MainActivity extends Activity {
 
 		cb1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				CheckBox cb = (CheckBox) buttonView;// »óÅÂ°¡ ¹Ù²ï °´Ã¼
-				tv.setText(cb.getText().toString() + (cb.isChecked() ? " Ã¼Å© µÊ" : " Ã¼Å© ¾È µÊ"));
+				CheckBox cb = (CheckBox) buttonView;// ìƒíƒœê°€ ë°”ë€ ê°ì²´
+				tv.setText(cb.getText().toString() + (cb.isChecked() ? " ì²´í¬ ë¨" : " ì²´í¬ ì•ˆ ë¨"));
 			}
 		});
 		cb2.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				CheckBox cb = (CheckBox) buttonView;// »óÅÂ°¡ ¹Ù²ï °´Ã¼
-				tv.setText(cb.getText().toString() + (cb.isChecked() ? " Ã¼Å© µÊ" : " Ã¼Å© ¾È µÊ"));
+				CheckBox cb = (CheckBox) buttonView;// ìƒíƒœê°€ ë°”ë€ ê°ì²´
+				tv.setText(cb.getText().toString() + (cb.isChecked() ? " ì²´í¬ ë¨" : " ì²´í¬ ì•ˆ ë¨"));
 			}
 		});
 		cb3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				CheckBox cb = (CheckBox) buttonView;// »óÅÂ°¡ ¹Ù²ï °´Ã¼
-				tv.setText(cb.getText().toString() + (cb.isChecked() ? " Ã¼Å© µÊ" : " Ã¼Å© ¾È µÊ"));
+				CheckBox cb = (CheckBox) buttonView;// ìƒíƒœê°€ ë°”ë€ ê°ì²´
+				tv.setText(cb.getText().toString() + (cb.isChecked() ? " ì²´í¬ ë¨" : " ì²´í¬ ì•ˆ ë¨"));
 			}
 		});
 		cb4.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				CheckBox cb = (CheckBox) buttonView;// »óÅÂ°¡ ¹Ù²ï °´Ã¼
-				tv.setText(cb.getText().toString() + (cb.isChecked() ? " Ã¼Å© µÊ" : " Ã¼Å© ¾È µÊ"));
+				CheckBox cb = (CheckBox) buttonView;// ìƒíƒœê°€ ë°”ë€ ê°ì²´
+				tv.setText(cb.getText().toString() + (cb.isChecked() ? " ì²´í¬ ë¨" : " ì²´í¬ ì•ˆ ë¨"));
 			}
 		});
 

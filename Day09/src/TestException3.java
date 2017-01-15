@@ -1,28 +1,28 @@
 import java.util.*;
 
 /**
- * ¿¹¿ÜÃ³¸®3
+ * ì˜ˆì™¸ì²˜ë¦¬3
  */
 public class TestException3 {
 	public static void main(String[] args) {
-		// »ç¿ëÀÚ ÀÔ·ÂÀ» ¼ıÀÚ·Î ¹Ş¾Æ¼­ Ãâ·ÂÇÏ±â
+		// ì‚¬ìš©ì ì…ë ¥ì„ ìˆ«ìë¡œ ë°›ì•„ì„œ ì¶œë ¥í•˜ê¸°
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		while (true) {
 			try {
 				int num = scan.nextInt();
 				System.out.println(10 / num);
 				break;
-			} catch (InputMismatchException e) {// ¹®ÀÚ ÀÔ·Â½Ã
-				System.out.println("¼ıÀÚ°¡ ¾Æ´Ñ °ÍÀ» ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
-				scan.nextLine();// ¹öÆÛ¿¡ Àß¸ø µé¾î°£ ³»¿ëÀ» Á¦°Å
-			} catch (ArithmeticException ae) {// ¼ıÀÚ 0 ÀÔ·Â½Ã
-				System.out.println("0¸¦ ÀÔ·ÂÇÏ¸é ¾È µË´Ï´Ù");
-			} catch (Exception e) {// ³ª¸ÓÁö ¸ğµç ¿¡¿Ü Ã³¸® - °¡Àå ¸¶Áö¸· catch¿¡ »ç¿ë
-				System.out.println("¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù");
-			} finally {// ¹İµå½Ã ½ÇÇàÇÏ°í ºüÁ®³ª°¡¾ß µÇ´Â ³»¿ë
-				System.out.println("ÆÄÀÌ³Î¸® ¹İµå½Ã ½ÇÇàµÊ");
+			} catch (InputMismatchException e) {// ë¬¸ì ì…ë ¥ì‹œ
+				System.out.println("ìˆ«ìê°€ ì•„ë‹Œ ê²ƒì„ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
+				scan.nextLine();// ë²„í¼ì— ì˜ëª» ë“¤ì–´ê°„ ë‚´ìš©ì„ ì œê±°
+			} catch (ArithmeticException ae) {// ìˆ«ì 0 ì…ë ¥ì‹œ
+				System.out.println("0ë¥¼ ì…ë ¥í•˜ë©´ ì•ˆ ë©ë‹ˆë‹¤");
+			} catch (Exception e) {// ë‚˜ë¨¸ì§€ ëª¨ë“  ì—ì™¸ ì²˜ë¦¬ - ê°€ì¥ ë§ˆì§€ë§‰ catchì— ì‚¬ìš©
+				System.out.println("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤");
+			} finally {// ë°˜ë“œì‹œ ì‹¤í–‰í•˜ê³  ë¹ ì ¸ë‚˜ê°€ì•¼ ë˜ëŠ” ë‚´ìš©
+				System.out.println("íŒŒì´ë„ë¦¬ ë°˜ë“œì‹œ ì‹¤í–‰ë¨");
 			}
 		}
 

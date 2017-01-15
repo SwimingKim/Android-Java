@@ -14,9 +14,9 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// Acitivity°¡ È­¸é¿¡ ±×·ÁÁú ¶§ °¡Àå ¸ÕÀú È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
-		super.onCreate(savedInstanceState);// ºÎ¸ğ onCreate¸Ş¼­µå È£Ãâ
-		setContentView(R.layout.activity_main);// xml°ú ¿¬°á
+		// Acitivityê°€ í™”ë©´ì— ê·¸ë ¤ì§ˆ ë•Œ ê°€ì¥ ë¨¼ì € í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
+		super.onCreate(savedInstanceState);// ë¶€ëª¨ onCreateë©”ì„œë“œ í˜¸ì¶œ
+		setContentView(R.layout.activity_main);// xmlê³¼ ì—°ê²°
 
 		Button b1 = (Button) findViewById(R.id.button1);
 		Button b2 = (Button) findViewById(R.id.button2);
@@ -27,8 +27,8 @@ public class MainActivity extends Activity {
 		// String bt1 = b1.getText().toString();
 
 		b1.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {// ¹öÆ° Å¬¸¯½Ã È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
-				tv.setText("Å¬¸¯Çß½À´Ï´Ù");
+			public void onClick(View v) {// ë²„íŠ¼ í´ë¦­ì‹œ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
+				tv.setText("í´ë¦­í–ˆìŠµë‹ˆë‹¤");
 			}
 		});
 
@@ -41,9 +41,9 @@ public class MainActivity extends Activity {
 		b3.setOnClickListener(new OnClickListener() {
 			int num = 0;
 
-			public void onClick(View v) {// ¹öÆ°À» Å¬¸¯ÇßÀ» ¶§ È£ÃâµÇ´Â Äİ¹é¸Ş¼­µå
+			public void onClick(View v) {// ë²„íŠ¼ì„ í´ë¦­í–ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°±ë©”ì„œë“œ
 				num++;
-				tv.setText(num + "");// ÀÎÀÚ°ªÀº ¹®ÀÚ¿­À» ³Ö¾î¾ß ÇÑ´Ù
+				tv.setText(num + "");// ì¸ìê°’ì€ ë¬¸ìì—´ì„ ë„£ì–´ì•¼ í•œë‹¤
 			}
 		});
 

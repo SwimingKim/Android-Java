@@ -30,8 +30,8 @@ public class EndActivity extends Activity{
 		setContentView(R.layout.end);
 		
 		Intent intent = getIntent();
-		good = intent.getIntExtra("¼º°ø", 0);
-		bad = intent.getIntExtra("½ÇÆĞ", 0);
+		good = intent.getIntExtra("ì„±ê³µ", 0);
+		bad = intent.getIntExtra("ì‹¤íŒ¨", 0);
 		
 		mp = MediaPlayer.create(getApplicationContext(), R.raw.clear);
 		mp.start();
@@ -52,16 +52,16 @@ public class EndActivity extends Activity{
 	protected Dialog onCreateDialog(int id) {
 		if (id==0) {
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("¼º°ø");
-			dialog.setMessage(good+"¹ø ¼º°ø "+bad+"¹ø ½ÇÆĞ\n°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï±î?");
-			dialog.setPositiveButton("¿¹", new OnClickListener() {
+			dialog.setTitle("ì„±ê³µ");
+			dialog.setMessage(good+"ë²ˆ ì„±ê³µ "+bad+"ë²ˆ ì‹¤íŒ¨\nê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ê² ìŠµë‹ˆê¹Œ?");
+			dialog.setPositiveButton("ì˜ˆ", new OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 					startActivity(intent);
 					finish();
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", new OnClickListener() {
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", new OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}

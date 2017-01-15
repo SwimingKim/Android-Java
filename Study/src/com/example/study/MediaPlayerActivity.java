@@ -18,16 +18,16 @@ public class MediaPlayerActivity extends Activity{
 
 		mediaPlayer = new MediaPlayer();
 		File files = new File(soundPath);
-		if (files.exists() == true) { // ¿µ¾î/ÀÏº»¾î À½¼º ÆÄÀÏÀÌ ÀÖ´Â °æ¿ì
+		if (files.exists() == true) { // ì˜ì–´/ì¼ë³¸ì–´ ìŒì„± íŒŒì¼ì´ ìˆëŠ” ê²½ìš°
 			try {
 				mediaPlayer = new MediaPlayer();
 				FileInputStream fis = new FileInputStream(soundPath);
 				FileDescriptor fd = fis.getFD();
 				mediaPlayer.setDataSource(fd);
 				mediaPlayer.prepare();
-				// mediaPlayer.setLooping(true); // ¿¬¼ÓÀç»ı
+				// mediaPlayer.setLooping(true); // ì—°ì†ì¬ìƒ
 				mediaPlayer.start();
-				/* mediaPlayer°¡ ³¡³ª°í È£ÃâµÇ´Â ¸Ş¼Òµå */
+				/* mediaPlayerê°€ ëë‚˜ê³  í˜¸ì¶œë˜ëŠ” ë©”ì†Œë“œ */
 				mediaPlayer.setOnCompletionListener(new OnCompletionListener() {
 					public void onCompletion(MediaPlayer mediaPlayer) {
 

@@ -10,30 +10,30 @@ import java.awt.event.WindowListener;
 import java.util.prefs.BackingStoreException;
 
 /**
- * ±×·¡ÇÈ AWT => Swing, TextArea, TextField
+ * ê·¸ë˜í”½ AWT => Swing, TextArea, TextField
  */
 public class TestAWT2 {
 	public static void main(String[] args) {
-		Frame f = new Frame("ÅØ½ºÆ® ¿¡¾î¸®¾î, ÅØ½ºÆ® ÇÊµå ¿¹Á¦");
-		f.setBounds(100, 100, 200, 300);// À§Ä¡¿Í Å©±â
-		f.setLayout(new FlowLayout());// ÄÄÆ÷³ÍÆ®ÀÇ ¹èÄ¡ °ü¸® : ·¹ÀÌ¾Æ¿ô ¸Å´ÏÀú
+		Frame f = new Frame("í…ìŠ¤íŠ¸ ì—ì–´ë¦¬ì–´, í…ìŠ¤íŠ¸ í•„ë“œ ì˜ˆì œ");
+		f.setBounds(100, 100, 200, 300);// ìœ„ì¹˜ì™€ í¬ê¸°
+		f.setLayout(new FlowLayout());// ì»´í¬ë„ŒíŠ¸ì˜ ë°°ì¹˜ ê´€ë¦¬ : ë ˆì´ì•„ì›ƒ ë§¤ë‹ˆì €
 
-		Button b1 = new Button("Àü¼Û");
+		Button b1 = new Button("ì „ì†¡");
 		b1.setBounds(50, 50, 100, 50);
 		f.add(b1);
 
-		TextField tf = new TextField("ÀÔ·ÂÇÏ¼¼¿ä", 20);// ¹®ÀÚ¿­, ¿­ÀÇ Å©±â
+		TextField tf = new TextField("ì…ë ¥í•˜ì„¸ìš”", 20);// ë¬¸ìì—´, ì—´ì˜ í¬ê¸°
 		f.add(tf);
 
 		TextArea ta = new TextArea(5, 20);
 		f.add(ta);
 
-		f.setVisible(true);// È­¸é¿¡ º¸¿©ÁÖ±â
+		f.setVisible(true);// í™”ë©´ì— ë³´ì—¬ì£¼ê¸°
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String str = tf.getText();
-				// ta.setText(str);//TextArea¿¡ ½á¶ó
-				ta.append(str + "\n");// ±âº» ¹®ÀÚ¿­ÀÇ µÚ¿¡ ºÙ¿©½á¶ó
+				// ta.setText(str);//TextAreaì— ì¨ë¼
+				ta.append(str + "\n");// ê¸°ë³¸ ë¬¸ìì—´ì˜ ë’¤ì— ë¶™ì—¬ì¨ë¼
 				tf.setText("");
 			}
 		});
@@ -51,8 +51,8 @@ public class TestAWT2 {
 			public void windowDeactivated(WindowEvent e) {
 			}
 
-			public void windowClosing(WindowEvent e) {// Ã¢´İ±â ¹öÆ° ´­·¶À» ¶§
-				// System.out.println("Ã¢´İ±â´­·¶½À´Ï´Ù");
+			public void windowClosing(WindowEvent e) {// ì°½ë‹«ê¸° ë²„íŠ¼ ëˆŒë €ì„ ë•Œ
+				// System.out.println("ì°½ë‹«ê¸°ëˆŒë €ìŠµë‹ˆë‹¤");
 				// f.setVisible(false);
 				// f.dispose();
 				System.exit(0);

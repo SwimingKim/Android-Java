@@ -1,11 +1,11 @@
 import java.util.Random;
 
 /**
- * ·Î¶Ç¹øÈ£ »ı¼º±â
+ * ë¡œë˜ë²ˆí˜¸ ìƒì„±ê¸°
  */
 public class TestLotto {
 	public static void main(String[] args) {
-		// ·Î¶Ç¹øÈ£ 6°³¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+		// ë¡œë˜ë²ˆí˜¸ 6ê°œë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 		Random ran = new Random();
 		// ran.nextInt(45)+1;//0+1<= ran+1<45+1
 		System.out.println(ran.nextInt(45) + 1);
@@ -16,28 +16,28 @@ public class TestLotto {
 		System.out.println(ran.nextInt(45) + 1);
 
 		int lotto[] = new int[6];
-		int count = 0;// ·Î¶Ç »ÌÀº °³¼ö
-		while (count < 6) {// 6°³ ¸ğµÎ »ÌÀ¸¸é ºüÁ®³ª°¨
+		int count = 0;// ë¡œë˜ ë½‘ì€ ê°œìˆ˜
+		while (count < 6) {// 6ê°œ ëª¨ë‘ ë½‘ìœ¼ë©´ ë¹ ì ¸ë‚˜ê°
 			int r = ran.nextInt(45) + 1;
 
-			// ÀÌÀü¿¡ »Ì¾Ò´ø ·Î¶Ç ¹øÈ£¿Í °°ÀºÁö È®ÀÎ
-			boolean isSame = false;// Áßº¹ÀÌ ÀÖ´Â Ã¼Å©ÇÏ´Â º¯¼ö
+			// ì´ì „ì— ë½‘ì•˜ë˜ ë¡œë˜ ë²ˆí˜¸ì™€ ê°™ì€ì§€ í™•ì¸
+			boolean isSame = false;// ì¤‘ë³µì´ ìˆëŠ” ì²´í¬í•˜ëŠ” ë³€ìˆ˜
 			if (lotto[0] == r)
-				isSame = true;// Áßº¹¹ß»ı
+				isSame = true;// ì¤‘ë³µë°œìƒ
 			if (lotto[1] == r)
-				isSame = true;// Áßº¹¹ß»ı
+				isSame = true;// ì¤‘ë³µë°œìƒ
 			if (lotto[2] == r)
-				isSame = true;// Áßº¹¹ß»ı
+				isSame = true;// ì¤‘ë³µë°œìƒ
 			if (lotto[3] == r)
-				isSame = true;// Áßº¹¹ß»ı
+				isSame = true;// ì¤‘ë³µë°œìƒ
 			if (lotto[4] == r)
-				isSame = true;// Áßº¹¹ß»ı
+				isSame = true;// ì¤‘ë³µë°œìƒ
 			if (lotto[5] == r)
-				isSame = true;// Áßº¹¹ß»ı
+				isSame = true;// ì¤‘ë³µë°œìƒ
 
-			for (int i = 0; i < count; i++) {// ÀÌÀü °Íµé°ú ºñ±³
+			for (int i = 0; i < count; i++) {// ì´ì „ ê²ƒë“¤ê³¼ ë¹„êµ
 				if (lotto[i] == r)
-					isSame = true;// Áßº¹¹ß»ı
+					isSame = true;// ì¤‘ë³µë°œìƒ
 			}
 
 			if (isSame == false) {
@@ -46,7 +46,7 @@ public class TestLotto {
 			}
 		} // end of while
 
-		// ¹è¿­¿¡ ÀúÀåÇØµĞ ·Î¶Ç¹øÈ£ Ãâ·ÂÇÏ±â
+		// ë°°ì—´ì— ì €ì¥í•´ë‘” ë¡œë˜ë²ˆí˜¸ ì¶œë ¥í•˜ê¸°
 		for (int i = 0; i < lotto.length; i++) {
 			System.out.println(lotto[i]);
 		}

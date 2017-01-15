@@ -91,11 +91,11 @@ public class MainActivity extends Activity {
 			// } else if (iv[dap1].isPressed()&&iv[dap2].isPressed()||
 			// iv[dap2].isPressed()&&iv[dap3].isPressed()||
 			// iv[dap2].isPressed()&&iv[dap3].isPressed()) {
-			// Toast.makeText(getApplicationContext(), "2°³ ¸ÂÃã", 0).show();
+			// Toast.makeText(getApplicationContext(), "2ê°œ ë§ì¶¤", 0).show();
 			// } else if (iv[dap1].isPressed()||
 			// iv[dap2].isPressed()||
 			// iv[dap3].isPressed()){
-			// Toast.makeText(getApplicationContext(), "1°³ ¸ÂÃã", 0).show();
+			// Toast.makeText(getApplicationContext(), "1ê°œ ë§ì¶¤", 0).show();
 			// }
 
 		}
@@ -105,21 +105,21 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DIGALOG_WAY:
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("°ÔÀÓ¹æ¹ı");
-			dialog.setMessage("Ã¢¹®¿¡ ¼û°ÜÁø Æ®·ÎÇÇ¸¦ Ã£¾ÆÁÖ¼¼¿ä");
-			dialog.setPositiveButton("¿¹", null);
+			dialog.setTitle("ê²Œì„ë°©ë²•");
+			dialog.setMessage("ì°½ë¬¸ì— ìˆ¨ê²¨ì§„ íŠ¸ë¡œí”¼ë¥¼ ì°¾ì•„ì£¼ì„¸ìš”");
+			dialog.setPositiveButton("ì˜ˆ", null);
 			return dialog.create();
 		case DIGALOG_INTRO:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("°³¹ßÀÚ ¼Ò°³");
-			dialog2.setMessage("°³¹ßÀÚ¿¡°Ô ¿¬¶ôÇØº¸½Ã°Ú½À´Ï±î?");
-			dialog2.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog2.setTitle("ê°œë°œì ì†Œê°œ");
+			dialog2.setMessage("ê°œë°œìì—ê²Œ ì—°ë½í•´ë³´ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog2.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:010-9622-0213"));
 					startActivity(intent);
 				}
 			});
-			dialog2.setNegativeButton("¾Æ´Ï¿À", null);
+			dialog2.setNegativeButton("ì•„ë‹ˆì˜¤", null);
 			return dialog2.create();
 
 		default:

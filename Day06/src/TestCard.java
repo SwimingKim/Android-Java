@@ -1,16 +1,16 @@
 /**
- * static º¯¼öÀÇ È°¿ë
+ * static ë³€ìˆ˜ì˜ í™œìš©
  */
 public class TestCard {
 	public static void main(String[] args) {
 		Card c1 = new Card();
-		c1.kind = "ÇÏÆ®";
+		c1.kind = "í•˜íŠ¸";
 		c1.number = 7;
 		Card.w = 4;
 		Card.h = 6;
 
 		Card c2 = new Card();
-		c2.kind = "´ÙÀÌ¾Æ";
+		c2.kind = "ë‹¤ì´ì•„";
 		c2.number = 5;
 		Card.w = 10;
 		Card.h = 20;

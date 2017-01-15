@@ -5,11 +5,11 @@ import java.awt.Label;
 import java.util.Random;
 
 /**
- * ¾²·¹µå È°¿ë
+ * ì“°ë ˆë“œ í™œìš©
  */
 public class TestThread2 {
 	public static void main(String[] args) {
-		Frame f = new Frame("¾²·¹µåÈ°¿ë");
+		Frame f = new Frame("ì“°ë ˆë“œí™œìš©");
 		f.setBounds(100, 100, 300, 400);
 		f.setLayout(new GridLayout(3, 1));
 
@@ -27,7 +27,7 @@ public class TestThread2 {
 		l3.setBackground(Color.red);
 
 		Thread t1 = new Thread(new Runnable() {
-			public void run() {// º°µµÀÇ ¾²·¹µå¿¡¼­ ÀÛ¾÷ÇÒ ³»¿ë ÀÛ¼º
+			public void run() {// ë³„ë„ì˜ ì“°ë ˆë“œì—ì„œ ì‘ì—…í•  ë‚´ìš© ì‘ì„±
 				int r = 0;
 				while (true) {
 					for (int i = 0; i < 256000; i++) {
@@ -40,7 +40,7 @@ public class TestThread2 {
 				}
 			}
 		});
-		t1.start();// ¾²·¹µå ½ÃÀÛ
+		t1.start();// ì“°ë ˆë“œ ì‹œì‘
 
 		Thread t2 = new Thread(new Runnable() {
 			public void run() {// r,g,b

@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 
 		// b.setOnClickListener(new OnClickListener() {
 		// public void onClick(View v) {
-		// // Æ®À© ¾Ö´Ï¸ŞÀÌ¼Ç - Alpha °ª º¯°æ
+		// // íŠ¸ìœˆ ì• ë‹ˆë©”ì´ì…˜ - Alpha ê°’ ë³€ê²½
 		// Animation animation =
 		// AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha);
 		//
@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// Æ®À© ¾Ö´Ï¸ŞÀÌ¼Ç - Rotation È¸ÀüÇÏ±â
+				// íŠ¸ìœˆ ì• ë‹ˆë©”ì´ì…˜ - Rotation íšŒì „í•˜ê¸°
 				Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
 
 				iv.startAnimation(animation);
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 		});
 
 		b3.setOnClickListener(new OnClickListener() {
-			// Æ®À© ¾Ö´Ï¸ŞÀÌ¼Ç - Translate ÀÌµ¿ÇÏ±â
+			// íŠ¸ìœˆ ì• ë‹ˆë©”ì´ì…˜ - Translate ì´ë™í•˜ê¸°
 			public void onClick(View v) {
 				Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.translate);
 				iv.startAnimation(animation);
@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 
 		b4.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// Æ®À© ¾Ö´Ï¸ŞÀÌ¼Ç - Scale Å©±âº¯°æÇÏ±â
+				// íŠ¸ìœˆ ì• ë‹ˆë©”ì´ì…˜ - Scale í¬ê¸°ë³€ê²½í•˜ê¸°
 				Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale);
 				iv.startAnimation(animation);
 			}

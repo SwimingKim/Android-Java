@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 	Animation animationToRight;
 	Animation animationToUp;
 	Animation animationToDown;
-	int dapI, dapJ; // ºó±×¸²ÀÌ ÀÖ´Â ´äÀÇ Çà°ú ¿­
+	int dapI, dapJ; // ë¹ˆê·¸ë¦¼ì´ ìˆëŠ” ë‹µì˜ í–‰ê³¼ ì—´
 	int position[] = new int[16];
 	private TextView tv;
 	Handler handler = new Handler();
@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
 					count++;
 					if (count==16) {
 						count = 0;
-						Toast.makeText(getApplicationContext(), "Á¾·á", 0).show();
+						Toast.makeText(getApplicationContext(), "ì¢…ë£Œ", 0).show();
 						handler.removeCallbacks(r);
 					} 
 				} else {
@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
 
 		MyEvent me = new MyEvent();
 
-		// »çÁø ³Ö±â&¹öÆ°ÀÌº¥Æ®
+		// ì‚¬ì§„ ë„£ê¸°&ë²„íŠ¼ì´ë²¤íŠ¸
 		for (int i = 0; i < iv.length; i++) {
 			for (int j = 0; j < iv[i].length; j++) {				
 				iv[i][j].setImageResource(seo[i*4+j+0]);
@@ -104,12 +104,12 @@ public class MainActivity extends Activity {
 
 		handler.post(r);
 
-		// ¼ÅÇÃ ÀÌº¥Æ®
+		// ì…”í”Œ ì´ë²¤íŠ¸
 		ran = new Random();
 		Button b = (Button)findViewById(R.id.button1);
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				// À§Ä¡ ¼ø¼­ ¼¯À½
+				// ìœ„ì¹˜ ìˆœì„œ ì„ìŒ
 				for (int i = 0; i < seo.length; i++) {
 					int n1 = ran.nextInt(seo.length);
 					int n2 = ran.nextInt(seo.length);
@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
 					position[n1] = position[n2];
 					position[n2] = temp;	
 				}
-				// ÀÌ¹ÌÁöºä ´Ù½Ã Á¤·Ä
+				// ì´ë¯¸ì§€ë·° ë‹¤ì‹œ ì •ë ¬
 				Arrange();
 				tv.setText(Arrays.toString(position)+"");
 				tv.append("\n"+dapI+","+dapJ);
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
 			LayoutInflater lif = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View myview = lif.inflate(R.layout.show, null);
 			dialog.setView(myview);
-			dialog.setTitle("»çÁøº¸±â");
+			dialog.setTitle("ì‚¬ì§„ë³´ê¸°");
 			ImageView dap = (ImageView)myview.findViewById(R.id.imageView1);
 			dap.setImageResource(R.drawable.frame);
 			return dialog.create();
@@ -182,10 +182,10 @@ public class MainActivity extends Activity {
 			img = iv[i][j];
 
 			if (img == iv[dapI][dapJ]) {
-				Toast.makeText(getApplicationContext(), "¶¯", 0).show();
+				Toast.makeText(getApplicationContext(), "ë•¡", 0).show();
 			}
 
-			if (i!=dapI&&i == dapI+1) {//¾Æ·¡¿¡ ÀÖ´Â °æ¿ì
+			if (i!=dapI&&i == dapI+1) {//ì•„ë˜ì— ìˆëŠ” ê²½ìš°
 				int temp = position[dapI*4+dapJ];
 				position[dapI*4+dapJ] = position[(dapI+1)*4+dapJ];
 				position[(dapI+1)*4+dapJ] = temp;	
@@ -194,7 +194,7 @@ public class MainActivity extends Activity {
 				tv.setText(Arrays.toString(position)+"");
 				tv.append("\n"+dapI+","+dapJ);
 			}
-			if (i!=dapI&&i == dapI-1) {//À§¿¡ ÀÖ´Â °æ¿ì
+			if (i!=dapI&&i == dapI-1) {//ìœ„ì— ìˆëŠ” ê²½ìš°
 				int temp = position[dapI*4+dapJ];
 				position[dapI*4+dapJ] = position[(dapI-1)*4+dapJ];
 				position[(dapI-1)*4+dapJ] = temp;	
@@ -204,7 +204,7 @@ public class MainActivity extends Activity {
 				tv.append("\n"+dapI+","+dapJ);
 			} 
 
-			if (j!=dapJ&&j == dapJ+1) {//¿À¸¥ÂÊ¿¡ ÀÖ´Â °æ¿ì
+			if (j!=dapJ&&j == dapJ+1) {//ì˜¤ë¥¸ìª½ì— ìˆëŠ” ê²½ìš°
 				int temp = position[dapI*4+dapJ];
 				position[dapI*4+dapJ] = position[dapI*4+dapJ+1];
 				position[dapI*4+dapJ+1] = temp;	
@@ -214,7 +214,7 @@ public class MainActivity extends Activity {
 				tv.append("\n"+dapI+","+dapJ);
 			}
 
-			if (j!=dapJ&&j == dapJ-1) {//¿ŞÂÊ¿¡ ÀÖ´Â °æ¿ì
+			if (j!=dapJ&&j == dapJ-1) {//ì™¼ìª½ì— ìˆëŠ” ê²½ìš°
 				int temp = position[dapI*4+dapJ];
 				position[dapI*4+dapJ] = position[dapI*4+dapJ-1];
 				position[dapI*4+dapJ-1] = temp;	

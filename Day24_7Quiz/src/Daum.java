@@ -15,8 +15,8 @@ public class Daum {
 				}
 			}
 		}
-		System.out.println("Á¤ÇØÁø ¼ö¿¡¼­ °¡Àå ÀÛÀº °á°ú´Â " + min);
-		System.out.println("±× ¼ö´Â " + s[a] + "," + s[b]);
+		System.out.println("ì •í•´ì§„ ìˆ˜ì—ì„œ ê°€ì¥ ì‘ì€ ê²°ê³¼ëŠ” " + min);
+		System.out.println("ê·¸ ìˆ˜ëŠ” " + s[a] + "," + s[b]);
 
 	}
 }

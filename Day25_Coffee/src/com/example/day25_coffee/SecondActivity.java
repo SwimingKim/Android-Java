@@ -14,10 +14,10 @@ import android.widget.Toast;
 public class SecondActivity extends MainActivity {
 	// Coffee(String menu,boolean esp, boolean milk, boolean water, boolean
 	// syrup)
-	Coffee[] co = { new Coffee("¿¡½ºÇÁ·¹¼Ò", true, false, false, false, "¸Ó¸®°¡ ¸¼¾ÆÁö°Ô ¾ÆÁÖ ½ë Ä¿ÇÇ¸¦ ¸¶¼Å¾ß°Ú¾î¿ä"),
-			new Coffee("¾Æ¸Ş¸®Ä«³ë", true, false, true, false, "¸®¾ó ¾Æ¸Ş¸®Ä­ ½ºÅ¸ÀÏ·Î ºÎÅ¹µå¸³´Ï´Ù"),
-			new Coffee("Ä«Æä¶ó¶¼", true, true, false, false, "µû²öÇÑ ¿ìÀ¯¿Í ÇÔ²² Ä¿ÇÇ¸¦ ¸¶½Ã°í ½Í¾î¿ä"),
-			new Coffee("¹Ù´Ò¶ó¶ó¶¼", true, true, false, true, "´Ş´ŞÇÏ°í µ¶Æ¯ÇÑ ÇâÀÌ ³ª´Â °ÍÀ» ÁÁ¾ÆÇÕ´Ï´Ù"), new Coffee() };
+	Coffee[] co = { new Coffee("ì—ìŠ¤í”„ë ˆì†Œ", true, false, false, false, "ë¨¸ë¦¬ê°€ ë§‘ì•„ì§€ê²Œ ì•„ì£¼ ìˆ ì»¤í”¼ë¥¼ ë§ˆì…”ì•¼ê² ì–´ìš”"),
+			new Coffee("ì•„ë©”ë¦¬ì¹´ë…¸", true, false, true, false, "ë¦¬ì–¼ ì•„ë©”ë¦¬ì¹¸ ìŠ¤íƒ€ì¼ë¡œ ë¶€íƒë“œë¦½ë‹ˆë‹¤"),
+			new Coffee("ì¹´í˜ë¼ë–¼", true, true, false, false, "ë”°ëˆí•œ ìš°ìœ ì™€ í•¨ê»˜ ì»¤í”¼ë¥¼ ë§ˆì‹œê³  ì‹¶ì–´ìš”"),
+			new Coffee("ë°”ë‹ë¼ë¼ë–¼", true, true, false, true, "ë‹¬ë‹¬í•˜ê³  ë…íŠ¹í•œ í–¥ì´ ë‚˜ëŠ” ê²ƒì„ ì¢‹ì•„í•©ë‹ˆë‹¤"), new Coffee() };
 
 	int num = 0;
 
@@ -41,8 +41,8 @@ public class SecondActivity extends MainActivity {
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
-				if (!!(tv.getText().toString().equals("ÀÌºÁ¿ä ³ª ±î´Ù·Î¿î »ç¶÷ÀÌ¿¡¿ä. ´ç½ÅÀÌ ³» Ä¿ÇÇ ¸¸µé ¼ö ÀÖÀ»±î??"))) {
-					Toast.makeText(getApplicationContext(), "½ÃÀÛÀ» ´­·¯ÁÖ¼¼¿ä", 1).show();
+				if (!!(tv.getText().toString().equals("ì´ë´ìš” ë‚˜ ê¹Œë‹¤ë¡œìš´ ì‚¬ëŒì´ì—ìš”. ë‹¹ì‹ ì´ ë‚´ ì»¤í”¼ ë§Œë“¤ ìˆ˜ ìˆì„ê¹Œ??"))) {
+					Toast.makeText(getApplicationContext(), "ì‹œì‘ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”", 1).show();
 					return;
 				}
 

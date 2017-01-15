@@ -2,37 +2,37 @@ import java.util.Scanner;
 
 public class Fighting {
 	public static void main(String[] args) {
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹Ş¾Æ¼­ ¹®Á¦ÀÇ °³¼ö¸¦ Á¤ÇÏ°í
-		// ÇØ´ç ÄÉÀÌ½ºº°·Î 1±îÁö µµ´ŞÇÏ´Â ¹æ¹ı Áß¿¡¼­
-		// °¡Àå Å«¼ö¿Í °¡Àå ÀÛÀº ¼ö¸¦ ±¸ÇØº¸ÀÚ
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ì•„ì„œ ë¬¸ì œì˜ ê°œìˆ˜ë¥¼ ì •í•˜ê³ 
+		// í•´ë‹¹ ì¼€ì´ìŠ¤ë³„ë¡œ 1ê¹Œì§€ ë„ë‹¬í•˜ëŠ” ë°©ë²• ì¤‘ì—ì„œ
+		// ê°€ì¥ í°ìˆ˜ì™€ ê°€ì¥ ì‘ì€ ìˆ˜ë¥¼ êµ¬í•´ë³´ì
 
-		System.out.println("ÃÑ ¹®Á¦ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì´ ë¬¸ì œì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		Scanner scan = new Scanner(System.in);
 		int T = Integer.valueOf(scan.nextLine());
 
 		for (int i = 1; i <= T; i++) {
 			System.out.println("");
-			System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½ÃÁÒ");
+			System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì£ ");
 			int num = Integer.valueOf(scan.nextLine());
 			int count = 1;
 
-			for (int j = 1; j <= 1000000; j++) {// Æ¯Á¤ÇÑ ¼ıÀÚ°¡ 1±îÁö °¡´Â °æ·Î ±¸ÇÏ±â
+			for (int j = 1; j <= 1000000; j++) {// íŠ¹ì •í•œ ìˆ«ìê°€ 1ê¹Œì§€ ê°€ëŠ” ê²½ë¡œ êµ¬í•˜ê¸°
 				count = 1;
 				while (num != 1) {
 					count++;
 					if (num % 2 == 0) {
 						num = num / 2;
-						System.out.print("Â¦¼ö" + num);
+						System.out.print("ì§ìˆ˜" + num);
 						continue;
 					} else {
 						num = num * 3 + 1;
-						System.out.print("È¦¼ö" + num);
+						System.out.print("í™€ìˆ˜" + num);
 						continue;
 					}
 				}
 			}
 			System.out.println("");
-			System.out.println(num + "°¡ 1±îÁö °¡´Â ¼ö´Â " + count);
+			System.out.println(num + "ê°€ 1ê¹Œì§€ ê°€ëŠ” ìˆ˜ëŠ” " + count);
 
 			System.out.println("");
 			System.out.println("CASE " + i);
@@ -42,7 +42,7 @@ public class Fighting {
 
 		// for (int i = 0; i < 100000000; i++) {
 		// int count = 1;
-		// System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		// System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		// int num = Integer.valueOf(scan.nextLine());
 		//
 		// int dap = 0;
@@ -52,11 +52,11 @@ public class Fighting {
 		// count++;
 		// if (num%2==0) {
 		// num=num/2;
-		// System.out.print("Â¦¼ö"+num);
+		// System.out.print("ì§ìˆ˜"+num);
 		// continue;
 		// } else {
 		// num=num*3+1;
-		// System.out.print("È¦¼ö"+num);
+		// System.out.print("í™€ìˆ˜"+num);
 		// continue;
 		// }
 		// }

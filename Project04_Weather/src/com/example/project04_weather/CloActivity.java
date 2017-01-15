@@ -26,20 +26,20 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class CloActivity extends Activity {
-	Clothes[] clo = {new Clothes("Æ¼¼ÅÃ÷", R.drawable.clo1, false, true, false, false),
-			new Clothes("°¡µğ°Ç", R.drawable.clo2, false, false, true, false),
-			new Clothes("¼ÅÃ÷", R.drawable.clo3, true, false, true, false),
-			new Clothes("¸ÇÅõ¸Ç", R.drawable.clo4, false, false, true, false),
-			new Clothes("ÄÚÆ®", R.drawable.clo5, false, false, false, true),
-			new Clothes("Ä«¶óÆ¼", R.drawable.clo6, true, true, false, false),
-			new Clothes("ÈÄµåÆ¼", R.drawable.clo7, false, false, true, true),
-			new Clothes("ÆĞµù", R.drawable.clo8, false, false, false, true),
-			new Clothes("Ã»¹ÙÁö", R.drawable.clo9, true, true, true, true),
-			new Clothes("¹İ¹ÙÁö", R.drawable.clo10, true, false, false, false),
-			new Clothes("Ä¡¸¶", R.drawable.clo11, true, false, true, false),
-			new Clothes("¿øÇÇ½º", R.drawable.clo12, true, true, false, false)};
-	String str[] = {"ÀüÃ¼","º½","¿©¸§","°¡À»","°Ü¿ï"};
-	String season = "ÀüÃ¼";
+	Clothes[] clo = {new Clothes("í‹°ì…”ì¸ ", R.drawable.clo1, false, true, false, false),
+			new Clothes("ê°€ë””ê±´", R.drawable.clo2, false, false, true, false),
+			new Clothes("ì…”ì¸ ", R.drawable.clo3, true, false, true, false),
+			new Clothes("ë§¨íˆ¬ë§¨", R.drawable.clo4, false, false, true, false),
+			new Clothes("ì½”íŠ¸", R.drawable.clo5, false, false, false, true),
+			new Clothes("ì¹´ë¼í‹°", R.drawable.clo6, true, true, false, false),
+			new Clothes("í›„ë“œí‹°", R.drawable.clo7, false, false, true, true),
+			new Clothes("íŒ¨ë”©", R.drawable.clo8, false, false, false, true),
+			new Clothes("ì²­ë°”ì§€", R.drawable.clo9, true, true, true, true),
+			new Clothes("ë°˜ë°”ì§€", R.drawable.clo10, true, false, false, false),
+			new Clothes("ì¹˜ë§ˆ", R.drawable.clo11, true, false, true, false),
+			new Clothes("ì›í”¼ìŠ¤", R.drawable.clo12, true, true, false, false)};
+	String str[] = {"ì „ì²´","ë´„","ì—¬ë¦„","ê°€ì„","ê²¨ìš¸"};
+	String season = "ì „ì²´";
 	ArrayList<Clothes> ct = new ArrayList<CloActivity.Clothes>();
 	private GridView gv;
 	private MyGrid mg;
@@ -53,29 +53,29 @@ public class CloActivity extends Activity {
 		gv.setAdapter(mg);
 		
 
-		if ("ÀüÃ¼".equals(season)) {
+		if ("ì „ì²´".equals(season)) {
 			for (int i = 0; i < clo.length; i++) {
 				ct.add(clo[i]);
 			}
-		} else if ("º½".equals(season)) {
+		} else if ("ë´„".equals(season)) {
 			for (int i = 0; i < clo.length; i++) {
 				if (clo[i].spring) {
 					ct.add(clo[i]);
 				}
 			}
-		} else if ("¿©¸§".equals(season)) {
+		} else if ("ì—¬ë¦„".equals(season)) {
 			for (int i = 0; i < clo.length; i++) {
 				if (clo[i].summer) {
 					ct.add(clo[i]);
 				}
 			}
-		} else if ("°¡À»".equals(season)) {
+		} else if ("ê°€ì„".equals(season)) {
 			for (int i = 0; i < clo.length; i++) {
 				if (clo[i].fall) {
 					ct.add(clo[i]);
 				}
 			}
-		} else if ("°Ü¿ï".equals(season)) {
+		} else if ("ê²¨ìš¸".equals(season)) {
 			for (int i = 0; i < clo.length; i++) {
 				if (clo[i].winter) {
 					ct.add(clo[i]);
@@ -130,10 +130,10 @@ public class CloActivity extends Activity {
 			iv.setImageResource(ct.get(num).img);
 			et_site.setText(ct.get(num).name);
 			String str = "";
-			if (ct.get(num).spring) str += "º½ "; 
-			if (ct.get(num).summer) str += "¿©¸§ "; 
-			if (ct.get(num).fall) str += "°¡À» "; 
-			if (ct.get(num).winter) str += "°Ü¿ï "; 
+			if (ct.get(num).spring) str += "ë´„ "; 
+			if (ct.get(num).summer) str += "ì—¬ë¦„ "; 
+			if (ct.get(num).fall) str += "ê°€ì„ "; 
+			if (ct.get(num).winter) str += "ê²¨ìš¸ "; 
 			et_id.setText(str);
 
 
@@ -158,10 +158,10 @@ public class CloActivity extends Activity {
 			LayoutInflater lif2 = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View MyView2 = lif2.inflate(R.layout.look, null);
 			dialog = new Builder(this);
-			dialog.setTitle("°Ë»ö °á°ú");
+			dialog.setTitle("ê²€ìƒ‰ ê²°ê³¼");
 			dialog.setView(MyView2);
 
-			dialog.setNegativeButton("È®ÀÎ",null);
+			dialog.setNegativeButton("í™•ì¸",null);
 
 			return dialog.create();
 
@@ -280,29 +280,29 @@ public class CloActivity extends Activity {
 			
 			season = str[position];
 			ct.clear();
-			if ("ÀüÃ¼".equals(season)) {
+			if ("ì „ì²´".equals(season)) {
 				for (int i = 0; i < clo.length; i++) {
 					ct.add(clo[i]);
 				}
-			} else if ("º½".equals(season)) {
+			} else if ("ë´„".equals(season)) {
 				for (int i = 0; i < clo.length; i++) {
 					if (clo[i].spring) {
 						ct.add(clo[i]);
 					}
 				}
-			} else if ("¿©¸§".equals(season)) {
+			} else if ("ì—¬ë¦„".equals(season)) {
 				for (int i = 0; i < clo.length; i++) {
 					if (clo[i].summer) {
 						ct.add(clo[i]);
 					}
 				}
-			} else if ("°¡À»".equals(season)) {
+			} else if ("ê°€ì„".equals(season)) {
 				for (int i = 0; i < clo.length; i++) {
 					if (clo[i].fall) {
 						ct.add(clo[i]);
 					}
 				}
-			} else if ("°Ü¿ï".equals(season)) {
+			} else if ("ê²¨ìš¸".equals(season)) {
 				for (int i = 0; i < clo.length; i++) {
 					if (clo[i].winter) {
 						ct.add(clo[i]);

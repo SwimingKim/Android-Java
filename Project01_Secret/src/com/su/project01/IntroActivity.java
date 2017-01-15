@@ -61,13 +61,13 @@ public class IntroActivity extends Activity{
 			LayoutInflater lif = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View mv = lif.inflate(R.layout.bo, null);			
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("º¸¾È");
-			dialog.setMessage("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			dialog.setTitle("ë³´ì•ˆ");
+			dialog.setMessage("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			dialog.setView(mv);
 			
 			final EditText et = (EditText)mv.findViewById(R.id.editText1);
 			
-			dialog.setPositiveButton("ÀÔ·Â¿Ï·á", new DialogInterface.OnClickListener() {
+			dialog.setPositiveButton("ì…ë ¥ì™„ë£Œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					if(open.equals(et.getText().toString())){
 						Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -75,7 +75,7 @@ public class IntroActivity extends Activity{
 						finish();
 					} else{
 						et.setText("");
-						Toast.makeText(getApplicationContext(), "ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä", 0).show();
+						Toast.makeText(getApplicationContext(), "ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”", 0).show();
 					}
 					
 				}

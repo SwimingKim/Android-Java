@@ -1,15 +1,15 @@
 /**
- * ÀÎÅÍÆäÀÌ½º interface : ²®µ¥±â(¼±¾ğºÎ)¸¸ ÀÖ´Â °Í (Å¬·¡½º°¡ ¾Æ´Ï´Ù)
+ * ì¸í„°í˜ì´ìŠ¤ interface : ê»ë°ê¸°(ì„ ì–¸ë¶€)ë§Œ ìˆëŠ” ê²ƒ (í´ë˜ìŠ¤ê°€ ì•„ë‹ˆë‹¤)
  * 
  */
 public class TestInterface {
 	public static void main(String[] args) {
-		// I i = new I();//ÀÎÅÍÆäÀÌ½º·Î´Â °´Ã¼»ı¼ººÒ°¡
+		// I i = new I();//ì¸í„°í˜ì´ìŠ¤ë¡œëŠ” ê°ì²´ìƒì„±ë¶ˆê°€
 		MyI m = new MyI();
 	}// end of main
 }// end of class
 
-class MyI implements I {// interface¸¦ ±¸ÃàÇÑ´Ù
+class MyI implements I {// interfaceë¥¼ êµ¬ì¶•í•œë‹¤
 	@Override
 	public void print() {
 	}
@@ -20,12 +20,12 @@ class MyI implements I {// interface¸¦ ±¸ÃàÇÑ´Ù
 }
 
 interface I {
-	public static final int a = 3;// ¸ğµç º¯¼ö¿¡´Â public static finalÀ» ¼±¾ğÇØ¾ß ÇÔ
-	int b = 4;// À§ Á¦¾îÀÚ¸¦ ¼±¾ğÇÏÁö ¾ÊÀ¸¸é, ÄÄÆÄÀÏ·¯°¡ ¾Ë¾Æ¼­ Ãß°¡ÇØÁØ´Ù
-	static int c = 5;// ºÎÁ·ÇÑ ºÎºĞÀ» ¾Ë¾Æ¼­ Ãß°¡ÇØÁØ´Ù
+	public static final int a = 3;// ëª¨ë“  ë³€ìˆ˜ì—ëŠ” public static finalì„ ì„ ì–¸í•´ì•¼ í•¨
+	int b = 4;// ìœ„ ì œì–´ìë¥¼ ì„ ì–¸í•˜ì§€ ì•Šìœ¼ë©´, ì»´íŒŒì¼ëŸ¬ê°€ ì•Œì•„ì„œ ì¶”ê°€í•´ì¤€ë‹¤
+	static int c = 5;// ë¶€ì¡±í•œ ë¶€ë¶„ì„ ì•Œì•„ì„œ ì¶”ê°€í•´ì¤€ë‹¤
 
-	public abstract void print();// ¸ğµç ¸Ş¼­µå¿¡´Â public abstract¸¦ ¼±¾ğÇØ¾ß ÇÔ
+	public abstract void print();// ëª¨ë“  ë©”ì„œë“œì—ëŠ” public abstractë¥¼ ì„ ì–¸í•´ì•¼ í•¨
 
-	void p();// À§ Á¦¾îÀÚ¸¦ ¼±¾ğÇÏÁö ¾ÊÀ¸¸é, ÄÄÆÄÀÏ·¯°¡ ¾Ë¾Æ¼­ Ãß°¡ÇØÁØ´Ù
+	void p();// ìœ„ ì œì–´ìë¥¼ ì„ ì–¸í•˜ì§€ ì•Šìœ¼ë©´, ì»´íŒŒì¼ëŸ¬ê°€ ì•Œì•„ì„œ ì¶”ê°€í•´ì¤€ë‹¤
 
 }

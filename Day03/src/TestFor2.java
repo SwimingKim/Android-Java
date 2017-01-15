@@ -1,5 +1,5 @@
 /**
- * ´ÙÁß for
+ * ë‹¤ì¤‘ for
  */
 public class TestFor2 {
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class TestFor2 {
 			}
 		}
 
-		// ±¸±¸´Ü
+		// êµ¬êµ¬ë‹¨
 		for (int i = 2; i <= 9; i++) {
 			for (int j = 1; j <= 9; j++) {
 				if (i * j < 10) {
@@ -25,11 +25,11 @@ public class TestFor2 {
 			}
 		}
 
-		// printf¹® »ç¿ëÇÏ±â
+		// printfë¬¸ ì‚¬ìš©í•˜ê¸°
 		for (int i = 2; i <= 9; i++) {
 			for (int j = 1; j <= 9; j++) {
 				System.out.printf("%d*%d=%3d\n", i, j, i * j);
-				// \n ÇÑÁÙ ³»¸®°í, %d´Â ¼ýÀÚ, %f´Â ¹®ÀÚ¿­, %3Àº 3ÀÚ¸®¼ýÀÚ
+				// \n í•œì¤„ ë‚´ë¦¬ê³ , %dëŠ” ìˆ«ìž, %fëŠ” ë¬¸ìžì—´, %3ì€ 3ìžë¦¬ìˆ«ìž
 			}
 		}
 

@@ -127,7 +127,7 @@ public class MainActivity extends Activity {
 		//
 		// do {
 		// num = ran.nextInt(5);
-		// Log.v("", "Å¸ÀÌ¸Ó ÀÛµ¿Áß ");
+		// Log.v("", "íƒ€ì´ë¨¸ ì‘ë™ì¤‘ ");
 		// timer.schedule(task, 3000,2000);
 		// } while (num==3);
 		// iv[0][num].setVisibility(View.VISIBLE);
@@ -144,7 +144,7 @@ public class MainActivity extends Activity {
 	// TimerTask task = new TimerTask() {
 	// public void run() {
 	// num = ran.nextInt(5);
-	// Log.v("", "Å¸ÀÌ¸Ó ÀÛµ¿Áß ");
+	// Log.v("", "íƒ€ì´ë¨¸ ì‘ë™ì¤‘ ");
 	// cancel();
 	//
 	// }

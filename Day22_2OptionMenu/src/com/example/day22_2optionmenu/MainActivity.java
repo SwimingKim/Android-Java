@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	TextView tv;
-	boolean isLogIn = false;// Ã³À½Àº false - ·Î±×¾Æ¿ô ½ÌÅÂ·Î ½ÃÀÛ
+	boolean isLogIn = false;// ì²˜ìŒì€ false - ë¡œê·¸ì•„ì›ƒ ì‹±íƒœë¡œ ì‹œì‘
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,40 +21,40 @@ public class MainActivity extends Activity {
 
 	}// end of onCreate
 
-	/** Æù¿¡ ¸Ş´ºÅ°¸¦ ´­·¶À»¶§ ÃÖÃÊ·Î ÇÑ¹ø¸¸ ½ÇÇàµÇ´Â Äİ¹é ¸Ş¼­µå */
+	/** í°ì— ë©”ë‰´í‚¤ë¥¼ ëˆŒë €ì„ë•Œ ìµœì´ˆë¡œ í•œë²ˆë§Œ ì‹¤í–‰ë˜ëŠ” ì½œë°± ë©”ì„œë“œ */
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);// ¸Ş´ºµî·Ï
+		getMenuInflater().inflate(R.menu.main, menu);// ë©”ë‰´ë“±ë¡
 		return true;
 	}
 
-	/** ¿É¼Ç¸Ş´º¸¦ ¶ç¿ï ¶§¸¶´Ù È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå */
+	/** ì˜µì…˜ë©”ë‰´ë¥¼ ë„ìš¸ ë•Œë§ˆë‹¤ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ */
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		if (isLogIn) {
-			menu.getItem(0).setTitle("·Î±×¾Æ¿ô");
+			menu.getItem(0).setTitle("ë¡œê·¸ì•„ì›ƒ");
 		} else if (isLogIn) {
-			menu.getItem(0).setTitle("·Î±×ÀÎ");
+			menu.getItem(0).setTitle("ë¡œê·¸ì¸");
 		}
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-	/** ¿É¼Ç¸Ş´º Ç×¸ñÀ» ¼±ÅÃÇßÀ» ¶§ ½ÇÇàµÇ´Â Äİ¹é ¸Ş¼­µå */
+	/** ì˜µì…˜ë©”ë‰´ í•­ëª©ì„ ì„ íƒí–ˆì„ ë•Œ ì‹¤í–‰ë˜ëŠ” ì½œë°± ë©”ì„œë“œ */
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {// ·Î±×ÀÎ/·Î±×¾Æ¿ô
-			if (isLogIn) {// ÇöÀç ·Î±×ÀÎ »óÅÂ¿¡¼­ ·Î±×¾Æ¿ô ¹öÆ°À» ´©¸£¸é
-				tv.setText("·Î±×¾Æ¿ô Çß½À´Ï´Ù");
+		if (id == R.id.action_settings) {// ë¡œê·¸ì¸/ë¡œê·¸ì•„ì›ƒ
+			if (isLogIn) {// í˜„ì¬ ë¡œê·¸ì¸ ìƒíƒœì—ì„œ ë¡œê·¸ì•„ì›ƒ ë²„íŠ¼ì„ ëˆ„ë¥´ë©´
+				tv.setText("ë¡œê·¸ì•„ì›ƒ í–ˆìŠµë‹ˆë‹¤");
 				isLogIn = false;
-			} else {// ÇöÀç ·Î±×¾Æ¿ô »óÅÂ¿¡¼­ ·Î±×ÀÎ ¹öÆ°À» ´©¸£¸é
-				tv.setText("·Î±×ÀÎ Çß½À´Ï´Ù");
+			} else {// í˜„ì¬ ë¡œê·¸ì•„ì›ƒ ìƒíƒœì—ì„œ ë¡œê·¸ì¸ ë²„íŠ¼ì„ ëˆ„ë¥´ë©´
+				tv.setText("ë¡œê·¸ì¸ í–ˆìŠµë‹ˆë‹¤");
 				isLogIn = true;
 			}
 			return true;
 		} else if (id == R.id.delete) {
-			Toast.makeText(getApplicationContext(), "del¼±ÅÃ", 1).show();
+			Toast.makeText(getApplicationContext(), "delì„ íƒ", 1).show();
 			return true;
 		} else if (id == R.id.end) {
-			tv.setText("Çï·Î¿ì¿ùµå");
+			tv.setText("í—¬ë¡œìš°ì›”ë“œ");
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

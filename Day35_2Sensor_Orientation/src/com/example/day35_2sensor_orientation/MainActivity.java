@@ -28,13 +28,13 @@ public class MainActivity extends Activity {
 		tvY = (TextView)findViewById(R.id.textView3);
 		tvZ = (TextView)findViewById(R.id.textView4);
 
-// ÇÚµåÆùÀÇ ÀÚ¿øÀº ÇÏ³ª »ÓÀÌ¹Ç·Î,
-//		¿ì¸® ¾ÛÀÌ ´õÀÌ»ó È­¸é¿¡¼­ º¸ÀÌÁö ¾ÊÀ» °æ¿ì, ÀÚ¿øÀ» ¹İÈ¯ÇØ¾ß ÇÑ´Ù.		
-		// ÀÚ¿øÀÇ ¼±¾ğ
+// í•¸ë“œí°ì˜ ìì›ì€ í•˜ë‚˜ ë¿ì´ë¯€ë¡œ,
+//		ìš°ë¦¬ ì•±ì´ ë”ì´ìƒ í™”ë©´ì—ì„œ ë³´ì´ì§€ ì•Šì„ ê²½ìš°, ìì›ì„ ë°˜í™˜í•´ì•¼ í•œë‹¤.		
+		// ìì›ì˜ ì„ ì–¸
 		sm = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
-//		sensor = sm.getDefaultSensor(Sensor.TYPE_ORIENTATION);//¹æÇâ¼¾¼­ : ³ªÄ§¹İ
-		sensor = sm.getDefaultSensor(sensor.TYPE_ACCELEROMETER);//°¡¼Óµµ¼¾¼­
-		// ¸®½º³Ê °´Ã¼ ¼±¾ğ
+//		sensor = sm.getDefaultSensor(Sensor.TYPE_ORIENTATION);//ë°©í–¥ì„¼ì„œ : ë‚˜ì¹¨ë°˜
+		sensor = sm.getDefaultSensor(sensor.TYPE_ACCELEROMETER);//ê°€ì†ë„ì„¼ì„œ
+		// ë¦¬ìŠ¤ë„ˆ ê°ì²´ ì„ ì–¸
 		oriL = new OriListner();
 
 
@@ -42,34 +42,34 @@ public class MainActivity extends Activity {
 
 	protected void onResume() {
 		super.onResume();
-		// ÀÚ¿øÀ» µî·Ï
-//		sm.registerListener(¸®½º³Ê, ¾î¶² ¼¾¼­, °ªÀ» ¹ŞÀ» ÁÖ±â)
-		sm.registerListener(oriL, sensor, SensorManager.SENSOR_DELAY_NORMAL);// °ªÀ» ¹ŞÀ» ÁÖ±â
+		// ìì›ì„ ë“±ë¡
+//		sm.registerListener(ë¦¬ìŠ¤ë„ˆ, ì–´ë–¤ ì„¼ì„œ, ê°’ì„ ë°›ì„ ì£¼ê¸°)
+		sm.registerListener(oriL, sensor, SensorManager.SENSOR_DELAY_NORMAL);// ê°’ì„ ë°›ì„ ì£¼ê¸°
 		
 	}//end of onResume
 
 	protected void onPause() {
 		super.onPause();
-		// ÀÚ¿øÀ» ¹İÈ¯
-		sm.unregisterListener(oriL,sensor);//¸®½º³Ê ÇØÁ¦
+		// ìì›ì„ ë°˜í™˜
+		sm.unregisterListener(oriL,sensor);//ë¦¬ìŠ¤ë„ˆ í•´ì œ
 	}
 	
 	class OriListner implements SensorEventListener {
 		
 		@Override
 		public void onAccuracyChanged(Sensor sensor, int accuracy) {
-			// ¼¾¼­ÀÇ Á¤¹Ğµµ°¡ º¯°æµÇ¾úÀ» ¶§ È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
+			// ì„¼ì„œì˜ ì •ë°€ë„ê°€ ë³€ê²½ë˜ì—ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
 			
 		}
 		
 		@Override
 		public void onSensorChanged(SensorEvent event) {
-			// ¼¾¼­ÀÇ °ªÀÌ º¯°æµÇ¾úÀ» ¶§ È£ÃâµÇ´Â Äİ¹é ¸Ş¼­µå
-			// TextView¿¡ º¯°æµÈ °ªÀ» ¶ç¿ì±â
+			// ì„¼ì„œì˜ ê°’ì´ ë³€ê²½ë˜ì—ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°± ë©”ì„œë“œ
+			// TextViewì— ë³€ê²½ëœ ê°’ì„ ë„ìš°ê¸°
 			
-			tvX.setText("XÃà : "+event.values[0]);
-			tvY.setText("YÃà : "+event.values[1]);
-			tvZ.setText("ZÃà : "+event.values[2]);
+			tvX.setText("Xì¶• : "+event.values[0]);
+			tvY.setText("Yì¶• : "+event.values[1]);
+			tvZ.setText("Zì¶• : "+event.values[2]);
 			
 		}
 		

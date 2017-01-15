@@ -1,8 +1,8 @@
 
-public class Test¼ø¿­ {
+public class Testìˆœì—´ {
 	public static void main(String[] args) {
 		int data[] = { 1, 2, 3 };
-		// 1,2,3 ¸ğµç ¼ø¿­À» Ãâ·ÂÇÏ½Ã¿À.
+		// 1,2,3 ëª¨ë“  ìˆœì—´ì„ ì¶œë ¥í•˜ì‹œì˜¤.
 
 		// 123
 		// 132

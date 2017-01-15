@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 			//					values[i] = degress.floatValue();
 			//				}
 			//			}
-			tv.setText("X√‡ : "+event.values[0]);
+			tv.setText("XÏ∂ï : "+event.values[0]);
 			if (event.values!=null){
 				iv.setRotation(iv.getRotation()-+event.values[0]);
 			}

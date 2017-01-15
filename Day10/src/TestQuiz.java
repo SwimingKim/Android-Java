@@ -10,19 +10,19 @@ import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 
 /**
- * AWTÈ°¿ë
+ * AWTí™œìš©
  */
 public class TestQuiz {
 	public static void main(String[] args) {
-		// ÁØºñÇÑ ÇÁ·¹ÀÓÀ» ¶ç¿î´Ù
-		// ¹öÆ°À» ´©¸£¸é ÇĞ»ıÀÇ ÀÌ¸§À» »ç¿ëÀÚ ÀÔ·Â ¹Ş´Â´Ù(JOptionPane »ç¿ë)
-		// ÀÔ·Â ¹ŞÀº ÇĞ»ıÀÇ ÀÌ¸§À» ÅØ½ºÆ® ¿¡¾î¸®¾î·Î ¿Å±ä´Ù
+		// ì¤€ë¹„í•œ í”„ë ˆì„ì„ ë„ìš´ë‹¤
+		// ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ í•™ìƒì˜ ì´ë¦„ì„ ì‚¬ìš©ì ì…ë ¥ ë°›ëŠ”ë‹¤(JOptionPane ì‚¬ìš©)
+		// ì…ë ¥ ë°›ì€ í•™ìƒì˜ ì´ë¦„ì„ í…ìŠ¤íŠ¸ ì—ì–´ë¦¬ì–´ë¡œ ì˜®ê¸´ë‹¤
 
-		Frame f = new Frame("ÇĞ»ıÀÌ¸§°ü¸®");
+		Frame f = new Frame("í•™ìƒì´ë¦„ê´€ë¦¬");
 		f.setBounds(100, 100, 200, 300);
 		f.setLayout(new FlowLayout());
 
-		Button b = new Button("Àü¼Û");
+		Button b = new Button("ì „ì†¡");
 		f.add(b);
 
 		TextArea ta = new TextArea(10, 20);
@@ -32,16 +32,16 @@ public class TestQuiz {
 
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String name = JOptionPane.showInputDialog("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+				String name = JOptionPane.showInputDialog("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 				if (name != null) {
 					ta.append(name + "\n");
 				}
 			}
 		});
 
-		// ÇÁ·¹ÀÓ ÀÌº¥Æ® Ã³¸®(Ã¢´İ±â)
-		// WindowListener¸¦ ±¸ÇöÇÏ·Á¸é »ç¿ëÇÏÁö ¾Ê´õ¶óµµ 7°³ÀÇ ¸Ş¼­µå¸¦ ¸ğµÎ ±¸ÇöÇØ¾ß ÇÔ(ºÒÆí)
-		// WinsowAdapter´Â À§ 7°³ÀÇ ¸Ş¼­µåÀÇ ¸öÅëÀ» ¸¸µé¾î µÑ¾î¼­, ¿ì¸®´Â ÇÊ¿äÇÑ °Í¸¸ ÀÛ¼ºÇÏ¸é µÊ
+		// í”„ë ˆì„ ì´ë²¤íŠ¸ ì²˜ë¦¬(ì°½ë‹«ê¸°)
+		// WindowListenerë¥¼ êµ¬í˜„í•˜ë ¤ë©´ ì‚¬ìš©í•˜ì§€ ì•Šë”ë¼ë„ 7ê°œì˜ ë©”ì„œë“œë¥¼ ëª¨ë‘ êµ¬í˜„í•´ì•¼ í•¨(ë¶ˆí¸)
+		// WinsowAdapterëŠ” ìœ„ 7ê°œì˜ ë©”ì„œë“œì˜ ëª¸í†µì„ ë§Œë“¤ì–´ ë‘˜ì–´ì„œ, ìš°ë¦¬ëŠ” í•„ìš”í•œ ê²ƒë§Œ ì‘ì„±í•˜ë©´ ë¨
 		f.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
 				f.dispose();

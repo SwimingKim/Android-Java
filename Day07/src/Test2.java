@@ -4,7 +4,7 @@ import javax.naming.StringRefAddr;
 
 public class Test2 {
 	public static void main(String[] args) {
-		// ¹è¿­ dataÀÇ ¿ø¼Ò¸¦ ¿ª¼øÀ¸·Î ¹è¿­ data2¿¡ ÀúÀå ÈÄ data2¸¦ Ãâ·Â
+		// ë°°ì—´ dataì˜ ì›ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ë°°ì—´ data2ì— ì €ì¥ í›„ data2ë¥¼ ì¶œë ¥
 
 		int data[] = { 3, 7, 2, 1, 5, 9, 4 };
 		int data2[] = new int[data.length];

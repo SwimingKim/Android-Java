@@ -7,8 +7,8 @@ public class test {
 //		System.out.println(temp);
 		
 //		
-//		String title = "´ÙÀÌ¾îÆ® ¿ä°¡";
-//		String str = "Æ® ¿ä";
+//		String title = "ë‹¤ì´ì–´íŠ¸ ìš”ê°€";
+//		String str = "íŠ¸ ìš”";
 //		
 //		boolean aa = title.contains(str);
 //		System.out.println(aa);
@@ -24,11 +24,11 @@ public class test {
 		
 //		System.out.println(String.valueOf((char)(1 + 64)));
 		
-		String a = "¾Æ¾Æ";
+		String a = "ì•„ì•„";
 		a = null;
 		
 		System.out.println(a);
-		System.out.println(a != null ? "½ºÆ®¸µ" : "¾Æ´Ô");
+		System.out.println(a != null ? "ìŠ¤íŠ¸ë§" : "ì•„ë‹˜");
 		
 		
 	}

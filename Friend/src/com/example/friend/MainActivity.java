@@ -22,12 +22,12 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	Friend fri[] = { new Friend("±è¼ö¿µ", "010-9622-0213", 940213, R.drawable.suyoung),
-			new Friend("±è¾Æ¿µ", "010-6662-3586", 940207, R.drawable.ayoung),
-			new Friend("±èÀ¯³ª", "010-4695-1880", 931122, R.drawable.una),
-			new Friend("ÀÌÀºÁö", "010-8902-4091", 931119, R.drawable.eunji),
-			new Friend("Á¤ÇıÁø", "010-2345-8896", 930716, R.drawable.hejin),
-			new Friend("ÃÖ¾ÆÀº", "010-4802-3098", 931227, R.drawable.aeun), };
+	Friend fri[] = { new Friend("ê¹€ìˆ˜ì˜", "010-9622-0213", 940213, R.drawable.suyoung),
+			new Friend("ê¹€ì•„ì˜", "010-6662-3586", 940207, R.drawable.ayoung),
+			new Friend("ê¹€ìœ ë‚˜", "010-4695-1880", 931122, R.drawable.una),
+			new Friend("ì´ì€ì§€", "010-8902-4091", 931119, R.drawable.eunji),
+			new Friend("ì •í˜œì§„", "010-2345-8896", 930716, R.drawable.hejin),
+			new Friend("ìµœì•„ì€", "010-4802-3098", 931227, R.drawable.aeun), };
 	int num = 0;
 	MyAdapter ma;
 	String nm[] = { fri[0].name, fri[1].name, fri[2].name, fri[3].name, fri[4].name, fri[5].name, };
@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
 					} else
 						break;
 				}
-				// Toast.makeText(getApplicationContext(), "°Ë»ö¾î¸¦ È®ÀÎÇØÁÖ¼¼¿ä",
+				// Toast.makeText(getApplicationContext(), "ê²€ìƒ‰ì–´ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”",
 				// 0).show();
 
 			}
@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View myview = (View) li.inflate(R.layout.row, null);
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("°Ë»ö°á°ú");
+			dialog.setTitle("ê²€ìƒ‰ê²°ê³¼");
 			dialog.setView(myview);
 			//
 			return dialog.create();

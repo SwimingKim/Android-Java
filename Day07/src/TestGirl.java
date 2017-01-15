@@ -1,10 +1,10 @@
 /**
- * ¿©ÀÚÄ£±¸ °´Ã¼ Ãß»óÈ­
+ * ì—¬ìì¹œêµ¬ ê°ì²´ ì¶”ìƒí™”
  */
 public class TestGirl {
 	public static void main(String[] args) {
-		Girl g1 = new Girl("°­¸ğ¿¬", 35, 80);
-		Girl g2 = new Girl("À±¸íÁÖ", 30, 85);
+		Girl g1 = new Girl("ê°•ëª¨ì—°", 35, 80);
+		Girl g2 = new Girl("ìœ¤ëª…ì£¼", 30, 85);
 		Girl g3 = new Girl();
 
 		g1.printGirl();
@@ -17,7 +17,7 @@ public class TestGirl {
 class Girl {
 	String name = "";
 	int age;
-	int pretty;// ÀÌ»Û Ã´µµ(100Á¡¸¸Á¡)
+	int pretty;// ì´ìœ ì²™ë„(100ì ë§Œì )
 
 	Girl() {
 	}
@@ -29,7 +29,7 @@ class Girl {
 	}
 
 	void printGirl() {
-		System.out.println(name + "¾ç\t" + age + "»ì\t" + pretty + "Á¡");
+		System.out.println(name + "ì–‘\t" + age + "ì‚´\t" + pretty + "ì ");
 	}
 
 }

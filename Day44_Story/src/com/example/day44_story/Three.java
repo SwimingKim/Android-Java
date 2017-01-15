@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Three extends Activity{
-	String text[] = {"°¡·ç¾ß ÀÎ»çÇØ!! ³» Ä£±¸ ¾ÆºÌ¾ß","Çä!!!!","¾Æ..¾È³çÇÏ¼¼¿ä"};
+	String text[] = {"ê°€ë£¨ì•¼ ì¸ì‚¬í•´!! ë‚´ ì¹œêµ¬ ì•„ëµ¤ì•¼","í—‰!!!!","ì•„..ì•ˆë…•í•˜ì„¸ìš”"};
 	Handler handler = new Handler();
 	Runnable r = new Runnable() {
 		int i = 0;
@@ -18,7 +18,7 @@ public class Three extends Activity{
 				if (i>=text.length) {
 					ab.setImageResource(R.drawable.ab_last);
 					ga.setImageResource(R.drawable.ga_last);
-					tv.setText("Ä£±¸µé ¾ÕÀ¸·Î´Â ¾çº¸ÇØ¿ä");
+					tv.setText("ì¹œêµ¬ë“¤ ì•žìœ¼ë¡œëŠ” ì–‘ë³´í•´ìš”");
 				} else{
 					tv.setText(text[i]);
 					i++;
@@ -27,7 +27,7 @@ public class Three extends Activity{
 			} else {
 				ga.setX(ga.getX()+20);
 				handler.postDelayed(r, 50);
-				tv.setText("»Ñ±î¾ß ³ª ¿Ô´Ù!!");
+				tv.setText("ë¿Œê¹Œì•¼ ë‚˜ ì™”ë‹¤!!");
 			}
 		}
 	};
@@ -51,7 +51,7 @@ public class Three extends Activity{
 		Intent in = getIntent();
 		
 		mp = MediaPlayer.create(getApplicationContext(), R.raw.china);
-		mp.seekTo(in.getIntExtra("³ë·¡", 0));
+		mp.seekTo(in.getIntExtra("ë…¸ëž˜", 0));
 		mp.start();
 		mp.setLooping(true);
 		

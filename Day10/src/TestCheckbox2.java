@@ -1,6 +1,6 @@
 
 /**
- * AWT - CheckBox2 ¶óµğ¿À ¹öÆ°
+ * AWT - CheckBox2 ë¼ë””ì˜¤ ë²„íŠ¼
  * */
 import java.awt.Button;
 import java.awt.Checkbox;
@@ -18,19 +18,19 @@ public class TestCheckbox2 {
 		f.setBounds(100, 100, 200, 300);
 		f.setLayout(new FlowLayout());
 
-		f.add(new Label("´ç½ÅÀÌ °¡Àå ÁÁ¾ÆÇÏ´Â °ÍÀº?"));
+		f.add(new Label("ë‹¹ì‹ ì´ ê°€ì¥ ì¢‹ì•„í•˜ëŠ” ê²ƒì€?"));
 		CheckboxGroup cg = new CheckboxGroup();
-		Checkbox cb1 = new Checkbox("°­¾ÆÁö", cg, false);
-		Checkbox cb2 = new Checkbox("¼Û¾ÆÁö", cg, false);
-		Checkbox cb3 = new Checkbox("¸Á¾ÆÁö", cg, false);
-		Checkbox cb4 = new Checkbox("°í¾çÀÌ", cg, false);
+		Checkbox cb1 = new Checkbox("ê°•ì•„ì§€", cg, false);
+		Checkbox cb2 = new Checkbox("ì†¡ì•„ì§€", cg, false);
+		Checkbox cb3 = new Checkbox("ë§ì•„ì§€", cg, false);
+		Checkbox cb4 = new Checkbox("ê³ ì–‘ì´", cg, false);
 
 		f.add(cb1);
 		f.add(cb2);
 		f.add(cb3);
 		f.add(cb4);
 
-		Button b = new Button("¼±ÅÃ¿Ï·á");
+		Button b = new Button("ì„ íƒì™„ë£Œ");
 		f.add(b);
 
 		TextArea ta = new TextArea(10, 20);
@@ -41,10 +41,10 @@ public class TestCheckbox2 {
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String str = "";
-				// str += cb1.getState() ? cb1.getLabel()+"¼±ÅÃ\n" : "";
-				// str += cb2.getState() ? cb2.getLabel()+"¼±ÅÃ\n" : "";
-				// str += cb3.getState() ? cb3.getLabel()+"¼±ÅÃ\n" : "";
-				// str += cb4.getState() ? cb4.getLabel()+"¼±ÅÃ\n" : "";
+				// str += cb1.getState() ? cb1.getLabel()+"ì„ íƒ\n" : "";
+				// str += cb2.getState() ? cb2.getLabel()+"ì„ íƒ\n" : "";
+				// str += cb3.getState() ? cb3.getLabel()+"ì„ íƒ\n" : "";
+				// str += cb4.getState() ? cb4.getLabel()+"ì„ íƒ\n" : "";
 
 				str += cg.getSelectedCheckbox().getLabel() + "\n";
 				ta.append(str + "\n");

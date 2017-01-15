@@ -1,13 +1,13 @@
 import java.util.Arrays;
 
 /**
- * ÇÇº¸³ªÄ¡ ¼ö¿­ - 1, 1, 2, 3, 5, 8
+ * í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ - 1, 1, 2, 3, 5, 8
  */
 public class Testfibo {
 	public static void main(String[] args) {
-		// ÇÇº¸³ªÄ¡ ¼ö¿­ 20°³¸¦ Ãâ·ÂÇÏ½Ã¿À.//6765
+		// í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ 20ê°œë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.//6765
 
-		int fibo[] = new int[20];// ¹è¿­º¯¼ö ¼±¾ğ, »ı¼º
+		int fibo[] = new int[20];// ë°°ì—´ë³€ìˆ˜ ì„ ì–¸, ìƒì„±
 		fibo[0] = 1;
 		fibo[1] = 1;
 		for (int i = 2; i < fibo.length; i++) {

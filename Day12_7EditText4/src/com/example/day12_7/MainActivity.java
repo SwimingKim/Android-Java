@@ -28,36 +28,36 @@ public class MainActivity extends Activity {
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				String text = ed.getText().toString();
-				if ("±ÛÀÚ".equals(text)) {
+				if ("ê¸€ì".equals(text)) {
 					tv.setTextColor(Color.RED);
-				} else if ("¹è°æ".equals(text)) {
+				} else if ("ë°°ê²½".equals(text)) {
 					tv.setBackgroundColor(Color.RED);
 				} else {
-					Toast.makeText(getApplicationContext(), "±ÛÀÚ È¤Àº ¹è°æ Áß ÅÃÀÏ", 1).show();
+					Toast.makeText(getApplicationContext(), "ê¸€ì í˜¹ì€ ë°°ê²½ ì¤‘ íƒì¼", 1).show();
 				}
 			}
 		});
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				String text = ed.getText().toString();
-				if ("±ÛÀÚ".equals(text)) {
+				if ("ê¸€ì".equals(text)) {
 					tv.setTextColor(Color.GREEN);
-				} else if ("¹è°æ".equals(text)) {
+				} else if ("ë°°ê²½".equals(text)) {
 					tv.setBackgroundColor(Color.GREEN);
 				} else {
-					Toast.makeText(getApplicationContext(), "±ÛÀÚ È¤Àº ¹è°æ Áß ÅÃÀÏ", 1).show();
+					Toast.makeText(getApplicationContext(), "ê¸€ì í˜¹ì€ ë°°ê²½ ì¤‘ íƒì¼", 1).show();
 				}
 			}
 		});
 		b3.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				String text = ed.getText().toString();
-				if ("±ÛÀÚ".equals(text)) {
+				if ("ê¸€ì".equals(text)) {
 					tv.setTextColor(Color.BLUE);
-				} else if ("¹è°æ".equals(text)) {
+				} else if ("ë°°ê²½".equals(text)) {
 					tv.setBackgroundColor(Color.BLUE);
 				} else {
-					Toast.makeText(getApplicationContext(), "±ÛÀÚ È¤Àº ¹è°æ Áß ÅÃÀÏ", 1).show();
+					Toast.makeText(getApplicationContext(), "ê¸€ì í˜¹ì€ ë°°ê²½ ì¤‘ íƒì¼", 1).show();
 				}
 			}
 		});

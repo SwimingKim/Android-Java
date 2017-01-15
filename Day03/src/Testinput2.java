@@ -4,26 +4,26 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» ¹Ş´Â ¹æ¹ı2
+ * ì‚¬ìš©ìì˜ ì…ë ¥ì„ ë°›ëŠ” ë°©ë²•2
  */
 public class Testinput2 {
 	public static void main(String[] args) throws IOException {
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» Å°º¸µå·ÎÅõÅÍ ¹Ş±â À§ÇŞ °´Ã¼¸¦ ¼±¾ğÇÑ´Ù
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ í‚¤ë³´ë“œë¡œíˆ¬í„° ë°›ê¸° ìœ„í–‡ ê°ì²´ë¥¼ ì„ ì–¸í•œë‹¤
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");// ¹®ÀÚ¿­·Î¸¸ ÀÔ·Â¹ŞÀ» ¼ö ÀÖ´Ù.
-		String name = br.readLine();// ¹®ÀÚ¿­·Î¸¸ ÀÔ·Â¹ŞÀ» ¼ö ÀÖ´Ù
-		// ÀÍ¼Á¼Ç Ã³¸®¸¦ ÇÑ´Ù
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº:" + name);
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");// ë¬¸ìì—´ë¡œë§Œ ì…ë ¥ë°›ì„ ìˆ˜ ìˆë‹¤.
+		String name = br.readLine();// ë¬¸ìì—´ë¡œë§Œ ì…ë ¥ë°›ì„ ìˆ˜ ìˆë‹¤
+		// ìµì…‰ì…˜ ì²˜ë¦¬ë¥¼ í•œë‹¤
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì€:" + name);
 
-		System.out.println("´ç½ÅÀÇ ³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		String str = br.readLine();
-		// Buffered Reader´Â ¹«Á¶°Ç ¹®ÀÚ¿­·Î¸¸ ÀÔ·ÂÀ» ¹Ş¾ÆÁØ´Ù
-		// ¼ıÀÚ¸¦ »ç¿ëÇÏ°í ½ÍÀ¸¸é, ¹ŞÀº ¹®ÀÚ¿­À» =>¼ıÀÚ·Î º¯È¯ÇØ¾ß ÇÑ´Ù
+		// Buffered ReaderëŠ” ë¬´ì¡°ê±´ ë¬¸ìì—´ë¡œë§Œ ì…ë ¥ì„ ë°›ì•„ì¤€ë‹¤
+		// ìˆ«ìë¥¼ ì‚¬ìš©í•˜ê³  ì‹¶ìœ¼ë©´, ë°›ì€ ë¬¸ìì—´ì„ =>ìˆ«ìë¡œ ë³€í™˜í•´ì•¼ í•œë‹¤
 
-		int age = Integer.parseInt(str);// ¹®ÀÚ¿­=>¼ıÀÚ·Î º¯È¯
+		int age = Integer.parseInt(str);// ë¬¸ìì—´=>ìˆ«ìë¡œ ë³€í™˜
 		System.out.println(age);
 
-		// ¼ıÀÚ=>¹®ÀÚ¿­
+		// ìˆ«ì=>ë¬¸ìì—´
 		String a = 26 + "";
 
 	}// end of main

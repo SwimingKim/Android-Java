@@ -1,5 +1,5 @@
 /**
- * ¹®ÀÚ´Â ÄÚµå°ª(¼ýÀÚ)À¸·Î ÀúÀåµÈ´Ù
+ * ë¬¸ìžëŠ” ì½”ë“œê°’(ìˆ«ìž)ìœ¼ë¡œ ì €ìž¥ëœë‹¤
  */
 public class TestASCI {
 	public static void main(String[] args) {
@@ -13,18 +13,18 @@ public class TestASCI {
 		}
 
 		char c = 'd';
-		// ¼Ò¹®ÀÚÀÎÁö ´ë¹®ÀÚÀÎÁö Ãâ·Â
-		// ¼Ò¹®ÀÚ¶ó¸é => ´ë¹®ÀÚ·Î º¯È¯ Ãâ·Â
-		// ´ë¹®ÀÚ¶ó¸é => ¼Ò¹®ÀÚ·Î º¯È¯ Ãâ·Â
+		// ì†Œë¬¸ìžì¸ì§€ ëŒ€ë¬¸ìžì¸ì§€ ì¶œë ¥
+		// ì†Œë¬¸ìžë¼ë©´ => ëŒ€ë¬¸ìžë¡œ ë³€í™˜ ì¶œë ¥
+		// ëŒ€ë¬¸ìžë¼ë©´ => ì†Œë¬¸ìžë¡œ ë³€í™˜ ì¶œë ¥
 
 		if (c >= 'A' && c <= 'Z') {
-			System.out.println("´ë¹®ÀÚÀÔ´Ï´Ù");
+			System.out.println("ëŒ€ë¬¸ìžìž…ë‹ˆë‹¤");
 			System.out.println((char) (c + ('a' - 'A')));
 		} else if (c >= 'a' && c <= 'z') {
-			System.out.println("¼Ò¹®ÀÚÀÔ´Ï´Ù");
+			System.out.println("ì†Œë¬¸ìžìž…ë‹ˆë‹¤");
 			System.out.println((char) (c - ('a' - 'A')));
 		} else
-			System.out.println("¿À·ùÀÔ´Ï´Ù");
+			System.out.println("ì˜¤ë¥˜ìž…ë‹ˆë‹¤");
 
 	}// end of main
 }// end of class

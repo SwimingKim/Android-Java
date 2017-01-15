@@ -54,10 +54,10 @@ public class IntroActivity extends Activity{
 	protected Dialog onCreateDialog(int id) {
 		if (id==0) {
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("°ÔÀÓ¹æ¹ı ¼³¸í");
-			dialog.setMessage("1´Ü°è´Â 1¸¶¸® µÎ´õÁö,\n2´Ü°è´Â 2¸¶¸® µÎ´õÁö,\n3´Ü°è´Â 4¸¶¸® µÎ´õÁö°¡ µîÀåÇÕ´Ï´Ù.\n"
-					+ "µÎ´õÁö¸¦ Ã³Ä¡ÇÏ¿©,\n¸¶À»ÀÇ ÆòÈ­¸¦ µÇÃ£¾ÆÁÖ¼¼¿ä");
-			dialog.setPositiveButton("È®ÀÎ", null);
+			dialog.setTitle("ê²Œì„ë°©ë²• ì„¤ëª…");
+			dialog.setMessage("1ë‹¨ê³„ëŠ” 1ë§ˆë¦¬ ë‘ë”ì§€,\n2ë‹¨ê³„ëŠ” 2ë§ˆë¦¬ ë‘ë”ì§€,\n3ë‹¨ê³„ëŠ” 4ë§ˆë¦¬ ë‘ë”ì§€ê°€ ë“±ì¥í•©ë‹ˆë‹¤.\n"
+					+ "ë‘ë”ì§€ë¥¼ ì²˜ì¹˜í•˜ì—¬,\në§ˆì„ì˜ í‰í™”ë¥¼ ë˜ì°¾ì•„ì£¼ì„¸ìš”");
+			dialog.setPositiveButton("í™•ì¸", null);
 			return dialog.create();
 		}
 		return super.onCreateDialog(id);

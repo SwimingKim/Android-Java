@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 			}
 			pro.setProgress(po++);
 			handler.postDelayed(r2, 500);
-			tv.setText("2´Ü°è ÁøÇàÁß");
+			tv.setText("2ë‹¨ê³„ ì§„í–‰ì¤‘");
 		}
 	};
 	Runnable r3 = new Runnable() {
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
 			}
 			pro.setProgress(po++);
 			handler.postDelayed(r3, 500);
-			tv.setText("3´Ü°è ÁøÇàÁß");
+			tv.setText("3ë‹¨ê³„ ì§„í–‰ì¤‘");
 		}
 	};
 	Runnable r_end = new Runnable() {
@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
 		iv[15] = (ImageView)findViewById(R.id.ImageView16);
 
 		tv = (TextView)findViewById(R.id.textView1);
-		tv.setText("1´Ü°è ÁøÇàÁß");
+		tv.setText("1ë‹¨ê³„ ì§„í–‰ì¤‘");
 
 		final Button b_all = (Button)findViewById(R.id.all);
 		final Button b_colum = (Button)findViewById(R.id.colum);
@@ -209,17 +209,17 @@ public class MainActivity extends Activity {
 				handler.removeCallbacks(r3);	
 				handler.removeCallbacks(r_end);	
 				Intent intent = new Intent(getApplicationContext(),EndActivity.class);
-				intent.putExtra("¼º°ø", good);
-				intent.putExtra("½ÇÆĞ", bad);
+				intent.putExtra("ì„±ê³µ", good);
+				intent.putExtra("ì‹¤íŒ¨", bad);
 				startActivity(intent);
 				finish();
 			}
 		};
 
 		timer = new Timer();
-		timer.schedule(task1, 10000);// 1´Ü°è Á¾·á&2´Ü°è ½ÃÀÛ
-		timer.schedule(task2, 20000);// 2´Ü°è Á¾·á&3´Ü°è ½ÃÀÛ
-		timer.schedule(task3, 30000);// 3´Ü°è Á¾·á&´ÙÀ½È­¸é ÀüÈ¯
+		timer.schedule(task1, 10000);// 1ë‹¨ê³„ ì¢…ë£Œ&2ë‹¨ê³„ ì‹œì‘
+		timer.schedule(task2, 20000);// 2ë‹¨ê³„ ì¢…ë£Œ&3ë‹¨ê³„ ì‹œì‘
+		timer.schedule(task3, 30000);// 3ë‹¨ê³„ ì¢…ë£Œ&ë‹¤ìŒí™”ë©´ ì „í™˜
 
 
 		MyEvent me = new MyEvent();
@@ -267,16 +267,16 @@ public class MainActivity extends Activity {
 			handler.removeCallbacks(r3);
 			handler.removeCallbacks(r_end);
 			timer.cancel();
-			dialog.setTitle("½ÇÆĞ");
-			dialog.setMessage("µÎ´õÁö°¡ ¸ğµÎ ¸¶À»·Î Ä§ÀÔÇß½À´Ï´Ù. ´Ù½Ã µµÀüÇÏ½Ã°Ú½À´Ï±î?");
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setTitle("ì‹¤íŒ¨");
+			dialog.setMessage("ë‘ë”ì§€ê°€ ëª¨ë‘ ë§ˆì„ë¡œ ì¹¨ì…í–ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ë„ì „í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}

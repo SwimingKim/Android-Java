@@ -1,12 +1,12 @@
 /**
- * this - ÀÚ±â ÀÚ½ÅÀÇ °´Ã¼¸¦ °¡¸®Å°´Â ÂüÁ¶º¯¼ö
+ * this - ìê¸° ìì‹ ì˜ ê°ì²´ë¥¼ ê°€ë¦¬í‚¤ëŠ” ì°¸ì¡°ë³€ìˆ˜
  */
 public class TestMart {
 	public static void main(String[] args) {
 
-		Mart m1 = new Mart("ÀÌ¸¶Æ®", 30000, 5000);
-		Mart m2 = new Mart("È¨ÇÃ·¯½º", 25000, 4000);
-		Mart m3 = new Mart("·Ôµ¥¸¶Æ®", 28000, 5100);
+		Mart m1 = new Mart("ì´ë§ˆíŠ¸", 30000, 5000);
+		Mart m2 = new Mart("í™ˆí”ŒëŸ¬ìŠ¤", 25000, 4000);
+		Mart m3 = new Mart("ë¡¯ë°ë§ˆíŠ¸", 28000, 5100);
 
 	}// end of main
 }// end of class
@@ -21,19 +21,19 @@ class Mart {
 		this.ball = ball;
 		this.pen = pen;
 		printPrice();
-		System.out.println("¼¼ÀÏ ÈÄ");
+		System.out.println("ì„¸ì¼ í›„");
 		sale();
 		printPrice();
 	}
 
 	void sale() {
-		int ttttttttt = 0;// Áö¿ªº¯¼ö´Â ¸â¹ö°¡ ¾Æ´Ï´Ù
+		int ttttttttt = 0;// ì§€ì—­ë³€ìˆ˜ëŠ” ë©¤ë²„ê°€ ì•„ë‹ˆë‹¤
 		ball *= 0.9;
 		pen *= 0.9;
 	}
 
 	void printPrice() {
-		System.out.println(name + "¸¶Æ®¿¡¼­´Â \n" + "º¼ÀÇ °¡°İÀº " + ball + "¿øÀÌ°í,\n" + "ÆæÀÇ °¡°İÀº " + pen + "¿øÀÌ´Ù\n");
+		System.out.println(name + "ë§ˆíŠ¸ì—ì„œëŠ” \n" + "ë³¼ì˜ ê°€ê²©ì€ " + ball + "ì›ì´ê³ ,\n" + "íœì˜ ê°€ê²©ì€ " + pen + "ì›ì´ë‹¤\n");
 	}
 
 }

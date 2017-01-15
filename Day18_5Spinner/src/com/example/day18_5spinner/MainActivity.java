@@ -12,16 +12,16 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	String[] data = { "¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä", "ÀÏ" };
+	String[] data = { "ì›”", "í™”", "ìˆ˜", "ëª©", "ê¸ˆ", "í† ", "ì¼" };
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// ¾Æ´äÅ¸ºä
-		// 1.´Ù·®ÀÇ µ¥ÀÌÅÍ
-		// 2.¾Æ´äÅ¸±¸¼º(layout, Å¬·¡½º ÀÛ¼º)
-		// 3.¾Æ´äÅ¸ºä¿¡ ¾Æ´äÅ¸µî·Ï
+		// ì•„ë‹µíƒ€ë·°
+		// 1.ë‹¤ëŸ‰ì˜ ë°ì´í„°
+		// 2.ì•„ë‹µíƒ€êµ¬ì„±(layout, í´ë˜ìŠ¤ ì‘ì„±)
+		// 3.ì•„ë‹µíƒ€ë·°ì— ì•„ë‹µíƒ€ë“±ë¡
 		Spinner s = (Spinner) findViewById(R.id.spinner1);
 
 		MyAdapter adapter = new MyAdapter(getApplicationContext(), R.layout.row, data);

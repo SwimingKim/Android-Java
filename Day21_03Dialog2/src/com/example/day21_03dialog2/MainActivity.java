@@ -34,18 +34,18 @@ public class MainActivity extends Activity {
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
 		case DIALOG_ID_SUBMIT:
-			// this¸¦ »ı¼ºÀÚ¿¡ ³Ö¾î¾ß ÇÑ´Ù.
+			// thisë¥¼ ìƒì„±ìì— ë„£ì–´ì•¼ í•œë‹¤.
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("¿Ï·áµÈ ¼³¹®Á¶»ç¸¦ Á¦ÃâÇÏ°Ú½À´Ï±î?");
+			dialog.setTitle("ì™„ë£Œëœ ì„¤ë¬¸ì¡°ì‚¬ë¥¼ ì œì¶œí•˜ê² ìŠµë‹ˆê¹Œ?");
 			dialog.setIcon(R.drawable.ic_launcher);
-			dialog.setMessage("È®ÀÎÇØÁÖ½Ê½Ã¿À");
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setMessage("í™•ì¸í•´ì£¼ì‹­ì‹œì˜¤");
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					Toast.makeText(getApplicationContext(), "Á¦ÃâµÇ¾ú½À´Ï´Ù", 0).show();
+					Toast.makeText(getApplicationContext(), "ì œì¶œë˜ì—ˆìŠµë‹ˆë‹¤", 0).show();
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", null);
-			dialog.setNeutralButton("±Û½ê¿ä", null);
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", null);
+			dialog.setNeutralButton("ê¸€ì„ìš”", null);
 
 			return dialog.create();
 		default:

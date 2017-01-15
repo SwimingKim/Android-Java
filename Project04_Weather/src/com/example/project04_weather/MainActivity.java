@@ -48,18 +48,18 @@ public class MainActivity extends Activity {
 	private StringBuilder weather;
 	String xml = "";
 	ArrayList<Clothes> ct = new ArrayList<Clothes>();
-	Clothes[] clo = {new Clothes("Æ¼¼ÅÃ÷", R.drawable.clo1, false, true, false, false),
-			new Clothes("°¡µð°Ç", R.drawable.clo2, false, false, true, false),
-			new Clothes("¼ÅÃ÷", R.drawable.clo3, true, false, true, false),
-			new Clothes("¸ÇÅõ¸Ç", R.drawable.clo4, false, false, true, false),
-			new Clothes("ÄÚÆ®", R.drawable.clo5, false, false, false, true),
-			new Clothes("Ä«¶óÆ¼", R.drawable.clo6, true, true, false, false),
-			new Clothes("ÈÄµåÆ¼", R.drawable.clo7, false, false, true, true),
-			new Clothes("ÆÐµù", R.drawable.clo8, false, false, false, true),
-			new Clothes("Ã»¹ÙÁö", R.drawable.clo9, true, true, true, true),
-			new Clothes("¹Ý¹ÙÁö", R.drawable.clo10, true, false, false, false),
-			new Clothes("Ä¡¸¶", R.drawable.clo11, true, false, true, false),
-			new Clothes("¿øÇÇ½º", R.drawable.clo12, true, true, false, false)};
+	Clothes[] clo = {new Clothes("í‹°ì…”ì¸ ", R.drawable.clo1, false, true, false, false),
+			new Clothes("ê°€ë””ê±´", R.drawable.clo2, false, false, true, false),
+			new Clothes("ì…”ì¸ ", R.drawable.clo3, true, false, true, false),
+			new Clothes("ë§¨íˆ¬ë§¨", R.drawable.clo4, false, false, true, false),
+			new Clothes("ì½”íŠ¸", R.drawable.clo5, false, false, false, true),
+			new Clothes("ì¹´ë¼í‹°", R.drawable.clo6, true, true, false, false),
+			new Clothes("í›„ë“œí‹°", R.drawable.clo7, false, false, true, true),
+			new Clothes("íŒ¨ë”©", R.drawable.clo8, false, false, false, true),
+			new Clothes("ì²­ë°”ì§€", R.drawable.clo9, true, true, true, true),
+			new Clothes("ë°˜ë°”ì§€", R.drawable.clo10, true, false, false, false),
+			new Clothes("ì¹˜ë§ˆ", R.drawable.clo11, true, false, true, false),
+			new Clothes("ì›í”¼ìŠ¤", R.drawable.clo12, true, true, false, false)};
 	private String aa;
 	int num;
 
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
 		tv = (EditText)findViewById(R.id.editText1);
 		b = (Button)findViewById(R.id.bweather);		
 		
-		tv.setText("¿À´ÃÀÇ ³¯¾¾¸¦ È®ÀÎÇØÁÖ¼¼¿ä");
+		tv.setText("ì˜¤ëŠ˜ì˜ ë‚ ì”¨ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”");
 
 		final MyGrid mg = new MyGrid(getApplicationContext(),R.layout.clo_row,ct);
 		final GridView gv = (GridView)findViewById(R.id.gridView1);
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 
 				ct.clear();
 				String str = tv.getText().toString();
-				if (!"¿À´ÃÀÇ ³¯¾¾¸¦ È®ÀÎÇØÁÖ¼¼¿ä".equals(str)) {
+				if (!"ì˜¤ëŠ˜ì˜ ë‚ ì”¨ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”".equals(str)) {
 					String arr[] = str.split(",");
 					float temp = Float.parseFloat(arr[1].substring(8));
 					if (temp>10&&temp<=20) {
@@ -164,10 +164,10 @@ public class MainActivity extends Activity {
 			iv.setImageResource(ct.get(num).img);
 			et_site.setText(ct.get(num).name);
 			String str = "";
-			if (ct.get(num).spring) str += "º½ "; 
-			if (ct.get(num).summer) str += "¿©¸§ "; 
-			if (ct.get(num).fall) str += "°¡À» "; 
-			if (ct.get(num).winter) str += "°Ü¿ï "; 
+			if (ct.get(num).spring) str += "ë´„ "; 
+			if (ct.get(num).summer) str += "ì—¬ë¦„ "; 
+			if (ct.get(num).fall) str += "ê°€ì„ "; 
+			if (ct.get(num).winter) str += "ê²¨ìš¸ "; 
 			et_id.setText(str);
 
 
@@ -192,10 +192,10 @@ public class MainActivity extends Activity {
 			LayoutInflater lif2 = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View MyView2 = lif2.inflate(R.layout.look, null);
 			dialog = new Builder(this);
-			dialog.setTitle("°Ë»ö °á°ú");
+			dialog.setTitle("ê²€ìƒ‰ ê²°ê³¼");
 			dialog.setView(MyView2);
 
-			dialog.setNegativeButton("È®ÀÎ",null);
+			dialog.setNegativeButton("í™•ì¸",null);
 
 			return dialog.create();
 
@@ -282,9 +282,9 @@ public class MainActivity extends Activity {
 			String itemValue1 = items1.item(0).getFirstChild().getNodeValue();
 			String itemValue3 = items3.item(0).getFirstChild().getNodeValue();
 
-			result.append(itemValue0+" ±âÁØ,\n");
-			result.append("ÇöÀç ¿Âµµ : "+itemValue1+",\n");
-			result.append("³¯¾¾ : "+itemValue3+",\n");
+			result.append(itemValue0+" ê¸°ì¤€,\n");
+			result.append("í˜„ìž¬ ì˜¨ë„ : "+itemValue1+",\n");
+			result.append("ë‚ ì”¨ : "+itemValue3+",\n");
 
 			tv.setText(result.toString());
 
@@ -311,7 +311,7 @@ public class MainActivity extends Activity {
 					conn.setConnectTimeout(1000); 
 					conn.setUseCaches(false);
 					if (conn.getResponseCode()==HttpURLConnection.HTTP_OK) {
-						BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));//ÇÑ±ÛÀÎÄÚµùÃ³¸®
+						BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));//í•œê¸€ì¸ì½”ë”©ì²˜ë¦¬
 						while (true) {
 							String str = br.readLine();
 							if (str==null) break;
@@ -330,7 +330,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		t.start();// ¾²·¹µå µ¿ÀÛ½ÃÅ°±â		
+		t.start();// ì“°ë ˆë“œ ë™ìž‘ì‹œí‚¤ê¸°		
 
 	}
 

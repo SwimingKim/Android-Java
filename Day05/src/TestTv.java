@@ -1,11 +1,11 @@
 /**
- * Å¬·¡½º ¸Þ¼­µå È°¿ë
+ * í´ëž˜ìŠ¤ ë©”ì„œë“œ í™œìš©
  */
 public class TestTv {
 	public static void main(String[] args) {
 
 		Tv t1 = new Tv();
-		t1.name = "»ï¼ºÆÄºê";
+		t1.name = "ì‚¼ì„±íŒŒë¸Œ";
 		t1.size = 40;
 		t1.channel = 11;
 		t1.volumn = 10;
@@ -29,18 +29,18 @@ public class TestTv {
 	}// end of main
 }// end of class
 
-class Tv {// Ãß»óÈ­ ÀÛ¾÷
-	String name;// Á¦Ç°¸í
-	int size;// È­¸é Å©±â
-	int channel;// Ã¤³Î
-	int volumn;// ¼Ò¸®Å©±â
-	boolean power;// Àü¿ø
+class Tv {// ì¶”ìƒí™” ìž‘ì—…
+	String name;// ì œí’ˆëª…
+	int size;// í™”ë©´ í¬ê¸°
+	int channel;// ì±„ë„
+	int volumn;// ì†Œë¦¬í¬ê¸°
+	boolean power;// ì „ì›
 
-	void printPower() {// ÇöÀç Àü¿ø »óÅÂ°¡ ÄÑÁ³´ÂÁö ²¨Á³´ÂÁö Ãâ·Â
-		System.out.println(power ? "ÄÑÁ®ÀÖ½À´Ï´Ù" : "²¨Á®ÀÖ½À´Ï´Ù");
+	void printPower() {// í˜„ìž¬ ì „ì› ìƒíƒœê°€ ì¼œì¡ŒëŠ”ì§€ êº¼ì¡ŒëŠ”ì§€ ì¶œë ¥
+		System.out.println(power ? "ì¼œì ¸ìžˆìŠµë‹ˆë‹¤" : "êº¼ì ¸ìžˆìŠµë‹ˆë‹¤");
 	}
 
-	void powerOnOff() {// ÆÄ¿ö ÄÑ->²ô°í, ²¨-> ÄÑ¶ó
+	void powerOnOff() {// íŒŒì›Œ ì¼œ->ë„ê³ , êº¼-> ì¼œë¼
 
 		// if(power){
 		// power = false;
@@ -58,30 +58,30 @@ class Tv {// Ãß»óÈ­ ÀÛ¾÷
 	// power=false;
 	// }
 	//
-	void channelDown() {// º¯¼ö¿¡ ÀúÀåµÈ channel°ªÀ» 1Áõ°¡½ÃÅ°±â
+	void channelDown() {// ë³€ìˆ˜ì— ì €ìž¥ëœ channelê°’ì„ 1ì¦ê°€ì‹œí‚¤ê¸°
 		channel--;
 	}
 
-	void channelUp() {// º¯¼ö¿¡ ÀúÀåµÈ channel°ªÀ» 1Áõ°¡½ÃÅ°±â
+	void channelUp() {// ë³€ìˆ˜ì— ì €ìž¥ëœ channelê°’ì„ 1ì¦ê°€ì‹œí‚¤ê¸°
 		channel++;
 	}
 
-	// ¸Þ¼­µå(½ÇÇà¹®µéÀÇ ¹­À½)
-	// ¹ÝÈ¯°ª : ¸®ÅÏ°ª - 1°³¸¸ »ç¿ë°¡´É, »ç¿ë¾ÈÇÏ·Á¸é void
-	// ¸Þ¼­µå¸í : ÇÔ¼ö È£Ãâ½Ã »ç¿ëÇÏ´Â ÀÌ¸§
-	// ÀÎÀÚ°ª : ÆÄ¶ó¹ÌÅÍ, ¸Å°³º¯¼ö - »ç¿ëÇÏÁö ¾Ê¾Æµµ µÇ°í, ¿©·¯°³ÀÇ ÀÎÀÚ¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
-	// ¹ÝÈ¯°ª, ¸Þ¼­µå¸í, ÀÎÀÚ°ª
+	// ë©”ì„œë“œ(ì‹¤í–‰ë¬¸ë“¤ì˜ ë¬¶ìŒ)
+	// ë°˜í™˜ê°’ : ë¦¬í„´ê°’ - 1ê°œë§Œ ì‚¬ìš©ê°€ëŠ¥, ì‚¬ìš©ì•ˆí•˜ë ¤ë©´ void
+	// ë©”ì„œë“œëª… : í•¨ìˆ˜ í˜¸ì¶œì‹œ ì‚¬ìš©í•˜ëŠ” ì´ë¦„
+	// ì¸ìžê°’ : íŒŒë¼ë¯¸í„°, ë§¤ê°œë³€ìˆ˜ - ì‚¬ìš©í•˜ì§€ ì•Šì•„ë„ ë˜ê³ , ì—¬ëŸ¬ê°œì˜ ì¸ìžë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.
+	// ë°˜í™˜ê°’, ë©”ì„œë“œëª…, ì¸ìžê°’
 	void ppp() {
-		System.out.println("³ª´Â ¸Þ¼­µå´Ù");
-		return;// ¸®ÅÏÅ¸ÀÔÀÌ voidÀÏ °æ¿ì´Â return¹®À» ½áµµ µÇ°í ¾È ½áµµ µÈ´Ù
+		System.out.println("ë‚˜ëŠ” ë©”ì„œë“œë‹¤");
+		return;// ë¦¬í„´íƒ€ìž…ì´ voidì¼ ê²½ìš°ëŠ” returnë¬¸ì„ ì¨ë„ ë˜ê³  ì•ˆ ì¨ë„ ëœë‹¤
 	}
 
-	int add2(int x) {// ÀÎÀÚ°ªÀ» ¹Þ¾Æ¼­ +2ÇÏ¿© ¸®ÅÏÇÏ´Â ¸Þ¼­µå
+	int add2(int x) {// ì¸ìžê°’ì„ ë°›ì•„ì„œ +2í•˜ì—¬ ë¦¬í„´í•˜ëŠ” ë©”ì„œë“œ
 		int y = x + 2;
 		return y;
 	}
 
-	int add(int x, int y) {// ÀÎÀÚ°ªÀ» µÎ°³ ¹Þ¾Æ¼­ ´õÇØ¼­ ¸®ÅÏÇÏ´Â ¸Þ¼­µå
+	int add(int x, int y) {// ì¸ìžê°’ì„ ë‘ê°œ ë°›ì•„ì„œ ë”í•´ì„œ ë¦¬í„´í•˜ëŠ” ë©”ì„œë“œ
 		int z = x + y;
 		return z;
 	}

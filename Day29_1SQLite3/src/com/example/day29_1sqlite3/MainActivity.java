@@ -19,36 +19,36 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// DB¸¦ È°¿ëÇÏ´Â ¹æ¹ı - sqLite3 (¸ğ¹ÙÀÏ¿ëÀ¸·Î ÀûÇÕ, °æ·®È­), Oracle, mySQL
-		// sqLite3¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ SQLiteOpenHelper Å¬·¡½º¸¦ È°¿ë
+		// DBë¥¼ í™œìš©í•˜ëŠ” ë°©ë²• - sqLite3 (ëª¨ë°”ì¼ìš©ìœ¼ë¡œ ì í•©, ê²½ëŸ‰í™”), Oracle, mySQL
+		// sqLite3ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œ SQLiteOpenHelper í´ë˜ìŠ¤ë¥¼ í™œìš©
 
 		helper = new MySQLiteOpenHelper(getApplicationContext(), "st_file.db", null, 1);
-		Log.d("sqlite3", "MySQLiteOpenHelper ÃÊ±âÈ­ ¼º°ø");
-		// µ¥ÀÌÅÍ »ğÀÔ - insert
+		Log.d("sqlite3", "MySQLiteOpenHelper ì´ˆê¸°í™” ì„±ê³µ");
+		// ë°ì´í„° ì‚½ì… - insert
 		{
 			db = helper.getWritableDatabase();
 			ContentValues values = new ContentValues();
-			values.put("name", "¼­¹Î±Ô");
+			values.put("name", "ì„œë¯¼ê·œ");
 			values.put("kor", 80);
 			db.insert("student", null, values);
-			Log.d("sqlite3", "insert ¿Ï·á");
+			Log.d("sqlite3", "insert ì™„ë£Œ");
 		}
 
-		// µ¥ÀÌÅÍ »èÁ¦ - delete
+		// ë°ì´í„° ì‚­ì œ - delete
 		// db = helper.getWritableDatabase();
-		// db.delete("student", "name=?", new String[] {"¼­¹Î±Ô"});
-		// Log.d("sqlite3", "delete ¿Ï·á");
+		// db.delete("student", "name=?", new String[] {"ì„œë¯¼ê·œ"});
+		// Log.d("sqlite3", "delete ì™„ë£Œ");
 
-		// µ¥ÀÌÅÍ ¼öÁ¤ - update
+		// ë°ì´í„° ìˆ˜ì • - update
 		{
 			db = helper.getWritableDatabase();
 			ContentValues values = new ContentValues();
 			values.put("kor", 90);
-			db.update("student", values, "name=?", new String[] { "¼­¹Î±Ô" });
-			Log.d("sqlite3", "update ¿Ï·á");
+			db.update("student", values, "name=?", new String[] { "ì„œë¯¼ê·œ" });
+			Log.d("sqlite3", "update ì™„ë£Œ");
 		}
 
-		// µ¥ÀÌÅÍ Á¶È¸ - select
+		// ë°ì´í„° ì¡°íšŒ - select
 		{
 			db = helper.getReadableDatabase();
 			Cursor c = db.query("student", null, null, null, null, null, null);
@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
 				int kor = c.getInt(c.getColumnIndex("kor"));
 				Log.d("sqlite3", id + "&" + name + "&" + kor);
 			}
-			Log.d("sqlite3", "select¿Ï·á");
+			Log.d("sqlite3", "selectì™„ë£Œ");
 
 		}
 
@@ -73,12 +73,12 @@ class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	}
 
 	public void onCreate(SQLiteDatabase db) {
-		// Ã³À½ µ¥ÀÌÅÍº£ÀÌ½º Å×ÀÌºíÀ» »ı¼ºÇÒ ¶§ - sqlÀÇ create¹® ½ÇÇà
+		// ì²˜ìŒ ë°ì´í„°ë² ì´ìŠ¤ í…Œì´ë¸”ì„ ìƒì„±í•  ë•Œ - sqlì˜ createë¬¸ ì‹¤í–‰
 		db.execSQL("create table student (id integer primary key autoincrement, name text, kor integer)");
 	}
 
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// µ¥ÀÌÅÍº£ÀÌ½ºÀÇ ¹öÁ¯ÀÌ º¯°æµÇ¾î¼­ ¾÷±×·¹ÀÌµå°¡ ÇÊ¿äÇÒ ¶§ - ¿ì¸®´Â Å×ÀÌºí dropÈÄ ´Ù½Ã create ÇÏÀÚ
+		// ë°ì´í„°ë² ì´ìŠ¤ì˜ ë²„ì ¼ì´ ë³€ê²½ë˜ì–´ì„œ ì—…ê·¸ë ˆì´ë“œê°€ í•„ìš”í•  ë•Œ - ìš°ë¦¬ëŠ” í…Œì´ë¸” dropí›„ ë‹¤ì‹œ create í•˜ì
 		db.execSQL("drop table if exists student"); // drop
 		onCreate(db); // create
 	}

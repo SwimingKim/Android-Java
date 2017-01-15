@@ -20,21 +20,21 @@ public class MainActivity extends Activity {
 
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), // ÇöÀçÈ­¸éÀÇ Á¦¾î±ÇÀÚ
-						"ÂªÀº Åä½ºÆ® ±î²á", // È­¸é¿¡ ¶ç¾îÁÙ ¸Ş¼¼Áö
-						Toast.LENGTH_SHORT)// 0Àº ÂªÀº °Í, 1Àº ±ä °Í
-						.show();// È­¸é¿¡ ¶ç¾îÁÖ±â
+				Toast.makeText(getApplicationContext(), // í˜„ì¬í™”ë©´ì˜ ì œì–´ê¶Œì
+						"ì§§ì€ í† ìŠ¤íŠ¸ ê¹Œê¿", // í™”ë©´ì— ë„ì–´ì¤„ ë©”ì„¸ì§€
+						Toast.LENGTH_SHORT)// 0ì€ ì§§ì€ ê²ƒ, 1ì€ ê¸´ ê²ƒ
+						.show();// í™”ë©´ì— ë„ì–´ì£¼ê¸°
 			}
 		});
 
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "±æ°Ô º¸¿©ÁÖ´Â ¸Ş¼¼Áö ·Î~¿Ë", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "ê¸¸ê²Œ ë³´ì—¬ì£¼ëŠ” ë©”ì„¸ì§€ ë¡œ~ì˜¹", Toast.LENGTH_LONG).show();
 			}
 		});
 		b3.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "¸Ş·Õ", 1).show();
+				Toast.makeText(getApplicationContext(), "ë©”ë¡±", 1).show();
 			}
 		});
 

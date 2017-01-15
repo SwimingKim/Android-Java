@@ -15,12 +15,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		final SoundPool sp = new SoundPool(255, // ÃÖ´ë·ÎµùÇÒ ¼ö ÀÖ´Â À½¾ÇÆÄÀÏ °³¼ö
-				AudioManager.STREAM_MUSIC// ½ºÆ®¸²Å¸ÀÔ
-				, 0);// À½Áú(±âº»°ª0)
-		final int soundID1 = sp.load(this, // ÇöÀç È­¸é Á¦¾î±ÇÀÚ
-				R.raw.s1, // ³ë·¡ÆÄÀÏ
-				1);// Àç»ı¿ì¼±¼øÀ§
+		final SoundPool sp = new SoundPool(255, // ìµœëŒ€ë¡œë”©í•  ìˆ˜ ìˆëŠ” ìŒì•…íŒŒì¼ ê°œìˆ˜
+				AudioManager.STREAM_MUSIC// ìŠ¤íŠ¸ë¦¼íƒ€ì…
+				, 0);// ìŒì§ˆ(ê¸°ë³¸ê°’0)
+		final int soundID1 = sp.load(this, // í˜„ì¬ í™”ë©´ ì œì–´ê¶Œì
+				R.raw.s1, // ë…¸ë˜íŒŒì¼
+				1);// ì¬ìƒìš°ì„ ìˆœìœ„
 		final int soundID2 = sp.load(this, R.raw.s2, 1);
 		final int soundID3 = sp.load(this, R.raw.s3, 1);
 
@@ -30,12 +30,12 @@ public class MainActivity extends Activity {
 
 		b1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				sp.play(soundID1, // ³ë·¡Àç»ıÆÄÀÏ
-						1, // ¿ŞÂÊ º¼·ı float ÀÛÀº¼Ò¸® 0.0~1.0Å«¼Ò¸®
-						1, // ¿À¸¥ÂÊ º¼·ı float ÀÛÀº¼Ò¸® 0.0~1.0Å«¼Ò¸®
-						0, // Àç»ı¿ì¼±¼øÀ§ int
-						0, // ¹İº¹È½¼ö(loop) int 0:¹«¹İº¹, -1:¹«ÇÑ¹İº¹, ¾ç¼ö:¹İº¹È½¼ö
-						1);// Àç»ı¼Óµµ(rate) float Àı¹İ¼Óµµ0.5~2.0µÎ¹è¼Óµµ
+				sp.play(soundID1, // ë…¸ë˜ì¬ìƒíŒŒì¼
+						1, // ì™¼ìª½ ë³¼ë¥¨ float ì‘ì€ì†Œë¦¬ 0.0~1.0í°ì†Œë¦¬
+						1, // ì˜¤ë¥¸ìª½ ë³¼ë¥¨ float ì‘ì€ì†Œë¦¬ 0.0~1.0í°ì†Œë¦¬
+						0, // ì¬ìƒìš°ì„ ìˆœìœ„ int
+						0, // ë°˜ë³µíšŸìˆ˜(loop) int 0:ë¬´ë°˜ë³µ, -1:ë¬´í•œë°˜ë³µ, ì–‘ìˆ˜:ë°˜ë³µíšŸìˆ˜
+						1);// ì¬ìƒì†ë„(rate) float ì ˆë°˜ì†ë„0.5~2.0ë‘ë°°ì†ë„
 
 			}
 		});

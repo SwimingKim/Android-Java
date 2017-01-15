@@ -1,5 +1,5 @@
 /**
- * super : ºÎ¸ğ Å¬·¡½ºÀÇ °´Ã¼¸¦ °¡¸®Å°´Â ÂüÁ¶º¯¼ö
+ * super : ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ê°€ë¦¬í‚¤ëŠ” ì°¸ì¡°ë³€ìˆ˜
  */
 public class TestSuper {
 	public static void main(String[] args) {
@@ -9,22 +9,22 @@ public class TestSuper {
 }// end of class
 
 class Parent {
-	int g = 100;// Àü¿ªº¯¼ö
+	int g = 100;// ì „ì—­ë³€ìˆ˜
 
 	void ddd() {
 		int g = 2000;
-	}// Áö¿ªº¯¼ö
+	}// ì§€ì—­ë³€ìˆ˜
 }
 
 class Child extends Parent {
-	int g = 30;// Àü¿ªº¯¼ö
+	int g = 30;// ì „ì—­ë³€ìˆ˜
 
 	void ccc() {
 		int g = 4;
 		System.out.println(g);// 4
-		System.out.println(this.g);// 30, this ³»Å¬·¡½ºÀÇ Àü¿ªº¯¼ö ÀÌ»ó
-		System.out.println(super.g);// 100, super ºÎ¸ğÅ¬·¡½ºÀÇ Àü¿ªº¯¼öÀÌ»ó
-		super.ddd();// ºÎ¸ğÅ¬·¡½ºÀÇ ¸â¹ö(º¯¼ö,¸Ş¼­µå)¿¡ Á¢±Ù½Ã super »ç¿ë
+		System.out.println(this.g);// 30, this ë‚´í´ë˜ìŠ¤ì˜ ì „ì—­ë³€ìˆ˜ ì´ìƒ
+		System.out.println(super.g);// 100, super ë¶€ëª¨í´ë˜ìŠ¤ì˜ ì „ì—­ë³€ìˆ˜ì´ìƒ
+		super.ddd();// ë¶€ëª¨í´ë˜ìŠ¤ì˜ ë©¤ë²„(ë³€ìˆ˜,ë©”ì„œë“œ)ì— ì ‘ê·¼ì‹œ super ì‚¬ìš©
 
-	}// Áö¿ªº¯¼ö
+	}// ì§€ì—­ë³€ìˆ˜
 }

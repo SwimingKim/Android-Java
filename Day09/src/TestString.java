@@ -1,5 +1,5 @@
 /**
- * À¯¿ëÇÑ Å¬·¡½º - String
+ * ìœ ìš©í•œ í´ë˜ìŠ¤ - String
  */
 public class TestString {
 	public static void main(String[] args) {
@@ -10,36 +10,36 @@ public class TestString {
 		// str1.value = "Sdfsf";
 
 		System.out.println("d");
-		p("str");// toString()ÀÌ »ı·«µÇ¾î ÀÖÀ½
-		p(str.toString());// ÀúÀåµÈ ¹®ÀÚ¿­ Ãâ·Â
-		p(str.charAt(3) + "");// ÇØ´ç ÀÎµ¦½º ¹øÂ°ÀÇ ¹®ÀÚ¸¦ ¸®ÅÏ
-		p(str.contains("cdef") + "");// ÇØ´ç¹®ÀÚ¿­ÀÇ Æ÷ÇÔ¿©ºÎ ¸®ÅÏ
-		p(str.equals(str2) + "");// ¹®ÀÚ¿­ÀÇ ³»¿ë¹° ºñ±³
-		p(str.indexOf("cde") + "");// ¹®ÀÚ¿­ÀÇ ½ÃÀÛÀ§Ä¡, ¹®ÀÚ¿­À» ¸ø Ã£À¸¸é -1
-		p(str.length() + "");// ¹®ÀÚ¿­ÀÇ ±æÀÌ
-		p(str.replace("ef", "xx"));// ¹®ÀÚ¿­ÀÇ ±³Ã¼
-		p(str.substring(3, 6));// ¹®ÀÚ¿­ÀÇ ÀÏºÎ ÃßÃâ(¾Õindex´Â Æ÷ÇÔ, µÚindex¹ÌÆ÷ÇÔ)
-		p(str.toUpperCase());// ´ë¹®ÀÚ·Î º¯È¯
-		p("AbCdEdEfGhIj".toLowerCase());// ¼Ò¹®ÀÚ·Î º¯È¯
-		p(str.concat("Xxx"));// ¹®ÀÚ¿­ ÀÌ¾îºÙÀÌ±â
+		p("str");// toString()ì´ ìƒëµë˜ì–´ ìˆìŒ
+		p(str.toString());// ì €ì¥ëœ ë¬¸ìì—´ ì¶œë ¥
+		p(str.charAt(3) + "");// í•´ë‹¹ ì¸ë±ìŠ¤ ë²ˆì§¸ì˜ ë¬¸ìë¥¼ ë¦¬í„´
+		p(str.contains("cdef") + "");// í•´ë‹¹ë¬¸ìì—´ì˜ í¬í•¨ì—¬ë¶€ ë¦¬í„´
+		p(str.equals(str2) + "");// ë¬¸ìì—´ì˜ ë‚´ìš©ë¬¼ ë¹„êµ
+		p(str.indexOf("cde") + "");// ë¬¸ìì—´ì˜ ì‹œì‘ìœ„ì¹˜, ë¬¸ìì—´ì„ ëª» ì°¾ìœ¼ë©´ -1
+		p(str.length() + "");// ë¬¸ìì—´ì˜ ê¸¸ì´
+		p(str.replace("ef", "xx"));// ë¬¸ìì—´ì˜ êµì²´
+		p(str.substring(3, 6));// ë¬¸ìì—´ì˜ ì¼ë¶€ ì¶”ì¶œ(ì•indexëŠ” í¬í•¨, ë’¤indexë¯¸í¬í•¨)
+		p(str.toUpperCase());// ëŒ€ë¬¸ìë¡œ ë³€í™˜
+		p("AbCdEdEfGhIj".toLowerCase());// ì†Œë¬¸ìë¡œ ë³€í™˜
+		p(str.concat("Xxx"));// ë¬¸ìì—´ ì´ì–´ë¶™ì´ê¸°
 
-		String str3 = "È£¶ûÀÌ/°­¾ÆÁö/°í¾çÀÌ/¼Û¾ÆÁö";
+		String str3 = "í˜¸ë‘ì´/ê°•ì•„ì§€/ê³ ì–‘ì´/ì†¡ì•„ì§€";
 		String[] w = str3.split("/");//
 		for (int i = 0; i < w.length; i++) {
 			System.out.println(w[i]);
 		}
 
-		String str4 = "   ¼­  ¹Î  ±Ô     ";
+		String str4 = "   ì„œ  ë¯¼  ê·œ     ";
 		p(str4);
-		p(str4.trim());// ¾ÕµÚÀÇ ½ºÆäÀÌ½º Á¦°ÅÇÏ±â
+		p(str4.trim());// ì•ë’¤ì˜ ìŠ¤í˜ì´ìŠ¤ ì œê±°í•˜ê¸°
 
-		// ¼ıÀÚ => ¹®ÀÚ¿­
-		String s1 = String.valueOf(123);// 123 int => String Çüº¯È¯
+		// ìˆ«ì => ë¬¸ìì—´
+		String s1 = String.valueOf(123);// 123 int => String í˜•ë³€í™˜
 		String s2 = String.valueOf(true);//
 		p(s1);
 		p(s2);
 
-		// ¹®ÀÚ¿­ => ±âº»Çü
+		// ë¬¸ìì—´ => ê¸°ë³¸í˜•
 		int num = Integer.valueOf("123");// Integer.parseInt("123");
 		boolean b = Boolean.valueOf("true");// Boolean.parseBoolean("true");
 		double d = Double.valueOf("3.14");// Double.parseDouble("3.14");

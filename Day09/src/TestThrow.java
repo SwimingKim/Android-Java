@@ -3,11 +3,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * ¿¹¿ÜÃ³¸®
+ * ì˜ˆì™¸ì²˜ë¦¬
  */
 
-// ÄÄÆÄÀÏ·¯ ¿ªÇÒ : Çüº¯È¯, ÀÓÆ÷Æ®, ±âº» »ı¼ºÀÚ ÀÛ¼º, ¿¡·¯ Ã£´Â °Í, ¿À¹ö ·Îµù Çã¿ë,
-// ÀÚ±âÀÚ½Å °´Ã¼(this) È£Ãâ, ºÎ¸ğÅ¬·¡½º(super) È£Ãâ
+// ì»´íŒŒì¼ëŸ¬ ì—­í•  : í˜•ë³€í™˜, ì„í¬íŠ¸, ê¸°ë³¸ ìƒì„±ì ì‘ì„±, ì—ëŸ¬ ì°¾ëŠ” ê²ƒ, ì˜¤ë²„ ë¡œë”© í—ˆìš©,
+// ìê¸°ìì‹  ê°ì²´(this) í˜¸ì¶œ, ë¶€ëª¨í´ë˜ìŠ¤(super) í˜¸ì¶œ
 public class TestThrow {
 	public static void main(String[] args) throws IOException {
 
@@ -23,13 +23,13 @@ public class TestThrow {
 		try {
 			second();
 		} catch (Exception e) {
-			System.out.println("¼¼ÄÁµå¿¡¼­ ÆøÅº Ã³¸®");
+			System.out.println("ì„¸ì»¨ë“œì—ì„œ í­íƒ„ ì²˜ë¦¬");
 		}
 		System.out.println("yyyy");
 	}
 
 	void second() throws ArithmeticException {
-		// ExceptionÀ» Á÷Á¢ Ã³¸®ÇÏÁö ¾Ê°í, ³ª¸¦ È£ÃâÇÑ ¸Ş¼­µå·Î Exception Á¤º¸¸¦ Àü´Ş
+		// Exceptionì„ ì§ì ‘ ì²˜ë¦¬í•˜ì§€ ì•Šê³ , ë‚˜ë¥¼ í˜¸ì¶œí•œ ë©”ì„œë“œë¡œ Exception ì •ë³´ë¥¼ ì „ë‹¬
 		System.out.println(3 / 0);
 		System.out.println("xxxx");
 	}

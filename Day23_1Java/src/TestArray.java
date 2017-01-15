@@ -3,7 +3,7 @@ import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 /**
- * ¹è¿­ : °°Àº Å¸ÀÔ º¯¼öµéÀÇ ¹­À½
+ * ë°°ì—´ : ê°™ì€ íƒ€ì… ë³€ìˆ˜ë“¤ì˜ ë¬¶ìŒ
  */
 public class TestArray {
 	public static void main(String[] args) {
@@ -17,15 +17,15 @@ public class TestArray {
 		}
 		System.out.println((float) sum / c.length);
 
-		// »ç¿ëÀÚÀÇ ÀÔ·ÂÀ» 3È¸ ¹Ş¾Æ¼­ ÃÑÁ¡°ú Æò±ÕÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+		// ì‚¬ìš©ìì˜ ì…ë ¥ì„ 3íšŒ ë°›ì•„ì„œ ì´ì ê³¼ í‰ê· ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 		int user[] = new int[3];
 		int sum_user = 0;
 		for (int i = 0; i < user.length; i++) {
-			user[i] = Integer.valueOf(JOptionPane.showInputDialog(i + 1 + "¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä"));
+			user[i] = Integer.valueOf(JOptionPane.showInputDialog(i + 1 + "ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”"));
 
 			sum_user += user[i];
 		}
-		System.out.println("ÃÑÁ¡ = " + sum_user + " Æò±Õ = " + sum_user / user.length);
+		System.out.println("ì´ì  = " + sum_user + " í‰ê·  = " + sum_user / user.length);
 
 	}// end of main
 }// end of class

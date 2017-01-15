@@ -11,7 +11,7 @@ public class SecondActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.second);// ÇöÀçjavaÆÄÀÏ°ú ¿¬°áÇÒ layoutÆÄÀÏ µî·Ï
+		setContentView(R.layout.second);// í˜„ì¬javaíŒŒì¼ê³¼ ì—°ê²°í•  layoutíŒŒì¼ ë“±ë¡
 
 		Button b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(new OnClickListener() {
@@ -23,11 +23,11 @@ public class SecondActivity extends Activity {
 		Button b2 = (Button) findViewById(R.id.button2);
 		b2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(), // ÇöÀçÈ­¸éÀÇ
-																	// Á¦¾î±ÇÀÚ
-						MainActivity.class);// ´ÙÀ½ ³Ñ¾î°¥ È­¸é
+				Intent intent = new Intent(getApplicationContext(), // í˜„ì¬í™”ë©´ì˜
+																	// ì œì–´ê¶Œì
+						MainActivity.class);// ë‹¤ìŒ ë„˜ì–´ê°ˆ í™”ë©´
 				finish();
-				;// ÇöÀç È­¸éÀ» ´İ¾ÆÁÜ
+				;// í˜„ì¬ í™”ë©´ì„ ë‹«ì•„ì¤Œ
 				startActivity(intent);
 			}
 		});

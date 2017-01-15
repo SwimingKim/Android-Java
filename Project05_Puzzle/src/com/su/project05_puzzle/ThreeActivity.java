@@ -41,9 +41,9 @@ public class ThreeActivity extends Activity{
 	Vibrator vib;
 	//	MediaPlayer mp;
 
-	int index[] = new int [16]; //¼¯ÀÎ ÀÎµ¦½º¸¦ ÀúÀåÇÒ ¹è¿­
-	int indexBlankImg; // ºó ÀÌ¹ÌÁöÀÇ ÀÎµ¦½º 
-	int moveCount; // ÀÌµ¿È½¼ö 
+	int index[] = new int [16]; //ì„ì¸ ì¸ë±ìŠ¤ë¥¼ ì €ì¥í•  ë°°ì—´
+	int indexBlankImg; // ë¹ˆ ì´ë¯¸ì§€ì˜ ì¸ë±ìŠ¤ 
+	int moveCount; // ì´ë™íšŸìˆ˜ 
 	private Button bStart;
 	private Button bSuffle;
 	private Button bHint;
@@ -74,7 +74,7 @@ public class ThreeActivity extends Activity{
 		chro = (Chronometer)findViewById(R.id.chronometer1);
 		vib = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
 
-		// »çÁø ³Ö±â&¹öÆ°ÀÌº¥Æ®
+		// ì‚¬ì§„ ë„£ê¸°&ë²„íŠ¼ì´ë²¤íŠ¸
 		for (int i = 0; i < seo.length; i++) {
 			index[i] = i;
 			if (seo[i]==R.drawable.bin) {
@@ -82,7 +82,7 @@ public class ThreeActivity extends Activity{
 			}
 		}
 
-		// ¼ÅÇÃ ÀÌº¥Æ®
+		// ì…”í”Œ ì´ë²¤íŠ¸
 		ran = new Random();
 
 		for (int i = 0; i < seo.length; i++) {
@@ -94,8 +94,8 @@ public class ThreeActivity extends Activity{
 			index[n2] = temp;	
 		}
 		gv.setAdapter(mg);
-		chro.setBase(SystemClock.elapsedRealtime()); // ½Ã°£ÃÊ±âÈ­ 
-		chro.start(); // ½Ã°£ ½ÃÀÛ 
+		chro.setBase(SystemClock.elapsedRealtime()); // ì‹œê°„ì´ˆê¸°í™” 
+		chro.start(); // ì‹œê°„ ì‹œì‘ 
 
 		//					mp = MediaPlayer.create(getApplicationContext(), R.raw.music);
 		//					if (mp==null||!mp.isPlaying()) {
@@ -103,7 +103,7 @@ public class ThreeActivity extends Activity{
 		//						mp.setLooping(true);
 		//					}
 
-		// ¸ğµç ÀÌ¹ÌÁö ºä¸¦ Å¬¸¯ÇÒ ¼ö ÀÖ°Ô 
+		// ëª¨ë“  ì´ë¯¸ì§€ ë·°ë¥¼ í´ë¦­í•  ìˆ˜ ìˆê²Œ 
 		gv.setEnabled(true);
 		for (int i = 0; i < seo.length; i++) {
 			if (seo[index[i]]==R.drawable.bin) {
@@ -121,7 +121,7 @@ public class ThreeActivity extends Activity{
 		});
 
 		bSuffle.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) { // ¼ø¼­¼¯±â
+			public void onClick(View v) { // ìˆœì„œì„ê¸°
 				for (int i = 0; i < seo.length; i++) {
 					int n1 = ran.nextInt(seo.length);
 					int n2 = ran.nextInt(seo.length);
@@ -137,18 +137,18 @@ public class ThreeActivity extends Activity{
 		bHint.setOnTouchListener(new OnTouchListener() {
 			int temp[] = new int[16];
 			public boolean onTouch(View v, MotionEvent event) {
-				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ¹öÆ°À» ´­·¶À» ¶§ 
+				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ 
 					for (int i = 0; i < index.length; i++) {
 						temp[i] = index[i];
 						index[i] = i;
 					}
 					gv.setAdapter(mg);
 
-				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ¹öÆ°À» ¶¼¾úÀ»¶§
+				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ë²„íŠ¼ì„ ë–¼ì—ˆì„ë•Œ
 					for (int i = 0; i < index.length; i++) {
 						index[i] = temp[i];
 					}
-					gv.setAdapter(mg);// ´Ù½Ã °ÔÀÓÈ­¸éÀ¸·Î µ¹¾Æ°¡±â 
+					gv.setAdapter(mg);// ë‹¤ì‹œ ê²Œì„í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸° 
 				}
 				return true;
 			}
@@ -158,7 +158,7 @@ public class ThreeActivity extends Activity{
 			public void onItemClick(AdapterView<?> parent, View view, int clickIndex, long id) {
 				moveCount++;
 				if (indexBlankImg-4<seo.length&&(clickIndex-indexBlankImg)%4==0&&indexBlankImg<clickIndex) {
-					// ºóÄ­ÀÌ À§ÂÊ¿¡ ÀÖÀ» ¶§
+					// ë¹ˆì¹¸ì´ ìœ„ìª½ì— ìˆì„ ë•Œ
 					for (int i = 1; i <= (clickIndex-indexBlankImg)/4; i++) {
 						int temp = index[clickIndex];
 						index[clickIndex] = index[clickIndex-i*4];
@@ -166,7 +166,7 @@ public class ThreeActivity extends Activity{
 					}
 					gv.setAdapter(mg);
 				} else if(indexBlankImg-4>=0&&(indexBlankImg-clickIndex)%4==0&&indexBlankImg>clickIndex) {
-					// ºóÄ­ÀÌ ¾Æ·¡ÂÊ¿¡ ÀÖÀ» ¶§
+					// ë¹ˆì¹¸ì´ ì•„ë˜ìª½ì— ìˆì„ ë•Œ
 					for (int i = 1; i <= (indexBlankImg-clickIndex)/4; i++) {
 						int temp = index[clickIndex];
 						index[clickIndex] = index[clickIndex+i*4];
@@ -175,7 +175,7 @@ public class ThreeActivity extends Activity{
 					gv.setAdapter(mg);
 				} else if (clickIndex%4!=0&&clickIndex/4==indexBlankImg/4&&
 						(clickIndex-indexBlankImg)<4&&indexBlankImg<clickIndex){
-					// ºóÄ­ÀÌ ¿ŞÂÊ¿¡ ÀÖÀ» ¶§
+					// ë¹ˆì¹¸ì´ ì™¼ìª½ì— ìˆì„ ë•Œ
 					for (int i = 1; i <= clickIndex-indexBlankImg; i++) {
 						int temp = index[clickIndex];
 						index[clickIndex] = index[clickIndex-i];
@@ -184,7 +184,7 @@ public class ThreeActivity extends Activity{
 					gv.setAdapter(mg);
 				} else if (clickIndex%4!=3&&clickIndex/4==indexBlankImg/4&&
 						(indexBlankImg-clickIndex)<4&&indexBlankImg>clickIndex) {
-					// ºóÄ­ÀÌ ¿À¸¥ÂÊ¿¡ ÀÖÀ» ¶§
+					// ë¹ˆì¹¸ì´ ì˜¤ë¥¸ìª½ì— ìˆì„ ë•Œ
 					for (int i = 1; i <= indexBlankImg-clickIndex; i++) {
 						int temp = index[clickIndex];
 						index[clickIndex] = index[clickIndex+i];
@@ -195,7 +195,7 @@ public class ThreeActivity extends Activity{
 					vib.vibrate(100);
 					moveCount--;
 				}
-				tvMoveCount.setText("ÀÌµ¿È½¼ö : "+moveCount);
+				tvMoveCount.setText("ì´ë™íšŸìˆ˜ : "+moveCount);
 
 				int count = 0;
 				for (int i = 0; i < index.length; i++) {
@@ -223,16 +223,16 @@ public class ThreeActivity extends Activity{
 	protected Dialog onCreateDialog(int id) {
 		if (id==0) {
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("¼º°ø");
-			dialog.setMessage("°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï±î?");
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setTitle("ì„±ê³µ");
+			dialog.setMessage("ê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ê² ìŠµë‹ˆê¹Œ?");
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 					startActivity(intent);
 					finish();					
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿À", new DialogInterface.OnClickListener() {
+			dialog.setNegativeButton("ì•„ë‹ˆì˜¤", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
 				}

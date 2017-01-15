@@ -1,5 +1,5 @@
 /**
- * Å¬·¡½º »ó¼Ó
+ * í´ë˜ìŠ¤ ìƒì†
  */
 public class TestClass2 {
 	public static void main(String[] args) {
@@ -8,20 +8,20 @@ public class TestClass2 {
 	}// end of main
 }// end of class
 
-class Boy { // Å¬·¡½ºÀÇ Á¤ÀÇ = Ãß»óÈ­ÇÑ´Ù
+class Boy { // í´ë˜ìŠ¤ì˜ ì •ì˜ = ì¶”ìƒí™”í•œë‹¤
 	int age; // 0
-	String name = "";// ÂüÁ¶Çü Å¸ÀÔº¯¼ö´Â nullÀÌ ±âº» °ª
+	String name = "";// ì°¸ì¡°í˜• íƒ€ì…ë³€ìˆ˜ëŠ” nullì´ ê¸°ë³¸ ê°’
 	boolean sex;// false
 
 	int getAge() {
 		return age;
 	}
 
-	boolean isSex() {// booleanÅ¸ÀÔÀº getÀÌ ¾Æ´Ï¶ó is·Î ÀÌ¿ëÇÑ´Ù
+	boolean isSex() {// booleaníƒ€ì…ì€ getì´ ì•„ë‹ˆë¼ isë¡œ ì´ìš©í•œë‹¤
 		return sex;
 	}
 
-	public Boy() {// ±âº» »ı¼ºÀÚ
+	public Boy() {// ê¸°ë³¸ ìƒì„±ì
 
 	}
 
@@ -34,13 +34,13 @@ class Boy { // Å¬·¡½ºÀÇ Á¤ÀÇ = Ãß»óÈ­ÇÑ´Ù
 
 }
 
-class Point2D { // 2Â÷¿ø ÁÂÇ¥°è
+class Point2D { // 2ì°¨ì› ì¢Œí‘œê³„
 	int x;
 	int y;
 
 }
 
-class Point3D extends Point2D { // 3Â÷¿ø ÁÂÇ¥°è
+class Point3D extends Point2D { // 3ì°¨ì› ì¢Œí‘œê³„
 	// int x;
 	// int y;
 	int z;

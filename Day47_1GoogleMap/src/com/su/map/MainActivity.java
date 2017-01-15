@@ -13,15 +13,15 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 /**
- * <±¸±Û ¸Ê »ç¿ëÇÏ±â>
+ * <êµ¬ê¸€ ë§µ ì‚¬ìš©í•˜ê¸°>
  * 
- * 1. ÇÁ·ÎÁ§Æ® »ı¼º½Ã google service¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Â API°¡ Æ÷ÇÔµÈ ¹öÀüÀ» ¼±ÅÃ ÈÄ »ı¼ºÇÑ´Ù.
- * 2. SDK Manager¿¡¼­ Google Play services ¼³Ä¡ ÇØ¾ß ÇÑ´Ù.(29¹öÀü)
- * 3. ÀÌÅ¬¸³½º¿¡ google-play-services_lib ÇÁ·ÎÁ§Æ®¸¦ import ÇØ¾ß ÇÑ´Ù.(lib Google API 6.0¹öÀü)
- * 4. ÀÓÆ÷Æ®ÇÑ google-play-services_lib¸¦ ¿ì¸® ÇÁ·ÎÁ§Æ®ÀÇ ¶óÀÌºê·¯¸®·Î µî·ÏÇÑ´Ù.(³»ÆÄÀÏ Google API 6.0¹öÀü)
- * 5. ±¸±Û ·Î±×ÀÎ, °³¹ßÀÚ »çÀÌÆ® API key ¹ß±Ş (SHA1 °ªÀ» µî·ÏÇØ¾ß ÇÑ´Ù)
- * 6. AndroidManifest.xml ±ÇÇÑ¼³Á¤ (°¢Á¾ ±ÇÇÑ, °³¹ßÀÚ Å°)
- * 7. FragmentActivity¸¦ »ó¼Ó¹Ş¾Æ¼­ ±¸Çö(jar->support)
+ * 1. í”„ë¡œì íŠ¸ ìƒì„±ì‹œ google serviceë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” APIê°€ í¬í•¨ëœ ë²„ì „ì„ ì„ íƒ í›„ ìƒì„±í•œë‹¤.
+ * 2. SDK Managerì—ì„œ Google Play services ì„¤ì¹˜ í•´ì•¼ í•œë‹¤.(29ë²„ì „)
+ * 3. ì´í´ë¦½ìŠ¤ì— google-play-services_lib í”„ë¡œì íŠ¸ë¥¼ import í•´ì•¼ í•œë‹¤.(lib Google API 6.0ë²„ì „)
+ * 4. ì„í¬íŠ¸í•œ google-play-services_libë¥¼ ìš°ë¦¬ í”„ë¡œì íŠ¸ì˜ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¡œ ë“±ë¡í•œë‹¤.(ë‚´íŒŒì¼ Google API 6.0ë²„ì „)
+ * 5. êµ¬ê¸€ ë¡œê·¸ì¸, ê°œë°œì ì‚¬ì´íŠ¸ API key ë°œê¸‰ (SHA1 ê°’ì„ ë“±ë¡í•´ì•¼ í•œë‹¤)
+ * 6. AndroidManifest.xml ê¶Œí•œì„¤ì • (ê°ì¢… ê¶Œí•œ, ê°œë°œì í‚¤)
+ * 7. FragmentActivityë¥¼ ìƒì†ë°›ì•„ì„œ êµ¬í˜„(jar->support)
  * 
  * */
 public class MainActivity extends FragmentActivity {
@@ -32,42 +32,42 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(arg0);
 		setContentView(R.layout.activity_main);
 
-		// Áöµµ °´Ã¼¸¦ xml¿¡¼­ °¡Á®¿À±â
+		// ì§€ë„ ê°ì²´ë¥¼ xmlì—ì„œ ê°€ì ¸ì˜¤ê¸°
 		SupportMapFragment smf = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.fragment1);
 		map = smf.getMap();
 
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.6341681, 126.9326195), 15));
-		// À§µµ °æµµ °ªÀº Áöµµ¿¡¼­ ¾ò¾î¿Â´Ù
-		// zoom °ªÀº 0 ÀÌ»óÀÇ float °ªÀ» ÀÔ·Â, ¼ıÀÚ°¡ Å¬ ¼ö·Ï È®´ëµÊ
+		// ìœ„ë„ ê²½ë„ ê°’ì€ ì§€ë„ì—ì„œ ì–»ì–´ì˜¨ë‹¤
+		// zoom ê°’ì€ 0 ì´ìƒì˜ float ê°’ì„ ì…ë ¥, ìˆ«ìê°€ í´ ìˆ˜ë¡ í™•ëŒ€ë¨
 
-		// Áöµµ ¿ìÇÏ´Ü È®´ë/Ãà¼Ò ¹öÆ° ´Ş±â
+		// ì§€ë„ ìš°í•˜ë‹¨ í™•ëŒ€/ì¶•ì†Œ ë²„íŠ¼ ë‹¬ê¸°
 		map.getUiSettings().setZoomControlsEnabled(true);
 
-		// ¸¶Ä¿ ´Ş±â
+		// ë§ˆì»¤ ë‹¬ê¸°
 		MarkerOptions mo1 = new MarkerOptions();
-//		mo1.position(new LatLng(37.6341681,126.932619)).title("¿ì¸®Áı").snippet("Á¤¸»! Â¯!");
+//		mo1.position(new LatLng(37.6341681,126.932619)).title("ìš°ë¦¬ì§‘").snippet("ì •ë§! ì§±!");
 		mo1.position(new LatLng(37.6341681,126.932619));
-		mo1.title("¿ì¸®Áı");
-		mo1.snippet("Á¤¸»! Â¯!");
+		mo1.title("ìš°ë¦¬ì§‘");
+		mo1.snippet("ì •ë§! ì§±!");
 //		map.addMarker(mo1).showInfoWindow();
 		map.addMarker(mo1);
 
 		MarkerOptions mo2 = new MarkerOptions();
-		mo2.position(new LatLng(37.6026422,126.953058)).title("¿ì¸®ÇĞ±³").snippet("¾ğ´ö¤Ğ¤Ğ");
+		mo2.position(new LatLng(37.6026422,126.953058)).title("ìš°ë¦¬í•™êµ").snippet("ì–¸ë•ã… ã… ");
 		map.addMarker(mo2);
 
-		// ¿À¹ö·¹ÀÌ ´Ş±â
+		// ì˜¤ë²„ë ˆì´ ë‹¬ê¸°
 		GroundOverlayOptions goo1 = new GroundOverlayOptions();
 		goo1.image(BitmapDescriptorFactory.fromResource(R.drawable.haha));
 		goo1.position(new LatLng(37.6026422,126.953058), 100, 100);
 
 		map.addGroundOverlay(goo1);
 		
-		// ¸¶Ä¿´Â ÀÏÁ¤ÇÑ Å©±â°¡ ¾ø°í, ¿À¹ö·¹ÀÌ´Â ÀÏÁ¤ÇÑ Å©±â°¡ ÀÖ´Ù.
+		// ë§ˆì»¤ëŠ” ì¼ì •í•œ í¬ê¸°ê°€ ì—†ê³ , ì˜¤ë²„ë ˆì´ëŠ” ì¼ì •í•œ í¬ê¸°ê°€ ìˆë‹¤.
 		
 		map.setOnMapClickListener(new OnMapClickListener() {
 			public void onMapClick(LatLng arg0) {
-				// ¸ÊÀ» Å¬¸¯ÇßÀ» ¶§ È£ÃâµÇ´Â Äİ¹é¸Ş¼­µå
+				// ë§µì„ í´ë¦­í–ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°±ë©”ì„œë“œ
 				GroundOverlayOptions goo1 = new GroundOverlayOptions();
 				goo1.image(BitmapDescriptorFactory.fromResource(R.drawable.haha));
 				goo1.position(arg0, 100, 100);

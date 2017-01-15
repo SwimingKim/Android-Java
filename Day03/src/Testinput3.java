@@ -1,17 +1,17 @@
 import javax.swing.JOptionPane;
 
 /**
- * »ç¿ëÀÚ ÀÔ·Â¹Ş±â3
+ * ì‚¬ìš©ì ì…ë ¥ë°›ê¸°3
  */
 public class Testinput3 {
 	public static void main(String[] args) {
-		String name = JOptionPane.showInputDialog("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+		String name = JOptionPane.showInputDialog("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº " + name + " ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì€ " + name + " ì…ë‹ˆë‹¤");
 
-		String str = JOptionPane.showInputDialog("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		String str = JOptionPane.showInputDialog("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		int age = Integer.parseInt(str);
-		System.out.println("´ç½ÅÀÇ ³ªÀÌ´Â " + age + "¼¼ ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” " + age + "ì„¸ ì…ë‹ˆë‹¤");
 
 	}// end of main
 }// end of class

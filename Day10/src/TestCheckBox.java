@@ -16,18 +16,18 @@ public class TestCheckBox {
 		f.setBounds(100, 100, 200, 300);
 		f.setLayout(new FlowLayout());
 
-		f.add(new Label("´ç½ÅÀÌ °¡Àå ÁÁ¾ÆÇÏ´Â °ÍÀº?"));
-		Checkbox cb1 = new Checkbox("°­¾ÆÁö");
-		Checkbox cb2 = new Checkbox("¼Û¾ÆÁö");
-		Checkbox cb3 = new Checkbox("¸Á¾ÆÁö");
-		Checkbox cb4 = new Checkbox("°í¾çÀÌ");
+		f.add(new Label("ë‹¹ì‹ ì´ ê°€ì¥ ì¢‹ì•„í•˜ëŠ” ê²ƒì€?"));
+		Checkbox cb1 = new Checkbox("ê°•ì•„ì§€");
+		Checkbox cb2 = new Checkbox("ì†¡ì•„ì§€");
+		Checkbox cb3 = new Checkbox("ë§ì•„ì§€");
+		Checkbox cb4 = new Checkbox("ê³ ì–‘ì´");
 
 		f.add(cb1);
 		f.add(cb2);
 		f.add(cb3);
 		f.add(cb4);
 
-		Button b = new Button("¼±ÅÃ¿Ï·á");
+		Button b = new Button("ì„ íƒì™„ë£Œ");
 		f.add(b);
 
 		TextArea ta = new TextArea(10, 20);
@@ -38,10 +38,10 @@ public class TestCheckBox {
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String str = "";
-				str += cb1.getState() ? cb1.getLabel() + "¼±ÅÃ\n" : "";
-				str += cb2.getState() ? cb2.getLabel() + "¼±ÅÃ\n" : "";
-				str += cb3.getState() ? cb3.getLabel() + "¼±ÅÃ\n" : "";
-				str += cb4.getState() ? cb4.getLabel() + "¼±ÅÃ\n" : "";
+				str += cb1.getState() ? cb1.getLabel() + "ì„ íƒ\n" : "";
+				str += cb2.getState() ? cb2.getLabel() + "ì„ íƒ\n" : "";
+				str += cb3.getState() ? cb3.getLabel() + "ì„ íƒ\n" : "";
+				str += cb4.getState() ? cb4.getLabel() + "ì„ íƒ\n" : "";
 				ta.append(str + "\n");
 			}
 		});

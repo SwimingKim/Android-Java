@@ -10,38 +10,38 @@ public class Foo {
 	static String game_str="";
 	
 	public static void main(String[] args) {
-        // ¹öÆÛ »ı¼º
+        // ë²„í¼ ìƒì„±
         BufferedReader br = null;        
          
-        // Input ½ºÆ®¸² »ı¼º
+        // Input ìŠ¤íŠ¸ë¦¼ ìƒì„±
         InputStreamReader isr = null;    
          
-        // File Input ½ºÆ®¸² »ı¼º
+        // File Input ìŠ¤íŠ¸ë¦¼ ìƒì„±
         FileInputStream fis = null;        
  
-        // File °æ·Î
+        // File ê²½ë¡œ
         File file = new File("C:\\Users\\Administrator\\Desktop\\memo.txt");
 
-        // ¹öÆÛ·Î ÀĞ¾îµéÀÏ ÀÓ½Ã º¯¼ö
+        // ë²„í¼ë¡œ ì½ì–´ë“¤ì¼ ì„ì‹œ ë³€ìˆ˜
         String temp = "";
          
-        // ÃÖÁ¾ ³»¿ë Ãâ·ÂÀ» À§ÇÑ º¯¼ö
+        // ìµœì¢… ë‚´ìš© ì¶œë ¥ì„ ìœ„í•œ ë³€ìˆ˜
         String content = "";
         String text="";
         ArrayList<String> arr;
         try {
              
-            // ÆÄÀÏÀ» ÀĞ¾îµé¿© File Input ½ºÆ®¸² °´Ã¼ »ı¼º
+            // íŒŒì¼ì„ ì½ì–´ë“¤ì—¬ File Input ìŠ¤íŠ¸ë¦¼ ê°ì²´ ìƒì„±
             fis = new FileInputStream(file);
              
-            // File Input ½ºÆ®¸² °´Ã¼¸¦ ÀÌ¿ëÇØ Input ½ºÆ®¸² °´Ã¼¸¦ »ı¼­ÇÏ´Âµ¥ ÀÎÄÚµùÀ» UTF-8·Î ÁöÁ¤
+            // File Input ìŠ¤íŠ¸ë¦¼ ê°ì²´ë¥¼ ì´ìš©í•´ Input ìŠ¤íŠ¸ë¦¼ ê°ì²´ë¥¼ ìƒì„œí•˜ëŠ”ë° ì¸ì½”ë”©ì„ UTF-8ë¡œ ì§€ì •
             isr = new InputStreamReader(fis, "UTF-8");
              
-            // Input ½ºÆ®¸² °´Ã¼¸¦ ÀÌ¿ëÇÏ¿© ¹öÆÛ¸¦ »ı¼º
+            // Input ìŠ¤íŠ¸ë¦¼ ê°ì²´ë¥¼ ì´ìš©í•˜ì—¬ ë²„í¼ë¥¼ ìƒì„±
             br = new BufferedReader(isr);
          
             arr = new ArrayList<String>();
-            // ¹öÆÛ¸¦ ÇÑÁÙÇÑÁÙ ÀĞ¾îµé¿© ³»¿ë ÃßÃâ
+            // ë²„í¼ë¥¼ í•œì¤„í•œì¤„ ì½ì–´ë“¤ì—¬ ë‚´ìš© ì¶”ì¶œ
             while( (temp = br.readLine()) != null) {
             	arr.add(temp + "\n");
             	
@@ -70,10 +70,10 @@ public class Foo {
 
 
 				    if (!file1.renameTo(file2)) {
-				     //System.err.println("ÀÌ¸§ º¯°æ ¿¡·¯ : " + file1);
+				     //System.err.println("ì´ë¦„ ë³€ê²½ ì—ëŸ¬ : " + file1);
 
 				    }else{
-				   	 System.err.println("ÀÌ¸§ º¯°æ : " + file1 +" > "+file2);
+				   	 System.err.println("ì´ë¦„ ë³€ê²½ : " + file1 +" > "+file2);
 				    }
 			
 			content += game_str+ "\n"; //+ "\n"
@@ -83,7 +83,7 @@ public class Foo {
 				
 				
 			}
-			//System.out.println("================== ÆÄÀÏ ³»¿ë Ãâ·Â ==================");
+			//System.out.println("================== íŒŒì¼ ë‚´ìš© ì¶œë ¥ ==================");
 			System.out.println(content);
 
 			    
@@ -129,11 +129,11 @@ public class Foo {
 
 			System.out.println(listFile[i].getName());
 
-			File file1 = new File("D:/»çÀü/ÀÛ¾÷ÁßÆú´õ/ÇÕ/" + string1);
-			File file2 = new File("D:/»çÀü/ÀÛ¾÷ÁßÆú´õ/ÇÕ/" + num + ".mp3");
+			File file1 = new File("D:/ì‚¬ì „/ì‘ì—…ì¤‘í´ë”/í•©/" + string1);
+			File file2 = new File("D:/ì‚¬ì „/ì‘ì—…ì¤‘í´ë”/í•©/" + num + ".mp3");
 
 			if (!file1.renameTo(file2)) {
-				System.err.println("ÀÌ¸§ º¯°æ ¿¡·¯ : " + file1);
+				System.err.println("ì´ë¦„ ë³€ê²½ ì—ëŸ¬ : " + file1);
 			}
 			num++;
 		}

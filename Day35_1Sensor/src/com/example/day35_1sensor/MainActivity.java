@@ -17,12 +17,12 @@ public class MainActivity extends Activity {
 		
 		TextView tv = (TextView)findViewById(R.id.textView2);
 		
-// ÇÚµåÆù¿¡ ¼³Ä¡µÈ ¼¾¼­µéÀÇ ¸ñ·ÏÀ» °¡Á®¿À±â
+// í•¸ë“œí°ì— ì„¤ì¹˜ëœ ì„¼ì„œë“¤ì˜ ëª©ë¡ì„ ê°€ì ¸ì˜¤ê¸°
 		SensorManager sm = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
 		List<Sensor> sensors = sm.getSensorList(Sensor.TYPE_ALL);
 		
-		String str = "<ÇÚµåÆùÀÇ ¼¾¼­¸ñ·Ï>/n";
-		str += "\n¼¾¼­ÀÇ °³¼ö : "+sensors.size()+"°³\n";
+		String str = "<í•¸ë“œí°ì˜ ì„¼ì„œëª©ë¡>/n";
+		str += "\nì„¼ì„œì˜ ê°œìˆ˜ : "+sensors.size()+"ê°œ\n";
 		for (int i = 0; i < sensors.size(); i++) {
 			str+= "\n\nName : "+ sensors.get(i).getName();			
 			str+= "\n\nVendor : "+ sensors.get(i).getVendor();

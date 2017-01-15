@@ -84,9 +84,9 @@ public class MainActivity extends Activity {
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				if (et_search.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä", 0).show();
+					Toast.makeText(getApplicationContext(), "ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”", 0).show();
 				} else if (Integer.valueOf(et_search.getText().toString())>=ss.size()){
-					Toast.makeText(getApplicationContext(), "¹üÀ§¸¦ ÃÊ°úÇß½À´Ï´Ù", 0).show();
+					Toast.makeText(getApplicationContext(), "ë²”ìœ„ë¥¼ ì´ˆê³¼í–ˆìŠµë‹ˆë‹¤", 0).show();
 					et_search.setText("");
 				} else {
 					findnum = Integer.valueOf(et_search.getText().toString());
@@ -267,11 +267,11 @@ public class MainActivity extends Activity {
 			final EditText et_id = (EditText)dialog.findViewById(R.id.editText2);
 			final EditText et_pass = (EditText)dialog.findViewById(R.id.editText3);	
 
-			//			db = hm.getReadableDatabase(); // °Ë»öÀ» À§ÇØ ÀĞ±â¸ğµå
+			//			db = hm.getReadableDatabase(); // ê²€ìƒ‰ì„ ìœ„í•´ ì½ê¸°ëª¨ë“œ
 			//			Cursor c = db.query("array", null, "num=?", new String[] {findnum+""}, null, null, null);
 			//
 			//			if (c==null) {
-			//				Toast.makeText(getApplicationContext(), "¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä", 0).show();
+			//				Toast.makeText(getApplicationContext(), "ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”", 0).show();
 			//			}
 			//
 			//			while (c.moveToNext()) {
@@ -310,9 +310,9 @@ public class MainActivity extends Activity {
 			LayoutInflater lif = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			final View myView = lif.inflate(R.layout.plus, null);
 			AlertDialog.Builder dialog = new Builder(this);
-			dialog.setTitle("Ãß°¡ÇÏ±â");
+			dialog.setTitle("ì¶”ê°€í•˜ê¸°");
 			dialog.setView(myView);
-			dialog.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					final EditText et_site = (EditText)myView.findViewById(R.id.editText1);
 					final EditText et_id = (EditText)myView.findViewById(R.id.editText2);
@@ -320,7 +320,7 @@ public class MainActivity extends Activity {
 					if (et_site.getText().toString().equals("")||
 							et_id.getText().toString().equals("")||
 							et_pass.getText().toString().equals("")) {
-						Toast.makeText(getApplicationContext(), "³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä", 0).show();
+						Toast.makeText(getApplicationContext(), "ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”", 0).show();
 					} else {
 						db = hm.getWritableDatabase();
 						ContentValues values = new ContentValues();
@@ -341,13 +341,13 @@ public class MainActivity extends Activity {
 
 				}
 			});
-			dialog.setNegativeButton("¾Æ´Ï¿ä", null);
+			dialog.setNegativeButton("ì•„ë‹ˆìš”", null);
 			return dialog.create();
 		case DIALOG_INTRO:
 			AlertDialog.Builder dialog2 = new Builder(this);
-			dialog2.setTitle("°³¹ßÀÚ ¼Ò°³");
-			dialog2.setMessage("ÀÌ¸ŞÀÏÁÖ¼Ò : rumex13@naver.com\n°³¹ßÀÚ¿¡°Ô ¿¬¶ôÇØº¸½Ã°Ú½À´Ï±î?");
-			dialog2.setPositiveButton("¿¹", new DialogInterface.OnClickListener() {
+			dialog2.setTitle("ê°œë°œì ì†Œê°œ");
+			dialog2.setMessage("ì´ë©”ì¼ì£¼ì†Œ : rumex13@naver.com\nê°œë°œìì—ê²Œ ì—°ë½í•´ë³´ì‹œê² ìŠµë‹ˆê¹Œ?");
+			dialog2.setPositiveButton("ì˜ˆ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Intent intent =
 							new Intent(Intent.ACTION_SENDTO,
@@ -355,24 +355,24 @@ public class MainActivity extends Activity {
 					startActivity(intent);
 				}
 			});
-			dialog2.setNegativeButton("¾Æ´Ï¿À", null);
+			dialog2.setNegativeButton("ì•„ë‹ˆì˜¤", null);
 			return dialog2.create();
 
 		case DIALOG_WAY:
 			AlertDialog.Builder dialog3 = new Builder(this);
-			dialog3.setTitle("ÀÌ¿ë ¾È³»");
-			dialog3.setMessage("ÀÒ¾î¹ö¸®±â ½¬¿î ¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ ¼Õ½±°Ô ÀúÀåÇÏ¼¼¿ä.");
-			dialog3.setPositiveButton("¿¹", null);
+			dialog3.setTitle("ì´ìš© ì•ˆë‚´");
+			dialog3.setMessage("ìƒì–´ë²„ë¦¬ê¸° ì‰¬ìš´ ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì†ì‰½ê²Œ ì €ì¥í•˜ì„¸ìš”.");
+			dialog3.setPositiveButton("ì˜ˆ", null);
 			return dialog3.create();	
 		case DIALOG_RESULT:
 			LayoutInflater lif2 = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View MyView2 = lif2.inflate(R.layout.look, null);
 			dialog4 = new Builder(this);
-			dialog4.setTitle("°Ë»ö °á°ú");
+			dialog4.setTitle("ê²€ìƒ‰ ê²°ê³¼");
 			dialog4.setView(MyView2);
 
-			dialog4.setNegativeButton("È®ÀÎ",null);
-			dialog4.setNeutralButton("»èÁ¦", new DialogInterface.OnClickListener() {
+			dialog4.setNegativeButton("í™•ì¸",null);
+			dialog4.setNeutralButton("ì‚­ì œ", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					db = hm.getReadableDatabase(); 
 					Cursor c1 = db.query("array", null, "site=?", new String[] {ss.get(findnum).site+""}, null, null, null);
@@ -384,7 +384,7 @@ public class MainActivity extends Activity {
 
 					db=hm.getWritableDatabase();
 					int result = db.delete("array", "num=?", new String[] {deletenum+""});
-					Toast.makeText(getApplicationContext(), "»èÁ¦¿Ï·á", 0).show();					
+					Toast.makeText(getApplicationContext(), "ì‚­ì œì™„ë£Œ", 0).show();					
 
 					int i = 0;
 					ss.clear();

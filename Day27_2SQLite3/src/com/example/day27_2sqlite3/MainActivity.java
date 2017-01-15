@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
 				db = helper.getReadableDatabase();
 				Cursor c = db.query("array", null, null, null, null, null, null);
 
-				tv.setText(result + "¹øÂ° insert ¿Ï·á");
+				tv.setText(result + "ë²ˆì§¸ insert ì™„ë£Œ");
 				while (c.moveToNext()) {
 					int id = c.getInt(c.getColumnIndex("id"));
 					String name = c.getString(c.getColumnIndex("name"));
@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
 				ContentValues values = new ContentValues();
 				values.put("age", Integer.valueOf(e_second_age.getText().toString()));
 				long result = db.update("array", values, "name=?", new String[] { e_second_name.getText().toString() });
-				tv.setText(result + "°³ update ¿Ï·á");
+				tv.setText(result + "ê°œ update ì™„ë£Œ");
 
 				// db = helper.getReadableDatabase();
 				// Cursor c = db.query("array", null, null, null, null, null,
@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
 
 				db = helper.getWritableDatabase();
 				long result = db.delete("array", "name=?", new String[] { e_third_name.getText().toString() });
-				tv.setText(result + "°³ delete ¿Ï·á");
+				tv.setText(result + "ê°œ delete ì™„ë£Œ");
 
 				db = helper.getReadableDatabase();
 				Cursor c = db.query("array", null, null, null, null, null, null);

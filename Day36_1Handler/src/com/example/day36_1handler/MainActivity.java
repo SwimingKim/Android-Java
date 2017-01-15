@@ -12,16 +12,16 @@ public class MainActivity extends Activity {
 	int sec = 0;
 	int min = 0;
 	Handler handler = new Handler();
-	Runnable r = new Runnable() {// Áö±İ ¹Ù·Î È­¸éº¯°æÀÛ¾÷À» ÇÒ °æ¿ì
-		public void run() {// È­¸éº¯°æ ÀÛ¾÷
+	Runnable r = new Runnable() {// ì§€ê¸ˆ ë°”ë¡œ í™”ë©´ë³€ê²½ì‘ì—…ì„ í•  ê²½ìš°
+		public void run() {// í™”ë©´ë³€ê²½ ì‘ì—…
 			sec++;
 			if (sec>=60) {
 				sec=0;
 				min++;
 			}
-			ts.setText(sec+"ÃÊ");
-			tm.setText(min+"ºĞ");
-			handler.postDelayed(r, 1000);//1ÃÊ ÈÄ¿¡ È­¸éº¯°æÀ» ÇÒ °æ¿ì
+			ts.setText(sec+"ì´ˆ");
+			tm.setText(min+"ë¶„");
+			handler.postDelayed(r, 1000);//1ì´ˆ í›„ì— í™”ë©´ë³€ê²½ì„ í•  ê²½ìš°
 		}
 	};
 	@Override
@@ -31,8 +31,8 @@ public class MainActivity extends Activity {
 
 		tm = (TextView)findViewById(R.id.textView1);
 		ts = (TextView)findViewById(R.id.textView2);
-		// ¸ŞÀÎ UI ¾²·¹µå¿¡¼­¸¸ È­¸éÀ» º¯°æÇÒ ¼ö ÀÖ´Ù
-		// 		¸ŞÀÎ UI¾²·¹µå°¡ ¾Æ´Ñ º°µµÀÇ ¾²·¹µå¿¡¼­ È­¸éÀ» º¯°æÇÏ°íÀÚ ÇÏ¸é, ¹İµå½Ã Handler¸¦ ½á¾ß ÇÔ
+		// ë©”ì¸ UI ì“°ë ˆë“œì—ì„œë§Œ í™”ë©´ì„ ë³€ê²½í•  ìˆ˜ ìˆë‹¤
+		// 		ë©”ì¸ UIì“°ë ˆë“œê°€ ì•„ë‹Œ ë³„ë„ì˜ ì“°ë ˆë“œì—ì„œ í™”ë©´ì„ ë³€ê²½í•˜ê³ ì í•˜ë©´, ë°˜ë“œì‹œ Handlerë¥¼ ì¨ì•¼ í•¨
 
 		handler.post(r);
 

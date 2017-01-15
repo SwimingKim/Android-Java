@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 					count++;
 					if (count==16) {
 						count = 0;
-						Toast.makeText(getApplicationContext(), "Á¾·á", 0).show();
+						Toast.makeText(getApplicationContext(), "ì¢…ë£Œ", 0).show();
 						handler.removeCallbacks(r);
 					} 
 				} else {
@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 
 		MyEvent me = new MyEvent();
 
-		// »çÁø ³Ö±â&¹öÆ°ÀÌº¥Æ®
+		// ì‚¬ì§„ ë„£ê¸°&ë²„íŠ¼ì´ë²¤íŠ¸
 		for (int i = 0; i < index.length; i++) {
 			index[i] = i;
 		}
@@ -92,13 +92,13 @@ public class MainActivity extends Activity {
 		}
 		tv.setText(Arrays.toString(index)+"");
 		tv.append("\n"+indexBlankImg);
-		// ¼ÅÇÃ ÀÌº¥Æ®
+		// ì…”í”Œ ì´ë²¤íŠ¸
 		ran = new Random();
 		Button b = (Button)findViewById(R.id.button1);
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				handler.post(r);
-				// À§Ä¡ ¼ø¼­ ¼¯À½
+				// ìœ„ì¹˜ ìˆœì„œ ì„ìŒ
 				for (int i = 0; i < img.length; i++) {
 					int n1 = ran.nextInt(img.length);
 					int n2 = ran.nextInt(img.length);
@@ -107,7 +107,7 @@ public class MainActivity extends Activity {
 					index[n1] = index[n2];
 					index[n2] = temp;	
 				}
-				// ÀÌ¹ÌÁöºä ´Ù½Ã Á¤·Ä
+				// ì´ë¯¸ì§€ë·° ë‹¤ì‹œ ì •ë ¬
 				Arrange();
 				tv.setText(Arrays.toString(index)+"");
 				tv.append("\n"+indexBlankImg);
@@ -117,13 +117,13 @@ public class MainActivity extends Activity {
 		Button bShow = (Button)findViewById(R.id.button3);
 		bShow.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
-				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ¹öÆ°À» ´­·¶À» ¶§ 
-					for (int i = 0; i < iv.length; i++) {// Á¤´äÈ­¸éÀ» º¸¿©ÁÖ±â 
+				if (MotionEvent.ACTION_DOWN == event.getAction()) {// ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ 
+					for (int i = 0; i < iv.length; i++) {// ì •ë‹µí™”ë©´ì„ ë³´ì—¬ì£¼ê¸° 
 						iv[i].setImageResource(img[i]); 
 					}
 
-				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ¹öÆ°À» ¶¼¾úÀ»¶§
-					for (int i = 0; i < iv.length; i++) {// ´Ù½Ã °ÔÀÓÈ­¸éÀ¸·Î µ¹¾Æ°¡±â 
+				} else if (MotionEvent.ACTION_UP == event.getAction()) { // ë²„íŠ¼ì„ ë–¼ì—ˆì„ë•Œ
+					for (int i = 0; i < iv.length; i++) {// ë‹¤ì‹œ ê²Œì„í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸° 
 						iv[i].setImageResource(img[index[i]]); 
 					}
 				}
@@ -143,11 +143,11 @@ public class MainActivity extends Activity {
 	class MyEvent implements OnClickListener{
 
 		public void onClick(View v) {
-			int clickIndex = (Integer) v.getTag(); // ÇöÀç »ç¿ëÀÚ°¡ Å¬¸¯ÇÑ ÀÌ¹ÌÁö index
+			int clickIndex = (Integer) v.getTag(); // í˜„ì¬ ì‚¬ìš©ìê°€ í´ë¦­í•œ ì´ë¯¸ì§€ index
 
 
 			if (indexBlankImg-4<iv.length&&(clickIndex-indexBlankImg)%4==0&&indexBlankImg<clickIndex) {
-				// ºóÄ­ÀÌ À§ÂÊ¿¡ ÀÖÀ» ¶§
+				// ë¹ˆì¹¸ì´ ìœ„ìª½ì— ìˆì„ ë•Œ
 				for (int i = 1; i <= (clickIndex-indexBlankImg)/4; i++) {
 					int temp = index[clickIndex];
 					index[clickIndex] = index[clickIndex-i*4];
@@ -158,7 +158,7 @@ public class MainActivity extends Activity {
 				}
 				indexBlankImg = clickIndex;
 			} else if(indexBlankImg-4>=0&&(indexBlankImg-clickIndex)%4==0&&indexBlankImg>clickIndex) {
-				// ºóÄ­ÀÌ ¾Æ·¡ÂÊ¿¡ ÀÖÀ» ¶§
+				// ë¹ˆì¹¸ì´ ì•„ë˜ìª½ì— ìˆì„ ë•Œ
 				for (int i = 1; i <= (indexBlankImg-clickIndex)/4; i++) {
 					int temp = index[clickIndex];
 					index[clickIndex] = index[clickIndex+i*4];
@@ -177,7 +177,7 @@ public class MainActivity extends Activity {
 				indexBlankImg = clickIndex;
 			} else if (clickIndex%4!=0&&clickIndex/4==indexBlankImg/4&&
 					(clickIndex-indexBlankImg)<4&&indexBlankImg<clickIndex){
-				// ºóÄ­ÀÌ ¿ŞÂÊ¿¡ ÀÖÀ» ¶§
+				// ë¹ˆì¹¸ì´ ì™¼ìª½ì— ìˆì„ ë•Œ
 				for (int i = 1; i <= clickIndex-indexBlankImg; i++) {
 					int temp = index[clickIndex];
 					index[clickIndex] = index[clickIndex-i];
@@ -189,7 +189,7 @@ public class MainActivity extends Activity {
 				indexBlankImg = clickIndex;
 			} else if (clickIndex%4!=3&&clickIndex/4==indexBlankImg/4&&
 					(indexBlankImg-clickIndex)<4&&indexBlankImg>clickIndex) {
-				// ºóÄ­ÀÌ ¿À¸¥ÂÊ¿¡ ÀÖÀ» ¶§
+				// ë¹ˆì¹¸ì´ ì˜¤ë¥¸ìª½ì— ìˆì„ ë•Œ
 				for (int i = 1; i <= indexBlankImg-clickIndex; i++) {
 					int temp = index[clickIndex];
 					index[clickIndex] = index[clickIndex+i];

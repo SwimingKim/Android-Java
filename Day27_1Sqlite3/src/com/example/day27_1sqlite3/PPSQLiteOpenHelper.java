@@ -6,18 +6,18 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * sqlite3 : ¸ğ¹ÙÀÏ¿ëÀ¸·Î ÀûÇÕÇÑ, °æ·®È­µÈ µ¥ÀÌÅÍº£ÀÌ½º ÇÁ·Î±×·¥, iPhone, ¾Èµå·ÎÀÌµå µî¿¡¼­ »ç¿ë ¾Èµå·ÎÀÌµå¿¡¼­´Â
- * SQLiteOpenHelper Å¬·¡½º¸¦ ÅëÇØ¼­ ¼Õ½±°Ô »ç¿ëÇÒ ¼ö ÀÖ´Ù
+ * sqlite3 : ëª¨ë°”ì¼ìš©ìœ¼ë¡œ ì í•©í•œ, ê²½ëŸ‰í™”ëœ ë°ì´í„°ë² ì´ìŠ¤ í”„ë¡œê·¸ë¨, iPhone, ì•ˆë“œë¡œì´ë“œ ë“±ì—ì„œ ì‚¬ìš© ì•ˆë“œë¡œì´ë“œì—ì„œëŠ”
+ * SQLiteOpenHelper í´ë˜ìŠ¤ë¥¼ í†µí•´ì„œ ì†ì‰½ê²Œ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤
  */
 public class PPSQLiteOpenHelper extends SQLiteOpenHelper {
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public PPSQLiteOpenHelper(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
 
 	}
 
 	public void onCreate(SQLiteDatabase db) {
-		// µ¥ÀÌÅÍº£ÀÌ½º¸¦ Ã³À½ »ı¼ºÇÒ ‹š È£ÃâÇÏ´Â ¸Ş¼­µå, Å×ÀÌºí ÃÊ±âÈ­ÀÛ¾÷
+		// ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ì²˜ìŒ ìƒì„±í•  ë–„ í˜¸ì¶œí•˜ëŠ” ë©”ì„œë“œ, í…Œì´ë¸” ì´ˆê¸°í™”ì‘ì—…
 
 		String str = "create table desk(id integer, name text);";
 		db.execSQL(str);
@@ -25,13 +25,13 @@ public class PPSQLiteOpenHelper extends SQLiteOpenHelper {
 	}
 
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// µ¥ÀÌÅÍ º£ÀÌ½ºÀÇ ¾÷±×·¹ÀÌµå¸¦ ÇÒ ¶§ È£ÃâÇÏ´Â ¸Ş¼­µå
-		// ¹öÁ¯ÀÌ ¾÷±×·¹ÀÌµå µÇ¾úÀ» ¶§ ³»ºÎ ±¸¼ºÀ» ¾î¶»°Ô ¹Ù²ÜÁö¿¡ ´ëÇÑ Á¤ÀÇ
-		// ¿ì¸®´Â ±âÁ¸ Å×ÀÌºíÀ» »èÁ¦ÇÏ°í, »õ·Î Å×ÀÌºí ¸¸µéÀÚ
+		// ë°ì´í„° ë² ì´ìŠ¤ì˜ ì—…ê·¸ë ˆì´ë“œë¥¼ í•  ë•Œ í˜¸ì¶œí•˜ëŠ” ë©”ì„œë“œ
+		// ë²„ì ¼ì´ ì—…ê·¸ë ˆì´ë“œ ë˜ì—ˆì„ ë•Œ ë‚´ë¶€ êµ¬ì„±ì„ ì–´ë–»ê²Œ ë°”ê¿€ì§€ì— ëŒ€í•œ ì •ì˜
+		// ìš°ë¦¬ëŠ” ê¸°ì¡´ í…Œì´ë¸”ì„ ì‚­ì œí•˜ê³ , ìƒˆë¡œ í…Œì´ë¸” ë§Œë“¤ì
 		String str = "drop table if exists desk";
 		db.execSQL(str);
 
-		onCreate(db);// Å×ÀÌºíÀ» »õ·Ó°Ô ÀÛ¼º
+		onCreate(db);// í…Œì´ë¸”ì„ ìƒˆë¡­ê²Œ ì‘ì„±
 
 	}
 

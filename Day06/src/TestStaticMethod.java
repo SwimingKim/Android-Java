@@ -6,11 +6,11 @@ public class TestStaticMethod {
 		N k = new N();
 		k.aa();
 
-		N.bb();// Å¬·¡½ºÀÇ ÀÌ¸§À¸·Î Á¢±ÙÇÒ ¼ö ÀÖ´Ù(°´Ã¼ »ı¼ºÇÒ ÇÊ¿ä¾ø´Ù)
+		N.bb();// í´ë˜ìŠ¤ì˜ ì´ë¦„ìœ¼ë¡œ ì ‘ê·¼í•  ìˆ˜ ìˆë‹¤(ê°ì²´ ìƒì„±í•  í•„ìš”ì—†ë‹¤)
 
 		Scanner scan = new Scanner(System.in);
 		Random ran = new Random();
-		Math.random();// static Á¤ÀÇ
+		Math.random();// static ì •ì˜
 
 	}// end of main
 }// end of class

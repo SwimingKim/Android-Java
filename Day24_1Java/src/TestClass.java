@@ -1,13 +1,13 @@
 /**
- * °´Ã¼ÁöÇâ - Å¬·¡½º : »õ·Î¿î Å¸ÀÔÀÇ Á¤ÀÇ º¯¼ö - ¹è¿­(°°Àº Å¸ÀÔ º¯¼öµéÀÇ ¹­À½) - ±¸Á¶Ã¼(º¯¼ö, ¹è¿­ÀÇ ¹­À½) - Å¬·¡½º(±¸Á¶Ã¼,
- * ¸Þ¼­µå)
+ * ê°ì²´ì§€í–¥ - í´ëž˜ìŠ¤ : ìƒˆë¡œìš´ íƒ€ìž…ì˜ ì •ì˜ ë³€ìˆ˜ - ë°°ì—´(ê°™ì€ íƒ€ìž… ë³€ìˆ˜ë“¤ì˜ ë¬¶ìŒ) - êµ¬ì¡°ì²´(ë³€ìˆ˜, ë°°ì—´ì˜ ë¬¶ìŒ) - í´ëž˜ìŠ¤(êµ¬ì¡°ì²´,
+ * ë©”ì„œë“œ)
  */
 public class TestClass {
 	public static void main(String[] args) {
-		// ÀýÂ÷ÁöÇâ¾ð¾î : ÇÑÁÙ¾¿ ½ÇÇà
-		// Å¬·¡½º : »õ·Î¿î Å¸ÀÔÀÇ ¼±¾ð
+		// ì ˆì°¨ì§€í–¥ì–¸ì–´ : í•œì¤„ì”© ì‹¤í–‰
+		// í´ëž˜ìŠ¤ : ìƒˆë¡œìš´ íƒ€ìž…ì˜ ì„ ì–¸
 
-		// º¯¼ö : ±âº»Çü, ÂüÁ¶Çü
+		// ë³€ìˆ˜ : ê¸°ë³¸í˜•, ì°¸ì¡°í˜•
 
 		int t = 3;
 		A aa = new A();
@@ -16,12 +16,12 @@ public class TestClass {
 	}// end of main
 }// end of class
 
-class A { // Å¬·¡½ºÀÇ Á¤ÀÇ
+class A { // í´ëž˜ìŠ¤ì˜ ì •ì˜
 	int a;
 	boolean s;
 	char c[] = new char[3];
 
-	void print() {// ¸Þ¼­µå
+	void print() {// ë©”ì„œë“œ
 
 	}
 

@@ -3,28 +3,28 @@ import java.awt.Frame;
 import java.awt.List;
 
 /**
- * AWT - List ¿©·¯°³ÀÇ ¸ñ·ÏÀ» ÇÑ²¨¹ø¿¡ º¸¿©ÁÖ´Â ÄÄÆ÷³ÍÆ®
+ * AWT - List ì—¬ëŸ¬ê°œì˜ ëª©ë¡ì„ í•œêº¼ë²ˆì— ë³´ì—¬ì£¼ëŠ” ì»´í¬ë„ŒíŠ¸
  */
 public class TestList {
 	public static void main(String[] args) {
-		Frame f = new Frame("ÇÁ·¹ÀÓ");
+		Frame f = new Frame("í”„ë ˆì„");
 		f.setBounds(100, 100, 200, 300);
 		f.setLayout(new FlowLayout());
 
 		List l = new List(5);
-		l.add("»ç°ú");
-		l.add("¹è");
-		l.add("µş±â");
-		l.add("¿ÀÀÌ");
-		l.add("°¡Áö");
-		l.add("ÆÄÀÎ¾ÖÇÃ");
-		l.add("¼ö¹Ú");
-		l.add("º¹¼ş¾Æ");
-		l.add("¿À·»Áö");
-		l.add("Æ÷µµ");
-		l.add("±Ö");
+		l.add("ì‚¬ê³¼");
+		l.add("ë°°");
+		l.add("ë”¸ê¸°");
+		l.add("ì˜¤ì´");
+		l.add("ê°€ì§€");
+		l.add("íŒŒì¸ì• í”Œ");
+		l.add("ìˆ˜ë°•");
+		l.add("ë³µìˆ­ì•„");
+		l.add("ì˜¤ë Œì§€");
+		l.add("í¬ë„");
+		l.add("ê·¤");
 		l.remove(1);
-		System.out.println(l.getSelectedItem());// ¼±ÅÃµÈ °ªÀ» °¡Á®¿Â´Ù
+		System.out.println(l.getSelectedItem());// ì„ íƒëœ ê°’ì„ ê°€ì ¸ì˜¨ë‹¤
 
 		f.add(l);
 

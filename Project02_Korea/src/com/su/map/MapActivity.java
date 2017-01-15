@@ -14,8 +14,8 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class MapActivity extends Activity{
 	ImageView iv[] = new ImageView[11];
-	String [] str = {"°­¿øµµ", "¼öµµ±Ç", "°æ»ó³²µµ", "°æ»óºÏµµ", "´ëÀü±¤¿ª½Ã","¿ï¸ªµµµ¶µµ" , "Àü¶ó³²µµ", "Àü¶óºÏµµ", 
-			"ÃæÃ»³²µµ", "ÃæÃ»ºÏµµ", "Á¦ÁÖµµ"};
+	String [] str = {"ê°•ì›ë„", "ìˆ˜ë„ê¶Œ", "ê²½ìƒë‚¨ë„", "ê²½ìƒë¶ë„", "ëŒ€ì „ê´‘ì—­ì‹œ","ìš¸ë¦‰ë„ë…ë„" , "ì „ë¼ë‚¨ë„", "ì „ë¼ë¶ë„", 
+			"ì¶©ì²­ë‚¨ë„", "ì¶©ì²­ë¶ë„", "ì œì£¼ë„"};
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,7 +34,7 @@ public class MapActivity extends Activity{
 		iv[10] = (ImageView)findViewById(R.id.je);
 		findViewById(R.id.nor).setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
-				Toast.makeText(getApplicationContext(), "ÅëÀÏµÇ¸é ¾÷±×·¹ÀÌµåµË´Ï´Ù", 0).show();
+				Toast.makeText(getApplicationContext(), "í†µì¼ë˜ë©´ ì—…ê·¸ë ˆì´ë“œë©ë‹ˆë‹¤", 0).show();
 			}
 		});
 		
@@ -47,21 +47,21 @@ public class MapActivity extends Activity{
 				Intent intent = new Intent(getApplicationContext(), RowActivity.class);
 				for (int a = 0; a < iv.length; a++) {
 					if (im.getId()==iv[a].getId()) {
-						intent.putExtra("±¸ºĞ", a);
+						intent.putExtra("êµ¬ë¶„", a);
 					}
 				}
 //				switch (im.getId()) {
-//				case R.id.ka: intent.putExtra("±¸ºĞ", 0); break;
-//				case R.id.su: intent.putExtra("±¸ºĞ", 1); break;
-//				case R.id.kn: intent.putExtra("±¸ºĞ", 2); break;
-//				case R.id.kb: intent.putExtra("±¸ºĞ", 3); break;
-//				case R.id.da: intent.putExtra("±¸ºĞ", 4); break;
-//				case R.id.wd: intent.putExtra("±¸ºĞ", 5); break;
-//				case R.id.jn: intent.putExtra("±¸ºĞ", 6); break;
-//				case R.id.jb: intent.putExtra("±¸ºĞ", 7); break;
-//				case R.id.cn: intent.putExtra("±¸ºĞ", 8); break;
-//				case R.id.cb: intent.putExtra("±¸ºĞ", 9); break;
-//				case R.id.je: intent.putExtra("±¸ºĞ", 10); break;
+//				case R.id.ka: intent.putExtra("êµ¬ë¶„", 0); break;
+//				case R.id.su: intent.putExtra("êµ¬ë¶„", 1); break;
+//				case R.id.kn: intent.putExtra("êµ¬ë¶„", 2); break;
+//				case R.id.kb: intent.putExtra("êµ¬ë¶„", 3); break;
+//				case R.id.da: intent.putExtra("êµ¬ë¶„", 4); break;
+//				case R.id.wd: intent.putExtra("êµ¬ë¶„", 5); break;
+//				case R.id.jn: intent.putExtra("êµ¬ë¶„", 6); break;
+//				case R.id.jb: intent.putExtra("êµ¬ë¶„", 7); break;
+//				case R.id.cn: intent.putExtra("êµ¬ë¶„", 8); break;
+//				case R.id.cb: intent.putExtra("êµ¬ë¶„", 9); break;
+//				case R.id.je: intent.putExtra("êµ¬ë¶„", 10); break;
 //				default:
 //					break;
 //				}				

@@ -48,8 +48,8 @@ public class ZeroActivity extends Activity{
 		Button b2 = (Button)findViewById(R.id.button2);
 		Button b3 = (Button)findViewById(R.id.button3);
 		chro = (Chronometer)findViewById(R.id.chronometer1);
-		chro.setBase(SystemClock.elapsedRealtime()); // ½Ã°£ÃÊ±âÈ­ 
-		chro.start(); // ½Ã°£ ½ÃÀÛ 
+		chro.setBase(SystemClock.elapsedRealtime()); // ì‹œê°„ì´ˆê¸°í™” 
+		chro.start(); // ì‹œê°„ ì‹œì‘ 
 
 		tv_uc = (TextView)findViewById(R.id.uc);
 		tv_up = (TextView)findViewById(R.id.up);
@@ -94,13 +94,13 @@ public class ZeroActivity extends Activity{
 		iv_red = (ImageView)findViewById(R.id.imageView7);
 
 		//		final Animation animaiton = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bl);
-		// ÄÄÇ»ÅÍ¿Í À¯ÀúÀÇ »çÁø ¼³Á¤
+		// ì»´í“¨í„°ì™€ ìœ ì €ì˜ ì‚¬ì§„ ì„¤ì •
 		iv_com.setImageResource(R.drawable.umm);
 		user[0].setImageResource(R.drawable.rc);
 		user[1].setImageResource(R.drawable.sc);
 		user[2].setImageResource(R.drawable.pc);
 
-		//À¯Àú Å¬¸¯½Ã ÄÄÇ»ÅÍÀÇ ÆĞ+°á°úÃ¢
+		//ìœ ì € í´ë¦­ì‹œ ì»´í“¨í„°ì˜ íŒ¨+ê²°ê³¼ì°½
 		class MyEvent implements OnClickListener {
 			int num;
 			public void onClick(View v) {
@@ -110,7 +110,7 @@ public class ZeroActivity extends Activity{
 				Random ran = new Random();
 				computer = ran.nextInt(3);
 
-				switch (computer) {//ÄÄÇ»ÅÍÀÇ ÆĞ Á¤ÇÏ±â
+				switch (computer) {//ì»´í“¨í„°ì˜ íŒ¨ ì •í•˜ê¸°
 				case 0:
 					iv_com.setImageResource(R.drawable.rc);
 					break;
@@ -124,15 +124,15 @@ public class ZeroActivity extends Activity{
 					break;
 				}	
 
-				for (int i = 0; i < user.length; i++) {//»ç¿ëÀÚÀÇ ¼±ÅÃ ºÒ·¯¿À±â
+				for (int i = 0; i < user.length; i++) {//ì‚¬ìš©ìì˜ ì„ íƒ ë¶ˆëŸ¬ì˜¤ê¸°
 					if(iv==user[i]) choice = i;
 				}
 
-				if (rcp) {//°¡À§¹ÙÀ§º¸Áß	
-					if (computer==choice) {//¹«½ÂºÎ
+				if (rcp) {//ê°€ìœ„ë°”ìœ„ë³´ì¤‘	
+					if (computer==choice) {//ë¬´ìŠ¹ë¶€
 						iv_red.setTranslationX(0);iv_red.setTranslationY(0);
 						iv_blue.setTranslationX(0);iv_blue.setTranslationY(0);
-					} else if (//»ç¿ëÀÚ ½Â
+					} else if (//ì‚¬ìš©ì ìŠ¹
 							(choice==0&&computer==1
 							||choice==1&&computer==2
 							||choice==2&&computer==0)){
@@ -141,14 +141,14 @@ public class ZeroActivity extends Activity{
 						iv_blue.setTranslationX(0);iv_blue.setTranslationY(0);
 						rcp = false;
 						result=true;
-					} else {//»ç¿ëÀÚ ÆĞ
+					} else {//ì‚¬ìš©ì íŒ¨
 						rcp = false;
 						result=false;
 						iv_blue.setTranslationX(200);iv_blue.setTranslationY(-200);
 						iv_red.setTranslationX(0);iv_red.setTranslationY(0);
 					}
-				} else {//¹¬Âîºü ÁøÇàÁß
-					if (computer==choice){//ºñ±â¸é Á¾·á
+				} else {//ë¬µì°Œë¹  ì§„í–‰ì¤‘
+					if (computer==choice){//ë¹„ê¸°ë©´ ì¢…ë£Œ
 						if (result) {
 							iv_red.setTranslationX(-400);iv_red.setTranslationY(-250);
 							win++;
@@ -161,7 +161,7 @@ public class ZeroActivity extends Activity{
 							rcp = true;
 						}
 					} else {
-						if (//»ç¿ëÀÚ ½Â
+						if (//ì‚¬ìš©ì ìŠ¹
 								(choice==0&&computer==1
 								||choice==1&&computer==2
 								||choice==2&&computer==0)){
@@ -169,7 +169,7 @@ public class ZeroActivity extends Activity{
 							iv_red.setTranslationX(-200);iv_red.setTranslationY(-200);
 							iv_blue.setTranslationX(0);iv_blue.setTranslationY(0);
 							result=true;
-						} else {//»ç¿ëÀÚ ÆĞ
+						} else {//ì‚¬ìš©ì íŒ¨
 							result=false;
 							iv_blue.setTranslationX(200);iv_blue.setTranslationY(-200);
 							iv_red.setTranslationX(0);iv_red.setTranslationY(0);
@@ -178,7 +178,7 @@ public class ZeroActivity extends Activity{
 				} 
 				tv_uc.setText(lose+"");
 				tv_cc.setText(win+"");
-				tvMoveCount.setText("Å¬¸¯ È½¼ö : "+num);
+				tvMoveCount.setText("í´ë¦­ íšŸìˆ˜ : "+num);
 
 
 			}

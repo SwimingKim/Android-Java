@@ -6,52 +6,52 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
- * ÀÚ¹ÙÀÇ GUI AWT(Abstract Window Toolkit)
+ * ìë°”ì˜ GUI AWT(Abstract Window Toolkit)
  */
 public class TestAWT1 {
 	public static void main(String[] args) {
-		Frame f = new Frame();// À©µµ¿ìÃ¢
-		// JFrame f = new JFrame();//À©µµ¿ìÃ¢
+		Frame f = new Frame();// ìœˆë„ìš°ì°½
+		// JFrame f = new JFrame();//ìœˆë„ìš°ì°½
 
-		f.setTitle("Á¦¸ñº¯°æ ÇÒ ¼ö ÀÖÀ½");// Å¸ÀÌÆ²¼³Á¤
-		f.setSize(300, 200);// Å©±âÁöÁ¤
-		f.setLocation(100, 100);// À§Ä¡ÁöÁ¤
-		f.setLayout(null);// È­¸é¿¡ ÄÄÆ÷³ÍÆ® ¹èÄ¡ÇÏ´Â ¹æ¹ı
+		f.setTitle("ì œëª©ë³€ê²½ í•  ìˆ˜ ìˆìŒ");// íƒ€ì´í‹€ì„¤ì •
+		f.setSize(300, 200);// í¬ê¸°ì§€ì •
+		f.setLocation(100, 100);// ìœ„ì¹˜ì§€ì •
+		f.setLayout(null);// í™”ë©´ì— ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜í•˜ëŠ” ë°©ë²•
 
 		f.setVisible(true);
 
 		String title = f.getTitle();
-		System.out.println("Ã¢ÀÇ Á¦¸ñÀº " + title);
+		System.out.println("ì°½ì˜ ì œëª©ì€ " + title);
 
 		Dimension d = f.getSize();
-		System.out.println("Ã¢ÀÇ ³ĞÀÌ´Â " + d.getWidth() + "ÀÌ°í,\n" + "Ã¢ÀÇ ³ôÀÌ´Â " + d.getHeight() + "ÀÌ´Ù.");
+		System.out.println("ì°½ì˜ ë„“ì´ëŠ” " + d.getWidth() + "ì´ê³ ,\n" + "ì°½ì˜ ë†’ì´ëŠ” " + d.getHeight() + "ì´ë‹¤.");
 
-		f.setBackground(Color.green);// »ö»ó ¼³Á¤
+		f.setBackground(Color.green);// ìƒ‰ìƒ ì„¤ì •
 		f.setVisible(true);
 
-		// »ç¿ëÀÚ ÀÔ·ÂÀ» ¹Ş¾Æ¼­(»¡°­, ÆÄ¶û, ³ë¶û)
-		String co = JOptionPane.showInputDialog("»¡°­, ÆÄ¶û, ³ë¶û Áß¿¡¼­ ÇÏ³ª¸¦ ¼±ÅÃÇÏ¼¼¿ä");
+		// ì‚¬ìš©ì ì…ë ¥ì„ ë°›ì•„ì„œ(ë¹¨ê°•, íŒŒë‘, ë…¸ë‘)
+		String co = JOptionPane.showInputDialog("ë¹¨ê°•, íŒŒë‘, ë…¸ë‘ ì¤‘ì—ì„œ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì„¸ìš”");
 		// switch (co) {
-		// case "»¡°­":
+		// case "ë¹¨ê°•":
 		// f.setBackground(Color.RED);
 		// break;
-		// case "ÆÄ¶û":
+		// case "íŒŒë‘":
 		// f.setBackground(Color.BLUE);
 		// break;
-		// case "³ë¶û":
+		// case "ë…¸ë‘":
 		// f.setBackground(Color.YELLOW);
 		// break;
-		// default: System.out.println("Àß ¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù");
+		// default: System.out.println("ì˜ ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤");
 		// break;
 		// }
-		if ("»¡°­".equals(co)) {
+		if ("ë¹¨ê°•".equals(co)) {
 			f.setBackground(Color.RED);
-		} else if ("ÆÄ¶û".equals(co)) {
+		} else if ("íŒŒë‘".equals(co)) {
 			f.setBackground(Color.BLUE);
-		} else if ("³ë¶û".equals(co)) {
+		} else if ("ë…¸ë‘".equals(co)) {
 			f.setBackground(Color.YELLOW);
 		} else {
-			System.out.println("Àß ¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù");
+			System.out.println("ì˜ ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤");
 			f.setBackground(Color.black);
 		}
 

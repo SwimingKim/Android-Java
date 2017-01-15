@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		final EditText et1 = (EditText) findViewById(R.id.editText1);// Áö¿ªº¯¼ö »èÁ¦
-																		// ¾ÈÇÔ
+		final EditText et1 = (EditText) findViewById(R.id.editText1);// ì§€ì—­ë³€ìˆ˜ ì‚­ì œ
+																		// ì•ˆí•¨
 		final EditText et2 = (EditText) findViewById(R.id.editText2);
 		Button b1 = (Button) findViewById(R.id.button1);
 		final TextView tv1 = (TextView) findViewById(R.id.textView1);
@@ -26,13 +26,13 @@ public class MainActivity extends Activity {
 				String id = et1.getText().toString();
 				String pw = et2.getText().toString();
 
-				// ¹®ÀÚ¿­ ºñ±³½Ã »ó¼ö¸¦ ¾ÕÂÊ¿¡ ÀÛ¼ºÇÏ´Â °ÍÀÌ ÁÁ´Ù(¾ÕÂÊÀÌ ½ºÆ®¸µÀÌ¾î¾ß ¿À·ù°¡ ¾È³­´Ù)
-				if ("¹Î½Ü".equals(id) && "¸ÚÁü".equals(pw)) {
-					tv1.setText("·Î±×ÀÎ ¼º°ø");
+				// ë¬¸ìì—´ ë¹„êµì‹œ ìƒìˆ˜ë¥¼ ì•ìª½ì— ì‘ì„±í•˜ëŠ” ê²ƒì´ ì¢‹ë‹¤(ì•ìª½ì´ ìŠ¤íŠ¸ë§ì´ì–´ì•¼ ì˜¤ë¥˜ê°€ ì•ˆë‚œë‹¤)
+				if ("ë¯¼ìŒ¤".equals(id) && "ë©‹ì§".equals(pw)) {
+					tv1.setText("ë¡œê·¸ì¸ ì„±ê³µ");
 					et1.setText("");
 					et2.setText("");
 				} else {
-					tv1.setText("·Î±×ÀÎ ½ÇÆĞ");
+					tv1.setText("ë¡œê·¸ì¸ ì‹¤íŒ¨");
 				}
 			}
 		});
