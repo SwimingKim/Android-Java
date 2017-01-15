@@ -8,7 +8,7 @@ public class ChoiceActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//ì´ê²ƒì€ ë§¥ë¶ì…ë‹ˆë‹¤.
+		// ÀÌ°ÍÀº ¸ÆºÏÀÔ´Ï´Ù
 
 	}//end of onCreate
 }//end of class
