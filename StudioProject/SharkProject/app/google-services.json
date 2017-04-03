@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "948302657332",
+    "firebase_url": "https://shark-16069.firebaseio.com",
+    "project_id": "shark-16069",
+    "storage_bucket": "shark-16069.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948302657332:android:4b07e348a3de0f32",
+        "android_client_info": {
+          "package_name": "com.su.shark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948302657332-gat5f3ugpg7hmfaghelsn7cbt97niqu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrUU2mM6iZIo-lZCAtnMsPzrDu1cK2FEw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
