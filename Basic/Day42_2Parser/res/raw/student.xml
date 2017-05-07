@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<minsseam >
+    <member id="01" pw="xyz">
+        <name abc ="a">서민규</name>
+        <adress>경기도 부천시</adress>
+        <age>26</age>
+    </member>
+    <member id="02" pw="pqw">
+        <name abc ="b">류현진</name>
+        <adress>에레이</adress>
+        <age>24</age>
+    </member>
+</minsseam>
