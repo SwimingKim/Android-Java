@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#98acd9</color>
+    <color name="colorPrimaryDark">#7e8fc3</color>
+    <color name="colorAccent">#c64351</color>
+    <color name="colorControlHighlight">#cdcac1</color>
+    <color name="red">#d75a40</color>
+    <color name="yellow">#e5bf4c</color>
+    <color name="menu3">#40cf74</color>
+    <color name="blue">#33b2b2</color>
+    <color name="brown">#6d4c41</color>
+    <color name="tras">#00ff</color>
+</resources>
