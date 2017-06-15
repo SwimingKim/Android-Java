@@ -10,6 +10,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -52,13 +53,25 @@ public class AndroidPlugin{
 //    }
 
     public Activity mUnityActivity = null;
-    public String  strMessage = null;
+    public String strMessage = null;
 
     public void setUnityActivity(Activity obj) {
         mUnityActivity = obj;
     }
 
-    public void showToast(final String strMessage) {
+    public void showShortToast(final String strMessage) {
+        this.strMessage = strMessage;
+
+        mUnityActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(mUnityActivity, strMessage, Toast.LENGTH_SHORT).show();
+                Log.d("Unity", "Toast 출력");
+            }
+        });
+    }
+
+    public void showLongToast(final String strMessage) {
         this.strMessage = strMessage;
 
         mUnityActivity.runOnUiThread(new Runnable() {
