@@ -5,6 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:weightSum="22"
     tools:context="writting.dev.su.com.androidocr.MainActivity">
 
 
@@ -12,12 +13,26 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/button_text" />
+
 
     <EditText
         android:id="@+id/field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/text_hint" />
+        android:layout_weight="20"
+        android:hint="@string/text_hint"
+        android:inputType="none" />
+
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="clearText"
+        android:text="Clear" />
+
 
 </LinearLayout>

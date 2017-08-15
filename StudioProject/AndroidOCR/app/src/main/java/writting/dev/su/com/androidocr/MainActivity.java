@@ -1,20 +1,16 @@
 package writting.dev.su.com.androidocr;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,12 +29,7 @@ public class MainActivity extends Activity {
 //    public static final String PACKAGE_NAME = "writting.dev.su.com.androidocr";
     public static final String DATA_PATH = Environment
             .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR/";
-
-    // You should have the trained data file in assets folder
-    // You can get them at:
-    // https://github.com/tesseract-ocr/tessdatabutton_text
     public static final String lang = "eng";
-
     private static final String TAG = "SimpleAndroidOCR.java";
 
     protected Button _button;
@@ -55,11 +46,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 권한 체크
+        /*
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && permissionCheck==PackageManager.PERMISSION_DENIED) {
-            requestPermissions(new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.CAMERA}, 1000);
+            requestPermissions(new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1000);
         }
+        */
 
         String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/"};
 
@@ -134,10 +127,11 @@ public class MainActivity extends Activity {
 
         Log.d(TAG, file+"::"+outputFileUri);
 
-        final Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        //intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+        final Intent intent = new Intent();
+        intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
 
-        startActivityForResult(intent, 1);
+        startActivityForResult(intent, 0);
 
     }
 
@@ -250,6 +244,11 @@ public class MainActivity extends Activity {
         }
 
         // Cycle done.
+    }
+
+    public void clearText(View v) {
+
+        ((EditText)findViewById(R.id.field)).setText("");
     }
 
     // www.Gaut.am was here
