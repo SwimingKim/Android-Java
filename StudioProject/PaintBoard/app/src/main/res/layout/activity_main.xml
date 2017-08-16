@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/colorBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="색상" />
+
+        <Button
+            android:id="@+id/penBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="굵기" />
+
+        <Button
+            android:id="@+id/eraserBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="지우개" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="삭제" />
+
+        <Button
+            android:id="@+id/undoBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="이전" />
+
+        <Button
+            android:id="@+id/readBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="읽기" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/boardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
+
+</LinearLayout>
