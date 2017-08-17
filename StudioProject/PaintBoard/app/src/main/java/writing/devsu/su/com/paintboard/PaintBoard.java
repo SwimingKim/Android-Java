@@ -100,6 +100,8 @@ public class PaintBoard extends View{
 
         mPaint.setColor(color);
         mPaint.setStrokeWidth(size);
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
+//        mPaint.setStrokeJoin(Paint.Join.ROUND);
     }
 
     public void newImage(int width, int height) {

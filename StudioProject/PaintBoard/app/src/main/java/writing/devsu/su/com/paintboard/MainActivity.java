@@ -25,11 +25,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     public static final String DATA_PATH = Environment
             .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR/";
-    public static final String lang = "eng";
     private static final String TAG = "SimpleAndroidOCR.java";
 
     protected String _path;
@@ -48,56 +47,24 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/"};
-
-        for (String path : paths) {
-            File dir = new File(path);
-            if (!dir.exists()) {
-                if (!dir.mkdirs()) {
-                    Log.v(TAG, "ERROR: Creation of directory " + path + " on sdcard failed");
-                    return;
-                } else {
-                    Log.v(TAG, "Created directory " + path + " on sdcard");
-                }
-            }
-
-        }
-
-        if (!(new File(DATA_PATH + "tessdata/" + lang + ".traineddata")).exists()) {
-            try {
-
-                AssetManager assetManager = getAssets();
-                InputStream in = assetManager.open("tessdata/" + lang + ".traineddata");
-                OutputStream out = new FileOutputStream(DATA_PATH
-                        + "tessdata/" + lang + ".traineddata");
-
-                // Transfer bytes from in to out
-                byte[] buf = new byte[1024];
-                int len;
-                while ((len = in.read(buf)) > 0) {
-                    out.write(buf, 0, len);
-                }
-                in.close();
-                out.close();
-
-                Log.v(TAG, "Copied " + lang + " traineddata");
-            } catch (IOException e) {
-                Log.e(TAG, "Was unable to copy " + lang + " traineddata " + e.toString());
-            }
-        }
-
+        getTrainedData("eng");
+        getTrainedData("kor");
         _path = DATA_PATH + "/ocr.jpg";
 
-////////////////
 
         final LinearLayout boardLayout = (LinearLayout) findViewById(R.id.boardLayout);
         colorBtn = (Button) findViewById(R.id.colorBtn);
+        colorBtn.setOnClickListener(this);
         penBtn = (Button) findViewById(R.id.penBtn);
+        penBtn.setOnClickListener(this);
         eraserBtn = (Button) findViewById(R.id.eraserBtn);
+        eraserBtn.setOnClickListener(this);
         undoBtn = (Button) findViewById(R.id.undoBtn);
+        undoBtn.setOnClickListener(this);
         readBtn = (Button) findViewById(R.id.readBtn);
+        readBtn.setOnClickListener(this);
         deleteBtn = (Button) findViewById(R.id.deleteBtn);
+        deleteBtn.setOnClickListener(this);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT);
         board = new PaintBoard(this);
@@ -105,104 +72,6 @@ public class MainActivity extends Activity {
         board.setPadding(2, 2, 2, 2);
         boardLayout.addView(board);
 
-
-        colorBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                ColorPaletteDialog.listener = new OnColorSelectedListener() {
-                    @Override
-                    public void onColorSelected(int pen) {
-                        mColor = pen;
-                        board.updatePaintProperty(mColor, mSize);
-                    }
-                };
-
-                Intent intent = new Intent(getApplicationContext(), ColorPaletteDialog.class);
-                startActivity(intent);
-            }
-        });
-
-        penBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                PenPaletteDialog.listener = new OnPenSelectedListener() {
-                    @Override
-                    public void onPenSelected(int pen) {
-                        mSize = pen;
-                        board.updatePaintProperty(mColor, mSize);
-                    }
-                };
-
-                Intent intent = new Intent(getApplicationContext(), PenPaletteDialog.class);
-                startActivity(intent);
-
-            }
-        });
-
-        eraserBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                eraserSelected = !eraserSelected;
-
-                if (eraserSelected) {
-                    enable(false);
-
-                    oldColor = mColor;
-                    oldSize = mSize;
-
-                    mColor = Color.WHITE;
-                    mSize = 15;
-
-                    board.updatePaintProperty(mColor, mSize);
-
-                } else {
-                    enable(true);
-
-                    mColor = oldColor;
-                    mSize = oldSize;
-
-                    board.updatePaintProperty(mColor, mSize);
-                }
-            }
-        });
-
-        deleteBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                board.clean();
-            }
-        });
-
-        undoBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                board.undo();
-            }
-        });
-
-        readBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                board.setDrawingCacheEnabled(true);
-                board.buildDrawingCache();
-                Bitmap captureView = board.getDrawingCache();
-                FileOutputStream fos;
-                try {
-                    fos = new FileOutputStream(DATA_PATH + "/ocr.jpg");
-                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-                    board.setDrawingCacheEnabled(false);
-
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-
-                onPhotoTaken();
-
-            }
-        });
 
     }
 
@@ -228,9 +97,51 @@ public class MainActivity extends Activity {
         return mSize;
     }
 
+    private void getTrainedData( String strlang ) {
+
+        String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/"};
+
+        for (String path : paths) {
+            File dir = new File(path);
+            if (!dir.exists()) {
+                if (!dir.mkdirs()) {
+                    Log.v(TAG, "ERROR: Creation of directory " + path + " on sdcard failed");
+                    return;
+                } else {
+                    Log.v(TAG, "Created directory " + path + " on sdcard");
+                }
+            }
+
+        }
+
+        if (!(new File(DATA_PATH + "tessdata/" + strlang + ".traineddata")).exists()) {
+            try {
+
+                AssetManager assetManager = getAssets();
+                InputStream in = assetManager.open("tessdata/" + strlang + ".traineddata");
+                OutputStream out = new FileOutputStream(DATA_PATH
+                        + "tessdata/" + strlang + ".traineddata");
+
+                // Transfer bytes from in to out
+                byte[] buf = new byte[1024];
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+                in.close();
+                out.close();
+
+                Log.v(TAG, "Copied " + strlang + " traineddata");
+            } catch (IOException e) {
+                Log.e(TAG, "Was unable to copy " + strlang + " traineddata " + e.toString());
+            }
+        }
 
 
-    protected void onPhotoTaken() {
+    }
+
+
+    protected void readText( String strlang ) {
         _taken = true;
 
         BitmapFactory.Options options = new BitmapFactory.Options();
@@ -282,7 +193,7 @@ public class MainActivity extends Activity {
 
         TessBaseAPI baseApi = new TessBaseAPI();
         baseApi.setDebug(true);
-        baseApi.init(DATA_PATH, lang);
+        baseApi.init(DATA_PATH, strlang);
         baseApi.setImage(bitmap);
 
         String recognizedText = baseApi.getUTF8Text();
@@ -291,15 +202,106 @@ public class MainActivity extends Activity {
 
         Log.v(TAG, "OCRED TEXT: " + recognizedText);
 
-        if ( lang.equalsIgnoreCase("eng") ) {
+        if ( strlang.equalsIgnoreCase("eng") ) {
             recognizedText = recognizedText.replaceAll("[^a-zA-Z0-9]+", " ");
+        }
+        else if ( strlang.equalsIgnoreCase("kor") ) {
+            recognizedText = recognizedText.replaceAll("[^가-힣0-9]+", " ");
         }
 
         recognizedText = recognizedText.trim();
 
         board.clean();
-        Toast.makeText(getApplicationContext(), recognizedText+"", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), recognizedText, Toast.LENGTH_SHORT).show();
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+        Intent intent = null;
+
+        switch (v.getId()) {
+            case R.id.colorBtn :
+
+                ColorPaletteDialog.listener = new OnColorSelectedListener() {
+                    @Override
+                    public void onColorSelected(int pen) {
+                        mColor = pen;
+                        board.updatePaintProperty(mColor, mSize);
+                    }
+                };
+
+                intent = new Intent(getApplicationContext(), ColorPaletteDialog.class);
+                startActivity(intent);
+
+                break;
+            case R.id.penBtn :
+
+                PenPaletteDialog.listener = new OnPenSelectedListener() {
+                    @Override
+                    public void onPenSelected(int pen) {
+                        mSize = pen;
+                        board.updatePaintProperty(mColor, mSize);
+                    }
+                };
+
+                intent = new Intent(getApplicationContext(), PenPaletteDialog.class);
+                startActivity(intent);
+
+                break;
+            case R.id.eraserBtn :
+
+                eraserSelected = !eraserSelected;
+
+                if (eraserSelected) {
+                    enable(false);
+
+                    oldColor = mColor;
+                    oldSize = mSize;
+
+                    mColor = Color.WHITE;
+                    mSize = 15;
+
+                    board.updatePaintProperty(mColor, mSize);
+
+                } else {
+                    enable(true);
+
+                    mColor = oldColor;
+                    mSize = oldSize;
+
+                    board.updatePaintProperty(mColor, mSize);
+                }
+
+                break;
+
+            case R.id.undoBtn :
+                board.undo();
+                break;
+
+            case R.id.readBtn :
+
+                board.setDrawingCacheEnabled(true);
+                board.buildDrawingCache();
+                Bitmap captureView = board.getDrawingCache();
+                FileOutputStream fos;
+                try {
+                    fos = new FileOutputStream(DATA_PATH + "/ocr.jpg");
+                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+                    board.setDrawingCacheEnabled(false);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                readText("kor");
+                break;
+            case R.id.deleteBtn :
+                board.clean();
+                break;
+
+
+        }
+    }
 }
