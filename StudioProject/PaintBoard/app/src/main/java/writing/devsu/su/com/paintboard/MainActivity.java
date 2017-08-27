@@ -194,6 +194,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         TessBaseAPI baseApi = new TessBaseAPI();
         baseApi.setDebug(true);
         baseApi.init(DATA_PATH, strlang);
+
+//        baseApi.setVariable(TessBaseAPI.VAR_CHAR_WHITELIST, "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        baseApi.setVariable(TessBaseAPI.VAR_CHAR_BLACKLIST, "!@#$%^&*()_+=-[]}{;:'\"\\|~`,./<>?");
+
         baseApi.setImage(bitmap);
 
         String recognizedText = baseApi.getUTF8Text();
@@ -202,12 +206,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         Log.v(TAG, "OCRED TEXT: " + recognizedText);
 
+        /*
         if ( strlang.equalsIgnoreCase("eng") ) {
             recognizedText = recognizedText.replaceAll("[^a-zA-Z0-9]+", " ");
         }
         else if ( strlang.equalsIgnoreCase("kor") ) {
             recognizedText = recognizedText.replaceAll("[^가-힣0-9]+", " ");
         }
+        */
 
         recognizedText = recognizedText.trim();
 
