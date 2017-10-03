@@ -15,7 +15,7 @@
 
 (1) 안드로이드 스튜디오
 1. 안드로이드 스튜디오에서 라이브러리 프로젝트를 만든다.
-```
+```gradle
 apply plugin : 'com.android.library'
 
 android {
@@ -61,7 +61,7 @@ exportJar.dependsOn(deleteOldJar, build)
 ```
 
 2. 자바 클래스를 만든다
-```
+```java
 public Activity mUnityActivity = null;
 public String  strMessage = null;
 
@@ -81,13 +81,13 @@ public void showToast(final String strMessage) {
     });
 }
 ```
-```
+```csharp
 // UnityPlayer.UnitySendMessage("프리팹이름", "함수이름", "매개변수");
 UnityPlayer.UnitySendMessage(objName, funcName, "Hello");
 ```
 
 3. AndroidManifest.xml
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidsample">
 
@@ -111,7 +111,7 @@ UnityPlayer.UnitySendMessage(objName, funcName, "Hello");
 (2) 유니티
 1. Unity의 android을 위한 classes.jar파일을 임포트한다. (Assets/Plugins/Android/)
 2. C# 스크립트 작성
-```
+```csharp
 AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
 
