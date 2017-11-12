@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="940.5dp"
+    android:layout_height="480dp"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/layout_movieplayer"
+        android:layout_width="980dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <com.coden.nplayerplus.NPlayerView
+            android:id="@+id/playerView"
+            android:layout_width="950dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#000000" />
+
+        <include layout="@layout/layout_controller_explain" />
+
+    </RelativeLayout>
+</RelativeLayout>
