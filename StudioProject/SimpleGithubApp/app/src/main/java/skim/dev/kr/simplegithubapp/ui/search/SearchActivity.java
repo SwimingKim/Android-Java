@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -69,6 +70,7 @@ public class SearchActivity extends AppCompatActivity implements SearchAdapter.I
                 updateTitle(query);
                 hideSoftKeyboard();
                 collapseRespository();
+                searchRepository(query);
                 return true;
             }
 
@@ -94,8 +96,8 @@ public class SearchActivity extends AppCompatActivity implements SearchAdapter.I
     @Override
     public void onItemClick(GithubRepo repository) {
         Intent intent = new Intent(this, RepositoryActivity.class);
-//        intent.putExtra(RepositoryActivity.KEY_USER_LOGIN, repository.owner.login);
-//        intent.putExtra(RepositoryActivity.KEY_REPO_NAME, repository.name);
+        intent.putExtra(RepositoryActivity.KEY_USER_LOGIN, repository.owner.login);
+        intent.putExtra(RepositoryActivity.KEY_RERO_NAME, repository.name);
         startActivity(intent);
     }
 
@@ -114,7 +116,6 @@ public class SearchActivity extends AppCompatActivity implements SearchAdapter.I
                 if (response.isSuccessful() && null != searchResult) {
                     adapter.setItems(searchResult.items);
                     adapter.notifyDataSetChanged();
-                    ;
 
                     if (0 == searchResult.totalCount) {
                         showError(getString(R.string.no_search_result));
