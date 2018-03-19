@@ -3,57 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <WebView
-        android:id="@+id/xwalk"
+    <EditText
+        android:id="@+id/et_keyword"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></WebView>
+        android:layout_height="match_parent"
+        android:hint="WebView change keyword"
+        android:imeOptions="actionSend"
+        android:inputType="text" />
 
-    <ImageView
-        android:visibility="gone"
-        android:id="@+id/iv"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@mipmap/ic_launcher" />
-
-    <LinearLayout
+    <skim.dev.kr.androidwebview.component.CustomWebView
+        android:id="@+id/view_web"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="녹음시작" />
 
-        <Button
-            android:id="@+id/btnStop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="녹음중지" />
-
-        <Button
-            android:id="@+id/btnPCM"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PCM 재생" />
-
-        <Button
-            android:id="@+id/btnWAV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WAV 재생" />
-
-        <Button
-            android:id="@+id/btnCapture"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="화면 캡처" />
-
-        <Button
-            android:id="@+id/btnCamera"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="카메라" />
-    </LinearLayout>
 </RelativeLayout>
