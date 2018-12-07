@@ -113,7 +113,7 @@ UnityPlayer.UnitySendMessage(objName, funcName, "Hello");
 2. C# 스크립트 작성
 ```csharp
 AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentPackage");
+AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
 
 AndroidJavaObject javaObj = new AndroidJavaObject(package);
 javaObj.Call("setUnityActivity", jo);
