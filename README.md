@@ -45,7 +45,7 @@ dependencies {
 
 // task to delete the old jar
 task deleteOldJar(type: Delete) {
-    delete 'release/AndroidPlugine.jar'
+    delete 'release/AndroidPlugin.jar'
 }
 
 // taks to export contents as jar
@@ -113,7 +113,7 @@ UnityPlayer.UnitySendMessage(objName, funcName, "Hello");
 2. C# 스크립트 작성
 ```csharp
 AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
+AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentPackage");
 
 AndroidJavaObject javaObj = new AndroidJavaObject(package);
 javaObj.Call("setUnityActivity", jo);
